@@ -2,11 +2,15 @@
 """Application-cold local checkouts; prepared tools excluded; OS caches uncontrolled."""
 from pathlib import Path
 import subprocess,json,os,time,shutil,re,statistics
-ROOT=Path(__file__).resolve().parents[1];BASE=ROOT.parent;OUT=BASE/'docker-baseline/c6/fresh';OUT.mkdir(parents=True,exist_ok=True)
+ROOT=Path(__file__).resolve().parents[1];BASE=ROOT.parent;OUT=BASE/'docker-baseline/c6/fresh'
+import argparse
+parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=OUT);parser.add_argument('--projects',default='hugo,docker,docker-agent');parser.add_argument('--repetitions',type=int,default=5);args=parser.parse_args();OUT=args.output.resolve()
+if (OUT/'runs.json').exists():raise SystemExit('Evidence already exists; choose a new --output directory: '+str(OUT))
+OUT.mkdir(parents=True,exist_ok=True)
 env=dict(os.environ,PATH=str(BASE/'docker-baseline/tools/node-v24.21.0-linux-x64/bin')+':'+os.environ['PATH']);runs=[]
-for project in ['hugo','docker','docker-agent']:
+for project in args.projects.split(','):
  source=BASE/('docker-upstream' if project=='hugo' else project)
- for i in range(5):
+ for i in range(args.repetitions):
   target=ROOT/'.cache'/f'fresh-{project}-{i+1}'
   if target.exists():raise SystemExit('Fresh checkout already exists: '+str(target))
   subprocess.run(['git','clone','--quiet','--local',str(source),str(target)],check=True)
@@ -34,4 +38,4 @@ for project in ['hugo','docker','docker-agent']:
   assert hashes(target)==hashes(source),(project,i,'fresh output mismatch')
   row['fresh_equals_accepted']=True;runs.append(row);(OUT/'runs.json').write_text(json.dumps(runs,indent=2)+'\n');print(project,'fresh',i+1,round(row['wall_s'],3),flush=True)
   shutil.rmtree(target)
-(OUT/'summary.json').write_text(json.dumps({p:{'median_s':statistics.median(r['wall_s'] for r in runs if r['project']==p),'min_s':min(r['wall_s'] for r in runs if r['project']==p),'max_s':max(r['wall_s'] for r in runs if r['project']==p)} for p in ['hugo','docker','docker-agent']},indent=2)+'\n')
+(OUT/'summary.json').write_text(json.dumps({p:{'median_s':statistics.median(r['wall_s'] for r in runs if r['project']==p),'min_s':min(r['wall_s'] for r in runs if r['project']==p),'max_s':max(r['wall_s'] for r in runs if r['project']==p)} for p in args.projects.split(',')},indent=2)+'\n')

@@ -26,8 +26,7 @@ No redesign, arbitrary content changes, changes to Nift without explicit approva
 Every route and file, including hidden pages, 404, aliases/redirects, Markdown downloads, JSON metadata, RSS, sitemap, robots, llms.txt and llms-full.txt. Preserve titles, descriptions, canonical/Open Graph/schema metadata, anchors, content, assets, responsive layout, navigation state, keyboard controls, focus behavior and practical accessibility. Record inherited upstream defects separately from migration regressions.
 
 # Project-specific architecture
-Proposed: authored content organized by Docker source sections, explicit published route/data map, family templates and shared partials, structured CLI/API data with deterministic generation.
-The starter currently tracks only `/` through templates/template.html. It is a setup smoke test, not migrated output. No final architecture has been benchmarked.
+Implemented: maintained Markdown/frontmatter and structured CLI/API data → bounded Docker compatibility renderer → transient HTML → Nift composition → minification/publication/search. All 3,901 HTML routes and 2,170 content/download pages are reconstructed. Use `python3 scripts/build.py` as the full publication entry point; direct Nift invocation composes prepared fragments only. See README and C6/C7 reports for current commands and measured boundaries.
 
 # Page families
 - Home, get-started and guides landing pages.
@@ -419,3 +418,6 @@ Prefer documented Nift behaviour and the existing project structure over guessin
 
 ## C6 initial faithful implementation preserved
 C6 warm/fresh/changed benchmarks and route lifecycle correctness are complete. See investigation/C6-BENCHMARKS.md and investigation/c6. The user requested a dedicated optimization pass on 7 October 2026: preserve all initial C6 measurements, profile first, optimize without changing publication or Nift, repeat full correctness and performance gates, and report initial versus optimized results at C7. Optimization evidence must use a separate directory. C7 remains pending.
+
+## C6 optimized implementation
+Optimization and repeated warm/changed correctness gates are complete. See investigation/C6-OPTIMIZATION.md and investigation/c6-optimized. Initial C6 is immutable. C7 remains: fresh committed checkout measurements, final comparison/recommendation, and final clean pushed checkpoints. Nift is unchanged.

@@ -3,6 +3,8 @@
 This module receives decoded shortcode values; it never evaluates Go templates.
 Only corpus-used names and fields are admitted by the dispatcher.
 """
+from publication.yaml_data import load as load_yaml
+
 from pathlib import Path
 import html,json,hashlib,re,yaml
 E=lambda value:html.escape(str(value),quote=True)
@@ -17,7 +19,7 @@ class Components:
  def data(self,name):
   p=self.r.upstream/'data'/name;self.r.dependencies.add(p)
   cache=getattr(self.r,'data_cache',{});self.r.data_cache=cache
-  if name not in cache:cache[name]=yaml.safe_load(p.read_text())
+  if name not in cache:cache[name]=load_yaml(p.read_text())
   return cache[name]
  def card(self,v):
   title=self.inline(v.get('title',''));desc=self.inline(v.get('description',''));inside='<div class="card-header">'
@@ -102,7 +104,7 @@ class Components:
    file=Path(__file__).parent/'pinned/gha-Dockerfile';self.r.dependencies.add(file)
    return self.r.markdown('```dockerfile {collapse=true}\n'+file.read_text().rstrip('\n')+'\n```',self.c)
   if name=='interactive-diagram':
-   file=self.r.upstream/'content'/Path(self.c['logical']).parent/k['src'];self.r.dependencies.add(file);v=yaml.safe_load(file.read_text());kind=v.get('type','sequence');identifier='interactive-diagram-'+hashlib.md5(self.c['logical'].encode()).hexdigest()+'-'+str(self.c.get('shortcode_ordinal',0))
+   file=self.r.upstream/'content'/Path(self.c['logical']).parent/k['src'];self.r.dependencies.add(file);v=load_yaml(file.read_text());kind=v.get('type','sequence');identifier='interactive-diagram-'+hashlib.md5(self.c['logical'].encode()).hexdigest()+'-'+str(self.c.get('shortcode_ordinal',0))
    out='<figure id="'+identifier+'" class="interactive-diagram interactive-diagram--'+E(kind)+' not-prose my-6" data-interactive-diagram data-diagram-type="'+E(kind)+'" aria-labelledby="'+identifier+'-title"><figcaption class="interactive-diagram__header"><div class="interactive-diagram__header-copy"><p id="'+identifier+'-title" class="interactive-diagram__title">'+E(v['title'])+'</p><p class="interactive-diagram__description">'+E(v['description'])+'</p></div></figcaption><div class="interactive-diagram__stage" data-diagram-stage></div>'
    if kind=='topology':
     overview=v['overview'];out+='<div class="interactive-diagram__topology-detail" data-topology-detail aria-live="polite" aria-atomic="true"><p class="interactive-diagram__topology-category" data-topology-category>'+E(overview['category'])+'</p><div class="interactive-diagram__topology-detail-copy"><p class="interactive-diagram__topology-title" data-topology-title>'+E(overview['label'])+'</p><p class="interactive-diagram__topology-body" data-topology-body>'+E(overview['body'])+'</p></div></div>';fallback='<ul>'+''.join('<li>'+E(x['label'])+': '+E(x['details'])+'</li>' for x in v['nodes']+v['edges'])+'</ul>'

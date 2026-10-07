@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 import sys,json,re,time
 from lxml import html
@@ -5,7 +6,7 @@ from copy import deepcopy
 root=Path(__file__).resolve().parents[1];sys.path.insert(0,str(root/'compatibility'));sys.path.insert(0,str(root))
 from docker import Renderer
 from publication.api import API
-out=root.parent/'docker-baseline/c4/api';out.mkdir(parents=True,exist_ok=True);r=Renderer(root/'.cache/docker-renderer',root/'authored',root/'data/refs.json',root/'compatibility/assets');model=json.loads((root/'authored/data/api-reference.json').read_text());registry=json.loads((root/'data/source-registry.json').read_text());a=API(model,r,registry);results=[]
+out=Path(os.environ.get('DOCKER_EVIDENCE_ROOT',str(root.parent/'docker-baseline/c4')))/'api';out.mkdir(parents=True,exist_ok=True);r=Renderer(root/'.cache/docker-renderer',root/'authored',root/'data/refs.json',root/'compatibility/assets');model=json.loads((root/'authored/data/api-reference.json').read_text());registry=json.loads((root/'data/source-registry.json').read_text());a=API(model,r,registry);results=[]
 records=[{'route':'/reference/api/','logical':'reference/api/_index.md','title':'Docker APIs','view':'catalog'}]
 for v in model['apis']:
  records.append({'route':v['url'],'logical':'reference/api/'+v['id']+'/latest/_index.md','title':v['title']+' API '+v['version'],'view':'overview','api_id':v['id']})
@@ -27,3 +28,5 @@ for rec in records:
   results.append(result)
  except Exception as e:results.append({'record':rec,'error':str(e)})
 r.close();(out/'results.json').write_text(json.dumps(results,indent=2)+'\n');print('pages',len(records),'errors',sum('error' in v for v in results));from collections import Counter;print(Counter(k for v in results for k,ok in v.get('checks',{}).items() if not ok));print([(v['record']['route'],v['error']) for v in results if 'error' in v][:10])
+
+assert results and all('error' not in v and all(v['checks'].values()) for v in results), 'Real-corpus parity failed'

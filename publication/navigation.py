@@ -6,6 +6,13 @@ class Navigation:
  def __init__(self,root,registry=None,api=None):
   self.root=root;self.model=json.loads((root/'data/navigation.json').read_text());self.nodes=self.model['nodes'];self.registry=registry or {};self.original=json.loads((root/'data/source-registry.json').read_text()) if registry else {};self.api=api or json.loads((root/'data/api-navigation.json').read_text())
   self.icons={n:(root/'publication/icons'/(n+'.svg')).read_text().strip() for n in ['chevron-down','chevron-up']}
+  # Effective nodes do not vary by current page. Cache them once per build.
+  self.values={k:self.node(k) for k in self.nodes};self.parents={};self.routes={};self.sections=[];self.fragments={}
+  for key,n in self.values.items():
+   n['key']=key
+   if n.get('route') and not n.get('goto'):self.routes.setdefault(n['route'],set()).add(key)
+   if n['kind']=='section' and n.get('source','').endswith('_index.md'):self.sections.append((key,n['source'].removesuffix('_index.md')))
+   for child in n.get('children',[]):self.parents.setdefault(child,set()).add(key)
  def node(self,key):
   seed=self.nodes[key];value=dict(seed)
   if seed.get('source') in self.registry:
@@ -16,12 +23,15 @@ class Navigation:
     elif key2 in side:value[field]=side[key2]
   return value
  def render(self,scope,record):
-  current=record['route'];active={};values={}
-  def mark(key):
-   n=self.node(key);values[key]=n;own=n.get('route')==current and not n.get('goto');logical=n.get('source','');source_ancestor=n['kind']=='section' and logical.endswith('_index.md') and record.get('logical','').startswith(logical.removesuffix('_index.md'))
-   children=[mark(v) for v in n.get('children',[])];active[key]=own or source_ancestor or any(children);return active[key]
+  current=record['route'];values=self.values;selected_keys=set(self.routes.get(current,()))
+  selected_keys.update(key for key,prefix in self.sections if record.get('logical','').startswith(prefix))
+  active_keys=set(selected_keys);pending=list(selected_keys)
+  while pending:
+   key=pending.pop()
+   for parent in self.parents.get(key,()):
+    if parent not in active_keys:active_keys.add(parent);pending.append(parent)
+  active={key:key in active_keys for key in self.nodes}
   roots=self.model['roots'].get(scope,{}).get('children',[])
-  for key in roots:mark(key)
   colors={'blue':'bg-blue-500 dark:bg-blue-400','red':'bg-red-500 dark:bg-red-400','violet':'bg-violet-500 dark:bg-violet-400','gray':'bg-gray-500 dark:bg-gray-400','green':'bg-green-500 dark:bg-green-700','amber':'bg-amber-500 dark:bg-amber-400'}
   def title(n):
    result=E(n['title']);badge=n.get('badge')
@@ -31,6 +41,11 @@ class Navigation:
    if parent and parent.get('reverse')!=self.nodes[parent['key']].get('reverse'):keys=list(reversed(keys))
    return ''.join(render(k,reveal) for k in keys if (not parent or not parent.get('active_children_only') or active[k]) and (not values[k].get('hidden') or active[k] or reveal))
   def render(key,reveal):
+   if active[key]:return render_uncached(key,reveal)
+   signature=(key,bool(reveal))
+   if signature not in self.fragments:self.fragments[signature]=render_uncached(key,reveal)
+   return self.fragments[signature]
+  def render_uncached(key,reveal):
    n=values[key];n['key']=key
    if n['kind']=='group':return '<div class="navbar-group"><li class="navbar-group-font-title">'+E(n['title'])+'</li>'+children(n.get('children',[]),reveal=reveal)+'</div>'
    own=n.get('route')==current and not n.get('goto');selected=' aria-current="page" id="sidebar-current-page"' if own else ''

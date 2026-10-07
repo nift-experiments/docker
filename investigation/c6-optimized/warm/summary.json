@@ -1,0 +1,16 @@
+{
+  "docker": {
+    "samples": 5,
+    "median_s": 21.831263954984024,
+    "min_s": 21.61484543699771,
+    "max_s": 22.469954488100484,
+    "median_peak_rss_kib": 452184
+  },
+  "docker-agent": {
+    "samples": 5,
+    "median_s": 14.653841419145465,
+    "min_s": 13.56451935088262,
+    "max_s": 14.90772751509212,
+    "median_peak_rss_kib": 401136
+  }
+}

@@ -1,23 +1,26 @@
 """Pinned standalone publication minification, measured separately."""
 import hashlib,json,subprocess,time
-from pathlib import Path
 
 def minify(root,force=False):
- start=time.perf_counter();statefile=root/'.generated/minify-state.json';state=json.loads(statefile.read_text()) if statefile.exists() else {};nextstate={};count=0
+ start=time.perf_counter();statefile=root/'.generated/minify-state.json';previous=json.loads(statefile.read_text()) if statefile.exists() else {};state=previous.get('pages',{});nextstate={};pending=[]
  binary=root/'.cache/html-minifier'
  if not binary.exists():raise RuntimeError('Publication minifier missing: run scripts/build.py --setup')
- process=subprocess.Popen([str(binary)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,text=True)
- try:
-  for file in sorted((root/'public').rglob('*.html')):
-   if 'pagefind' in file.parts:continue
-   key=file.relative_to(root/'public').as_posix();digest=hashlib.sha256(file.read_bytes()).hexdigest()
-   if force or state.get(key)!=digest:
-    process.stdin.write(json.dumps({'Path':str(file)})+'\n');process.stdin.flush();result=json.loads(process.stdout.readline())
-    if result.get('error'):raise RuntimeError(result)
-    digest=hashlib.sha256(file.read_bytes()).hexdigest();count+=1
-   nextstate[key]=digest
- finally:
-  process.stdin.close();process.wait()
- if process.returncode:raise RuntimeError('Minifier failed')
- statefile.parent.mkdir(parents=True,exist_ok=True);statefile.write_text(json.dumps(nextstate,sort_keys=True)+'\n')
- return {'html_minification_s':time.perf_counter()-start,'minified_pages':count}
+ implementation=hashlib.sha256(binary.read_bytes()).hexdigest()
+ force=force or previous.get('implementation')!=implementation
+ scan_start=time.perf_counter()
+ for file in sorted((root/'public').rglob('*.html')):
+  if 'pagefind' in file.parts:continue
+  key=file.relative_to(root/'public').as_posix()
+  if force:pending.append(file);continue
+  digest=hashlib.sha256(file.read_bytes()).hexdigest();nextstate[key]=digest
+  if state.get(key)!=digest:pending.append(file)
+ scan_wall=time.perf_counter()-scan_start;worker_start=time.perf_counter();workers=0;svg_metrics={}
+ if pending:
+  response=subprocess.run([str(binary)],input=json.dumps({'Paths':list(map(str,pending)),'Workers':8})+'\n',capture_output=True,text=True,check=True)
+  result=json.loads(response.stdout);workers=result['workers'];svg_metrics={k:v for k,v in result.items() if k.startswith('svg_cache_')}
+  for item in result['results']:
+   if item.get('error'):raise RuntimeError(item)
+   nextstate[str(__import__('pathlib').Path(item['path']).relative_to(root/'public'))]=item['digest']
+ worker_wall=time.perf_counter()-worker_start
+ statefile.parent.mkdir(parents=True,exist_ok=True);statefile.write_text(json.dumps({'implementation':implementation,'pages':nextstate},sort_keys=True)+'\n')
+ return {'html_minification_s':time.perf_counter()-start,'minification_scan_hash_s':scan_wall,'minification_workers_s':worker_wall,'minification_workers':workers,'minified_pages':len(pending),**svg_metrics}

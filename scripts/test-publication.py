@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """Whole-publication obligations and retrieval-code preservation against the pin."""
 from pathlib import Path
 import json,re,sys,hashlib,subprocess,xml.etree.ElementTree as ET
@@ -37,6 +38,6 @@ for name in sorted(p for p in gold if p.endswith('.md')):
  missing=[{'code':code[:160],'language':language} for code,language in expected if not equivalent(code)]
  if missing:result['code_exports'].append({'file':name,'missing':missing,'expected_blocks':len(expected),'actual_blocks':len(current)})
 worker.stdin.close();worker.wait()
-path=ROOT.parent/'docker-baseline/c4'/('publication-'+ROOT.name+'.json');path.write_text(json.dumps(result,indent=2)+'\n');print({k:v if isinstance(v,list) and k not in ['code_exports'] else (len(v) if isinstance(v,list) else sum(not x for x in v.values())) for k,v in result.items()});print(result['code_exports'][:3])
+path=Path(os.environ.get('DOCKER_EVIDENCE_ROOT',str(ROOT.parent/'docker-baseline/c4')))/('publication-'+ROOT.name+'.json');path.write_text(json.dumps(result,indent=2)+'\n');print({k:v if isinstance(v,list) and k not in ['code_exports'] else (len(v) if isinstance(v,list) else sum(not x for x in v.values())) for k,v in result.items()});print(result['code_exports'][:3])
 
 assert not result['missing'] and not result['extra'] and not result['code_exports'] and all(all(v.values()) for v in [result['json'],result['text'],result['xml'],result['assets']]), 'Publication parity failed'

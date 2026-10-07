@@ -3,6 +3,7 @@
 from pathlib import Path
 import json,statistics
 ROOT=Path(__file__).resolve().parents[1];BASE=ROOT.parent/'docker-baseline/c6'
+if (BASE/'report-summary.json').exists():raise SystemExit('Initial C6 report is already archived; read investigation/C6-BENCHMARKS.md. Do not replace preserved results.')
 load=lambda p:json.loads((BASE/p).read_text())
 warm=load('runs.json');fresh=load('fresh/runs.json');changed=load('changed/runs.json');hugo=load('hugo-changed/runs.json');routes=load('routes/results.json');assert len(warm)==15 and len(fresh)==15 and len(changed)==60 and len(hugo)==30 and len(routes)==6
 assert sum(v['incremental_equals_full'] for v in changed)==12 and all(v['semantic_output_checked'] for v in changed+hugo)

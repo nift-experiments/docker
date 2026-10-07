@@ -14,6 +14,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"runtime/pprof"
 	"strconv"
 	"strings"
 	"time"
@@ -55,6 +56,7 @@ type Hooks struct {
 	icons   map[string]string
 	metrics Metrics
 	alerts  map[ast.Node]string
+	lexers  map[string]chroma.Lexer
 }
 
 func esc(s string) string { return stdhtml.EscapeString(s) }
@@ -302,7 +304,11 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 			fmt.Fprintf(w, `<div class="goat svg-container %s" data-export-code="%s">%s</div>`, esc(options["class"]), base64.StdEncoding.EncodeToString([]byte(code.String())), svg)
 			return ast.WalkSkipChildren, nil
 		}
-		lexer := lexers.Get(lang)
+		lexer, known := h.lexers[lang]
+		if !known {
+			lexer = lexers.Get(lang)
+			h.lexers[lang] = lexer
+		}
 		unhighlighted := lexer == nil
 		codeText := strings.TrimRight(code.String(), "\n")
 		var value string
@@ -534,6 +540,17 @@ func consumeBlockAttributes(doc ast.Node, source []byte) {
 	})
 }
 func main() {
+	if path := os.Getenv("DOCKER_RENDERER_CPU_PROFILE"); path != "" {
+		f, err := os.Create(path)
+		if err != nil {
+			panic(err)
+		}
+		if err = pprof.StartCPUProfile(f); err != nil {
+			panic(err)
+		}
+		defer f.Close()
+		defer pprof.StopCPUProfile()
+	}
 	assets := flag.String("assets", "compatibility/assets", "Docker SVG assets")
 	refsFile := flag.String("refs", "", "explicit pinned source-route map")
 	inspect := flag.Bool("inspect-fences", false, "validation-only Markdown fence inspection")
@@ -560,6 +577,7 @@ func main() {
 	scanner := bufio.NewScanner(os.Stdin)
 	scanner.Buffer(make([]byte, 64*1024), 32*1024*1024)
 	encoder := json.NewEncoder(os.Stdout)
+	lexerCache := map[string]chroma.Lexer{}
 	for scanner.Scan() {
 		var request Request
 		response := Response{}
@@ -568,7 +586,7 @@ func main() {
 			encoder.Encode(response)
 			continue
 		}
-		hooks := &Hooks{request: request, refs: refs, icons: icons, metrics: Metrics{Hooks: map[string]int{}}, alerts: map[ast.Node]string{}}
+		hooks := &Hooks{request: request, refs: refs, icons: icons, metrics: Metrics{Hooks: map[string]int{}}, alerts: map[ast.Node]string{}, lexers: lexerCache}
 		md := goldmark.New(goldmark.WithExtensions(extension.GFM, extension.Footnote, extension.DefinitionList), goldmark.WithParserOptions(parser.WithAttribute()), goldmark.WithRendererOptions(gh.WithUnsafe(), renderer.WithNodeRenderers(util.Prioritized(hooks, 100))))
 		source := []byte(request.Markdown)
 		start := time.Now()

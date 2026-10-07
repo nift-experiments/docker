@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 import sys,json,re
 from lxml import html
@@ -25,6 +26,8 @@ for rec in records:
   if not all(checks.values()):v.update(actual=a,expected=b)
   results.append(v)
  except Exception as e:results.append({'route':rec['route'],'error':repr(e)})
-path=root.parent/'docker-baseline/c4'/('content-'+root.name+'.json');path.write_text(json.dumps(results,indent=2)+'\n')
+path=Path(os.environ.get('DOCKER_EVIDENCE_ROOT',str(root.parent/'docker-baseline/c4')))/('content-'+root.name+'.json');path.write_text(json.dumps(results,indent=2)+'\n')
 from collections import Counter
 print('pages',len(results),'errors',sum('error' in v for v in results));print(Counter(k for v in results for k,b in v.get('checks',{}).items() if not b));print([(v['route'],v['error']) for v in results if 'error' in v][:3]);print([(v['route'],[k for k,b in v.get('checks',{}).items() if not b]) for v in results if v.get('checks') and not all(v['checks'].values())][:30])
+
+assert results and all('error' not in v and all(v['checks'].values()) for v in results), 'Real-corpus parity failed'

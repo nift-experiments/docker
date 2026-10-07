@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 """Compare 192 states, corrected behavior fixtures and initial viewport images."""
 from pathlib import Path
 import json,re,sys,collections
@@ -10,7 +11,7 @@ behavior={}
 for row in json.loads((BASE/'c1/behavior/observations.json').read_text())['records']:behavior[(row['family'],row['width'],row['mode'])]=row
 key=lambda r:(r['family'],r['width'],r['mode']);norm=lambda v:re.sub(r'\s+',' ',v).strip()
 for name in sys.argv[1:] or ['human','agent']:
- folder=BASE/'c5'/(name+'-browser');rows=json.loads((folder/'observations.json').read_text())['records'];differences=[];visual=[];behaviors=[]
+ folder=Path(os.environ.get('DOCKER_EVIDENCE_ROOT',str(BASE/'c5')))/(name+'-browser');rows=json.loads((folder/'observations.json').read_text())['records'];differences=[];visual=[];behaviors=[]
  for row in rows:
   old,refdir=references[key(row)];fields=[]
   for field,value in old['initial'].items():
@@ -41,6 +42,6 @@ for name in sys.argv[1:] or ['human','agent']:
   a=Image.open(refdir/old['screenshot']['file']).convert('RGB');b=Image.open(folder/row['screenshot']['file']).convert('RGB')
   if a.size!=b.size:visual.append({'state':key(row),'size_mismatch':[a.size,b.size]});continue
   difference=ImageChops.difference(a,b);mae=sum(ImageStat.Stat(difference).mean)/3;visual.append({'state':key(row),'mean_absolute_rgb_error':mae,'pixel_identical':difference.getbbox() is None})
- summary={'states':len(rows),'unique_states':len(set(map(key,rows))),'dom_differences':differences,'behavior_differences':behaviors,'visual':visual,'maximum_visual_mae':max((v.get('mean_absolute_rgb_error',255) for v in visual),default=255),'pixel_identical_states':sum(v.get('pixel_identical',False) for v in visual)};(BASE/'c5'/(name+'-browser-parity.json')).write_text(json.dumps(summary,indent=2)+'\n');print(name,{k:len(v) if isinstance(v,list) else v for k,v in summary.items() if k!='visual'});print(differences[:6]);print([(v['state'],v.get('mean_absolute_rgb_error')) for v in sorted(visual,key=lambda v:v.get('mean_absolute_rgb_error',255),reverse=True)[:8]]);print([(v['state'],list(v['actual'])) for v in behaviors[:6]])
+ summary={'states':len(rows),'unique_states':len(set(map(key,rows))),'dom_differences':differences,'behavior_differences':behaviors,'visual':visual,'maximum_visual_mae':max((v.get('mean_absolute_rgb_error',255) for v in visual),default=255),'pixel_identical_states':sum(v.get('pixel_identical',False) for v in visual)};(Path(os.environ.get('DOCKER_EVIDENCE_ROOT',str(BASE/'c5')))/(name+'-browser-parity.json')).write_text(json.dumps(summary,indent=2)+'\n');print(name,{k:len(v) if isinstance(v,list) else v for k,v in summary.items() if k!='visual'});print(differences[:6]);print([(v['state'],v.get('mean_absolute_rgb_error')) for v in sorted(visual,key=lambda v:v.get('mean_absolute_rgb_error',255),reverse=True)[:8]]);print([(v['state'],list(v['actual'])) for v in behaviors[:6]])
 
- assert summary['states']==192 and summary['unique_states']==192 and not summary['dom_differences'] and not summary['behavior_differences'], 'Browser parity failed'
+ assert summary['states']==192 and summary['unique_states']==192 and not summary['dom_differences'] and not summary['behavior_differences'] and summary['pixel_identical_states']==192, 'Browser parity failed'

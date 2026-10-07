@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-10-07T13:02:47.378261+00:00",
+  "platform": "Linux-7.0.0-29-generic-x86_64-with-glibc2.43",
+  "cpu_logical": 20,
+  "load_average": [
+    40.970703125,
+    18.4072265625,
+    15.69091796875
+  ],
+  "measurement": "serialized experimental builds; existing desktop activity; uncontrolled OS caches; prepared tools excluded; RSS per measured process/phase, not aggregate pool memory",
+  "initial_snapshot_sha256": {
+    "runs.json": "407e4e72e6e100d11887c2656d11e3ed34b5568359f6b015743880afa3942db0",
+    "summary.json": "66ea8ad274cb38dd36985d56faebaa5f49094d612bde16c82934182e0c58479b",
+    "environment.json": "c300631f07e4459085243e73042c898f4abca4e58d2881a2b6e487c2df34585a",
+    "fresh/runs.json": "3b4ca6b54e7542c67c35a2d99e3805e4810509605032478cf494eb6e9c764713",
+    "fresh/summary.json": "1d488116cef21a089a6d7b9059e9a867e4b56d5b3ce6e7ebee6cef5774b9f35a",
+    "changed/runs.json": "028ed6e616b7251bd1fd4afde97ebcf0abb319e08bfb345dfb73285e28a46756",
+    "changed/summary.json": "0e7368f6b39cfa5f09687b1f36e7f2c67e5aabeeb811a76161e4cd2de87e8a8e",
+    "hugo-changed/runs.json": "8361d0ca2cae2e6301e696e4c8063ea68733b334ea399b524c16f9f54956d67f",
+    "hugo-changed/summary.json": "01e741926ab71f5941ee4616d8b98899ecf2cafaaff57c3ee16fabdfc983ffc1"
+  },
+  "projects": {
+    "docker": "0d7b54012d3662b1cf4d84b3c6881cd8bdcd7034",
+    "docker-agent": "6789288037b2ac9b4e1daaa741441e948765abaf"
+  }
+}

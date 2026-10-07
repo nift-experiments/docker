@@ -1,0 +1,656 @@
+{
+  "diagnostic_wall_s": 80.92103413981386,
+  "timings": [
+    {
+      "path": [
+        "html_minification"
+      ],
+      "calls": 1,
+      "wall_s": 29.109130846103653,
+      "exclusive_s": 28.067896916996688
+    },
+    {
+      "path": [
+        "per_page_shell"
+      ],
+      "calls": 3901,
+      "wall_s": 20.93777920398861,
+      "exclusive_s": 1.1117256567813456
+    },
+    {
+      "path": [
+        "publication"
+      ],
+      "calls": 1,
+      "wall_s": 14.749042951036245,
+      "exclusive_s": 8.9482395213563
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "heading_toc_binding"
+      ],
+      "calls": 2224,
+      "wall_s": 9.629253756254911,
+      "exclusive_s": 0.7045421674847603
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "heading_toc_binding",
+        "html_parse"
+      ],
+      "calls": 2224,
+      "wall_s": 8.924711588770151,
+      "exclusive_s": 8.924711588770151
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "navigation_binding"
+      ],
+      "calls": 1604,
+      "wall_s": 7.630489437142387,
+      "exclusive_s": 7.630489437142387
+    },
+    {
+      "path": [
+        "publication",
+        "html_parse"
+      ],
+      "calls": 2167,
+      "wall_s": 5.484143800102174,
+      "exclusive_s": 5.484143800102174
+    },
+    {
+      "path": [
+        "shortcode_markdown_pipeline"
+      ],
+      "calls": 1116,
+      "wall_s": 5.035559696611017,
+      "exclusive_s": 0.3389507692772895
+    },
+    {
+      "path": [
+        "shortcode_markdown_pipeline",
+        "goldmark_request"
+      ],
+      "calls": 3008,
+      "wall_s": 4.65249125380069,
+      "exclusive_s": 4.4295912072993815
+    },
+    {
+      "path": [
+        "cli_body_generation"
+      ],
+      "calls": 539,
+      "wall_s": 4.025594531325623,
+      "exclusive_s": 0.18209340353496373
+    },
+    {
+      "path": [
+        "cli_body_generation",
+        "yaml_data_parse"
+      ],
+      "calls": 1076,
+      "wall_s": 2.9666117671877146,
+      "exclusive_s": 2.9666117671877146
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "fragment_hash_write"
+      ],
+      "calls": 31087,
+      "wall_s": 2.011681567877531,
+      "exclusive_s": 1.203115486772731
+    },
+    {
+      "path": [
+        "html_minification",
+        "filesystem_binary_read"
+      ],
+      "calls": 7802,
+      "wall_s": 0.918114768108353,
+      "exclusive_s": 0.918114768108353
+    },
+    {
+      "path": [
+        "special_body_generation"
+      ],
+      "calls": 43,
+      "wall_s": 0.8511415091343224,
+      "exclusive_s": 0.005713007412850857
+    },
+    {
+      "path": [
+        "cli_body_generation",
+        "goldmark_request"
+      ],
+      "calls": 3667,
+      "wall_s": 0.8330558622255921,
+      "exclusive_s": 0.7814109912142158
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "fragment_hash_write",
+        "filesystem_text_read"
+      ],
+      "calls": 14456,
+      "wall_s": 0.8085660811048001,
+      "exclusive_s": 0.8085660811048001
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "yaml_data_parse"
+      ],
+      "calls": 42,
+      "wall_s": 0.807866372866556,
+      "exclusive_s": 0.807866372866556
+    },
+    {
+      "path": [
+        "frontmatter_source_loading"
+      ],
+      "calls": 1225,
+      "wall_s": 0.4753847138490528,
+      "exclusive_s": 0.02103973994962871
+    },
+    {
+      "path": [
+        "shared_shell_setup"
+      ],
+      "calls": 1,
+      "wall_s": 0.4427275920752436,
+      "exclusive_s": 0.13771017943508923
+    },
+    {
+      "path": [
+        "frontmatter_source_loading",
+        "yaml_data_parse"
+      ],
+      "calls": 1225,
+      "wall_s": 0.4196182156447321,
+      "exclusive_s": 0.4196182156447321
+    },
+    {
+      "path": [
+        "api_body_generation"
+      ],
+      "calls": 452,
+      "wall_s": 0.3762441778089851,
+      "exclusive_s": 0.19505783403292298
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "template_binding"
+      ],
+      "calls": 19631,
+      "wall_s": 0.3678229786455631,
+      "exclusive_s": 0.3678229786455631
+    },
+    {
+      "path": [
+        "publication_metadata_binding"
+      ],
+      "calls": 1,
+      "wall_s": 0.26113526802510023,
+      "exclusive_s": 0.1425670653115958
+    },
+    {
+      "path": [
+        "publication",
+        "filesystem_text_read"
+      ],
+      "calls": 4354,
+      "wall_s": 0.2478277871850878,
+      "exclusive_s": 0.2478277871850878
+    },
+    {
+      "path": [
+        "shortcode_markdown_pipeline",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 3008,
+      "wall_s": 0.22290004650130868,
+      "exclusive_s": 0.22290004650130868
+    },
+    {
+      "path": [
+        "filesystem_text_read"
+      ],
+      "calls": 7810,
+      "wall_s": 0.21130928955972195,
+      "exclusive_s": 0.21130928955972195
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "structured_data_parse"
+      ],
+      "calls": 3,
+      "wall_s": 0.20461486000567675,
+      "exclusive_s": 0.20461486000567675
+    },
+    {
+      "path": [
+        "api_body_generation",
+        "goldmark_request"
+      ],
+      "calls": 2048,
+      "wall_s": 0.18118634377606213,
+      "exclusive_s": 0.16909374087117612
+    },
+    {
+      "path": [
+        "html_minification",
+        "structured_data_parse"
+      ],
+      "calls": 3902,
+      "wall_s": 0.12206643796525896,
+      "exclusive_s": 0.12206643796525896
+    },
+    {
+      "path": [
+        "publication_metadata_binding",
+        "structured_data_parse"
+      ],
+      "calls": 3,
+      "wall_s": 0.08791396487504244,
+      "exclusive_s": 0.08791396487504244
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "filesystem_text_read"
+      ],
+      "calls": 2494,
+      "wall_s": 0.0858263410627842,
+      "exclusive_s": 0.0858263410627842
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "filesystem_text_read"
+      ],
+      "calls": 3,
+      "wall_s": 0.0730060099158436,
+      "exclusive_s": 0.0730060099158436
+    },
+    {
+      "path": [
+        "publication",
+        "structured_data_parse"
+      ],
+      "calls": 147,
+      "wall_s": 0.0680676253978163,
+      "exclusive_s": 0.0680676253978163
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "api_navigation_binding"
+      ],
+      "calls": 451,
+      "wall_s": 0.053468407364562154,
+      "exclusive_s": 0.053468407364562154
+    },
+    {
+      "path": [
+        "cli_body_generation",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 3667,
+      "wall_s": 0.05164487101137638,
+      "exclusive_s": 0.05164487101137638
+    },
+    {
+      "path": [
+        "yaml_data_parse"
+      ],
+      "calls": 2,
+      "wall_s": 0.04906343389302492,
+      "exclusive_s": 0.04906343389302492
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "filesystem_binary_read"
+      ],
+      "calls": 2171,
+      "wall_s": 0.04751105885952711,
+      "exclusive_s": 0.04751105885952711
+    },
+    {
+      "path": [
+        "filesystem_binary_read"
+      ],
+      "calls": 2548,
+      "wall_s": 0.04674999648705125,
+      "exclusive_s": 0.04674999648705125
+    },
+    {
+      "path": [
+        "cli_body_generation",
+        "filesystem_text_read"
+      ],
+      "calls": 1235,
+      "wall_s": 0.04383349837735295,
+      "exclusive_s": 0.04383349837735295
+    },
+    {
+      "path": [
+        "frontmatter_source_loading",
+        "filesystem_text_read"
+      ],
+      "calls": 1225,
+      "wall_s": 0.03472675825469196,
+      "exclusive_s": 0.03472675825469196
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "goldmark_request"
+      ],
+      "calls": 173,
+      "wall_s": 0.034225221956148744,
+      "exclusive_s": 0.03193229506723583
+    },
+    {
+      "path": [
+        "publication_metadata_binding",
+        "filesystem_text_read"
+      ],
+      "calls": 3,
+      "wall_s": 0.030654237838461995,
+      "exclusive_s": 0.030654237838461995
+    },
+    {
+      "path": [
+        "structured_data_parse"
+      ],
+      "calls": 5,
+      "wall_s": 0.02526390110142529,
+      "exclusive_s": 0.02526390110142529
+    },
+    {
+      "path": [
+        "shortcode_markdown_pipeline",
+        "yaml_data_parse"
+      ],
+      "calls": 3,
+      "wall_s": 0.024810131872072816,
+      "exclusive_s": 0.024810131872072816
+    },
+    {
+      "path": [
+        "compatibility_setup"
+      ],
+      "calls": 1,
+      "wall_s": 0.024763785069808364,
+      "exclusive_s": 0.0010885419324040413
+    },
+    {
+      "path": [
+        "shortcode_markdown_pipeline",
+        "filesystem_text_read"
+      ],
+      "calls": 839,
+      "wall_s": 0.01930754166096449,
+      "exclusive_s": 0.01930754166096449
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "filesystem_binary_read"
+      ],
+      "calls": 339,
+      "wall_s": 0.01843925379216671,
+      "exclusive_s": 0.01843925379216671
+    },
+    {
+      "path": [
+        "landing_body_generation"
+      ],
+      "calls": 3,
+      "wall_s": 0.018257964868098497,
+      "exclusive_s": 0.004534126026555896
+    },
+    {
+      "path": [
+        "compatibility_setup",
+        "yaml_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.01800542208366096,
+      "exclusive_s": 0.01800542208366096
+    },
+    {
+      "path": [
+        "api_body_generation",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 2048,
+      "wall_s": 0.012092602904886007,
+      "exclusive_s": 0.012092602904886007
+    },
+    {
+      "path": [
+        "landing_body_generation",
+        "goldmark_request"
+      ],
+      "calls": 98,
+      "wall_s": 0.009298367891460657,
+      "exclusive_s": 0.008631303440779448
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "navigation_setup"
+      ],
+      "calls": 1,
+      "wall_s": 0.0089572889264673,
+      "exclusive_s": 0.00015801098197698593
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "navigation_setup",
+        "structured_data_parse"
+      ],
+      "calls": 3,
+      "wall_s": 0.006847071927040815,
+      "exclusive_s": 0.006847071927040815
+    },
+    {
+      "path": [
+        "route_registry_reconciliation"
+      ],
+      "calls": 1,
+      "wall_s": 0.00607764907181263,
+      "exclusive_s": 0.003074123291298747
+    },
+    {
+      "path": [
+        "compatibility_setup",
+        "structured_data_parse"
+      ],
+      "calls": 2,
+      "wall_s": 0.004341585794463754,
+      "exclusive_s": 0.004341585794463754
+    },
+    {
+      "path": [
+        "filesystem_text_write"
+      ],
+      "calls": 2,
+      "wall_s": 0.0041040589567273855,
+      "exclusive_s": 0.0041040589567273855
+    },
+    {
+      "path": [
+        "landing_body_generation",
+        "filesystem_text_read"
+      ],
+      "calls": 136,
+      "wall_s": 0.0032025810796767473,
+      "exclusive_s": 0.0032025810796767473
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 173,
+      "wall_s": 0.002292926888912916,
+      "exclusive_s": 0.002292926888912916
+    },
+    {
+      "path": [
+        "route_registry_reconciliation",
+        "structured_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.0020893928594887257,
+      "exclusive_s": 0.0020893928594887257
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "navigation_setup",
+        "filesystem_text_read"
+      ],
+      "calls": 5,
+      "wall_s": 0.0019522060174494982,
+      "exclusive_s": 0.0019522060174494982
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "shortcode_markdown_pipeline"
+      ],
+      "calls": 2,
+      "wall_s": 0.0018308633007109165,
+      "exclusive_s": 6.063818000257015e-05
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "shortcode_markdown_pipeline",
+        "goldmark_request"
+      ],
+      "calls": 2,
+      "wall_s": 0.0017702251207083464,
+      "exclusive_s": 0.001706194132566452
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "filesystem_text_read"
+      ],
+      "calls": 42,
+      "wall_s": 0.0015060435980558395,
+      "exclusive_s": 0.0015060435980558395
+    },
+    {
+      "path": [
+        "compatibility_setup",
+        "filesystem_text_read"
+      ],
+      "calls": 3,
+      "wall_s": 0.0013282352592796087,
+      "exclusive_s": 0.0013282352592796087
+    },
+    {
+      "path": [
+        "landing_body_generation",
+        "yaml_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.0011726377997547388,
+      "exclusive_s": 0.0011726377997547388
+    },
+    {
+      "path": [
+        "route_registry_reconciliation",
+        "filesystem_text_read"
+      ],
+      "calls": 1,
+      "wall_s": 0.000914132921025157,
+      "exclusive_s": 0.000914132921025157
+    },
+    {
+      "path": [
+        "publication",
+        "filesystem_text_write"
+      ],
+      "calls": 2,
+      "wall_s": 0.0006772149354219437,
+      "exclusive_s": 0.0006772149354219437
+    },
+    {
+      "path": [
+        "landing_body_generation",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 98,
+      "wall_s": 0.0006670644506812096,
+      "exclusive_s": 0.0006670644506812096
+    },
+    {
+      "path": [
+        "html_minification",
+        "filesystem_text_write"
+      ],
+      "calls": 1,
+      "wall_s": 0.0006490719970315695,
+      "exclusive_s": 0.0006490719970315695
+    },
+    {
+      "path": [
+        "html_minification",
+        "filesystem_text_read"
+      ],
+      "calls": 1,
+      "wall_s": 0.00040365103632211685,
+      "exclusive_s": 0.00040365103632211685
+    },
+    {
+      "path": [
+        "publication",
+        "filesystem_binary_read"
+      ],
+      "calls": 2,
+      "wall_s": 8.700205944478512e-05,
+      "exclusive_s": 8.700205944478512e-05
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "shortcode_markdown_pipeline",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 2,
+      "wall_s": 6.403098814189434e-05,
+      "exclusive_s": 6.403098814189434e-05
+    },
+    {
+      "path": [
+        "landing_body_generation",
+        "structured_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 5.0252070650458336e-05,
+      "exclusive_s": 5.0252070650458336e-05
+    }
+  ]
+}

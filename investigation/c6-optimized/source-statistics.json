@@ -1,0 +1,86 @@
+{
+  "docker": {
+    "all_tracked": {
+      "files": 3061,
+      "bytes": 126286813
+    },
+    "authored": {
+      "files": 2096,
+      "bytes": 31631946
+    },
+    "maintained_pages": {
+      "files": 2,
+      "bytes": 106
+    },
+    "chrome_templates": {
+      "files": 323,
+      "bytes": 4554740
+    },
+    "all_layouts": {
+      "files": 326,
+      "bytes": 4926961
+    },
+    "data": {
+      "files": 13,
+      "bytes": 35900225
+    },
+    "runtime_python": {
+      "files": 43,
+      "bytes": 225578,
+      "lines": 2646
+    },
+    "public": {
+      "files": 8622,
+      "bytes": 963301734
+    },
+    "published_javascript": {
+      "files": 10,
+      "bytes": 4266240
+    },
+    "physical_authored_markdown": {
+      "files": 1263
+    }
+  },
+  "docker-agent": {
+    "all_tracked": {
+      "files": 4694,
+      "bytes": 140530119
+    },
+    "authored": {
+      "files": 0,
+      "bytes": 0
+    },
+    "maintained_pages": {
+      "files": 3902,
+      "bytes": 48877784
+    },
+    "chrome_templates": {
+      "files": 323,
+      "bytes": 4554740
+    },
+    "all_layouts": {
+      "files": 326,
+      "bytes": 4926961
+    },
+    "data": {
+      "files": 9,
+      "bytes": 33274963
+    },
+    "runtime_python": {
+      "files": 15,
+      "bytes": 68952,
+      "lines": 971
+    },
+    "public": {
+      "files": 8622,
+      "bytes": 988353510
+    },
+    "published_javascript": {
+      "files": 10,
+      "bytes": 4266240
+    },
+    "physical_authored_markdown": {
+      "files": 0
+    }
+  }
+}

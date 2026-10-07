@@ -7,7 +7,9 @@ Setup and analysis are excluded. No OS cache eviction or cold-machine claim.
 from pathlib import Path
 import json,os,time,subprocess,argparse,statistics,re,shutil
 ROOT=Path(__file__).resolve().parents[1];BASE=ROOT.parent
-p=argparse.ArgumentParser();p.add_argument('--repetitions',type=int,default=5);p.add_argument('--output',type=Path,default=BASE/'docker-baseline/c6');p.add_argument('--projects',default='hugo,docker,docker-agent');args=p.parse_args();OUT=args.output.resolve();OUT.mkdir(parents=True,exist_ok=True)
+p=argparse.ArgumentParser();p.add_argument('--repetitions',type=int,default=5);p.add_argument('--output',type=Path,default=BASE/'docker-baseline/c6');p.add_argument('--projects',default='hugo,docker,docker-agent');args=p.parse_args();OUT=args.output.resolve();
+if (OUT/'runs.json').exists():raise SystemExit('Evidence already exists; choose a new --output directory: '+str(OUT))
+OUT.mkdir(parents=True,exist_ok=True)
 TOOLS=BASE/'docker-baseline/tools';env=dict(os.environ,PATH=str(TOOLS/'node-v24.21.0-linux-x64/bin')+':'+str(TOOLS)+':'+os.environ['PATH'],NODE_ENV='production',GOTOOLCHAIN='local');results=[]
 def timed(command,cwd,directory,name):
  directory.mkdir(parents=True,exist_ok=True);started=time.perf_counter()

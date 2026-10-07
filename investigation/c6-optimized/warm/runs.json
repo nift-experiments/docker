@@ -1,0 +1,537 @@
+[
+  {
+    "project": "docker",
+    "repetition": 1,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 21.726105673005804,
+    "peak_rss_kib": 452456,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 6.403092499822378,
+      "shell_prepare_s": 2.783403194,
+      "compatibility_expansion_ns": 132747620,
+      "shortcode_parse_ns": 69390907,
+      "context_dependency_prepare_ns": 91808533,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 380998132,
+        "MarkdownRenderNS": 150292545,
+        "HookNS": 323740879,
+        "ChromaNS": 1672510844
+      },
+      "family_wall_ns": {
+        "landing": 17290675,
+        "markdown": 3354727893,
+        "special": 167498950,
+        "legacy-api": 73297,
+        "cli": 811599440,
+        "api": 338921943
+      },
+      "asset_publication_s": 0.03505515307188034,
+      "asset_files": 294,
+      "nift_composition_s": 2.830374550074339,
+      "total_s": 20.268407135969028,
+      "publication": {
+        "markdown_exports_s": 0.06720247003249824,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.2582146229688078,
+        "search_s": 3.6737105541396886,
+        "search_prepare_s": 0.029217223171144724,
+        "search_index_s": 3.644493294879794,
+        "publication_s": 4.008621030952781
+      },
+      "minification": {
+        "html_minification_s": 1.755995815852657,
+        "minification_scan_hash_s": 0.14493466587737203,
+        "minification_workers_s": 1.6008283840492368,
+        "minification_workers": 8,
+        "minified_pages": 3901,
+        "svg_cache_hits": 517698,
+        "svg_cache_misses": 176,
+        "svg_cache_retained_bytes": 503614
+      },
+      "body_analysis": {
+        "body_analysis_s": 2.225334092974663,
+        "analysis_scan_hash_cache_s": 0.0767176270019263,
+        "analysis_workers_wall_s": 2.1459586590062827,
+        "analysis_workers": 4,
+        "analyzed_pages": 2170,
+        "worker_html_parse_wall_sum_s": 4.823487936053425,
+        "worker_download_conversion_wall_sum_s": 2.8218293378595263
+      }
+    }
+  },
+  {
+    "project": "docker",
+    "repetition": 2,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 21.61484543699771,
+    "peak_rss_kib": 452700,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 6.344302949029952,
+      "shell_prepare_s": 2.577893308,
+      "compatibility_expansion_ns": 130394147,
+      "shortcode_parse_ns": 68628269,
+      "context_dependency_prepare_ns": 91187275,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 386687833,
+        "MarkdownRenderNS": 158441561,
+        "HookNS": 327728455,
+        "ChromaNS": 1705638961
+      },
+      "family_wall_ns": {
+        "landing": 18769605,
+        "markdown": 3362694575,
+        "special": 182260080,
+        "legacy-api": 68480,
+        "cli": 873354102,
+        "api": 321968494
+      },
+      "asset_publication_s": 0.03559042396955192,
+      "asset_files": 294,
+      "nift_composition_s": 2.8516014590859413,
+      "total_s": 20.162675572093576,
+      "publication": {
+        "markdown_exports_s": 0.07185941003262997,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.27168550598435104,
+        "search_s": 3.728692840086296,
+        "search_prepare_s": 0.02600843203254044,
+        "search_index_s": 3.702681282069534,
+        "publication_s": 4.081046086968854
+      },
+      "minification": {
+        "html_minification_s": 1.7613504589535296,
+        "minification_scan_hash_s": 0.13213833700865507,
+        "minification_workers_s": 1.618667459115386,
+        "minification_workers": 8,
+        "minified_pages": 3901,
+        "svg_cache_hits": 517697,
+        "svg_cache_misses": 177,
+        "svg_cache_retained_bytes": 503614
+      },
+      "body_analysis": {
+        "body_analysis_s": 2.2963163999374956,
+        "analysis_scan_hash_cache_s": 0.07325605000369251,
+        "analysis_workers_wall_s": 2.220682682003826,
+        "analysis_workers": 4,
+        "analyzed_pages": 2170,
+        "worker_html_parse_wall_sum_s": 5.018811253132299,
+        "worker_download_conversion_wall_sum_s": 2.9177915572654456
+      }
+    }
+  },
+  {
+    "project": "docker",
+    "repetition": 3,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 21.831263954984024,
+    "peak_rss_kib": 452184,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 6.255568460095674,
+      "shell_prepare_s": 2.673251541,
+      "compatibility_expansion_ns": 130962828,
+      "shortcode_parse_ns": 68008398,
+      "context_dependency_prepare_ns": 89845579,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 374272541,
+        "MarkdownRenderNS": 153868891,
+        "HookNS": 332231119,
+        "ChromaNS": 1688450311
+      },
+      "family_wall_ns": {
+        "landing": 11110592,
+        "markdown": 3323829417,
+        "special": 165975938,
+        "legacy-api": 109810,
+        "cli": 875627064,
+        "api": 312344743
+      },
+      "asset_publication_s": 0.03557695704512298,
+      "asset_files": 294,
+      "nift_composition_s": 2.838577666087076,
+      "total_s": 20.42386843590066,
+      "publication": {
+        "markdown_exports_s": 0.07183133508078754,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.26418391591869295,
+        "search_s": 3.831240575062111,
+        "search_prepare_s": 0.026541539002209902,
+        "search_index_s": 3.804702196037397,
+        "publication_s": 4.175405763089657
+      },
+      "minification": {
+        "html_minification_s": 1.8062648789491504,
+        "minification_scan_hash_s": 0.13377708103507757,
+        "minification_workers_s": 1.6620287671685219,
+        "minification_workers": 8,
+        "minified_pages": 3901,
+        "svg_cache_hits": 517681,
+        "svg_cache_misses": 193,
+        "svg_cache_retained_bytes": 503614
+      },
+      "body_analysis": {
+        "body_analysis_s": 2.4234070118982345,
+        "analysis_scan_hash_cache_s": 0.07950294204056263,
+        "analysis_workers_wall_s": 2.3412503849249333,
+        "analysis_workers": 4,
+        "analyzed_pages": 2170,
+        "worker_html_parse_wall_sum_s": 5.197783795185387,
+        "worker_download_conversion_wall_sum_s": 3.0310257088858634
+      }
+    }
+  },
+  {
+    "project": "docker",
+    "repetition": 4,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 22.288053812924773,
+    "peak_rss_kib": 452092,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 6.350496533093974,
+      "shell_prepare_s": 2.682526771,
+      "compatibility_expansion_ns": 135398607,
+      "shortcode_parse_ns": 70167289,
+      "context_dependency_prepare_ns": 92530349,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 371456133,
+        "MarkdownRenderNS": 155512333,
+        "HookNS": 330246617,
+        "ChromaNS": 1702538924
+      },
+      "family_wall_ns": {
+        "landing": 10482963,
+        "markdown": 3316889881,
+        "special": 199672470,
+        "legacy-api": 85391,
+        "cli": 899219685,
+        "api": 323450223
+      },
+      "asset_publication_s": 0.03753399406559765,
+      "asset_files": 294,
+      "nift_composition_s": 2.9683495541103184,
+      "total_s": 20.845210627187043,
+      "publication": {
+        "markdown_exports_s": 0.07502228999510407,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.2748316200450063,
+        "search_s": 3.9674144429154694,
+        "search_prepare_s": 0.021766545018181205,
+        "search_index_s": 3.945649732835591,
+        "publication_s": 4.326236669905484
+      },
+      "minification": {
+        "html_minification_s": 1.8408371650148183,
+        "minification_scan_hash_s": 0.1537191430106759,
+        "minification_workers_s": 1.6591090930160135,
+        "minification_workers": 8,
+        "minified_pages": 3901,
+        "svg_cache_hits": 517659,
+        "svg_cache_misses": 215,
+        "svg_cache_retained_bytes": 503614
+      },
+      "body_analysis": {
+        "body_analysis_s": 2.4197148140519857,
+        "analysis_scan_hash_cache_s": 0.08048677793703973,
+        "analysis_workers_wall_s": 2.3365798199083656,
+        "analysis_workers": 4,
+        "analyzed_pages": 2170,
+        "worker_html_parse_wall_sum_s": 5.23541363957338,
+        "worker_download_conversion_wall_sum_s": 2.9918243791908026
+      }
+    }
+  },
+  {
+    "project": "docker",
+    "repetition": 5,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 22.469954488100484,
+    "peak_rss_kib": 451900,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 6.396701445803046,
+      "shell_prepare_s": 2.763241351,
+      "compatibility_expansion_ns": 137157898,
+      "shortcode_parse_ns": 68092365,
+      "context_dependency_prepare_ns": 90410926,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 389624717,
+        "MarkdownRenderNS": 159373164,
+        "HookNS": 334920912,
+        "ChromaNS": 1716272553
+      },
+      "family_wall_ns": {
+        "landing": 14947709,
+        "markdown": 3356474140,
+        "special": 164991448,
+        "legacy-api": 73098,
+        "cli": 907737986,
+        "api": 327175098
+      },
+      "asset_publication_s": 0.03653728310018778,
+      "asset_files": 294,
+      "nift_composition_s": 3.036120756994933,
+      "total_s": 21.075791821815073,
+      "publication": {
+        "markdown_exports_s": 0.07894239900633693,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.25692164595238864,
+        "search_s": 3.957854072097689,
+        "search_prepare_s": 0.023936731042340398,
+        "search_index_s": 3.933919583214447,
+        "publication_s": 4.301753934007138
+      },
+      "minification": {
+        "html_minification_s": 1.8466854668222368,
+        "minification_scan_hash_s": 0.13919158792123199,
+        "minification_workers_s": 1.6967074158601463,
+        "minification_workers": 8,
+        "minified_pages": 3901,
+        "svg_cache_hits": 517636,
+        "svg_cache_misses": 238,
+        "svg_cache_retained_bytes": 503614
+      },
+      "body_analysis": {
+        "body_analysis_s": 2.4720489110331982,
+        "analysis_scan_hash_cache_s": 0.08157077711075544,
+        "analysis_workers_wall_s": 2.3879796690307558,
+        "analysis_workers": 4,
+        "analyzed_pages": 2170,
+        "worker_html_parse_wall_sum_s": 5.4088201662525535,
+        "worker_download_conversion_wall_sum_s": 3.1400605209637433
+      }
+    }
+  },
+  {
+    "project": "docker-agent",
+    "repetition": 1,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 13.56451935088262,
+    "peak_rss_kib": 402784,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 3.478492463938892,
+      "asset_publication_s": 0.03566894703544676,
+      "asset_files": 294,
+      "nift_composition_s": 3.1006227959878743,
+      "total_s": 12.821873432956636,
+      "publication": {
+        "markdown_exports_s": 0.06953674089163542,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.1371271200478077,
+        "search_s": 3.5135752779897302,
+        "search_prepare_s": 0.023292798083275557,
+        "search_index_s": 3.4902838689740747,
+        "publication_s": 3.7274461889173836
+      },
+      "body_analysis": {
+        "body_analysis_s": 2.4776627600658685,
+        "analysis_scan_hash_cache_s": 0.07180086383596063,
+        "analysis_workers_wall_s": 2.403648325940594,
+        "analysis_workers": 4,
+        "analyzed_pages": 2170,
+        "worker_html_parse_wall_sum_s": 5.550989221315831,
+        "worker_download_conversion_wall_sum_s": 3.113210949115455
+      }
+    }
+  },
+  {
+    "project": "docker-agent",
+    "repetition": 2,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 14.270916505949572,
+    "peak_rss_kib": 401136,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 3.3376129490789026,
+      "asset_publication_s": 0.03955232910811901,
+      "asset_files": 294,
+      "nift_composition_s": 3.265006548957899,
+      "total_s": 13.376877361908555,
+      "publication": {
+        "markdown_exports_s": 0.06171293812803924,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.13387534813955426,
+        "search_s": 4.0055719499941915,
+        "search_prepare_s": 0.02847617003135383,
+        "search_index_s": 3.9770983420312405,
+        "publication_s": 4.20840709307231
+      },
+      "body_analysis": {
+        "body_analysis_s": 2.5236029389780015,
+        "analysis_scan_hash_cache_s": 0.06962255598045886,
+        "analysis_workers_wall_s": 2.451102828839794,
+        "analysis_workers": 4,
+        "analyzed_pages": 2170,
+        "worker_html_parse_wall_sum_s": 5.4975666627287865,
+        "worker_download_conversion_wall_sum_s": 3.2263723677024245
+      }
+    }
+  },
+  {
+    "project": "docker-agent",
+    "repetition": 3,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 14.653841419145465,
+    "peak_rss_kib": 400728,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 3.821166157955304,
+      "asset_publication_s": 0.036842681001871824,
+      "asset_files": 294,
+      "nift_composition_s": 3.0649069661740214,
+      "total_s": 13.722468425985426,
+      "publication": {
+        "markdown_exports_s": 0.0691775509621948,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.15428389003500342,
+        "search_s": 4.036014663986862,
+        "search_prepare_s": 0.028858253033831716,
+        "search_index_s": 4.007157252868637,
+        "publication_s": 4.268609964987263
+      },
+      "body_analysis": {
+        "body_analysis_s": 2.526796530932188,
+        "analysis_scan_hash_cache_s": 0.07081741699948907,
+        "analysis_workers_wall_s": 2.4535533210728317,
+        "analysis_workers": 4,
+        "analyzed_pages": 2170,
+        "worker_html_parse_wall_sum_s": 5.465876490809023,
+        "worker_download_conversion_wall_sum_s": 3.245578187517822
+      }
+    }
+  },
+  {
+    "project": "docker-agent",
+    "repetition": 4,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 14.90772751509212,
+    "peak_rss_kib": 400112,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 3.586059729801491,
+      "asset_publication_s": 0.040426496881991625,
+      "asset_files": 294,
+      "nift_composition_s": 3.228793525835499,
+      "total_s": 13.950986014911905,
+      "publication": {
+        "markdown_exports_s": 0.07065886608324945,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.160909733036533,
+        "search_s": 4.127147185849026,
+        "search_prepare_s": 0.02986990986391902,
+        "search_index_s": 4.0972765509504825,
+        "publication_s": 4.367103545926511
+      },
+      "body_analysis": {
+        "body_analysis_s": 2.72618500306271,
+        "analysis_scan_hash_cache_s": 0.0743385108653456,
+        "analysis_workers_wall_s": 2.6490449279081076,
+        "analysis_workers": 4,
+        "analyzed_pages": 2170,
+        "worker_html_parse_wall_sum_s": 5.869304326828569,
+        "worker_download_conversion_wall_sum_s": 3.431709237396717
+      }
+    }
+  },
+  {
+    "project": "docker-agent",
+    "repetition": 5,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 14.807065072935075,
+    "peak_rss_kib": 402720,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 3.5345894841011614,
+      "asset_publication_s": 0.039003011072054505,
+      "asset_files": 294,
+      "nift_composition_s": 3.242264316882938,
+      "total_s": 13.906536408001557,
+      "publication": {
+        "markdown_exports_s": 0.08754530688747764,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.1812072079628706,
+        "search_s": 4.251702997134998,
+        "search_prepare_s": 0.03144438401795924,
+        "search_index_s": 4.2202587351202965,
+        "publication_s": 4.528549919137731
+      },
+      "body_analysis": {
+        "body_analysis_s": 2.5592908759135753,
+        "analysis_scan_hash_cache_s": 0.07595283002592623,
+        "analysis_workers_wall_s": 2.480843641096726,
+        "analysis_workers": 4,
+        "analyzed_pages": 2170,
+        "worker_html_parse_wall_sum_s": 5.5626664811279625,
+        "worker_download_conversion_wall_sum_s": 3.3113374679815024
+      }
+    }
+  }
+]

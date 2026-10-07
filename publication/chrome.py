@@ -5,10 +5,19 @@ from .navigation import Navigation
 E=lambda v:html.escape(str(v),quote=True)
 class Chrome:
  def __init__(self,root,model,registry=None,api=None,force=False):
-  self.root=root;self.model=model;self.registry=registry or {};self.config=json.loads((root/'data/chrome.json').read_text());self.nav=Navigation(root,registry,api);self.cache={};self.seed=json.loads((root/'data/publication.json').read_text());self.force=force;self.statefile=root/'.generated/chrome-state.json';self.state=json.loads(self.statefile.read_text()) if self.statefile.exists() else {};self.nextstate={}
+  self.root=root;self.model=model;self.registry=registry or {};self.config=json.loads((root/'data/chrome.json').read_text());self.nav=Navigation(root,registry,api);self.cache={};self.fragments_written=set();self._toc_body=None;self._toc_headings=None;self.analysis={};self._analysis_headings=None;self.seed=json.loads((root/'data/publication.json').read_text());self.force=force;self.statefile=root/'.generated/chrome-state.json';self.state=json.loads(self.statefile.read_text()) if self.statefile.exists() else {};self.nextstate={}
   owned={v for c in self.config.values() for v in [c['prefix'],c['suffix'],*c['slots'].values()] if v}
-  files=[root/v for v in sorted(owned)]+list((root/'publication').glob('*.py'))+list((root/'publication/icons').glob('*.svg'))+[root/'data/navigation.json',root/'data/api-navigation.json',root/'data/chrome.json']
-  self.common=hashlib.sha256(b''.join(p.read_bytes() for p in files)+json.dumps(model,sort_keys=True,default=str).encode()+json.dumps({k:v['frontmatter'] for k,v in (registry or {}).items()},sort_keys=True,default=str).encode()).hexdigest()
+  files=list((root/'publication').glob('*.py'))+list((root/'publication/icons').glob('*.svg'))
+  self.common=hashlib.sha256(b''.join(p.read_bytes() for p in files)).hexdigest();self.layout_hashes={v:hashlib.sha256(self.read(v).encode()).hexdigest() for v in owned};self.scope_hashes={}
+  for scope,group in self.nav.model['roots'].items():
+   keys=set()
+   def collect(key):
+    if key in keys:return
+    keys.add(key)
+    for child in self.nav.values[key].get('children',[]):collect(child)
+   for key in group.get('children',[]):collect(key)
+   self.scope_hashes[scope]=hashlib.sha256(json.dumps({k:self.nav.values[k] for k in sorted(keys)},sort_keys=True,default=str).encode()).hexdigest()
+  self.api_hash=hashlib.sha256(json.dumps(self.nav.api,sort_keys=True).encode()).hexdigest()
  def read(self,path):
   if path not in self.cache:self.cache[path]=(self.root/path).read_text()
   return self.cache[path]
@@ -20,7 +29,11 @@ class Chrome:
    for child in n.children:
     if isinstance(child,str):continue
     yield child;yield from walk(child)
-  headings=[n for n in walk(Document(body).root) if n.tag in ['h1','h2','h3','h4','h5','h6'] and 'scroll-mt-20' in n.attrs.get('class','') and n.attrs.get('id')]
+  if self._analysis_headings is not None:
+   headings=self._analysis_headings
+  elif self._toc_body is not body:
+   self._toc_body=body;self._toc_headings=[n for n in walk(Document(body).root) if n.tag in ['h1','h2','h3','h4','h5','h6'] and 'scroll-mt-20' in n.attrs.get('class','') and n.attrs.get('id')]
+  if self._analysis_headings is None:headings=self._toc_headings
   current=[(n.tag,n.attrs.get('id'),re.sub(r'\s+',' ',n.text()).strip()) for n in headings]
   if current==[tuple(v) for v in config.get('full_outline',config.get('outline',[]))]:return original
   def inline(v):
@@ -44,7 +57,16 @@ class Chrome:
  def render(self,record):
   config=self.config.get(record['route'])
   if not config:return []
-  route=record['route'];bindings=config.get('bindings',{});fingerprint=hashlib.sha256((self.common+json.dumps(record,sort_keys=True)).encode()+(self.root/record['body']).read_bytes()).hexdigest();cached=self.state.get(route)
+  route=record['route'];bindings=config.get('bindings',{});page=self.model['pages'].get(route)
+  scope=next((v.get('articleSection') for v in (page or {}).get('schema',[]) if v.get('@type')=='TechArticle'),None)
+  front=self.registry.get(config.get('logical',''),{}).get('frontmatter',{});params={**front,**front.get('params',{})}
+  metadata={'site_title':self.model['site_title'],'page':page,'params':{k:params.get(k) for k in ['toc_min','toc_max','notoc']},'changes':self.model.get('changes',{}).get(route,{})}
+  breadcrumbs=self.expand(self.read(config['slots']['BREADCRUMBS']),bindings) if config['slots'].get('BREADCRUMBS') else ''
+  metadata['breadcrumb_changes']={k:v for k,v in self.model.get('navigation_title_changes',{}).items() if v['old']!=v['new'] and '>'+E(v['old'])+'<' in breadcrumbs}
+  shared={'layouts':{v:self.layout_hashes[v] for v in [config['prefix'],config['suffix'],*config['slots'].values()] if v},'navigation':self.scope_hashes.get(scope) if 'NAV' in config['slots'] else None,'api_navigation':self.api_hash if 'API_NAV' in config['slots'] else None}
+  body_bytes=(self.root/record['body']).read_bytes();fingerprint=hashlib.sha256((self.common+json.dumps({'record':record,'config':config,'metadata':metadata,'shared':shared},sort_keys=True,default=str)).encode()+body_bytes).hexdigest();cached=self.state.get(route)
+  inputs='.generated/chrome-inputs/'+hashlib.sha256(route.encode()).hexdigest()+'.json';destination=self.root/inputs;destination.parent.mkdir(parents=True,exist_ok=True)
+  if not destination.exists() or destination.read_text()!=fingerprint:destination.write_text(fingerprint)
   if not self.force and cached and cached['fingerprint']==fingerprint and all((self.root/p).exists() for p in cached['pieces'] if p):
    record['pieces']=cached['pieces'];self.nextstate[route]=cached;return cached['dependencies']
   page=self.model['pages'].get(route);bindings=dict(bindings)
@@ -53,7 +75,11 @@ class Chrome:
    for field in ['description','keywords']:
     if field in delta:
      content=next((m['content'] for m in page['meta'] if m.get('name')==field),'');bindings['PAGEFIND_META']=re.sub(r'(data-pagefind-meta=\"'+field+r':)[^\"]*',lambda m:m.group(1)+E(content),bindings['PAGEFIND_META'])
-  seed=self.seed['pages'].get(route);body=(self.root/record['body']).read_text();values={};dependencies=['data/chrome.json','data/navigation.json','data/api-navigation.json','data/publication.json','publication/chrome.py','publication/navigation.py']
+  seed=self.seed['pages'].get(route);body=body_bytes.decode();self._analysis_headings=None
+  if record['body'] in self.analysis:
+   from .analysis import heading_nodes
+   self._analysis_headings=heading_nodes(self.analysis[record['body']]['headings'])
+  values={};dependencies=[inputs,'publication/chrome.py','publication/navigation.py']
   for slot,path in config['slots'].items():
    if path:dependencies.append(path)
    value=self.expand(self.read(path),bindings) if path else ''
@@ -109,8 +135,8 @@ class Chrome:
   return re.sub(r'@@([A-Z_0-9]+)@@',lambda m:bindings.get(m.group(1),m.group()),value)
  def fragment(self,value):
   digest=hashlib.sha256(value.encode()).hexdigest();path='.generated/chrome-fragments/'+digest+'.html'
-  if path not in self.cache:
+  if path not in self.fragments_written:
    destination=self.root/path;destination.parent.mkdir(parents=True,exist_ok=True)
    if not destination.exists() or destination.read_text()!=value:destination.write_text(value)
-   self.cache[path]=value
+   self.fragments_written.add(path)
   return path

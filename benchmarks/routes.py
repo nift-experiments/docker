@@ -2,11 +2,15 @@
 """Explicit route registration/rename/removal proof, restoring maintained inputs."""
 from pathlib import Path
 import json,copy,subprocess,os,hashlib,gzip,html
-ROOT=Path(__file__).resolve().parents[1];BASE=ROOT.parent;OUT=BASE/'docker-baseline/c6/routes';OUT.mkdir(parents=True,exist_ok=True);env=dict(os.environ,PATH=str(BASE/'docker-baseline/tools/node-v24.21.0-linux-x64/bin')+':'+os.environ['PATH']);results=[]
+ROOT=Path(__file__).resolve().parents[1];BASE=ROOT.parent;OUT=BASE/'docker-baseline/c6/routes'
+import argparse
+parser=argparse.ArgumentParser();parser.add_argument('--output',type=Path,default=OUT);parser.add_argument('--projects',default='docker,docker-agent');parser.add_argument('--repetitions',type=int,default=5);args=parser.parse_args();OUT=args.output.resolve()
+if (OUT/'results.json').exists():raise SystemExit('Evidence already exists; choose a new --output directory: '+str(OUT))
+OUT.mkdir(parents=True,exist_ok=True);env=dict(os.environ,PATH=str(BASE/'docker-baseline/tools/node-v24.21.0-linux-x64/bin')+':'+os.environ['PATH']);results=[]
 def hashes(root):return {p.relative_to(root/'public').as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in (root/'public').rglob('*') if p.is_file()}
 def build(root,full=False,name='build'):
  with (OUT/(root.name+'-'+name+'.log')).open('w') as log:subprocess.run(['python3','scripts/build.py',*(['--all'] if full else [])],cwd=root,env=env,stdout=log,stderr=subprocess.STDOUT,check=True)
-for project in ['docker','docker-agent']:
+for project in args.projects.split(','):
  root=BASE/project;build(root,name='baseline');baseline=hashes(root);saved={};created=[]
  def save(path,data):
   if path not in saved:saved[path]=path.read_bytes()

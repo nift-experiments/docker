@@ -1,4 +1,6 @@
 """Bounded data-driven bodies for Docker's samples, glossary and learning series."""
+from publication.yaml_data import load as load_yaml
+
 from pathlib import Path
 import html,json,yaml
 E=lambda v:html.escape(str(v),quote=True)
@@ -7,11 +9,11 @@ class Special:
  def render(self,kind,text,c):
   front={**c['frontmatter'],**c['frontmatter'].get('params',{})};data=self.r.upstream/'data'
   if kind=='glossary':
-   values=yaml.safe_load((data/'glossary.yaml').read_text());out=self.r.render(text,c)+'<table><thead><tr><th>Term</th><th>Definition</th></tr></thead><tbody>'
+   values=load_yaml((data/'glossary.yaml').read_text());out=self.r.render(text,c)+'<table><thead><tr><th>Term</th><th>Definition</th></tr></thead><tbody>'
    for term,definition in sorted(values.items()):out+='<tr><td class="not-prose"><a class="-top-16 relative" name="'+E(self.r.urlize(term))+'"></a>'+E(term)+'</td><td>'+self.r.markdown(definition,c).strip().removeprefix('<p>').removesuffix('</p>')+'</td></tr>'
    return out+'</tbody></table>'
   if kind=='samples':
-   values=yaml.safe_load((data/'samples.yaml').read_text())['samples'];out='<table><thead><tr><th>Name</th><th>Description</th></tr></thead><tbody>'
+   values=load_yaml((data/'samples.yaml').read_text())['samples'];out='<table><thead><tr><th>Name</th><th>Description</th></tr></thead><tbody>'
    for v in values:
     if front.get('service','') in v['services']:out+='<tr><td>'+self.r.markdown('['+v['title']+']('+v['url']+')',c).strip().removeprefix('<p>').removesuffix('</p>')+'</td><td>'+E(v['description'])+'</td></tr>'
    return out+'</tbody></table><h2>Looking for more samples?</h2><p>Visit the following GitHub repositories for more Docker samples.</p><ul><li><p><a class="link" href="https://github.com/docker/awesome-compose" rel="noopener">Awesome Compose</a>: A curated repository containing over 30 Docker Compose samples. These samples offer a starting point for how to integrate different services using a Compose file.</p></li><li><p><a class="link" href="https://github.com/dockersamples?q=&amp;type=all&amp;language=&amp;sort=stargazers" rel="noopener">Docker Samples</a>: A collection of over 30 repositories that offer sample containerized demo applications, tutorials, and labs.</p></li></ul>'
@@ -40,7 +42,7 @@ class Special:
     d=date.fromisoformat(v['published']);fields={k:E(value) for k,value in v.items()};fields['product']+=' ';fields.update(date=d.strftime('%b')+' '+str(d.day),VISIBILITY='' if v.get('featured') else 'x-cloak x-show="expanded" x-collapse.duration.300ms');items.append(self.template('news-item',fields))
    return self.template('home',{'NEWS':self.template('news',{'ITEMS':''.join(items)})})
   if kind=='guides':
-   tags=yaml.safe_load((self.r.upstream/'data/tags.yaml').read_text());order=['languages','ai','testing','cicd','security','databases','deployment','admin','labs'];records=[v for logical,v in self.registry.items() if logical.startswith('guides/') and not v['index']]
+   tags=load_yaml((self.r.upstream/'data/tags.yaml').read_text());order=['languages','ai','testing','cicd','security','databases','deployment','admin','labs'];records=[v for logical,v in self.registry.items() if logical.startswith('guides/') and not v['index']]
    records=sorted(records,key=lambda v:(v['frontmatter'].get('weight',0) or 1000000,v['frontmatter'].get('linkTitle',v['frontmatter']['title']).casefold()))
    sections=[];buttons=[]
    def card(v,name):

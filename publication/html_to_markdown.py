@@ -30,8 +30,8 @@ def descendants(n,tag):
   if isinstance(c,Node):
    if c.tag==tag:yield c
    yield from descendants(c,tag)
-def convert(value,title=None):
- root=Document(value).root;code_blocks=[]
+def convert(value,title=None,document=None):
+ root=document if document is not None else Document(value).root;code_blocks=[]
  def children(n):return ''.join(render(c) for c in n.children)
  def render(n):
   if isinstance(n,str):return re.sub(r'\s+',' ',n)

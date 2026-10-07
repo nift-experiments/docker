@@ -1,9 +1,14 @@
 """Typed Docker/Cobra YAML → Docker CLI component markup."""
+from publication.yaml_data import load as load_yaml
+
 from pathlib import Path
 import html,re,yaml
 E=lambda x:html.escape(str(x),quote=True)
 class CLI:
- def __init__(self,renderer,records):self.r=renderer;self.records=records;self.context=None;self.root=renderer.upstream.parent
+ def __init__(self,renderer,records):self.r=renderer;self.records=records;self.context=None;self.root=renderer.upstream.parent;self.data_cache={};self.children_cache={}
+ def data(self,source):
+  if source not in self.data_cache:self.data_cache[source]=load_yaml((self.root/source).read_text())
+  return self.data_cache[source]
  def md(self,value):
   # Five pinned command descriptions use this legacy block attribute. Docker's
   # alert hook consumes it without exposing the class in the rendered block.
@@ -43,7 +48,7 @@ class CLI:
    out+='<tr'+(' class="p-2"' if not sbx else '')+'><td>'+flag+'</td><td>'+default+'</td><td>'+desc+'</td></tr>'
   return out+'</tbody></table></div>'
  def render(self,record):
-  d=yaml.safe_load((self.root/record['source']).read_text());sbx=record['family']=='sbx-cli';self.context={'route':record['route'],'logical':record['logical'],'index':record['section'],'frontmatter':{},'records':{}}
+  d=self.data(record['source']);sbx=record['family']=='sbx-cli';self.context={'route':record['route'],'logical':record['logical'],'index':record['section'],'frontmatter':{},'records':{}}
   out=self.summary(d,sbx)
   if not sbx and d.get('deprecated'):out+=self.md('> [!WARNING]\n> This command is deprecated\n>\n> It may be removed in a future Docker version. For more information, see the\n> [Docker roadmap](https://github.com/docker/roadmap/issues/209)')
   if d.get('experimental') or d.get('experimentalcli'):out+=self.experimental()
@@ -55,7 +60,7 @@ class CLI:
   def subcommands():
    children=self.children(record);result=self.heading('Commands' if sbx else 'Subcommands')+'<table><thead><tr><th class="text-left">Command</th><th class="text-left">Description</th></tr></thead><tbody>'
    for v in children:
-    child=yaml.safe_load((self.root/v['source']).read_text());summary=E(child.get('synopsis' if sbx else 'short',''))
+    child=self.data(v['source']);summary=E(child.get('synopsis' if sbx else 'short',''))
     if sbx:summary='<span class="inline-flex items-center gap-2">'+(self.badge('experimental','violet') if child.get('experimental') else '')+summary+'</span> '
     result+='<tr><td class="text-left"><a class="link" href="https://docs.docker.com'+E(v['route'])+'"><code>'+E(v['title'])+'</code></a></td><td class="text-left">'+summary+'</td></tr>'
    return result+'</tbody></table>'

@@ -1,0 +1,368 @@
+{
+  "diagnostic_wall_s": 15.012755904113874,
+  "timings": [
+    {
+      "path": [
+        "publication"
+      ],
+      "calls": 1,
+      "wall_s": 4.494212480029091,
+      "exclusive_s": 0.12757276347838342
+    },
+    {
+      "path": [
+        "publication",
+        "external_process"
+      ],
+      "calls": 1,
+      "wall_s": 4.216236558044329,
+      "exclusive_s": 4.216236558044329
+    },
+    {
+      "path": [
+        "external_process"
+      ],
+      "calls": 1,
+      "wall_s": 3.609459645114839,
+      "exclusive_s": 3.609459645114839
+    },
+    {
+      "path": [
+        "per_page_shell"
+      ],
+      "calls": 3901,
+      "wall_s": 3.2819861804600805,
+      "exclusive_s": 0.9403020266909152
+    },
+    {
+      "path": [
+        "shared_html_analysis"
+      ],
+      "calls": 1,
+      "wall_s": 2.9179439039435238,
+      "exclusive_s": 2.790611071046442
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "fragment_hash_write"
+      ],
+      "calls": 31087,
+      "wall_s": 1.3357441569678485,
+      "exclusive_s": 0.3806162578985095
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "navigation_binding"
+      ],
+      "calls": 1604,
+      "wall_s": 0.5434871807228774,
+      "exclusive_s": 0.5434871807228774
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "fragment_hash_write",
+        "filesystem_text_read"
+      ],
+      "calls": 14452,
+      "wall_s": 0.4907640216406435,
+      "exclusive_s": 0.4907640216406435
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "fragment_hash_write",
+        "content_hash"
+      ],
+      "calls": 31087,
+      "wall_s": 0.46436387742869556,
+      "exclusive_s": 0.46436387742869556
+    },
+    {
+      "path": [
+        "shared_shell_setup"
+      ],
+      "calls": 1,
+      "wall_s": 0.32453621993772686,
+      "exclusive_s": 0.014449149603024125
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "template_binding"
+      ],
+      "calls": 21330,
+      "wall_s": 0.22560622706077993,
+      "exclusive_s": 0.22560622706077993
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "structured_data_parse"
+      ],
+      "calls": 3,
+      "wall_s": 0.21616260800510645,
+      "exclusive_s": 0.21616260800510645
+    },
+    {
+      "path": [
+        "structured_data_parse"
+      ],
+      "calls": 2,
+      "wall_s": 0.09750761720351875,
+      "exclusive_s": 0.09750761720351875
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "filesystem_text_read"
+      ],
+      "calls": 326,
+      "wall_s": 0.08212969382293522,
+      "exclusive_s": 0.08212969382293522
+    },
+    {
+      "path": [
+        "filesystem_text_read"
+      ],
+      "calls": 3904,
+      "wall_s": 0.07558818068355322,
+      "exclusive_s": 0.07558818068355322
+    },
+    {
+      "path": [
+        "publication",
+        "structured_data_parse"
+      ],
+      "calls": 4,
+      "wall_s": 0.07508829887956381,
+      "exclusive_s": 0.07508829887956381
+    },
+    {
+      "path": [
+        "shared_html_analysis",
+        "filesystem_text_read"
+      ],
+      "calls": 2171,
+      "wall_s": 0.0654676933772862,
+      "exclusive_s": 0.0654676933772862
+    },
+    {
+      "path": [
+        "publication",
+        "filesystem_text_read"
+      ],
+      "calls": 2184,
+      "wall_s": 0.0625826942268759,
+      "exclusive_s": 0.0625826942268759
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "heading_toc_binding"
+      ],
+      "calls": 2224,
+      "wall_s": 0.06039359956048429,
+      "exclusive_s": 0.06039359956048429
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "api_navigation_binding"
+      ],
+      "calls": 451,
+      "wall_s": 0.0576008977368474,
+      "exclusive_s": 0.0576008977368474
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "content_hash"
+      ],
+      "calls": 4342,
+      "wall_s": 0.04630733793601394,
+      "exclusive_s": 0.04630733793601394
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "filesystem_binary_read"
+      ],
+      "calls": 2171,
+      "wall_s": 0.046110431663692,
+      "exclusive_s": 0.046110431663692
+    },
+    {
+      "path": [
+        "shared_html_analysis",
+        "filesystem_binary_read"
+      ],
+      "calls": 2172,
+      "wall_s": 0.03134744171984494,
+      "exclusive_s": 0.03134744171984494
+    },
+    {
+      "path": [
+        "shared_html_analysis",
+        "content_hash"
+      ],
+      "calls": 4341,
+      "wall_s": 0.029596054693683982,
+      "exclusive_s": 0.029596054693683982
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "filesystem_text_read"
+      ],
+      "calls": 2171,
+      "wall_s": 0.0264343221206218,
+      "exclusive_s": 0.0264343221206218
+    },
+    {
+      "path": [
+        "filesystem_binary_read"
+      ],
+      "calls": 588,
+      "wall_s": 0.024193035904318094,
+      "exclusive_s": 0.024193035904318094
+    },
+    {
+      "path": [
+        "publication",
+        "content_hash"
+      ],
+      "calls": 2171,
+      "wall_s": 0.009659755742177367,
+      "exclusive_s": 0.009659755742177367
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "navigation_setup"
+      ],
+      "calls": 1,
+      "wall_s": 0.007979135029017925,
+      "exclusive_s": 0.0025600423105061054
+    },
+    {
+      "path": [
+        "filesystem_text_write"
+      ],
+      "calls": 2,
+      "wall_s": 0.005872210953384638,
+      "exclusive_s": 0.005872210953384638
+    },
+    {
+      "path": [
+        "route_registry_reconciliation"
+      ],
+      "calls": 1,
+      "wall_s": 0.005712745012715459,
+      "exclusive_s": 0.0031198449432849884
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "navigation_setup",
+        "structured_data_parse"
+      ],
+      "calls": 2,
+      "wall_s": 0.004010418895632029,
+      "exclusive_s": 0.004010418895632029
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "content_hash"
+      ],
+      "calls": 328,
+      "wall_s": 0.003700793022289872,
+      "exclusive_s": 0.003700793022289872
+    },
+    {
+      "path": [
+        "publication",
+        "html_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.002429218962788582,
+      "exclusive_s": 0.002429218962788582
+    },
+    {
+      "path": [
+        "route_registry_reconciliation",
+        "structured_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.0021216270979493856,
+      "exclusive_s": 0.0021216270979493856
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "navigation_setup",
+        "filesystem_text_read"
+      ],
+      "calls": 4,
+      "wall_s": 0.0014086738228797913,
+      "exclusive_s": 0.0014086738228797913
+    },
+    {
+      "path": [
+        "publication",
+        "filesystem_text_write"
+      ],
+      "calls": 2,
+      "wall_s": 0.0005793168675154448,
+      "exclusive_s": 0.0005793168675154448
+    },
+    {
+      "path": [
+        "shared_html_analysis",
+        "structured_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.0004760189913213253,
+      "exclusive_s": 0.0004760189913213253
+    },
+    {
+      "path": [
+        "route_registry_reconciliation",
+        "filesystem_text_read"
+      ],
+      "calls": 1,
+      "wall_s": 0.0004712729714810848,
+      "exclusive_s": 0.0004712729714810848
+    },
+    {
+      "path": [
+        "shared_html_analysis",
+        "filesystem_text_write"
+      ],
+      "calls": 1,
+      "wall_s": 0.0004456241149455309,
+      "exclusive_s": 0.0004456241149455309
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "filesystem_binary_read"
+      ],
+      "calls": 10,
+      "wall_s": 0.00011484045535326004,
+      "exclusive_s": 0.00011484045535326004
+    },
+    {
+      "path": [
+        "publication",
+        "filesystem_binary_read"
+      ],
+      "calls": 2,
+      "wall_s": 6.387382745742798e-05,
+      "exclusive_s": 6.387382745742798e-05
+    }
+  ]
+}

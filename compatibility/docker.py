@@ -4,6 +4,7 @@ Maintained source is untouched. Explicit source/route maps and discovered includ
 files are dependencies. Unsupported corpus constructs fail with source context.
 """
 from __future__ import annotations
+from publication.yaml_data import load as load_yaml
 from dataclasses import dataclass, field
 from pathlib import Path
 import fnmatch,html,json,re,shlex,subprocess,textwrap,time
@@ -64,7 +65,7 @@ def read_markdown(path: Path):
     if opening:
         close=re.search(r'^---[ \t]*$',source[opening.end():],re.M)
         if not close:raise ValueError(f'unclosed frontmatter {path}')
-        stop=opening.end()+close.start();frontmatter=yaml.safe_load(source[opening.end():stop]) or {};return frontmatter,source[opening.end()+close.end():].lstrip('\n')
+        stop=opening.end()+close.start();frontmatter=load_yaml(source[opening.end():stop]) or {};return frontmatter,source[opening.end()+close.end():].lstrip('\n')
     return {},source
 
 def source_routes(upstream: Path,site: Path):
@@ -75,7 +76,7 @@ def source_routes(upstream: Path,site: Path):
     """
     refs={};records={}
     sources={file.relative_to(upstream/'content').as_posix():file for file in (upstream/'content').rglob('*.md')}
-    config=yaml.safe_load((upstream/'hugo.yaml').read_text())
+    config=load_yaml((upstream/'hugo.yaml').read_text())
     for module in config['module']['imports']:
         vendor=upstream/'_vendor'/module['path']
         for mount in module.get('mounts',[]):
@@ -134,9 +135,9 @@ def source_routes(upstream: Path,site: Path):
 
 class Renderer:
     def __init__(self,binary: Path,upstream: Path,refs: Path,assets: Path):
-        self.upstream=upstream;self.assets=assets;self.refs=json.loads(refs.read_text());self.global_params=(yaml.safe_load((upstream/'hugo.yaml').read_text()) or {}).get('params',{})
+        self.upstream=upstream;self.assets=assets;self.refs=json.loads(refs.read_text());self.global_params=(load_yaml((upstream/'hugo.yaml').read_text()) or {}).get('params',{})
         self.process=subprocess.Popen([str(binary),'-refs',str(refs),'-assets',str(assets)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,text=True,bufsize=1)
-        self.legacy_anchors=json.loads((assets.parent/'legacy-anchors.json').read_text()) if (assets.parent/'legacy-anchors.json').exists() else {};self.metrics=[];self.dependencies=set();self.calls_ns=0;self.expansion_ns=0;self.counts={}
+        self.legacy_anchors=json.loads((assets.parent/'legacy-anchors.json').read_text()) if (assets.parent/'legacy-anchors.json').exists() else {};self.metrics=[];self.dependencies=set();self.calls_ns=0;self.expansion_ns=0;self.counts={};self.parsed_sources={};self.snippets={};self.shortcode_parse_ns=0;self.context_prepare_ns=0
     def close(self):
         self.process.stdin.close();result=self.process.wait()
         if result:raise RuntimeError(f'renderer exited {result}')
@@ -147,10 +148,32 @@ class Renderer:
         result=json.loads(line);self.calls_ns+=time.perf_counter_ns()-begin
         if result['Error']:raise ValueError(context['logical']+': '+result['Error'])
         self.metrics.append(result['Metrics']);return result['HTML']
+    def parse(self,source):
+        if source not in self.parsed_sources:
+            started=time.perf_counter_ns();self.parsed_sources[source]=parse_shortcodes(source);self.shortcode_parse_ns+=time.perf_counter_ns()-started
+        return self.parsed_sources[source]
+    def snippet(self,file):
+        if file not in self.snippets:self.snippets[file]=file.read_text()
+        return self.snippets[file]
+    def context_inputs(self,source):
+        """Frontmatter/listing fields actually consumed by bounded shortcodes."""
+        started=time.perf_counter_ns();fields=set();names=set()
+        def visit(nodes,includes):
+            for node in nodes:
+                if not isinstance(node,Shortcode):continue
+                names.add(node.name);args=[v for v in node.parameters if '=' not in v];kwargs=dict(v.split('=',1) for v in node.parameters if '=' in v)
+                if node.name=='param':fields.add(args[0])
+                elif node.name=='grid':fields.add(kwargs.get('items','grid'))
+                elif node.name=='include':
+                    file=(self.upstream/'content/includes'/args[0]).resolve();folder=(self.upstream/'content/includes').resolve()
+                    if not file.is_relative_to(folder) or file in includes:raise ValueError('Invalid include dependency: '+str(file))
+                    visit(self.parse(self.snippet(file)),includes|{file})
+                visit(node.children,includes)
+        visit(self.parse(source),set());self.context_prepare_ns+=time.perf_counter_ns()-started;return fields,names
     def render(self,source,context):
         begin=time.perf_counter_ns();calls_before=self.calls_ns
         slots={}
-        parsed=parse_shortcodes(source);ordinals={id(n):i for i,n in enumerate(n for n in parsed if isinstance(n,Shortcode))}
+        parsed=self.parse(source);ordinals={id(n):i for i,n in enumerate(n for n in parsed if isinstance(n,Shortcode))}
         def materialize(nodes):
             out=[]
             for item in nodes:
@@ -170,7 +193,7 @@ class Renderer:
                     if not file.is_relative_to(folder):raise ValueError('include escapes snippet directory')
                     if str(file) in context.get('includes',[]):raise ValueError(f'cyclic include {file}')
                     self.dependencies.add(file);child=dict(context,includes=context.get('includes',[])+[str(file)])
-                    out.append(self.expand_include(file.read_text(),child,slots));continue
+                    out.append(self.expand_include(self.snippet(file),child,slots));continue
                 if item.name=='tabs':
                     children=[n for n in item.children if isinstance(n,Shortcode)]
                     if not children or any(n.name!='tab' for n in children):raise ValueError('tabs requires tab children')
@@ -217,7 +240,7 @@ class Renderer:
                 childfile=(self.upstream/'content/includes'/item.parameters[0]).resolve();folder=(self.upstream/'content/includes').resolve()
                 if not childfile.is_relative_to(folder):raise ValueError('include escapes snippet directory')
                 if str(childfile) in context.get('includes',[]):raise ValueError('cyclic include')
-                self.dependencies.add(childfile);out.append(self.expand_include(childfile.read_text(),dict(context,includes=context.get('includes',[])+[str(childfile)]),slots))
+                self.dependencies.add(childfile);out.append(self.expand_include(self.snippet(childfile),dict(context,includes=context.get('includes',[])+[str(childfile)]),slots))
             else:raise ValueError(f'include shortcode {item.name} needs a real corpus fixture')
         return ''.join(out)
     @staticmethod

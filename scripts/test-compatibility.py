@@ -4,7 +4,7 @@ from pathlib import Path
 import base64,json,re,sys,time
 from lxml import html
 ROOT=Path(__file__).resolve().parents[1]
-sys.path.insert(0,str(ROOT/'compatibility'))
+sys.path.insert(0,str(ROOT/'compatibility'));sys.path.insert(0,str(ROOT))
 from docker import Renderer,read_markdown,source_routes
 UPSTREAM=ROOT.parent/'docker-upstream';SITE=ROOT.parent/'docker-baseline/site'
 output=Path(sys.argv[1]).resolve();output.mkdir(parents=True,exist_ok=True)

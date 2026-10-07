@@ -1,0 +1,779 @@
+{
+  "diagnostic_wall_s": 24.48352175205946,
+  "timings": [
+    {
+      "path": [
+        "publication"
+      ],
+      "calls": 1,
+      "wall_s": 4.676853619050235,
+      "exclusive_s": 0.12654854217544198
+    },
+    {
+      "path": [
+        "publication",
+        "external_process"
+      ],
+      "calls": 1,
+      "wall_s": 4.246674122987315,
+      "exclusive_s": 4.246674122987315
+    },
+    {
+      "path": [
+        "per_page_shell"
+      ],
+      "calls": 3901,
+      "wall_s": 3.696473689051345,
+      "exclusive_s": 1.0661945044994354
+    },
+    {
+      "path": [
+        "shortcode_markdown_pipeline"
+      ],
+      "calls": 1116,
+      "wall_s": 3.6044951425865293,
+      "exclusive_s": 0.25114933936856687
+    },
+    {
+      "path": [
+        "external_process"
+      ],
+      "calls": 1,
+      "wall_s": 3.4630866469815373,
+      "exclusive_s": 3.4630866469815373
+    },
+    {
+      "path": [
+        "shortcode_markdown_pipeline",
+        "goldmark_request"
+      ],
+      "calls": 3008,
+      "wall_s": 3.334824100602418,
+      "exclusive_s": 3.1515677457209677
+    },
+    {
+      "path": [
+        "shared_html_analysis"
+      ],
+      "calls": 1,
+      "wall_s": 3.210414335131645,
+      "exclusive_s": 3.0885193322319537
+    },
+    {
+      "path": [
+        "html_minification"
+      ],
+      "calls": 1,
+      "wall_s": 1.9453601520508528,
+      "exclusive_s": 0.22778069996275008
+    },
+    {
+      "path": [
+        "html_minification",
+        "external_process"
+      ],
+      "calls": 1,
+      "wall_s": 1.7049352740868926,
+      "exclusive_s": 1.7049352740868926
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "fragment_hash_write"
+      ],
+      "calls": 31087,
+      "wall_s": 1.442410725634545,
+      "exclusive_s": 0.42743171099573374
+    },
+    {
+      "path": [
+        "cli_body_generation"
+      ],
+      "calls": 539,
+      "wall_s": 0.985883524408564,
+      "exclusive_s": 0.1809644615277648
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "navigation_binding"
+      ],
+      "calls": 1604,
+      "wall_s": 0.6635214125271887,
+      "exclusive_s": 0.6635214125271887
+    },
+    {
+      "path": [
+        "cli_body_generation",
+        "goldmark_request"
+      ],
+      "calls": 3667,
+      "wall_s": 0.6174419806338847,
+      "exclusive_s": 0.5724495842587203
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "fragment_hash_write",
+        "filesystem_text_read"
+      ],
+      "calls": 14456,
+      "wall_s": 0.5286573439370841,
+      "exclusive_s": 0.5286573439370841
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "fragment_hash_write",
+        "content_hash"
+      ],
+      "calls": 31087,
+      "wall_s": 0.48632167070172727,
+      "exclusive_s": 0.48632167070172727
+    },
+    {
+      "path": [
+        "api_body_generation"
+      ],
+      "calls": 452,
+      "wall_s": 0.3874567858874798,
+      "exclusive_s": 0.2097413393203169
+    },
+    {
+      "path": [
+        "shared_shell_setup"
+      ],
+      "calls": 1,
+      "wall_s": 0.30168767482973635,
+      "exclusive_s": 0.014463240979239345
+    },
+    {
+      "path": [
+        "publication_metadata_binding"
+      ],
+      "calls": 1,
+      "wall_s": 0.2846905349288136,
+      "exclusive_s": 0.1572185216937214
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "template_binding"
+      ],
+      "calls": 21330,
+      "wall_s": 0.2528043461497873,
+      "exclusive_s": 0.2528043461497873
+    },
+    {
+      "path": [
+        "filesystem_text_read"
+      ],
+      "calls": 10015,
+      "wall_s": 0.2458151236642152,
+      "exclusive_s": 0.2458151236642152
+    },
+    {
+      "path": [
+        "special_body_generation"
+      ],
+      "calls": 43,
+      "wall_s": 0.19633830967359245,
+      "exclusive_s": 0.003319792915135622
+    },
+    {
+      "path": [
+        "publication",
+        "structured_data_parse"
+      ],
+      "calls": 4,
+      "wall_s": 0.19500735588371754,
+      "exclusive_s": 0.19500735588371754
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "structured_data_parse"
+      ],
+      "calls": 3,
+      "wall_s": 0.19125659810379148,
+      "exclusive_s": 0.19125659810379148
+    },
+    {
+      "path": [
+        "shortcode_markdown_pipeline",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 3008,
+      "wall_s": 0.18325635488145053,
+      "exclusive_s": 0.18325635488145053
+    },
+    {
+      "path": [
+        "api_body_generation",
+        "goldmark_request"
+      ],
+      "calls": 2048,
+      "wall_s": 0.17771544656716287,
+      "exclusive_s": 0.1638043390121311
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "yaml_data_parse"
+      ],
+      "calls": 42,
+      "wall_s": 0.1672815908677876,
+      "exclusive_s": 0.1672815908677876
+    },
+    {
+      "path": [
+        "cli_body_generation",
+        "yaml_data_parse"
+      ],
+      "calls": 539,
+      "wall_s": 0.1627419658470899,
+      "exclusive_s": 0.1627419658470899
+    },
+    {
+      "path": [
+        "frontmatter_source_loading"
+      ],
+      "calls": 1225,
+      "wall_s": 0.10543543170206249,
+      "exclusive_s": 0.017841538647189736
+    },
+    {
+      "path": [
+        "publication",
+        "filesystem_text_read"
+      ],
+      "calls": 2184,
+      "wall_s": 0.0966974925249815,
+      "exclusive_s": 0.0966974925249815
+    },
+    {
+      "path": [
+        "publication_metadata_binding",
+        "structured_data_parse"
+      ],
+      "calls": 3,
+      "wall_s": 0.09511214005760849,
+      "exclusive_s": 0.09511214005760849
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "filesystem_text_read"
+      ],
+      "calls": 326,
+      "wall_s": 0.07787012751214206,
+      "exclusive_s": 0.07787012751214206
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "api_navigation_binding"
+      ],
+      "calls": 451,
+      "wall_s": 0.070443628821522,
+      "exclusive_s": 0.070443628821522
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "heading_toc_binding"
+      ],
+      "calls": 2224,
+      "wall_s": 0.06759357685223222,
+      "exclusive_s": 0.06759357685223222
+    },
+    {
+      "path": [
+        "frontmatter_source_loading",
+        "yaml_data_parse"
+      ],
+      "calls": 1225,
+      "wall_s": 0.05599957494996488,
+      "exclusive_s": 0.05599957494996488
+    },
+    {
+      "path": [
+        "shared_html_analysis",
+        "filesystem_text_read"
+      ],
+      "calls": 2171,
+      "wall_s": 0.05436107283458114,
+      "exclusive_s": 0.05436107283458114
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "filesystem_binary_read"
+      ],
+      "calls": 2171,
+      "wall_s": 0.051923794439062476,
+      "exclusive_s": 0.051923794439062476
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "content_hash"
+      ],
+      "calls": 4342,
+      "wall_s": 0.05120823159813881,
+      "exclusive_s": 0.05120823159813881
+    },
+    {
+      "path": [
+        "cli_body_generation",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 3667,
+      "wall_s": 0.04499239637516439,
+      "exclusive_s": 0.04499239637516439
+    },
+    {
+      "path": [
+        "shared_html_analysis",
+        "filesystem_binary_read"
+      ],
+      "calls": 2172,
+      "wall_s": 0.03796592424623668,
+      "exclusive_s": 0.03796592424623668
+    },
+    {
+      "path": [
+        "publication_metadata_binding",
+        "filesystem_text_read"
+      ],
+      "calls": 3,
+      "wall_s": 0.03235987317748368,
+      "exclusive_s": 0.03235987317748368
+    },
+    {
+      "path": [
+        "frontmatter_source_loading",
+        "filesystem_text_read"
+      ],
+      "calls": 1225,
+      "wall_s": 0.03159431810490787,
+      "exclusive_s": 0.03159431810490787
+    },
+    {
+      "path": [
+        "filesystem_binary_read"
+      ],
+      "calls": 1437,
+      "wall_s": 0.030776650877669454,
+      "exclusive_s": 0.030776650877669454
+    },
+    {
+      "path": [
+        "per_page_shell",
+        "filesystem_text_read"
+      ],
+      "calls": 2171,
+      "wall_s": 0.030373468529433012,
+      "exclusive_s": 0.030373468529433012
+    },
+    {
+      "path": [
+        "content_hash"
+      ],
+      "calls": 6300,
+      "wall_s": 0.029399308608844876,
+      "exclusive_s": 0.029399308608844876
+    },
+    {
+      "path": [
+        "shared_html_analysis",
+        "content_hash"
+      ],
+      "calls": 4341,
+      "wall_s": 0.02835321892052889,
+      "exclusive_s": 0.02835321892052889
+    },
+    {
+      "path": [
+        "structured_data_parse"
+      ],
+      "calls": 5,
+      "wall_s": 0.027576005086302757,
+      "exclusive_s": 0.027576005086302757
+    },
+    {
+      "path": [
+        "cli_body_generation",
+        "filesystem_text_read"
+      ],
+      "calls": 698,
+      "wall_s": 0.02473511639982462,
+      "exclusive_s": 0.02473511639982462
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "goldmark_request"
+      ],
+      "calls": 173,
+      "wall_s": 0.02328946441411972,
+      "exclusive_s": 0.021654398879036307
+    },
+    {
+      "path": [
+        "landing_body_generation"
+      ],
+      "calls": 3,
+      "wall_s": 0.018419285072013736,
+      "exclusive_s": 0.005032773828133941
+    },
+    {
+      "path": [
+        "shortcode_markdown_pipeline",
+        "filesystem_text_read"
+      ],
+      "calls": 753,
+      "wall_s": 0.01571861165575683,
+      "exclusive_s": 0.01571861165575683
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "navigation_setup"
+      ],
+      "calls": 1,
+      "wall_s": 0.013965061865746975,
+      "exclusive_s": 0.005027160746976733
+    },
+    {
+      "path": [
+        "api_body_generation",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 2048,
+      "wall_s": 0.013911107555031776,
+      "exclusive_s": 0.013911107555031776
+    },
+    {
+      "path": [
+        "compatibility_setup"
+      ],
+      "calls": 1,
+      "wall_s": 0.009830427821725607,
+      "exclusive_s": 0.0010872890707105398
+    },
+    {
+      "path": [
+        "landing_body_generation",
+        "goldmark_request"
+      ],
+      "calls": 98,
+      "wall_s": 0.00936193997040391,
+      "exclusive_s": 0.008577607106417418
+    },
+    {
+      "path": [
+        "publication",
+        "content_hash"
+      ],
+      "calls": 2171,
+      "wall_s": 0.008952131494879723,
+      "exclusive_s": 0.008952131494879723
+    },
+    {
+      "path": [
+        "filesystem_text_write"
+      ],
+      "calls": 2,
+      "wall_s": 0.007670926162973046,
+      "exclusive_s": 0.007670926162973046
+    },
+    {
+      "path": [
+        "route_registry_reconciliation"
+      ],
+      "calls": 1,
+      "wall_s": 0.007073706015944481,
+      "exclusive_s": 0.004148029955103993
+    },
+    {
+      "path": [
+        "yaml_data_parse"
+      ],
+      "calls": 2,
+      "wall_s": 0.007034275913611054,
+      "exclusive_s": 0.007034275913611054
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "navigation_setup",
+        "structured_data_parse"
+      ],
+      "calls": 3,
+      "wall_s": 0.0067971881944686174,
+      "exclusive_s": 0.0067971881944686174
+    },
+    {
+      "path": [
+        "compatibility_setup",
+        "structured_data_parse"
+      ],
+      "calls": 2,
+      "wall_s": 0.004787371959537268,
+      "exclusive_s": 0.004787371959537268
+    },
+    {
+      "path": [
+        "html_minification",
+        "content_hash"
+      ],
+      "calls": 1,
+      "wall_s": 0.004486051853746176,
+      "exclusive_s": 0.004486051853746176
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "content_hash"
+      ],
+      "calls": 328,
+      "wall_s": 0.0040013655088841915,
+      "exclusive_s": 0.0040013655088841915
+    },
+    {
+      "path": [
+        "landing_body_generation",
+        "filesystem_text_read"
+      ],
+      "calls": 136,
+      "wall_s": 0.0037262171972543,
+      "exclusive_s": 0.0037262171972543
+    },
+    {
+      "path": [
+        "html_minification",
+        "structured_data_parse"
+      ],
+      "calls": 2,
+      "wall_s": 0.0035654883831739426,
+      "exclusive_s": 0.0035654883831739426
+    },
+    {
+      "path": [
+        "html_minification",
+        "filesystem_binary_read"
+      ],
+      "calls": 1,
+      "wall_s": 0.003282079938799143,
+      "exclusive_s": 0.003282079938799143
+    },
+    {
+      "path": [
+        "shortcode_markdown_pipeline",
+        "yaml_data_parse"
+      ],
+      "calls": 3,
+      "wall_s": 0.0028030909597873688,
+      "exclusive_s": 0.0028030909597873688
+    },
+    {
+      "path": [
+        "publication",
+        "html_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.0023544328287243843,
+      "exclusive_s": 0.0023544328287243843
+    },
+    {
+      "path": [
+        "compatibility_setup",
+        "yaml_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.0023062739055603743,
+      "exclusive_s": 0.0023062739055603743
+    },
+    {
+      "path": [
+        "route_registry_reconciliation",
+        "structured_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.002208314137533307,
+      "exclusive_s": 0.002208314137533307
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "navigation_setup",
+        "filesystem_text_read"
+      ],
+      "calls": 5,
+      "wall_s": 0.0021407129243016243,
+      "exclusive_s": 0.0021407129243016243
+    },
+    {
+      "path": [
+        "compatibility_setup",
+        "filesystem_text_read"
+      ],
+      "calls": 3,
+      "wall_s": 0.0016494928859174252,
+      "exclusive_s": 0.0016494928859174252
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 173,
+      "wall_s": 0.0016350655350834131,
+      "exclusive_s": 0.0016350655350834131
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "filesystem_text_read"
+      ],
+      "calls": 42,
+      "wall_s": 0.001516326330602169,
+      "exclusive_s": 0.001516326330602169
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "shortcode_markdown_pipeline"
+      ],
+      "calls": 2,
+      "wall_s": 0.0009311351459473372,
+      "exclusive_s": 3.531109541654587e-05
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "shortcode_markdown_pipeline",
+        "goldmark_request"
+      ],
+      "calls": 2,
+      "wall_s": 0.0008958240505307913,
+      "exclusive_s": 0.0008360450156033039
+    },
+    {
+      "path": [
+        "html_minification",
+        "filesystem_text_write"
+      ],
+      "calls": 1,
+      "wall_s": 0.0008818819187581539,
+      "exclusive_s": 0.0008818819187581539
+    },
+    {
+      "path": [
+        "shared_html_analysis",
+        "structured_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.0007858029566705227,
+      "exclusive_s": 0.0007858029566705227
+    },
+    {
+      "path": [
+        "landing_body_generation",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 98,
+      "wall_s": 0.0007843328639864922,
+      "exclusive_s": 0.0007843328639864922
+    },
+    {
+      "path": [
+        "route_registry_reconciliation",
+        "filesystem_text_read"
+      ],
+      "calls": 1,
+      "wall_s": 0.0007173619233071804,
+      "exclusive_s": 0.0007173619233071804
+    },
+    {
+      "path": [
+        "publication",
+        "filesystem_text_write"
+      ],
+      "calls": 2,
+      "wall_s": 0.0005658641457557678,
+      "exclusive_s": 0.0005658641457557678
+    },
+    {
+      "path": [
+        "shared_html_analysis",
+        "filesystem_text_write"
+      ],
+      "calls": 1,
+      "wall_s": 0.0004289839416742325,
+      "exclusive_s": 0.0004289839416742325
+    },
+    {
+      "path": [
+        "html_minification",
+        "filesystem_text_read"
+      ],
+      "calls": 1,
+      "wall_s": 0.0004286759067326784,
+      "exclusive_s": 0.0004286759067326784
+    },
+    {
+      "path": [
+        "landing_body_generation",
+        "yaml_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 0.0002608560025691986,
+      "exclusive_s": 0.0002608560025691986
+    },
+    {
+      "path": [
+        "shared_shell_setup",
+        "filesystem_binary_read"
+      ],
+      "calls": 15,
+      "wall_s": 0.00013128085993230343,
+      "exclusive_s": 0.00013128085993230343
+    },
+    {
+      "path": [
+        "special_body_generation",
+        "shortcode_markdown_pipeline",
+        "goldmark_request",
+        "structured_data_parse"
+      ],
+      "calls": 2,
+      "wall_s": 5.977903492748737e-05,
+      "exclusive_s": 5.977903492748737e-05
+    },
+    {
+      "path": [
+        "publication",
+        "filesystem_binary_read"
+      ],
+      "calls": 2,
+      "wall_s": 5.367700941860676e-05,
+      "exclusive_s": 5.367700941860676e-05
+    },
+    {
+      "path": [
+        "landing_body_generation",
+        "structured_data_parse"
+      ],
+      "calls": 1,
+      "wall_s": 3.7498073652386665e-05,
+      "exclusive_s": 3.7498073652386665e-05
+    }
+  ]
+}

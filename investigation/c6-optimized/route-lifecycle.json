@@ -1,0 +1,42 @@
+[
+  {
+    "project": "docker",
+    "case": "addition",
+    "incremental_equals_full": true,
+    "body_anchor_toc_literal_download_sitemap_search_navigation_metadata": true,
+    "retired_previous_outputs": false
+  },
+  {
+    "project": "docker",
+    "case": "rename",
+    "incremental_equals_full": true,
+    "body_anchor_toc_literal_download_sitemap_search_navigation_metadata": true,
+    "retired_previous_outputs": true
+  },
+  {
+    "project": "docker",
+    "case": "deletion",
+    "incremental_equals_full": true,
+    "restored_all_output_hashes": true
+  },
+  {
+    "project": "docker-agent",
+    "case": "addition",
+    "incremental_equals_full": true,
+    "body_anchor_toc_literal_download_sitemap_search_navigation_metadata": true,
+    "retired_previous_outputs": false
+  },
+  {
+    "project": "docker-agent",
+    "case": "rename",
+    "incremental_equals_full": true,
+    "body_anchor_toc_literal_download_sitemap_search_navigation_metadata": true,
+    "retired_previous_outputs": true
+  },
+  {
+    "project": "docker-agent",
+    "case": "deletion",
+    "incremental_equals_full": true,
+    "restored_all_output_hashes": true
+  }
+]

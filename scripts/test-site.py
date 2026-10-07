@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
+import os
 """Full HTML contract and fresh indexed-search corpus comparison."""
 from pathlib import Path
 import gzip,json,re,sys,collections
-ROOT=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else Path(__file__).resolve().parents[1];BASE=ROOT.parent/'docker-baseline';OUT=BASE/'c5'/ROOT.name;OUT.mkdir(exist_ok=True)
+ROOT=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else Path(__file__).resolve().parents[1];BASE=ROOT.parent/'docker-baseline';OUT=Path(os.environ.get('DOCKER_EVIDENCE_ROOT',str(BASE/'c5')))/ROOT.name;OUT.mkdir(parents=True,exist_ok=True)
 def pages(path):
  with gzip.open(path/'pages.json.gz','rt') as f:return {r['route']:r for r in json.load(f)}
 a=pages(ROOT/'investigation/inventory');b=pages(OUT/'inventory');diff=[]

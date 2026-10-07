@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 from pathlib import Path
 import sys,json,re
 from lxml import html
@@ -19,3 +20,5 @@ for rec in records:
 path=ROOT.parent/'docker-baseline/c4/navigation-results.json';path.write_text(json.dumps(results,indent=2)+'\n')
 from collections import Counter
 print('pages',len(results),'failures',sum(not all(v['checks'].values()) for v in results));print(Counter(k for v in results for k,ok in v['checks'].items() if not ok));print([(v['route'],[k for k,ok in v['checks'].items() if not ok]) for v in results if not all(v['checks'].values())][:8])
+
+assert results and all('error' not in v and all(v['checks'].values()) for v in results), 'Real-corpus parity failed'

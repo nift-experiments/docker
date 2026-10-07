@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+import os
 from pathlib import Path
 import sys,json,re,copy
 from lxml import html
@@ -6,7 +7,7 @@ ROOT=Path(__file__).resolve().parents[1];sys.path.insert(0,str(ROOT));sys.path.i
 from docker import Renderer,read_markdown
 from extract import Spans,frame
 from publication.special import Special
-r=Renderer(ROOT/'.cache/docker-renderer',ROOT/'authored',ROOT/'data/refs.json',ROOT/'compatibility/assets');registry=json.loads((ROOT/'data/source-registry.json').read_text());special=Special(r,registry);OUT=ROOT.parent/'docker-baseline/c4/special';OUT.mkdir(parents=True,exist_ok=True);results=[]
+r=Renderer(ROOT/'.cache/docker-renderer',ROOT/'authored',ROOT/'data/refs.json',ROOT/'compatibility/assets');registry=json.loads((ROOT/'data/source-registry.json').read_text());special=Special(r,registry);OUT=Path(os.environ.get('DOCKER_EVIDENCE_ROOT',str(ROOT.parent/'docker-baseline/c4')))/'special';OUT.mkdir(parents=True,exist_ok=True);results=[]
 norm=lambda s:re.sub(r'\s+',' ',s).strip()
 def visible(e):
  e=copy.deepcopy(e)
@@ -29,3 +30,5 @@ for logical,v in registry.items():
   results.append(rec);path=OUT/v['route'].strip('/')/'body.html';path.parent.mkdir(parents=True,exist_ok=True);path.write_text(rendered)
  except Exception as e:results.append({'route':v['route'],'kind':kind,'error':repr(e)})
 r.close();(OUT/'results.json').write_text(json.dumps(results,indent=2)+'\n');print('pages',len(results));print([(v['route'],v.get('error') or [k for k,ok in v['checks'].items() if not ok]) for v in results if v.get('error') or not all(v['checks'].values())])
+
+assert results and all('error' not in v and all(v['checks'].values()) for v in results), 'Real-corpus parity failed'

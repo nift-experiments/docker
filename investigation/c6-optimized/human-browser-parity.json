@@ -1,0 +1,1738 @@
+{
+  "states": 192,
+  "unique_states": 192,
+  "dom_differences": [],
+  "behavior_differences": [],
+  "visual": [
+    {
+      "state": [
+        "home",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "section",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "standard-doc",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "get-started",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide-landing",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "learning-series",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "cli",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-catalog",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-overview",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-operation",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "glossary",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-schema",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "legacy-api",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "samples",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "wide",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "hidden",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "tabs",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "accordion",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "mermaid",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "diagram",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "topology",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "redirect",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "404",
+        1440,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "home",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "section",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "standard-doc",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "get-started",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide-landing",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "learning-series",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "cli",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-catalog",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-overview",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-operation",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "glossary",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-schema",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "legacy-api",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "samples",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "wide",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "hidden",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "tabs",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "accordion",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "mermaid",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "diagram",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "topology",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "redirect",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "404",
+        1440,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "home",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "section",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "standard-doc",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "get-started",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide-landing",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "learning-series",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "cli",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-catalog",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-overview",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-operation",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "glossary",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-schema",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "legacy-api",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "samples",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "wide",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "hidden",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "tabs",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "accordion",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "mermaid",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "diagram",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "topology",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "redirect",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "404",
+        1440,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "home",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "section",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "standard-doc",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "get-started",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide-landing",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "learning-series",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "cli",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-catalog",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-overview",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-operation",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "glossary",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-schema",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "legacy-api",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "samples",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "wide",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "hidden",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "tabs",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "accordion",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "mermaid",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "diagram",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "topology",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "redirect",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "404",
+        1440,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "home",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "section",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "standard-doc",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "get-started",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide-landing",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "learning-series",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "cli",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-catalog",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-overview",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-operation",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "glossary",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-schema",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "legacy-api",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "samples",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "wide",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "hidden",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "tabs",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "accordion",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "mermaid",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "diagram",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "topology",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "redirect",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "404",
+        390,
+        "light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "home",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "section",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "standard-doc",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "get-started",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide-landing",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "learning-series",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "cli",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-catalog",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-overview",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-operation",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "glossary",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-schema",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "legacy-api",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "samples",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "wide",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "hidden",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "tabs",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "accordion",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "mermaid",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "diagram",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "topology",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "redirect",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "404",
+        390,
+        "dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "home",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "section",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "standard-doc",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "get-started",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide-landing",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "learning-series",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "cli",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-catalog",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-overview",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-operation",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "glossary",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-schema",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "legacy-api",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "samples",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "wide",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "hidden",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "tabs",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "accordion",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "mermaid",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "diagram",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "topology",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "redirect",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "404",
+        390,
+        "system-light"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "home",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "section",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "standard-doc",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "get-started",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide-landing",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "guide",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "learning-series",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "cli",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-catalog",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-overview",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-operation",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "glossary",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "api-schema",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "legacy-api",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "samples",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "wide",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "hidden",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "tabs",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "accordion",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "mermaid",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "diagram",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "topology",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "redirect",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    },
+    {
+      "state": [
+        "404",
+        390,
+        "system-dark"
+      ],
+      "mean_absolute_rgb_error": 0.0,
+      "pixel_identical": true
+    }
+  ],
+  "maximum_visual_mae": 0.0,
+  "pixel_identical_states": 192
+}

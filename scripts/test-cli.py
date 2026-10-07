@@ -1,10 +1,11 @@
+import os
 from pathlib import Path
 import sys,json,re,copy,base64
 from lxml import html
 root=Path(__file__).resolve().parents[1];sys.path.insert(0,str(root));sys.path.insert(0,str(root/'compatibility'))
 from docker import Renderer
 from publication.cli import CLI
-out=root.parent/'docker-baseline/c4/cli';out.mkdir(parents=True,exist_ok=True)
+out=Path(os.environ.get('DOCKER_EVIDENCE_ROOT',str(root.parent/'docker-baseline/c4')))/'cli';out.mkdir(parents=True,exist_ok=True)
 r=Renderer(root/'.cache/docker-renderer',root/'authored',root/'data/refs.json',root/'compatibility/assets');records=json.loads((root/'data/cli-registry.json').read_text());cli=CLI(r,records);results=[]
 norm=lambda s:re.sub(r'\s+',' ',s).strip()
 def visible(e):
@@ -17,7 +18,7 @@ def props(e):
 for record in records:
  try:
   value=cli.render(record);target=out/record['route'].strip('/')/'body.html';target.parent.mkdir(parents=True,exist_ok=True);target.write_text(value)
-  actual=props(html.fragment_fromstring(value.replace(chr(27),''),create_parent='div'));article=html.fromstring((out.parents[1]/'site'/record['route'].strip('/')/'index.html').read_text().replace(chr(27),'')).xpath('//article')[0];expected=html.Element('div');start=False
+  actual=props(html.fragment_fromstring(value.replace(chr(27),''),create_parent='div'));article=html.fromstring((root.parent/'docker-baseline/site'/record['route'].strip('/')/'index.html').read_text().replace(chr(27),'')).xpath('//article')[0];expected=html.Element('div');start=False
   for child in article:
    if child.tag=='div' and child.get('class')=='overflow-x-auto':start=True
    if start:expected.append(copy.deepcopy(child))
@@ -28,3 +29,5 @@ for record in records:
 r.close();(out/'results.json').write_text(json.dumps(results,indent=2)+'\n')
 from collections import Counter
 print('pages',len(results),'errors',sum('error' in v for v in results));print(Counter(k for v in results for k,ok in v.get('checks',{}).items() if not ok));print([(v['record']['route'],v['error']) for v in results if 'error' in v][:10])
+
+assert results and all('error' not in v and all(v['checks'].values()) for v in results), 'Real-corpus parity failed'
