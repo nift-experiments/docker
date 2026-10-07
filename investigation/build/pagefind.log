@@ -1,0 +1,30 @@
+
+Running Pagefind v1.5.2 (Extended)
+Running from: "/home/nick/Repositories/nift/nift-experiments/docker-upstream"
+Source:       "/home/nick/Repositories/nift/nift-experiments/docker-baseline/site"
+Output:       "/home/nick/Repositories/nift/nift-experiments/docker-baseline/site/pagefind"
+
+[Walking source directory]
+Found 3901 files matching **/*.{html}
+
+[Parsing files]
+Found a data-pagefind-body element on the site.
+↳ Ignoring pages without this tag.
+2 pages found without an <html> element. 
+Pages without an outer <html> element will not be processed by default. 
+If adding this element is not possible, use the root selector config to target a different root element.
+  * "/google161104f9fdea6089.html" has no <html> element
+  * "/googlecbe7fee896be512c.html" has no <html> element
+
+[Reading languages]
+Discovered 1 language: en
+
+[Building search indexes]
+Total: 
+  Indexed 1 language
+  Indexed 2142 pages
+  Indexed 31268 words
+  Indexed 0 filters
+  Indexed 0 sorts
+
+Finished in 4.896 seconds

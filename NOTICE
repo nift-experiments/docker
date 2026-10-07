@@ -1,0 +1,5 @@
+Docker Docs reference material: Copyright 2013-2026 Docker, Inc.
+Upstream: https://github.com/docker/docs
+Pinned commit: 6cf1b1c167f032e8a6629da211602300b623b20e
+Reference source files under investigation/upstream retain their Apache-2.0 license.
+This repository is a Nift migration experiment and is not an official Docker publication.

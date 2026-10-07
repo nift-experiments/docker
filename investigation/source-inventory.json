@@ -1,0 +1,80 @@
+{
+  "content": {
+    "files": 1350,
+    "bytes": 25591235,
+    "extensions": {
+      ".md": 1116,
+      ".gotmpl": 3,
+      ".yaml": 8,
+      ".png": 64,
+      ".webp": 110,
+      ".dot": 3,
+      ".svg": 12,
+      ".excalidraw": 1,
+      ".avif": 21,
+      ".gliffy": 8,
+      "": 2,
+      ".sh": 2
+    }
+  },
+  "data": {
+    "files": 510,
+    "bytes": 4176568,
+    "extensions": {
+      ".yml": 1,
+      ".yaml": 507,
+      ".json": 2
+    }
+  },
+  "layouts": {
+    "files": 118,
+    "bytes": 221692,
+    "extensions": {
+      ".html": 83,
+      ".xml": 2,
+      ".txt": 3,
+      ".md": 24,
+      ".json": 2,
+      ".svg": 4
+    }
+  },
+  "assets": {
+    "files": 67,
+    "bytes": 1250983,
+    "extensions": {
+      ".css": 11,
+      ".js": 10,
+      ".svg": 33,
+      ".webp": 7,
+      ".jpg": 1,
+      ".png": 5
+    }
+  },
+  "static": {
+    "files": 20,
+    "bytes": 3568798,
+    "extensions": {
+      ".html": 2,
+      ".xsl": 1,
+      ".ico": 1,
+      ".png": 5,
+      ".pdf": 1,
+      ".json": 1,
+      ".woff2": 3,
+      ".txt": 2,
+      ".mp4": 1,
+      ".svg": 3
+    }
+  },
+  "_vendor": {
+    "files": 393,
+    "bytes": 16422556,
+    "extensions": {
+      ".txt": 1,
+      ".md": 266,
+      ".yaml": 120,
+      ".gif": 1,
+      ".png": 5
+    }
+  }
+}

@@ -1,0 +1,1 @@
+hugo --gc --minify --panicOnWarning --printPathWarnings --printUnusedTemplates -b https://docs.docker.com -e production --destination /home/nick/Repositories/nift/nift-experiments/docker-baseline/site 

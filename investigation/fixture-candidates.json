@@ -1,0 +1,253 @@
+[
+  {
+    "route": "/",
+    "title": "Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  {
+    "route": "/get-started/",
+    "title": "Get started | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  {
+    "route": "/guides/",
+    "title": "Docker guides | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  {
+    "route": "/reference/cli/docker/",
+    "title": "docker | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  {
+    "route": "/reference/api/",
+    "title": "Docker APIs | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  {
+    "route": "/reference/glossary/",
+    "title": "Glossary | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  {
+    "route": "/404.html",
+    "title": "404 Page not found | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  {
+    "route": "/engine/install/",
+    "title": "Install Docker Engine | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  {
+    "route": "/desktop/setup/install/linux/",
+    "title": "Install Docker Desktop on Linux | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ]
+  },
+  {
+    "family_or_behavior": "API operation",
+    "route": "/reference/api/ai-governance/latest/",
+    "title": "AI Governance API 1 | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ]
+  },
+  {
+    "family_or_behavior": "tabs",
+    "route": "/accounts/company/",
+    "title": "Company overview | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ]
+  },
+  {
+    "family_or_behavior": "Mermaid",
+    "route": "/ai/sandboxes/governance/access-controls/mcp/",
+    "title": "MCP access policies | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ]
+  },
+  {
+    "family_or_behavior": "interactive diagram",
+    "route": "/ai/sandboxes/architecture/",
+    "title": "Architecture | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ]
+  },
+  {
+    "family_or_behavior": "hidden page",
+    "route": "/bot-detection/",
+    "title": "Automated traffic detection | Docker Docs",
+    "status": "capture pending C1",
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        844
+      ]
+    ]
+  }
+]

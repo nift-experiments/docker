@@ -1,0 +1,4 @@
+.nift/.lock
+.nift/public/
+node_modules/
+__pycache__/
