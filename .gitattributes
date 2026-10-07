@@ -1,0 +1,3 @@
+# Keep captured logs and generated starter output byte-for-byte.
+investigation/build/* -whitespace
+public/index.html -whitespace
