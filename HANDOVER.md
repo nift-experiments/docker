@@ -421,3 +421,6 @@ C6 warm/fresh/changed benchmarks and route lifecycle correctness are complete. S
 
 ## C6 optimized implementation
 Optimization and repeated warm/changed correctness gates are complete. See investigation/C6-OPTIMIZATION.md and investigation/c6-optimized. Initial C6 is immutable. C7 remains: fresh committed checkout measurements, final comparison/recommendation, and final clean pushed checkpoints. Nift is unchanged.
+
+## C7 complete
+All planned checkpoints, optimized fresh-checkout measurements and the final comparison are complete. See investigation/C7-COMPARISON.md. Both source models remain distinct, all parity/dependency/lifecycle gates pass, and Nift/upstream are unchanged. There are no outstanding migration blockers or required follow-up tasks. Use scripts/build.py for publication; preserve accepted evidence when rerunning.

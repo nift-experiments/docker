@@ -1,0 +1,11 @@
+{
+  "docker": {
+    "all_publication_files_byte_identical": 8622
+  },
+  "docker-agent": {
+    "all_publication_files_byte_identical": 8622
+  },
+  "human-controls": "all checks identical to C5 after normalizing local server port; external attempts mocked by capture",
+  "agent-controls": "all checks identical to C5 after normalizing local server port; external attempts mocked by capture",
+  "initial_benchmarks": "unchanged"
+}

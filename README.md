@@ -6,7 +6,7 @@ Source model: maintained Markdown/frontmatter and structured CLI/API data → bo
 
 ## Build
 
-Prerequisites: Python with PyYAML (tested 6.0.3), Go (tested 1.26.0) for initial renderer/minifier setup, Nift 4.7.2, and Node/npm (tested 24.21.0/11.19.0). Parallel HTML analysis uses POSIX fork. Install tools/dependencies before measuring builds:
+Prerequisites: Python (tested 3.14.4) with PyYAML (tested 6.0.3), Go (tested 1.26.0) for initial renderer/minifier setup, Nift 4.7.2, and Node/npm (tested 24.21.0/11.19.0). Parallel HTML analysis uses POSIX fork. Install tools/dependencies before measuring builds:
 
 ```sh
 python3 scripts/build.py --setup
@@ -23,4 +23,4 @@ Shared layouts live under `layouts/`; navigation and publication bindings live u
 
 ## Evidence
 
-See [HANDOVER.md](HANDOVER.md), [baseline provenance](investigation/BASELINE.md), [initial C6 benchmarks](investigation/C6-BENCHMARKS.md), and [C6 optimization](investigation/C6-OPTIMIZATION.md). C7 will contain the complete comparison after fresh-checkout measurements. Initial evidence is immutable; reruns must use a new evidence output directory.
+See [HANDOVER.md](HANDOVER.md), [baseline provenance](investigation/BASELINE.md), [initial C6 benchmarks](investigation/C6-BENCHMARKS.md), and [C6 optimization](investigation/C6-OPTIMIZATION.md). See [the final C7 comparison](investigation/C7-COMPARISON.md) for initial versus optimized timings, correctness and maintenance recommendations. Initial evidence is immutable; reruns must use a new evidence output directory.

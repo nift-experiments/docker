@@ -1,0 +1,8 @@
+{
+  "documents": 64,
+  "workers": 8,
+  "race_detected": false,
+  "race_equals_production_minifier_hashes": true,
+  "svg_cache_hits": 21617,
+  "svg_cache_misses": 170
+}
