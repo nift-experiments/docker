@@ -1,8 +1,43 @@
 {
   "tracked": [
     {
+      "name": "release-lifecycle/index",
+      "title": "Docker's product release lifecycle",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/install/ubuntu/index",
+      "title": "Install Docker Engine on Ubuntu",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-overview/index",
+      "title": "What is Docker?",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/access-controls/mcp/index",
+      "title": "MCP access policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/drivers/device-mapper-driver/index",
+      "title": "Device Mapper storage driver (deprecated)",
+      "template": "templates/template.html"
+    },
+    {
       "name": "/",
-      "title": "index",
+      "title": "Docker Docs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/cli/docker/container/run/index",
+      "title": "docker container run",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/ai-governance/latest/operations/createPolicy/index",
+      "title": "Create policy",
       "template": "templates/template.html"
     }
   ]

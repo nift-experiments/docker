@@ -2,3 +2,8 @@
 .nift/public/
 node_modules/
 __pycache__/
+
+# Transient renderer/composition state and generated publication.
+.generated/
+.cache/
+public/

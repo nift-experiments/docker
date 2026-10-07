@@ -65,33 +65,24 @@ Changed-input scenarios: deterministic edits to 1/10/100 authored pages, shared 
 Compare source/template counts, shared abstractions, direct/transitive dependencies, JS bytes, full and changed build time/RSS, output size, migration effort, ease of human/agent editing and compromises. Neither architecture is required to win.
 
 # Current checkpoint
-C0 setup/investigation complete: final production pipeline succeeded; complete website/source archives, full Git history, logs, dependency/tool provenance and full 8,622-file inventory preserved. See investigation/BASELINE.md for measured evidence and execution status. C1 parity contract is frozen; see investigation/PARITY-CONTRACT.md and parity/contract.json. Complete local audits, 192 browser states and focused keyboard/control evidence are preserved. C2 direct native Markdown renderer line is stopped at a demonstrated parity limitation; see investigation/C2-MARKDOWN-GATE.md. Minimal native reproduction, standalone Goldmark workaround and exact raw-composition/dependency test are preserved. C2 shared chrome/page families remain incomplete; C3–C7 have not started. No migrated output or final benchmarks claimed.
-
-# Completed checkpoints
-Repositories created/cloned; Nift initialized; generated handover v0.0.8 inspected and preserved below plus investigation/generated-HANDOVER-v0.0.8.md. Nift 4.7.2 does not generate AGENTS.md here; project rules added manually. Upstream pinned and source architecture inspected. Production build procedure traced through deployment workflow, bake file, Dockerfile and releaser environment.
+C0 baseline and C1 parity contract complete. C2 bounded compatibility and raw-composition proof complete; see investigation/C2-ARCHITECTURE.md and c2 evidence. Eight representative routes compose successfully in both projects; five real Markdown fixtures and 40 browser states per project pass. C3–C7 remain and must proceed without approval pauses.
 
 # Remaining checkpoints
-- C1 completed: frozen complete reference and acceptance contract; full audit plus browser/control evidence.
-- C2: reconstruct shared chrome and representative page families; verify route/path/sigil handling and dependency fan-out.
-- C3: migrate full standard docs and guide corpus, preserving metadata and semantic authoring choices.
-- C4: CLI/API adapters, samples, glossary, special layouts and all ancillary outputs.
-- C5: interactions, search and responsive/accessibility parity; full route/asset/link audits.
-- C6: clean-checkout and changed-input correctness, reproducible full/changed benchmarks.
-- C7: architecture comparison and final evidence report, known compromises and maintainers' resume guide.
-Commit, validate, update handover and push at each bounded checkpoint. Do not proceed merely because representative pages look right.
+- C3: full docs/guide corpus and corpus-driven shortcode coverage.
+- C4: generated/special families, all ancillary outputs and fresh publication/search.
+- C5: whole-site interactions and route/content/metadata/asset parity.
+- C6: fresh checkout, changed-input correctness and uncontended repeated component/full-pipeline benchmarks.
+- C7: final architecture comparison and report.
+Commit and push each checkpoint independently; preserve distinct maintained-source models.
 
 # Known deviations
-No migration exists yet. Native baseline execution differs from the official Alpine/BuildKit environment; record this honestly. Browser fixtures and full route link validation belong to C1 and must be completed before claiming parity.
+C2 is a partial-site proof. The human project's home/CLI/API bodies are explicitly temporary generated-family scaffolding. Search and Markdown exports remain frozen reference fixtures pending C4. No final benchmark or whole-site migration completion is claimed. Native baseline differs from Alpine/BuildKit; retain investigation/BASELINE.md caveats.
 
-# Blockers
-C2 native Markdown parity blocker: the actual Docker table is emitted as literal rows and heading anchors are omitted by @markup; a renderer-profile argument is unsupported. A standalone Goldmark workaround and raw HTML/dependency composition pass bounded tests, but complete Docker render-hook/shortcode compatibility is not proven. Direct native docker rendering is stopped under the user limitation/report gate. See investigation/C2-MARKDOWN-GATE.md for the proposed external compiler architecture and decision scope. Native production baseline pipeline passed. Docker/BuildKit container reproduction remains unmeasured because Docker is not installed; native execution differences are recorded in investigation/BASELINE.md. No confirmed Nift blocker so far.
-
-# Nift limitations encountered
-Initialization emitted `Failed to create stream fd: Operation not permitted` under the restricted shell but returned success and built the starter. Verify builds outside the restricted shell if it interferes; do not change Nift. C2 demonstrates @markup table/anchor limitations and @input escaping of syntax-highlight spans. Nift raw emission with explicit dependencies works exactly and incrementally, so core changes are not proven necessary overall. A separate Goldmark compatibility compiler is a viable narrow workaround; full semantics still need reconstruction. See investigation/C2-MARKDOWN-GATE.md.
+# Blockers and Nift limitations
+No confirmed core blocker. Historical @markup tables/anchors and @input escaping limitations are documented in investigation/C2-MARKDOWN-GATE.md. The user approved standalone Goldmark/Chroma compatibility and the proven raw-emission path. Do not describe compatibility timings as native @markup performance or expand into a general Hugo implementation. Stop only for the user's real core/parity/architecture/methodology conditions.
 
 # Decisions and rationale
-The user explicitly required Markdown as maintained source in docker and pre-rendered HTML as maintained source in docker-agent on 7 October 2026. This is an experiment variable, not an incidental optimization. No migration has begun.
-Keep upstream and built reference material outside both migration working trees to prevent accidental source edits and benchmark contamination. Preserve generated Nift guidance; project-specific sections extend it. Keep a single pinned baseline for both architecture experiments. Build production with full Git history because enableGitInfo influences output metadata. Freeze complete output before choosing extraction strategy.
+Maintained Markdown/frontmatter in docker and maintained rendered HTML in docker-agent are intentional experiment variables. Nift composes raw HTML with explicit dependencies in both. Human conversion and compatibility/Chroma costs remain separately instrumented. No Nift modifications.
 
 # Exact commands to resume work
 ```sh

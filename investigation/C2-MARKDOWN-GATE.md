@@ -1,3 +1,5 @@
+> Historical investigation: the user approved the external Goldmark/Chroma architecture on 7 October 2026. See C2-ARCHITECTURE.md for the implemented bounded proof; no approval pause remains.
+
 # C2 native Markdown parity gate — incomplete checkpoint
 
 C1 is completed and pushed. C2 has bounded renderer/composition evidence, but shared-chrome/page-family migration is not complete. C3–C7 have not started. There are no final performance results or migrated corpus claims.

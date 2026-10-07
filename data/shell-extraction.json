@@ -1,0 +1,5 @@
+{
+  "shared_candidates": 459,
+  "shared_used": 47,
+  "rule": "Exact shared shell subtrees of at least 1024 characters in at least two distinct fixture documents; no Markdown body extraction as shared chrome."
+}

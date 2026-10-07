@@ -14,3 +14,5 @@ Read HANDOVER.md before substantial work. It contains project checkpoints and th
 - Benchmark equal output obligations, including assets, search, Markdown, metadata, redirects and feeds. Separate renderer-only measurements from complete publication pipelines.
 - Preserve Docker's Apache-2.0 license and attribution when copying reference material.
 - Do not send feedback, analytics events, or chat prompts to Docker services during automated validation. Use deterministic fixtures for remote behavior and report the limitation.
+
+- The user approved standalone Goldmark/Chroma Docker compatibility compilation for docker; docker-agent retains maintained HTML without Markdown in routine builds. Preserve separate component costs and never call compatibility timings native @markup performance. See investigation/C2-ARCHITECTURE.md.

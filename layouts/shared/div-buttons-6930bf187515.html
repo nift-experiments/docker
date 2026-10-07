@@ -1,0 +1,113 @@
+<div id=buttons class="flex min-w-0 flex-shrink-0 items-center justify-end"><div class="flex items-center gap-2"><div data-tooltip-wrapper class=relative><button x-data @click=$store.gordon.toggle() aria-label="Ask Gordon, AI assistant" aria-describedby=gordon-tooltip class="group shimmer flex cursor-pointer items-center gap-2 rounded-lg border border-blue-500 bg-blue-700 p-2 text-white transition-colors focus:ring focus:ring-blue-400 focus:outline-none">
+<span class="icon-svg group-hover:hidden"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M15.1329 9.83887C16.0755 9.95803 16.7429 10.8191 16.6241 11.7617L16.4786 12.915C16.3541 13.8995 15.5254 14.689 14.5411 14.5635 13.5522 14.4372 12.9407 13.4627 13.0655 12.4736L13.21 11.3311C13.3291 10.3882 14.19 9.71983 15.1329 9.83887z" fill="currentColor"/><path d="M8.7813 9.75293C9.72891 9.82425 10.4393 10.6501 10.3682 11.5977L10.2784 12.7939C10.2035 13.7885 9.41068 14.6231 8.41607 14.5498 7.42582 14.4766 6.77123 13.5361 6.84576 12.5459L6.93658 11.3398C7.0079 10.3922 7.83369 9.68175 8.7813 9.75293z" fill="currentColor"/><path d="M9.45806 6.98145C11.5069 6.88872 13.4159 6.87248 15.4336 6.94824 16.455 6.9866 16.8836 7.00573 17.3682 7.11914c1.917.44868 3.6173 2.21413 3.9942 4.14646C21.4571 11.7521 21.46 12.2718 21.46 13.4941 21.46 14.9264 21.4566 15.5405 21.3575 16.0371c-.4192 2.0994-2.0598 3.741-4.1592 4.1602C16.7016 20.2964 16.0878 20.2998 14.6553 20.2998H10.0811C8.71799 20.2998 8.13354 20.2968 7.66021 20.207 5.52066 19.801 3.84742 18.1268 3.44146 15.9873 3.35176 15.5141 3.34869 14.9297 3.34869 13.5674 3.34869 12.3454 3.35173 11.824 3.43658 11.3633c.36931-2.0041 2.03213-3.74481 4.01757-4.20412.4575-.10578.91728-.12855 2.00391-.17773zM17.3516 8.40332c-2.8674-.69671-5.8989-.65251-8.91307-.11035C7.43795 8.47297 6.93663 8.56368 6.43755 8.88184 6.0328 9.14005 5.61786 9.59152 5.39458 10.0166 5.01948 10.7313 5.01331 11.6205 4.94439 12.4062 4.80742 13.8649 4.73843 14.595 4.97271 15.0908 5.1886 15.5473 5.5117 15.8616 5.97369 16.0654 6.4755 16.2867 7.25812 16.1923 8.82232 16.0039 11.6796 15.6597 13.9776 15.7223 16.5342 16.0283 17.8763 16.189 18.5479 16.269 19.0274 16.0732 19.4599 15.8964 19.7926 15.6018 20.0196 15.1934 20.2708 14.7405 20.2715 14.0947 20.2715 12.8057 20.2715 11.9806 20.3631 11.0803 20.0352 10.3037 19.8562 9.88029 19.4279 9.33546 19.0586 9.06152 18.5706 8.69964 18.1638 8.60067 17.3516 8.40332z" fill="currentColor"/><path d="M2.86333 10.7393C2.79805 10.9707 2.7531 11.2053 2.7149 11.4424 2.64844 11.9339 2.64849 12.5225 2.64849 13.5674L2.65044 14.4492C2.65537 15.2237 2.67513 15.7025 2.75396 16.1182 2.82942 16.4813 2.92441 16.8374 3.05962 17.1836 3.05835 17.1803 3.05698 17.1771 3.05572 17.1738 1.93813 17.1766 1.02699 16.2761 1.01861 15.1572L1.00005 12.6875C.992369 11.6362 1.8232 10.7782 2.86333 10.7393z" fill="currentColor"/><path d="M21.8536 10.4102C23.1521 10.6254 24.0736 11.8198 23.9278 13.1475l-.169 1.5361C23.6379 15.7836 22.8507 16.646 21.8438 16.9199 21.9017 16.7485 21.9536 16.5736 21.9961 16.3955 22.1373 15.7443 22.1538 15.0859 22.1583 14.4209L22.1602 13.4941C22.1602 12.2987 22.1605 11.7 22.0499 11.1318 22.0023 10.8879 21.9358 10.6469 21.8536 10.4102z" fill="currentColor"/><path d="M13.5411 6.2041C13.2066 6.20089 12.873 6.20049 12.5391 6.20215 12.5873 5.59323 12.6651 5.08294 12.7676 4.63965c-.577-.34002-.9658-.96639-.9658-1.68457C11.8021 1.87531 12.678 1.00005 13.7579 1 14.8377 1.00001 15.7127 1.87528 15.7129 2.95508 15.7129 4.04353 14.8176 4.92299 13.7325 4.90918 13.6498 5.27685 13.5841 5.70041 13.5411 6.2041z" fill="currentColor"/></svg>
+</span><span class="icon-svg hidden group-hover:block"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M9.45806 6.98145C11.5069 6.88872 13.4159 6.87248 15.4336 6.94824 16.455 6.9866 16.8836 7.00573 17.3682 7.11914c1.917.44868 3.6173 2.21413 3.9942 4.14646C21.4571 11.7521 21.46 12.2718 21.46 13.4941 21.46 14.9264 21.4566 15.5405 21.3575 16.0371c-.4192 2.0994-2.0598 3.741-4.1592 4.1602C16.7016 20.2964 16.0878 20.2998 14.6553 20.2998H10.0811C8.71799 20.2998 8.13354 20.2968 7.66021 20.207 5.52066 19.801 3.84742 18.1268 3.44146 15.9873 3.35176 15.5141 3.34869 14.9297 3.34869 13.5674 3.34869 12.3454 3.35173 11.824 3.43658 11.3633c.36931-2.0041 2.03213-3.74481 4.01757-4.20412.4575-.10578.91728-.12855 2.00391-.17773zM17.3516 8.40332c-2.8674-.69671-5.8989-.65251-8.91307-.11035C7.43795 8.47297 6.93663 8.56368 6.43755 8.88184 6.0328 9.14005 5.61786 9.59152 5.39458 10.0166 5.01948 10.7313 5.01331 11.6205 4.94439 12.4062 4.80742 13.8649 4.73843 14.595 4.97271 15.0908 5.1886 15.5473 5.5117 15.8616 5.97369 16.0654 6.4755 16.2867 7.25812 16.1923 8.82232 16.0039 11.6796 15.6597 13.9776 15.7223 16.5342 16.0283 17.8763 16.189 18.5479 16.269 19.0274 16.0732 19.4599 15.8964 19.7926 15.6018 20.0196 15.1934 20.2708 14.7405 20.2715 14.0947 20.2715 12.8057 20.2715 11.9806 20.3631 11.0803 20.0352 10.3037 19.8562 9.88029 19.4279 9.33546 19.0586 9.06152 18.5706 8.69964 18.1638 8.60067 17.3516 8.40332z" fill="currentColor"/><path d="M2.86333 10.7393C2.79805 10.9707 2.7531 11.2053 2.7149 11.4424 2.64844 11.9339 2.64849 12.5225 2.64849 13.5674L2.65044 14.4492C2.65537 15.2237 2.67513 15.7025 2.75396 16.1182 2.82942 16.4813 2.92441 16.8374 3.05962 17.1836 3.05835 17.1803 3.05698 17.1771 3.05572 17.1738 1.93813 17.1766 1.02699 16.2761 1.01861 15.1572L1.00005 12.6875C.992369 11.6362 1.8232 10.7782 2.86333 10.7393z" fill="currentColor"/><path d="M21.8536 10.4102C23.1521 10.6254 24.0736 11.8198 23.9278 13.1475l-.169 1.5361C23.6379 15.7836 22.8507 16.646 21.8438 16.9199 21.9017 16.7485 21.9536 16.5736 21.9961 16.3955 22.1373 15.7443 22.1538 15.0859 22.1583 14.4209L22.1602 13.4941C22.1602 12.2987 22.1605 11.7 22.0499 11.1318 22.0023 10.8879 21.9358 10.6469 21.8536 10.4102z" fill="currentColor"/><path d="M13.5411 6.2041C13.2066 6.20089 12.873 6.20049 12.5391 6.20215 12.5873 5.59323 12.6651 5.08294 12.7676 4.63965c-.577-.34002-.9658-.96639-.9658-1.68457C11.8021 1.87531 12.678 1.00005 13.7579 1 14.8377 1.00001 15.7127 1.87528 15.7129 2.95508 15.7129 4.04353 14.8176 4.92299 13.7325 4.90918 13.6498 5.27685 13.5841 5.70041 13.5411 6.2041z" fill="currentColor"/><path d="M8 12C8.33333 11.3334 9.5 11 10.5 12" stroke="currentColor" stroke-linecap="round"/><path d="M16.5 12C16.1667 11.3334 15 11 14 12" stroke="currentColor" stroke-linecap="round"/></svg>
+</span><span class="hidden px-1 lg:inline">Gordon</span></button><div id=gordon-tooltip data-tooltip-body class="absolute top-0 left-0 hidden rounded-sm bg-gray-900 p-2 text-sm whitespace-nowrap text-white" role=tooltip>Gordon, your AI assistant for Docker docs<div data-tooltip-arrow class="absolute h-2 w-2 rotate-45 bg-gray-900"></div></div></div><div id=search-bar-container><div id=search-bar class="h-full relative flex items-center overflow-visible"><button type=button aria-label=Search class="cursor-pointer flex items-center gap-2 p-2 rounded-lg bg-blue-700 border border-blue-500 text-white transition-colors focus:outline-none focus:ring focus:ring-blue-400 hover:bg-blue-800 hover:border-blue-400" id=search-modal-trigger>
+<span class=icon-svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"><path fill-rule="evenodd" d="M10.5 3.75a6.75 6.75.0 100 13.5 6.75 6.75.0 000-13.5zM2.25 10.5a8.25 8.25.0 1114.59 5.28l4.69 4.69a.75.75.0 11-1.06 1.06l-4.69-4.69A8.25 8.25.0 012.25 10.5z" clip-rule="evenodd"/></svg>
+</span><span class="hidden px-1 lg:inline">Search</span></button></div><script type=module>
+  
+  await import('/pagefind/pagefind-component-ui.js');
+  const { configureInstance, getInstanceManager } = window.PagefindComponents;
+
+  configureInstance('default', {
+    bundlePath: '/pagefind/',
+    ranking: {
+      termFrequency: 0.0,
+      termSimilarity: 2.0,
+      pageLength: 0.0,
+      termSaturation: 1.0,
+      metaWeights: {
+        title: 10.0,
+        description: 4.0,
+        keywords: 6.0
+      }
+    }
+  });
+
+  
+  document.body.insertAdjacentHTML('beforeend', `
+    <pagefind-modal id="search-modal" reset-on-close>
+      <pagefind-modal-header>
+        <pagefind-input placeholder="Search documentation…"></pagefind-input>
+      </pagefind-modal-header>
+      <pagefind-modal-body>
+        <p id="search-placeholder" class="text-center text-gray-500 dark:text-gray-400 py-8">
+          Start typing to search the documentation
+        </p>
+        <pagefind-summary></pagefind-summary>
+        <pagefind-results>
+          \x3Cscript type="text/pagefind-template">
+            <li class="py-3 border-b border-gray-200 dark:border-gray-700 last:border-b-0">
+              \u007b\u007b#if meta.breadcrumbs\u007d\u007d
+                <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">\u007b\u007b meta.breadcrumbs \u007d\u007d</p>
+              \u007b\u007b\/if\u007d\u007d
+              <p class="font-medium">
+                <a class="text-blue-600 dark:text-blue-400 hover:underline" href="\u007b\u007b meta.url | default(url) | safeUrl \u007d\u007d">
+                  \u007b\u007b meta.title \u007d\u007d
+                </a>
+              </p>
+              \u007b\u007b#if excerpt\u007d\u007d
+                <p class="text-gray-600 dark:text-gray-400 mt-1 text-sm">\u007b\u007b\u002b excerpt \u002b\u007d\u007d</p>
+              \u007b\u007b\/if\u007d\u007d
+              \u007b\u007b#if sub_results\u007d\u007d
+                <ul class="mt-3 ml-4 flex flex-wrap gap-2">
+                  \u007b\u007b#each sub_results as sub\u007d\u007d
+                    \u007b\u007b#if (lt @index 5)\u007d\u007d
+                      <li class="text-sm">
+                        <a class="text-blue-600 dark:text-blue-400 hover:underline" href="\u007b\u007b sub.url | safeUrl \u007d\u007d">
+                          \u007b\u007b sub.title \u007d\u007d
+                        </a>
+                      </li>
+                    \u007b\u007b\/if\u007d\u007d
+                  \u007b\u007b\/each\u007d\u007d
+                </ul>
+              \u007b\u007b\/if\u007d\u007d
+            </li>
+          \x3C/script>
+        </pagefind-results>
+      </pagefind-modal-body>
+    </pagefind-modal>
+  `);
+
+  const modal = document.getElementById('search-modal');
+  const placeholder = document.getElementById('search-placeholder');
+
+  
+  const instance = getInstanceManager().getInstance('default');
+  instance.on('search', (term) => {
+    placeholder.hidden = !!term;
+  });
+  instance.on('results', () => {
+    placeholder.hidden = !!instance.searchTerm;
+  });
+
+  
+  const openModal = () => modal.open?.();
+  document.getElementById('search-modal-trigger').addEventListener('click', openModal);
+  document.addEventListener('keydown', (e) => {
+    if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+      e.preventDefault();
+      openModal();
+    }
+  });
+</script></div><button aria-label="Theme switch" id=theme-switch class="cursor-pointer rounded-lg border border-blue-500 bg-blue-700 p-2 transition-colors hover:border-blue-400 hover:bg-blue-800 focus:ring focus:ring-blue-400 focus:outline-none" x-data="{ theme: localStorage.getItem('theme-preference') || 'auto' }" x-init="
+            let mql = window.matchMedia('(prefers-color-scheme: dark)');
+            function applyTheme(val) {
+              if (val === 'auto') {
+                localStorage.removeItem('theme-preference');
+                document.firstElementChild.className = mql.matches ? 'dark' : 'light';
+              } else {
+                localStorage.setItem('theme-preference', val);
+                document.firstElementChild.className = val;
+              }
+              document.firstElementChild.dataset.themePreference = val;
+            }
+            let handler = e => { if (theme === 'auto') document.firstElementChild.className = e.matches ? 'dark' : 'light'; };
+            mql.addEventListener('change', handler);
+            $watch('theme', val => applyTheme(val));
+            return () => mql.removeEventListener('change', handler);
+          " @click="theme = (theme === 'light' ? 'dark' : theme === 'dark' ? 'auto' : 'light')">
+<span class="theme-icon-sun icon-svg" x-show="theme === 'light'"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none"><path d="M12 2V4m0 16v2M4 12H2M6.31412 6.31412 4.8999 4.8999m12.786 1.41422L19.1001 4.8999M6.31412 17.69 4.8999 19.1042M17.6859 17.69l1.4142 1.4142M22 12H20m-3 0c0 2.7614-2.2386 5-5 5-2.76142.0-5-2.2386-5-5 0-2.76142 2.23858-5 5-5 2.7614.0 5 2.23858 5 5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+<rect width=24 height=24 fill=currentColor fill-opacity=1></g></svg>
+</span><span class="theme-icon-moon icon-svg" x-show="theme === 'dark'"><svg width="1em" height="1em" viewBox="0 0 24 24" fill="none"><path d="M22 15.8442C20.6866 16.4382 19.2286 16.7688 17.6935 16.7688c-5.7782.0-10.46234-4.6841-10.46234-10.46226.0-1.53519.33064-2.99314.92461-4.30654C4.52576 3.64163 2 7.2947 2 11.5377 2 17.3159 6.68414 22 12.4623 22c4.243.0 7.8961-2.5258 9.5377-6.1558z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+<rect width=24 height=24 fill=currentColor fill-opacity=1></g></svg>
+</span><span class="theme-icon-auto icon-svg" x-show="theme === 'auto'"><svg viewBox="0 0 24 24" fill="none"><path fill="none" d="M19 17.4598C17.8179 17.9944 16.5058 18.292 15.1241 18.292c-5.20034.0-9.41606-4.2158-9.41606-9.41612C5.70804 7.49422 6.00562 6.18206 6.5402 5 3.27319 6.47747 1 9.76523 1 13.5839 1 18.7843 5.21572 23 10.4161 23c3.8187.0 7.1064-2.2732 8.5839-5.5402z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path fill="none" d="M19.4888 4.61889 18.1877 5.91996M12.9834 3.7265v-1.84m7.3975 9.2375h1.84M9.73068 7.87158c1.79642-1.79642 4.70902-1.79642 6.50542.0 1.7964 1.79641 1.7964 4.70892.0 6.50542" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></button></div></div>

@@ -1,6 +1,6 @@
 {
   "config": {
-    "content-dir": "content/",
+    "content-dir": ".generated/content/",
     "content-ext": ".html",
     "output-dir": "public/",
     "output-ext": ".html",

@@ -1,0 +1,199 @@
+<div style=scroll-behavior:smooth x-data x-init="$nextTick(() => {
+          const container = $el; // The div with overflow
+          const item = document.getElementById('sidebar-current-page')
+          if (item) {
+              const containerTop = container.scrollTop;
+              const containerBottom = containerTop + container.clientHeight;
+
+              const itemTop = item.offsetTop - container.offsetTop;
+              const itemBottom = itemTop + item.offsetHeight;
+
+              // Scroll only if the item is out of view
+              if (itemBottom > containerBottom - 200) {
+                  container.scrollTop = itemTop - (container.clientHeight / 2 - item.offsetHeight / 2);
+              }
+          }
+      })" class="bg-background-toc dark:bg-background-toc fixed top-0 z-40 hidden h-screen w-full flex-none overflow-x-hidden overflow-y-auto md:sticky md:top-16 md:z-auto md:block md:h-[calc(100vh-64px)] md:w-[320px]" :class="{ 'hidden': ! $store.showSidebar }"><div class="fixed bg-black/50 md:hidden" x-show=$store.showSidebar @click="openSidebar = false" x-transition.opacity></div><div class="bg-background-toc dark:bg-background-toc z-50 w-full p-3 md:block md:w-[300px]"><button class="my-4 md:hidden" @click="$store.showSidebar = false">
+<span class=icon-svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"><path fill-rule="evenodd" d="M11.03 3.97a.75.75.0 010 1.06l-6.22 6.22H21a.75.75.0 010 1.5H4.81l6.22 6.22a.75.75.0 11-1.06 1.06l-7.5-7.5a.75.75.0 010-1.06l7.5-7.5a.75.75.0 011.06.0z" clip-rule="evenodd"/></svg>
+</span>Back</button><div class="px-2 py-4 md:hidden text-gray-700 dark:text-gray-200 card" x-data="{ expanded: false }"><div class="flex w-full items-center justify-between"><a class="hover:text-blue dark:hover:text-blue" href=https://docs.docker.com/reference/><span class="icon-sm icon-svg pr-2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"><path fill-rule="evenodd" d="M2.25 6a3 3 0 013-3h13.5a3 3 0 013 3v12a3 3 0 01-3 3H5.25a3 3 0 01-3-3V6zm3.97.97a.75.75.0 011.06.0l2.25 2.25a.75.75.0 010 1.06l-2.25 2.25a.75.75.0 01-1.06-1.06l1.72-1.72-1.72-1.72a.75.75.0 010-1.06zm4.28 4.28a.75.75.0 000 1.5h3a.75.75.0 000-1.5h-3z" clip-rule="evenodd"/></svg>
+</span>Reference</a>
+<button @click="expanded = !expanded" class="rounded-sm px-1 hover:bg-gray-200 hover:dark:bg-gray-800">
+<span x-show="! expanded" class="icon-svg icon-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"><path fill-rule="evenodd" d="M12.53 16.28a.75.75.0 01-1.06.0l-7.5-7.5a.75.75.0 011.06-1.06L12 14.69l6.97-6.97a.75.75.0 111.06 1.06l-7.5 7.5z" clip-rule="evenodd"/></svg>
+</span><span x-cloak x-show=expanded class="icon-svg icon-sm"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"><path fill-rule="evenodd" d="M11.47 7.72a.75.75.0 011.06.0l7.5 7.5a.75.75.0 11-1.06 1.06L12 9.31l-6.97 6.97a.75.75.0 01-1.06-1.06l7.5-7.5z" clip-rule="evenodd"/></svg></span></button></div><ul x-cloak x-show=expanded class="space-y-4 pt-4"><li><a class="hover:text-blue dark:hover:text-blue" href=/get-started/>Get started</a></li><li><a class="hover:text-blue dark:hover:text-blue" href=/guides/><span class="icon-sm icon-svg pr-2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"><path d="M11.25 4.533A9.707 9.707.0 006 3a9.735 9.735.0 00-3.25.555.75.75.0 00-.5.707v14.25a.75.75.0 001 .707A8.237 8.237.0 016 18.75c1.995.0 3.823.707 5.25 1.886V4.533zm1.5 16.103A8.214 8.214.0 0118 18.75c.966.0 1.89.166 2.75.47a.75.75.0 001-.708V4.262a.75.75.0 00-.5-.707A9.735 9.735.0 0018 3a9.707 9.707.0 00-5.25 1.533v16.103z"/></svg>
+</span>Guides</a></li><li><a class="hover:text-blue dark:hover:text-blue" href=/manuals/><span class="icon-sm icon-svg pr-2"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"><path fill-rule="evenodd" d="M5.625 1.5c-1.036.0-1.875.84-1.875 1.875v17.25c0 1.035.84 1.875 1.875 1.875h12.75c1.035.0 1.875-.84 1.875-1.875V12.75A3.75 3.75.0 0016.5 9h-1.875A1.875 1.875.0 0112.75 7.125V5.25A3.75 3.75.0 009 1.5H5.625zM7.5 15a.75.75.0 01.75-.75h7.5a.75.75.0 010 1.5h-7.5A.75.75.0 017.5 15zm.75 2.25a.75.75.0 000 1.5H12a.75.75.0 000-1.5H8.25z" clip-rule="evenodd"/><path d="M12.971 1.816A5.23 5.23.0 0114.25 5.25v1.875c0 .207.168.375.375.375H16.5a5.23 5.23.0 013.434 1.279 9.768 9.768.0 00-6.963-6.963z"/></svg>
+</span>Manuals</a></li></ul></div><nav class=api-nav aria-label="API navigation"><a class=api-nav-back href=/reference/api/>← API catalog</a><h2>AI Governance</h2><p class=api-nav-version>API 1</p><a href=/reference/api/ai-governance/latest/>Overview</a><h3>Policies</h3><a class=api-nav-operation href=/reference/api/ai-governance/latest/operations/listPolicies/><small data-method=GET>GET</small><span>List policies</span></a>
+<a class=api-nav-operation href=/reference/api/ai-governance/latest/operations/createPolicy/ aria-current=page id=sidebar-current-page><small data-method=POST>POST</small><span>Create policy</span></a>
+<a class=api-nav-operation href=/reference/api/ai-governance/latest/operations/getPolicy/><small data-method=GET>GET</small><span>Get policy</span></a>
+<a class=api-nav-operation href=/reference/api/ai-governance/latest/operations/deletePolicy/><small data-method=DELETE>DELETE</small><span>Delete policy</span></a>
+<a class=api-nav-operation href=/reference/api/ai-governance/latest/operations/updatePolicy/><small data-method=PATCH>PATCH</small><span>Update policy</span></a><h3>Rules</h3><a class=api-nav-operation href=/reference/api/ai-governance/latest/operations/createRule/><small data-method=POST>POST</small><span>Create rule</span></a>
+<a class=api-nav-operation href=/reference/api/ai-governance/latest/operations/deleteRule/><small data-method=DELETE>DELETE</small><span>Delete rule</span></a>
+<a class=api-nav-operation href=/reference/api/ai-governance/latest/operations/updateRule/><small data-method=PATCH>PATCH</small><span>Update rule</span></a></nav></div></div><div data-pagefind-body class="dark:bg-background-dark w-full min-w-0 bg-white p-8"><meta data-pagefind-meta="description:POST /orgs/{org_name}/governance/policies — AI Governance API 1."><meta data-pagefind-meta="breadcrumbs:Reference / API reference / Docker AI Governance API / Latest"><article class=api-reference data-api-view=operation><nav class=api-crumbs aria-label="API breadcrumb"><a href=/reference/api/>APIs</a> /
+<a href=/reference/api/ai-governance/latest/>AI Governance</a> /
+<span>API 1</span></nav><div class=api-tools><label>API version
+<select data-api-version><option value=/reference/api/ai-governance/latest/ selected>1</option></select></label><a href=https://docs.docker.com/ai/sandboxes/governance/>Product manual</a><a href=/reference/api/ai-governance/api.yaml>Download OpenAPI specification</a><a href=https://docs.docker.com/reference/api/ai-governance/latest/operations/createPolicy.md>Markdown</a></div><meta data-pagefind-meta="title:Create policy — AI Governance API 1"><h1>Create policy</h1><div class=api-signature><span class=api-method data-method=POST>POST</span><code><wbr>/orgs<wbr>/{org_name}<wbr>/governance<wbr>/policies</code></div><div class=api-operation-grid><div class=api-reading><div class="api-description prose dark:prose-invert">Creates a new policy with an empty rule set. Rules are added separately via the rules sub-resource.</div><h2>Connection and access</h2><p><a href=/reference/api/ai-governance/latest/#authentication>API connection and authentication guidance</a></p><p><code>https://hub.docker.com/v2</code></p><p>Use one of these alternatives. Requirements within an
+alternative apply together.</p><ul><li><code>bearerAuth</code></li></ul><h2>Parameters</h2><section class=api-field data-api-parameter=org_name><h3><code>org_name</code>
+<small>path</small>
+<small class=api-required>Required</small></h3><div class="prose dark:prose-invert">Docker Hub organization name.</div><p class=api-type>Type:
+<code>string</code></p><details class=api-constraints><summary>All schema constraints and annotations</summary><pre><code>{
+  "type": "string"
+}</code></pre></details></section><h2>Request and responses</h2><label>Media type
+<select data-api-media-select><option value>All media types</option><option value=application/json>application/json</option></select></label><section class=api-variant data-api-variant=/paths/~1orgs~1{org_name}~1governance~1policies/post/requestBody/content/application~1json data-api-media=application/json><h3><span>Request</span></h3><div class="prose dark:prose-invert">Policy name and optional scope.</div><p class=api-media><code>application/json</code></p><p class=api-ref>Schema:
+<a href=/reference/api/ai-governance/latest/schemas/CreatePolicyRequest/><code>CreatePolicyRequest</code></a></p><div data-api-examples><div data-api-example=0><h4>default</h4><pre><code>{
+  &#34;name&#34;: &#34;Security Research — hardened&#34;,
+  &#34;scope&#34;: {
+    &#34;teams&#34;: [
+      &#34;d290f1ee-6c54-4b01-90e6-d701748f0851&#34;
+    ]
+  }
+}</code></pre></div></div></section><section class=api-variant data-api-variant=/paths/~1orgs~1{org_name}~1governance~1policies/post/responses/201/content/application~1json data-api-media=application/json><h3><span>Response</span>
+<code class=api-status>201</code></h3><div class="prose dark:prose-invert">Policy created. Returns the new policy without its rule set.</div><p class=api-media><code>application/json</code></p><p class=api-ref>Schema:
+<a href=/reference/api/ai-governance/latest/schemas/Policy/><code>Policy</code></a></p><div data-api-examples><div data-api-example=0><h4>default</h4><pre><code>{
+  &#34;created_at&#34;: &#34;2026-04-22T00:00:00Z&#34;,
+  &#34;id&#34;: &#34;pol_06evsmp24r1pg71cm8500546pkbn&#34;,
+  &#34;name&#34;: &#34;Security Research — hardened&#34;,
+  &#34;org&#34;: &#34;my-org&#34;,
+  &#34;scope&#34;: {
+    &#34;teams&#34;: [
+      &#34;d290f1ee-6c54-4b01-90e6-d701748f0851&#34;
+    ]
+  },
+  &#34;updated_at&#34;: &#34;2026-04-22T00:00:00Z&#34;
+}</code></pre></div></div></section><section class=api-variant data-api-variant=/paths/~1orgs~1{org_name}~1governance~1policies/post/responses/400/content/application~1json data-api-media=application/json><h3><span>Response</span>
+<code class=api-status>400</code></h3><div class="prose dark:prose-invert">Bad request</div><p class=api-media><code>application/json</code></p><p class=api-ref>Schema:
+<a href=/reference/api/ai-governance/latest/schemas/Error/><code>Error</code></a></p><div data-api-examples><div data-api-example=0><h4>default</h4><pre><code>{
+  &#34;error&#34;: {
+    &#34;code&#34;: &#34;invalid_argument&#34;,
+    &#34;message&#34;: &#34;name is required&#34;
+  }
+}</code></pre></div></div></section><section class=api-variant data-api-variant=/paths/~1orgs~1{org_name}~1governance~1policies/post/responses/401/content/application~1json data-api-media=application/json><h3><span>Response</span>
+<code class=api-status>401</code></h3><div class="prose dark:prose-invert">Missing or invalid credentials</div><p class=api-media><code>application/json</code></p><p class=api-ref>Schema:
+<a href=/reference/api/ai-governance/latest/schemas/Error/><code>Error</code></a></p><div data-api-examples><div data-api-example=0><h4>default</h4><pre><code>{
+  &#34;error&#34;: {
+    &#34;code&#34;: &#34;unauthenticated&#34;,
+    &#34;message&#34;: &#34;unauthenticated&#34;
+  }
+}</code></pre></div></div></section><section class=api-variant data-api-variant=/paths/~1orgs~1{org_name}~1governance~1policies/post/responses/403/content/application~1json data-api-media=application/json><h3><span>Response</span>
+<code class=api-status>403</code></h3><div class="prose dark:prose-invert">Caller lacks the required permission for this org, the org is not entitled to use governance (<code>permission_denied</code>), or a creation limit has been reached (<code>limit_exceeded</code>): the org already has the maximum number of policies, or the policy already has the maximum number of rules.</div><p class=api-media><code>application/json</code></p><p class=api-ref>Schema:
+<a href=/reference/api/ai-governance/latest/schemas/Error/><code>Error</code></a></p><div data-api-examples><label>Example
+<select data-api-example-select><option value=0>limit_exceeded</option><option value=1>permission_denied</option></select></label><div data-api-example=0><h4>limit_exceeded</h4><pre><code>{
+  &#34;error&#34;: {
+    &#34;code&#34;: &#34;limit_exceeded&#34;,
+    &#34;message&#34;: &#34;organization has reached the maximum of 100 policies&#34;
+  }
+}</code></pre></div><div data-api-example=1><h4>permission_denied</h4><pre><code>{
+  &#34;error&#34;: {
+    &#34;code&#34;: &#34;permission_denied&#34;,
+    &#34;message&#34;: &#34;permission denied&#34;
+  }
+}</code></pre></div></div></section><section class=api-variant data-api-variant=/paths/~1orgs~1{org_name}~1governance~1policies/post/responses/404/content/application~1json data-api-media=application/json><h3><span>Response</span>
+<code class=api-status>404</code></h3><div class="prose dark:prose-invert">Not found</div><p class=api-media><code>application/json</code></p><p class=api-ref>Schema:
+<a href=/reference/api/ai-governance/latest/schemas/Error/><code>Error</code></a></p><div data-api-examples><div data-api-example=0><h4>default</h4><pre><code>{
+  &#34;error&#34;: {
+    &#34;code&#34;: &#34;not_found&#34;,
+    &#34;message&#34;: &#34;policy not found&#34;
+  }
+}</code></pre></div></div></section><section class=api-variant data-api-variant=/paths/~1orgs~1{org_name}~1governance~1policies/post/responses/409/content/application~1json data-api-media=application/json><h3><span>Response</span>
+<code class=api-status>409</code></h3><div class="prose dark:prose-invert">Conflict</div><p class=api-media><code>application/json</code></p><p class=api-ref>Schema:
+<a href=/reference/api/ai-governance/latest/schemas/Error/><code>Error</code></a></p><div data-api-examples><div data-api-example=0><h4>default</h4><pre><code>{
+  &#34;error&#34;: {
+    &#34;code&#34;: &#34;conflict&#34;,
+    &#34;message&#34;: &#34;policy name already in use&#34;
+  }
+}</code></pre></div></div></section><section class=api-variant data-api-variant=/paths/~1orgs~1{org_name}~1governance~1policies/post/responses/500/content/application~1json data-api-media=application/json><h3><span>Response</span>
+<code class=api-status>500</code></h3><div class="prose dark:prose-invert">Internal server error</div><p class=api-media><code>application/json</code></p><p class=api-ref>Schema:
+<a href=/reference/api/ai-governance/latest/schemas/Error/><code>Error</code></a></p><div data-api-examples><div data-api-example=0><h4>default</h4><pre><code>{
+  &#34;error&#34;: {
+    &#34;code&#34;: &#34;internal&#34;,
+    &#34;message&#34;: &#34;internal error&#34;
+  }
+}</code></pre></div></div></section><h2>Referenced schemas</h2><p><a href=/reference/api/ai-governance/latest/schemas/CreatePolicyRequest/>#/components/schemas/CreatePolicyRequest</a></p><p><a href=/reference/api/ai-governance/latest/schemas/Policy/>#/components/schemas/Policy</a></p><details><summary>Complete operation contract</summary><pre><code>{
+  "description": "Creates a new policy with an empty rule set. Rules are added separately via the rules sub-resource.\n",
+  "operationId": "createPolicy",
+  "requestBody": {
+    "content": {
+      "application/json": {
+        "examples": {
+          "default": {
+            "value": {
+              "name": "Security Research — hardened",
+              "scope": {
+                "teams": [
+                  "d290f1ee-6c54-4b01-90e6-d701748f0851"
+                ]
+              }
+            }
+          }
+        },
+        "schema": {
+          "$ref": "#/components/schemas/CreatePolicyRequest"
+        }
+      }
+    },
+    "description": "Policy name and optional scope.",
+    "required": true
+  },
+  "responses": {
+    "201": {
+      "content": {
+        "application/json": {
+          "examples": {
+            "default": {
+              "value": {
+                "created_at": "2026-04-22T00:00:00Z",
+                "id": "pol_06evsmp24r1pg71cm8500546pkbn",
+                "name": "Security Research — hardened",
+                "org": "my-org",
+                "scope": {
+                  "teams": [
+                    "d290f1ee-6c54-4b01-90e6-d701748f0851"
+                  ]
+                },
+                "updated_at": "2026-04-22T00:00:00Z"
+              }
+            }
+          },
+          "schema": {
+            "$ref": "#/components/schemas/Policy"
+          }
+        }
+      },
+      "description": "Policy created. Returns the new policy without its rule set."
+    },
+    "400": {
+      "$ref": "#/components/responses/InvalidArgument"
+    },
+    "401": {
+      "$ref": "#/components/responses/Unauthenticated"
+    },
+    "403": {
+      "$ref": "#/components/responses/Forbidden"
+    },
+    "404": {
+      "$ref": "#/components/responses/NotFound"
+    },
+    "409": {
+      "$ref": "#/components/responses/Conflict"
+    },
+    "500": {
+      "$ref": "#/components/responses/InternalError"
+    }
+  },
+  "summary": "Create policy",
+  "tags": [
+    "policies"
+  ]
+}</code></pre></details></div><aside class=api-request><div class=api-request-heading><h2>Example request</h2><span>Shell</span></div><p>Replace placeholders and supply the required credentials or
+request body.</p><pre><code data-api-copy-source>curl \
+  --request POST \
+  --header &#34;Authorization: Bearer ${TOKEN}&#34; \
+  --header &#39;Accept: application/json&#39; \
+  --header &#39;Content-Type: application/json&#39; \
+  --data-raw &#39;{
+  &#34;name&#34;: &#34;Security Research — hardened&#34;,
+  &#34;scope&#34;: {
+    &#34;teams&#34;: [
+      &#34;d290f1ee-6c54-4b01-90e6-d701748f0851&#34;
+    ]
+  }
+}&#39; \
+  &#39;https://hub.docker.com/v2/orgs/&lt;ORG_NAME&gt;/governance/policies&#39;</code></pre><button type=button data-api-copy>Copy request</button></aside></div></article></div>

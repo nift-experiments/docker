@@ -5,3 +5,8 @@ public/index.html -whitespace
 # Verbatim upstream excerpt and tool build-information output.
 investigation/markdown-probe/docker-table.md -whitespace
 investigation/markdown-probe/results/goldmark-toolchain.log -whitespace
+
+# Preserve exact upstream Markdown, extracted HTML and published asset bytes.
+authored/** -whitespace
+layouts/** -whitespace
+static/** -whitespace
