@@ -1,0 +1,120 @@
+{
+  "warm": {
+    "hugo": {
+      "samples": 5,
+      "median_s": 29.122733725933358,
+      "min_s": 27.742030546069145,
+      "max_s": 30.551731670973822,
+      "median_peak_rss_kib": 1569556
+    },
+    "docker": {
+      "samples": 5,
+      "median_s": 61.523862169124186,
+      "min_s": 60.24932717718184,
+      "max_s": 61.61981793795712,
+      "median_peak_rss_kib": 1083668
+    },
+    "docker-agent": {
+      "samples": 5,
+      "median_s": 30.267645868007094,
+      "min_s": 28.263651939108968,
+      "max_s": 35.753886624006554,
+      "median_peak_rss_kib": 1015964
+    }
+  },
+  "fresh": {
+    "hugo": {
+      "median_s": 34.463265436002985,
+      "min_s": 31.276330903870985,
+      "max_s": 38.18701543100178
+    },
+    "docker": {
+      "median_s": 66.6563807609491,
+      "min_s": 64.70645330799744,
+      "max_s": 87.11697106994689
+    },
+    "docker-agent": {
+      "median_s": 30.033802103018388,
+      "min_s": 29.46351432404481,
+      "max_s": 30.2497013930697
+    }
+  },
+  "changed": {
+    "docker": {
+      "1-page": 8.549942129990086,
+      "10-pages": 8.101863259915262,
+      "100-pages": 12.532047166954726,
+      "layout": 47.44410996697843,
+      "navigation": 54.63362779491581,
+      "metadata": 71.29789103311487
+    },
+    "docker-agent": {
+      "1-page": 5.963667660020292,
+      "10-pages": 6.30653088609688,
+      "100-pages": 9.353451465955004,
+      "layout": 25.81730219698511,
+      "navigation": 26.792849455960095,
+      "metadata": 26.427678778069094
+    }
+  },
+  "hugo_changed": {
+    "1-page": 46.59907660307363,
+    "10-pages": 46.42046022415161,
+    "100-pages": 49.90285315993242,
+    "layout": 50.91183627396822,
+    "navigation": 40.37755411793478,
+    "metadata": 44.08071695105173
+  },
+  "components": {
+    "hugo": {
+      "hugo": 18.844460198888555,
+      "flatten-tests": 0.2573330239392817,
+      "flatten": 5.810020585078746,
+      "api-verify": 0.825823029037565,
+      "pagefind": 3.315866207005456
+    },
+    "docker": {
+      "nift_composition_s": 2.8139701951295137,
+      "asset_publication_s": 0.031732812989503145,
+      "total_s": 60.54594367695972,
+      "markdown_exports_s": 7.312880167970434,
+      "ancillary_s": 0.0946454550139606,
+      "search_s": 3.2965407948940992,
+      "compatibility_wall_s": 10.56057706105328,
+      "shell_prepare_s": 16.194586034,
+      "html_minification_s": 19.780754992971197,
+      "shortcode_expansion_s": 0.199406184,
+      "MarkdownParseNS": 0.416810019,
+      "MarkdownRenderNS": 0.16003314,
+      "HookNS": 1.020166367,
+      "ChromaNS": 1.605730046
+    },
+    "docker-agent": {
+      "nift_composition_s": 3.019812651211396,
+      "asset_publication_s": 0.03337353211827576,
+      "total_s": 29.534993340959772,
+      "markdown_exports_s": 7.267882113112137,
+      "ancillary_s": 0.09679737407714128,
+      "search_s": 3.535087704891339,
+      "composition_prepare_s": 15.619341911980882
+    }
+  },
+  "changed_rss_kib": {
+    "docker": {
+      "1-page": 402048,
+      "10-pages": 401584,
+      "100-pages": 401864,
+      "layout": 1101772,
+      "navigation": 1101392,
+      "metadata": 1111792
+    },
+    "docker-agent": {
+      "1-page": 401048,
+      "10-pages": 402232,
+      "100-pages": 401884,
+      "layout": 1014960,
+      "navigation": 1015736,
+      "metadata": 1002140
+    }
+  }
+}

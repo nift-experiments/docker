@@ -1,0 +1,932 @@
+[
+  {
+    "project": "hugo",
+    "case": "1-page",
+    "iteration": 1,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 35.450429380871356,
+    "peak_rss_kib": 1459188,
+    "components": {
+      "hugo": {
+        "wall_s": 22.060776949161664,
+        "peak_rss_kib": 1459188
+      },
+      "flatten-tests": {
+        "wall_s": 0.31978075206279755,
+        "peak_rss_kib": 66760
+      },
+      "flatten": {
+        "wall_s": 7.765627217013389,
+        "peak_rss_kib": 510832
+      },
+      "api-verify": {
+        "wall_s": 1.073456141864881,
+        "peak_rss_kib": 141724
+      },
+      "pagefind": {
+        "wall_s": 4.229472222970799,
+        "peak_rss_kib": 400536
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "1-page",
+    "iteration": 2,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 46.37794499285519,
+    "peak_rss_kib": 1478392,
+    "components": {
+      "hugo": {
+        "wall_s": 24.89065623912029,
+        "peak_rss_kib": 1478392
+      },
+      "flatten-tests": {
+        "wall_s": 0.33559318096376956,
+        "peak_rss_kib": 66728
+      },
+      "flatten": {
+        "wall_s": 15.775465918937698,
+        "peak_rss_kib": 499216
+      },
+      "api-verify": {
+        "wall_s": 1.094332312932238,
+        "peak_rss_kib": 140752
+      },
+      "pagefind": {
+        "wall_s": 4.280692215077579,
+        "peak_rss_kib": 400968
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "1-page",
+    "iteration": 3,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 49.13673608913086,
+    "peak_rss_kib": 1548900,
+    "components": {
+      "hugo": {
+        "wall_s": 26.41330465208739,
+        "peak_rss_kib": 1548900
+      },
+      "flatten-tests": {
+        "wall_s": 0.34392122202552855,
+        "peak_rss_kib": 66856
+      },
+      "flatten": {
+        "wall_s": 16.434651576913893,
+        "peak_rss_kib": 555368
+      },
+      "api-verify": {
+        "wall_s": 1.2225383140612394,
+        "peak_rss_kib": 140588
+      },
+      "pagefind": {
+        "wall_s": 4.721000427147374,
+        "peak_rss_kib": 400240
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "1-page",
+    "iteration": 4,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 48.699935293989256,
+    "peak_rss_kib": 1440752,
+    "components": {
+      "hugo": {
+        "wall_s": 27.124010055093095,
+        "peak_rss_kib": 1440752
+      },
+      "flatten-tests": {
+        "wall_s": 0.30736572993919253,
+        "peak_rss_kib": 65928
+      },
+      "flatten": {
+        "wall_s": 15.735967003041878,
+        "peak_rss_kib": 564692
+      },
+      "api-verify": {
+        "wall_s": 1.1002781910356134,
+        "peak_rss_kib": 140684
+      },
+      "pagefind": {
+        "wall_s": 4.4312165840528905,
+        "peak_rss_kib": 403564
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "1-page",
+    "iteration": 5,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 46.59907660307363,
+    "peak_rss_kib": 1411560,
+    "components": {
+      "hugo": {
+        "wall_s": 25.509666769998148,
+        "peak_rss_kib": 1411560
+      },
+      "flatten-tests": {
+        "wall_s": 0.3294828310608864,
+        "peak_rss_kib": 66680
+      },
+      "flatten": {
+        "wall_s": 15.302529502892867,
+        "peak_rss_kib": 499260
+      },
+      "api-verify": {
+        "wall_s": 1.0406979168765247,
+        "peak_rss_kib": 139988
+      },
+      "pagefind": {
+        "wall_s": 4.415437008952722,
+        "peak_rss_kib": 401912
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "10-pages",
+    "iteration": 1,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 47.437615727074444,
+    "peak_rss_kib": 1401612,
+    "components": {
+      "hugo": {
+        "wall_s": 26.170991870108992,
+        "peak_rss_kib": 1401612
+      },
+      "flatten-tests": {
+        "wall_s": 0.3523621510248631,
+        "peak_rss_kib": 66532
+      },
+      "flatten": {
+        "wall_s": 15.587669515050948,
+        "peak_rss_kib": 556232
+      },
+      "api-verify": {
+        "wall_s": 1.03465936309658,
+        "peak_rss_kib": 140816
+      },
+      "pagefind": {
+        "wall_s": 4.290805855998769,
+        "peak_rss_kib": 401844
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "10-pages",
+    "iteration": 2,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 45.81790186697617,
+    "peak_rss_kib": 1622076,
+    "components": {
+      "hugo": {
+        "wall_s": 25.394805981079116,
+        "peak_rss_kib": 1622076
+      },
+      "flatten-tests": {
+        "wall_s": 0.3115862437989563,
+        "peak_rss_kib": 66800
+      },
+      "flatten": {
+        "wall_s": 14.810295260045677,
+        "peak_rss_kib": 501984
+      },
+      "api-verify": {
+        "wall_s": 1.0730231020133942,
+        "peak_rss_kib": 141864
+      },
+      "pagefind": {
+        "wall_s": 4.2271893550641835,
+        "peak_rss_kib": 399748
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "10-pages",
+    "iteration": 3,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 48.094704734161496,
+    "peak_rss_kib": 1439496,
+    "components": {
+      "hugo": {
+        "wall_s": 25.55895206495188,
+        "peak_rss_kib": 1439496
+      },
+      "flatten-tests": {
+        "wall_s": 0.30457343393936753,
+        "peak_rss_kib": 66608
+      },
+      "flatten": {
+        "wall_s": 16.265530742006376,
+        "peak_rss_kib": 553244
+      },
+      "api-verify": {
+        "wall_s": 1.152993564028293,
+        "peak_rss_kib": 138612
+      },
+      "pagefind": {
+        "wall_s": 4.811663114000112,
+        "peak_rss_kib": 399952
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "10-pages",
+    "iteration": 4,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 46.42046022415161,
+    "peak_rss_kib": 1468244,
+    "components": {
+      "hugo": {
+        "wall_s": 25.296960134990513,
+        "peak_rss_kib": 1468244
+      },
+      "flatten-tests": {
+        "wall_s": 0.34631463210098445,
+        "peak_rss_kib": 66344
+      },
+      "flatten": {
+        "wall_s": 14.910294552100822,
+        "peak_rss_kib": 564156
+      },
+      "api-verify": {
+        "wall_s": 1.0835846320260316,
+        "peak_rss_kib": 140900
+      },
+      "pagefind": {
+        "wall_s": 4.782308445079252,
+        "peak_rss_kib": 401456
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "10-pages",
+    "iteration": 5,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 46.33251804090105,
+    "peak_rss_kib": 1547664,
+    "components": {
+      "hugo": {
+        "wall_s": 25.69215422309935,
+        "peak_rss_kib": 1547664
+      },
+      "flatten-tests": {
+        "wall_s": 0.32906932407058775,
+        "peak_rss_kib": 66008
+      },
+      "flatten": {
+        "wall_s": 15.020788790890947,
+        "peak_rss_kib": 499140
+      },
+      "api-verify": {
+        "wall_s": 1.0407523638568819,
+        "peak_rss_kib": 141384
+      },
+      "pagefind": {
+        "wall_s": 4.248553242068738,
+        "peak_rss_kib": 401184
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "100-pages",
+    "iteration": 1,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 48.3356577870436,
+    "peak_rss_kib": 1372552,
+    "components": {
+      "hugo": {
+        "wall_s": 27.207960712024942,
+        "peak_rss_kib": 1372552
+      },
+      "flatten-tests": {
+        "wall_s": 0.44238361483439803,
+        "peak_rss_kib": 66984
+      },
+      "flatten": {
+        "wall_s": 15.182671723887324,
+        "peak_rss_kib": 499972
+      },
+      "api-verify": {
+        "wall_s": 1.0515234270133078,
+        "peak_rss_kib": 140428
+      },
+      "pagefind": {
+        "wall_s": 4.44996106904,
+        "peak_rss_kib": 402828
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "100-pages",
+    "iteration": 2,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 50.47218335210346,
+    "peak_rss_kib": 1586292,
+    "components": {
+      "hugo": {
+        "wall_s": 28.061798632144928,
+        "peak_rss_kib": 1586292
+      },
+      "flatten-tests": {
+        "wall_s": 0.34279272495768964,
+        "peak_rss_kib": 65992
+      },
+      "flatten": {
+        "wall_s": 16.440883656963706,
+        "peak_rss_kib": 498492
+      },
+      "api-verify": {
+        "wall_s": 1.1182380139362067,
+        "peak_rss_kib": 139908
+      },
+      "pagefind": {
+        "wall_s": 4.507275579962879,
+        "peak_rss_kib": 402644
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "100-pages",
+    "iteration": 3,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 49.51930608600378,
+    "peak_rss_kib": 1550860,
+    "components": {
+      "hugo": {
+        "wall_s": 27.429397681960836,
+        "peak_rss_kib": 1550860
+      },
+      "flatten-tests": {
+        "wall_s": 0.3370084739290178,
+        "peak_rss_kib": 66948
+      },
+      "flatten": {
+        "wall_s": 16.254870851058513,
+        "peak_rss_kib": 499348
+      },
+      "api-verify": {
+        "wall_s": 1.0666140299290419,
+        "peak_rss_kib": 141364
+      },
+      "pagefind": {
+        "wall_s": 4.430363683961332,
+        "peak_rss_kib": 402080
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "100-pages",
+    "iteration": 4,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 49.90285315993242,
+    "peak_rss_kib": 1389232,
+    "components": {
+      "hugo": {
+        "wall_s": 27.73419714299962,
+        "peak_rss_kib": 1389232
+      },
+      "flatten-tests": {
+        "wall_s": 0.41491824900731444,
+        "peak_rss_kib": 66784
+      },
+      "flatten": {
+        "wall_s": 15.99508806411177,
+        "peak_rss_kib": 501932
+      },
+      "api-verify": {
+        "wall_s": 1.0865217989776284,
+        "peak_rss_kib": 139824
+      },
+      "pagefind": {
+        "wall_s": 4.670921246055514,
+        "peak_rss_kib": 402248
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "100-pages",
+    "iteration": 5,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 50.00397302699275,
+    "peak_rss_kib": 1524156,
+    "components": {
+      "hugo": {
+        "wall_s": 27.81431840895675,
+        "peak_rss_kib": 1524156
+      },
+      "flatten-tests": {
+        "wall_s": 0.346934320172295,
+        "peak_rss_kib": 66820
+      },
+      "flatten": {
+        "wall_s": 16.229007282992825,
+        "peak_rss_kib": 556832
+      },
+      "api-verify": {
+        "wall_s": 1.1057895319536328,
+        "peak_rss_kib": 142280
+      },
+      "pagefind": {
+        "wall_s": 4.506576462183148,
+        "peak_rss_kib": 401764
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "layout",
+    "iteration": 1,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 50.56390742678195,
+    "peak_rss_kib": 1586844,
+    "components": {
+      "hugo": {
+        "wall_s": 27.895850302884355,
+        "peak_rss_kib": 1586844
+      },
+      "flatten-tests": {
+        "wall_s": 0.3564247088506818,
+        "peak_rss_kib": 66524
+      },
+      "flatten": {
+        "wall_s": 16.663406918989494,
+        "peak_rss_kib": 498192
+      },
+      "api-verify": {
+        "wall_s": 1.1587075041607022,
+        "peak_rss_kib": 142232
+      },
+      "pagefind": {
+        "wall_s": 4.48814389994368,
+        "peak_rss_kib": 401920
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "layout",
+    "iteration": 2,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 50.91183627396822,
+    "peak_rss_kib": 1523264,
+    "components": {
+      "hugo": {
+        "wall_s": 28.030142519855872,
+        "peak_rss_kib": 1523264
+      },
+      "flatten-tests": {
+        "wall_s": 0.38712223106995225,
+        "peak_rss_kib": 66492
+      },
+      "flatten": {
+        "wall_s": 16.802132555050775,
+        "peak_rss_kib": 566992
+      },
+      "api-verify": {
+        "wall_s": 1.1210464481264353,
+        "peak_rss_kib": 141908
+      },
+      "pagefind": {
+        "wall_s": 4.570293670985848,
+        "peak_rss_kib": 401144
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "layout",
+    "iteration": 3,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 51.058726453920826,
+    "peak_rss_kib": 1442012,
+    "components": {
+      "hugo": {
+        "wall_s": 28.11861855792813,
+        "peak_rss_kib": 1442012
+      },
+      "flatten-tests": {
+        "wall_s": 0.3901902539655566,
+        "peak_rss_kib": 66224
+      },
+      "flatten": {
+        "wall_s": 16.67608342389576,
+        "peak_rss_kib": 496136
+      },
+      "api-verify": {
+        "wall_s": 1.0864367510657758,
+        "peak_rss_kib": 142192
+      },
+      "pagefind": {
+        "wall_s": 4.786127540981397,
+        "peak_rss_kib": 399764
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "layout",
+    "iteration": 4,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 51.77746704709716,
+    "peak_rss_kib": 1506556,
+    "components": {
+      "hugo": {
+        "wall_s": 28.006558668101206,
+        "peak_rss_kib": 1506556
+      },
+      "flatten-tests": {
+        "wall_s": 0.40770071605220437,
+        "peak_rss_kib": 67392
+      },
+      "flatten": {
+        "wall_s": 17.62125603109598,
+        "peak_rss_kib": 499584
+      },
+      "api-verify": {
+        "wall_s": 1.1291717351414263,
+        "peak_rss_kib": 140988
+      },
+      "pagefind": {
+        "wall_s": 4.6116283889859915,
+        "peak_rss_kib": 401804
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "layout",
+    "iteration": 5,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 50.472461502067745,
+    "peak_rss_kib": 1615736,
+    "components": {
+      "hugo": {
+        "wall_s": 27.285653519211337,
+        "peak_rss_kib": 1615736
+      },
+      "flatten-tests": {
+        "wall_s": 0.3289275490678847,
+        "peak_rss_kib": 66764
+      },
+      "flatten": {
+        "wall_s": 17.015156070003286,
+        "peak_rss_kib": 493068
+      },
+      "api-verify": {
+        "wall_s": 1.10682930983603,
+        "peak_rss_kib": 140196
+      },
+      "pagefind": {
+        "wall_s": 4.734552884008735,
+        "peak_rss_kib": 400140
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "navigation",
+    "iteration": 1,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 41.165040691848844,
+    "peak_rss_kib": 1526616,
+    "components": {
+      "hugo": {
+        "wall_s": 23.172411550069228,
+        "peak_rss_kib": 1526616
+      },
+      "flatten-tests": {
+        "wall_s": 0.2912730521056801,
+        "peak_rss_kib": 66316
+      },
+      "flatten": {
+        "wall_s": 13.001426106086,
+        "peak_rss_kib": 568088
+      },
+      "api-verify": {
+        "wall_s": 0.9212257431354374,
+        "peak_rss_kib": 141352
+      },
+      "pagefind": {
+        "wall_s": 3.7777159239631146,
+        "peak_rss_kib": 403676
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "navigation",
+    "iteration": 2,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 40.08810050692409,
+    "peak_rss_kib": 1470248,
+    "components": {
+      "hugo": {
+        "wall_s": 22.450480157975107,
+        "peak_rss_kib": 1470248
+      },
+      "flatten-tests": {
+        "wall_s": 0.2855553880799562,
+        "peak_rss_kib": 66720
+      },
+      "flatten": {
+        "wall_s": 12.65292572393082,
+        "peak_rss_kib": 556420
+      },
+      "api-verify": {
+        "wall_s": 0.8782468629069626,
+        "peak_rss_kib": 140724
+      },
+      "pagefind": {
+        "wall_s": 3.8198633110150695,
+        "peak_rss_kib": 402976
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "navigation",
+    "iteration": 3,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 40.617676061112434,
+    "peak_rss_kib": 1408380,
+    "components": {
+      "hugo": {
+        "wall_s": 22.73630632390268,
+        "peak_rss_kib": 1408380
+      },
+      "flatten-tests": {
+        "wall_s": 0.291455308906734,
+        "peak_rss_kib": 66440
+      },
+      "flatten": {
+        "wall_s": 12.677051888080314,
+        "peak_rss_kib": 568928
+      },
+      "api-verify": {
+        "wall_s": 0.8971709599718451,
+        "peak_rss_kib": 142444
+      },
+      "pagefind": {
+        "wall_s": 4.014621004927903,
+        "peak_rss_kib": 401640
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "navigation",
+    "iteration": 4,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 40.37755411793478,
+    "peak_rss_kib": 1574572,
+    "components": {
+      "hugo": {
+        "wall_s": 22.944540987024084,
+        "peak_rss_kib": 1574572
+      },
+      "flatten-tests": {
+        "wall_s": 0.29218923998996615,
+        "peak_rss_kib": 66848
+      },
+      "flatten": {
+        "wall_s": 12.330252317013219,
+        "peak_rss_kib": 497836
+      },
+      "api-verify": {
+        "wall_s": 0.8842220678925514,
+        "peak_rss_kib": 142224
+      },
+      "pagefind": {
+        "wall_s": 3.925278770038858,
+        "peak_rss_kib": 400316
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "navigation",
+    "iteration": 5,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 40.00232443585992,
+    "peak_rss_kib": 1556960,
+    "components": {
+      "hugo": {
+        "wall_s": 22.171340310946107,
+        "peak_rss_kib": 1556960
+      },
+      "flatten-tests": {
+        "wall_s": 0.280049029039219,
+        "peak_rss_kib": 67376
+      },
+      "flatten": {
+        "wall_s": 12.697960041929036,
+        "peak_rss_kib": 556352
+      },
+      "api-verify": {
+        "wall_s": 0.8979140529409051,
+        "peak_rss_kib": 142096
+      },
+      "pagefind": {
+        "wall_s": 3.954058277886361,
+        "peak_rss_kib": 400580
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "metadata",
+    "iteration": 1,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 39.47850613715127,
+    "peak_rss_kib": 1594512,
+    "components": {
+      "hugo": {
+        "wall_s": 22.03986171982251,
+        "peak_rss_kib": 1594512
+      },
+      "flatten-tests": {
+        "wall_s": 0.28286850918084383,
+        "peak_rss_kib": 66788
+      },
+      "flatten": {
+        "wall_s": 12.42930009891279,
+        "peak_rss_kib": 552420
+      },
+      "api-verify": {
+        "wall_s": 0.8743109370116144,
+        "peak_rss_kib": 140928
+      },
+      "pagefind": {
+        "wall_s": 3.851128394016996,
+        "peak_rss_kib": 402944
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "metadata",
+    "iteration": 2,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 40.138429476181045,
+    "peak_rss_kib": 1467412,
+    "components": {
+      "hugo": {
+        "wall_s": 22.467066146899015,
+        "peak_rss_kib": 1467412
+      },
+      "flatten-tests": {
+        "wall_s": 0.28000230086036026,
+        "peak_rss_kib": 66500
+      },
+      "flatten": {
+        "wall_s": 12.720309412106872,
+        "peak_rss_kib": 552468
+      },
+      "api-verify": {
+        "wall_s": 0.8879972000140697,
+        "peak_rss_kib": 142292
+      },
+      "pagefind": {
+        "wall_s": 3.7821614630520344,
+        "peak_rss_kib": 401084
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "metadata",
+    "iteration": 3,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 44.08071695105173,
+    "peak_rss_kib": 1565676,
+    "components": {
+      "hugo": {
+        "wall_s": 23.147792944917455,
+        "peak_rss_kib": 1565676
+      },
+      "flatten-tests": {
+        "wall_s": 0.336723810993135,
+        "peak_rss_kib": 66656
+      },
+      "flatten": {
+        "wall_s": 14.92586011113599,
+        "peak_rss_kib": 498412
+      },
+      "api-verify": {
+        "wall_s": 1.0935504739172757,
+        "peak_rss_kib": 141256
+      },
+      "pagefind": {
+        "wall_s": 4.57549777906388,
+        "peak_rss_kib": 400704
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "metadata",
+    "iteration": 4,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 44.80582128209062,
+    "peak_rss_kib": 1581204,
+    "components": {
+      "hugo": {
+        "wall_s": 24.528876420110464,
+        "peak_rss_kib": 1581204
+      },
+      "flatten-tests": {
+        "wall_s": 0.3237312079872936,
+        "peak_rss_kib": 67056
+      },
+      "flatten": {
+        "wall_s": 14.74168536090292,
+        "peak_rss_kib": 502092
+      },
+      "api-verify": {
+        "wall_s": 1.0677711030002683,
+        "peak_rss_kib": 142708
+      },
+      "pagefind": {
+        "wall_s": 4.1427390889730304,
+        "peak_rss_kib": 400316
+      }
+    },
+    "semantic_output_checked": true
+  },
+  {
+    "project": "hugo",
+    "case": "metadata",
+    "iteration": 5,
+    "mode": "warm CLI full publication after edit; not server incremental",
+    "wall_s": 44.295898471958935,
+    "peak_rss_kib": 1580680,
+    "components": {
+      "hugo": {
+        "wall_s": 25.648604519898072,
+        "peak_rss_kib": 1580680
+      },
+      "flatten-tests": {
+        "wall_s": 0.30765729304403067,
+        "peak_rss_kib": 66116
+      },
+      "flatten": {
+        "wall_s": 13.538768758065999,
+        "peak_rss_kib": 567976
+      },
+      "api-verify": {
+        "wall_s": 0.8945614511612803,
+        "peak_rss_kib": 140832
+      },
+      "pagefind": {
+        "wall_s": 3.905209284974262,
+        "peak_rss_kib": 400944
+      }
+    },
+    "semantic_output_checked": true
+  }
+]

@@ -1,0 +1,497 @@
+[
+  {
+    "project": "hugo",
+    "iteration": 1,
+    "mode": "fresh full-history checkout; empty application cache/output; prepared node_modules; uncontrolled OS caches",
+    "wall_s": 31.276330903870985,
+    "components": {
+      "hugo": {
+        "wall_s": 20.404859491158277,
+        "peak_rss_kib": 1504212
+      },
+      "flatten-tests": {
+        "wall_s": 0.27939715306274593,
+        "peak_rss_kib": 66964
+      },
+      "flatten": {
+        "wall_s": 6.152454274939373,
+        "peak_rss_kib": 509164
+      },
+      "api-verify": {
+        "wall_s": 0.8502595371101052,
+        "peak_rss_kib": 138572
+      },
+      "pagefind": {
+        "wall_s": 3.5881064450368285,
+        "peak_rss_kib": 401608
+      }
+    },
+    "peak_rss_kib": 1504212,
+    "publication_counts_verified": true
+  },
+  {
+    "project": "hugo",
+    "iteration": 2,
+    "mode": "fresh full-history checkout; empty application cache/output; prepared node_modules; uncontrolled OS caches",
+    "wall_s": 38.18701543100178,
+    "components": {
+      "hugo": {
+        "wall_s": 21.61202778480947,
+        "peak_rss_kib": 1438384
+      },
+      "flatten-tests": {
+        "wall_s": 0.6477684110868722,
+        "peak_rss_kib": 67164
+      },
+      "flatten": {
+        "wall_s": 9.297471988014877,
+        "peak_rss_kib": 508792
+      },
+      "api-verify": {
+        "wall_s": 0.9007321898825467,
+        "peak_rss_kib": 139996
+      },
+      "pagefind": {
+        "wall_s": 5.72765205684118,
+        "peak_rss_kib": 399352
+      }
+    },
+    "peak_rss_kib": 1438384,
+    "publication_counts_verified": true
+  },
+  {
+    "project": "hugo",
+    "iteration": 3,
+    "mode": "fresh full-history checkout; empty application cache/output; prepared node_modules; uncontrolled OS caches",
+    "wall_s": 34.463265436002985,
+    "components": {
+      "hugo": {
+        "wall_s": 22.632679731119424,
+        "peak_rss_kib": 1513280
+      },
+      "flatten-tests": {
+        "wall_s": 0.29339738190174103,
+        "peak_rss_kib": 67792
+      },
+      "flatten": {
+        "wall_s": 6.789456236874685,
+        "peak_rss_kib": 508684
+      },
+      "api-verify": {
+        "wall_s": 0.9638840078841895,
+        "peak_rss_kib": 141884
+      },
+      "pagefind": {
+        "wall_s": 3.782745833043009,
+        "peak_rss_kib": 402596
+      }
+    },
+    "peak_rss_kib": 1513280,
+    "publication_counts_verified": true
+  },
+  {
+    "project": "hugo",
+    "iteration": 4,
+    "mode": "fresh full-history checkout; empty application cache/output; prepared node_modules; uncontrolled OS caches",
+    "wall_s": 35.04032600205392,
+    "components": {
+      "hugo": {
+        "wall_s": 23.42957648797892,
+        "peak_rss_kib": 1614244
+      },
+      "flatten-tests": {
+        "wall_s": 0.2821912821382284,
+        "peak_rss_kib": 66420
+      },
+      "flatten": {
+        "wall_s": 6.44510751683265,
+        "peak_rss_kib": 511992
+      },
+      "api-verify": {
+        "wall_s": 0.888186939060688,
+        "peak_rss_kib": 139880
+      },
+      "pagefind": {
+        "wall_s": 3.9940045450348407,
+        "peak_rss_kib": 403908
+      }
+    },
+    "peak_rss_kib": 1614244,
+    "publication_counts_verified": true
+  },
+  {
+    "project": "hugo",
+    "iteration": 5,
+    "mode": "fresh full-history checkout; empty application cache/output; prepared node_modules; uncontrolled OS caches",
+    "wall_s": 32.75187068898231,
+    "components": {
+      "hugo": {
+        "wall_s": 22.000416802009568,
+        "peak_rss_kib": 1513668
+      },
+      "flatten-tests": {
+        "wall_s": 0.29462665203027427,
+        "peak_rss_kib": 67224
+      },
+      "flatten": {
+        "wall_s": 6.130957775050774,
+        "peak_rss_kib": 511384
+      },
+      "api-verify": {
+        "wall_s": 0.8241549748927355,
+        "peak_rss_kib": 120980
+      },
+      "pagefind": {
+        "wall_s": 3.5007891228888184,
+        "peak_rss_kib": 404600
+      }
+    },
+    "peak_rss_kib": 1513668,
+    "publication_counts_verified": true
+  },
+  {
+    "project": "docker",
+    "iteration": 1,
+    "mode": "fresh committed checkout; empty .generated/public; prepared binaries and Pagefind; uncontrolled OS caches",
+    "wall_s": 87.11697106994689,
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 11.567063812074046,
+      "shell_prepare_s": 19.12165341,
+      "compatibility_expansion_ns": 237606102,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 469556954,
+        "MarkdownRenderNS": 177275140,
+        "HookNS": 1104488749,
+        "ChromaNS": 1744811225
+      },
+      "family_wall_ns": {
+        "landing": 14575115,
+        "markdown": 4771794280,
+        "special": 700933972,
+        "legacy-api": 101404,
+        "cli": 3556919011,
+        "api": 338880709
+      },
+      "asset_publication_s": 0.04209790821187198,
+      "asset_files": 294,
+      "nift_composition_s": 3.715661780908704,
+      "total_s": 85.86153658805415,
+      "publication": {
+        "markdown_exports_s": 10.175525875994936,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.16433187387883663,
+        "search_s": 4.032950577093288,
+        "publication_s": 14.389810906955972
+      },
+      "minification": {
+        "html_minification_s": 37.00780623499304,
+        "minified_pages": 3901
+      }
+    },
+    "peak_rss_kib": 1077444,
+    "fresh_equals_accepted": true
+  },
+  {
+    "project": "docker",
+    "iteration": 2,
+    "mode": "fresh committed checkout; empty .generated/public; prepared binaries and Pagefind; uncontrolled OS caches",
+    "wall_s": 81.56465981388465,
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 14.245095582899935,
+      "shell_prepare_s": 27.0897734,
+      "compatibility_expansion_ns": 382379013,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 596709625,
+        "MarkdownRenderNS": 232505489,
+        "HookNS": 1307219032,
+        "ChromaNS": 2286062326
+      },
+      "family_wall_ns": {
+        "landing": 12054082,
+        "markdown": 6161283461,
+        "special": 902614511,
+        "legacy-api": 124407,
+        "cli": 4062747274,
+        "api": 500059361
+      },
+      "asset_publication_s": 0.05301448004320264,
+      "asset_files": 294,
+      "nift_composition_s": 3.7691971419844776,
+      "total_s": 80.39682637387887,
+      "publication": {
+        "markdown_exports_s": 8.305706718936563,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.10553645109757781,
+        "search_s": 3.869107169797644,
+        "publication_s": 12.28800781792961
+      },
+      "minification": {
+        "html_minification_s": 22.938566020922735,
+        "minified_pages": 3901
+      }
+    },
+    "peak_rss_kib": 1077368,
+    "fresh_equals_accepted": true
+  },
+  {
+    "project": "docker",
+    "iteration": 3,
+    "mode": "fresh committed checkout; empty .generated/public; prepared binaries and Pagefind; uncontrolled OS caches",
+    "wall_s": 66.60187203204259,
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 11.693547067919415,
+      "shell_prepare_s": 18.772714976,
+      "compatibility_expansion_ns": 236142918,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 468112597,
+        "MarkdownRenderNS": 178743535,
+        "HookNS": 1089478454,
+        "ChromaNS": 1801545355
+      },
+      "family_wall_ns": {
+        "landing": 10257764,
+        "markdown": 4762263090,
+        "special": 689201239,
+        "legacy-api": 124636,
+        "cli": 3629527984,
+        "api": 372090721
+      },
+      "asset_publication_s": 0.041679210029542446,
+      "asset_files": 294,
+      "nift_composition_s": 3.1881071038078517,
+      "total_s": 65.56680571404286,
+      "publication": {
+        "markdown_exports_s": 7.455611901124939,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.09861618978902698,
+        "search_s": 3.4448189500253648,
+        "publication_s": 11.005999651970342
+      },
+      "minification": {
+        "html_minification_s": 20.84879822982475,
+        "minified_pages": 3901
+      }
+    },
+    "peak_rss_kib": 1076952,
+    "fresh_equals_accepted": true
+  },
+  {
+    "project": "docker",
+    "iteration": 4,
+    "mode": "fresh committed checkout; empty .generated/public; prepared binaries and Pagefind; uncontrolled OS caches",
+    "wall_s": 66.6563807609491,
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 11.333296764026098,
+      "shell_prepare_s": 18.06938921,
+      "compatibility_expansion_ns": 222531469,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 449052420,
+        "MarkdownRenderNS": 170073325,
+        "HookNS": 1098356637,
+        "ChromaNS": 1711800114
+      },
+      "family_wall_ns": {
+        "landing": 17306404,
+        "markdown": 4640874829,
+        "special": 681588370,
+        "legacy-api": 94644,
+        "cli": 3546188324,
+        "api": 338925197
+      },
+      "asset_publication_s": 0.04117591795511544,
+      "asset_files": 294,
+      "nift_composition_s": 3.107625511009246,
+      "total_s": 65.54164196993224,
+      "publication": {
+        "markdown_exports_s": 8.488515598000959,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.1068466801661998,
+        "search_s": 3.609796372940764,
+        "publication_s": 12.212274522986263
+      },
+      "minification": {
+        "html_minification_s": 20.757467756979167,
+        "minified_pages": 3901
+      }
+    },
+    "peak_rss_kib": 1077800,
+    "fresh_equals_accepted": true
+  },
+  {
+    "project": "docker",
+    "iteration": 5,
+    "mode": "fresh committed checkout; empty .generated/public; prepared binaries and Pagefind; uncontrolled OS caches",
+    "wall_s": 64.70645330799744,
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 11.130950657077094,
+      "shell_prepare_s": 17.75363215,
+      "compatibility_expansion_ns": 224314393,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 443400089,
+        "MarkdownRenderNS": 169604109,
+        "HookNS": 1051153295,
+        "ChromaNS": 1677584957
+      },
+      "family_wall_ns": {
+        "landing": 16561362,
+        "markdown": 4533005947,
+        "special": 652947342,
+        "legacy-api": 108199,
+        "cli": 3509719990,
+        "api": 332859982
+      },
+      "asset_publication_s": 0.041984617011621594,
+      "asset_files": 294,
+      "nift_composition_s": 3.1483388838823885,
+      "total_s": 63.615911746164784,
+      "publication": {
+        "markdown_exports_s": 7.540524381911382,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.10321086389012635,
+        "search_s": 3.4861429040320218,
+        "publication_s": 11.13629741105251
+      },
+      "minification": {
+        "html_minification_s": 20.393861582968384,
+        "minified_pages": 3901
+      }
+    },
+    "peak_rss_kib": 1076892,
+    "fresh_equals_accepted": true
+  },
+  {
+    "project": "docker-agent",
+    "iteration": 1,
+    "mode": "fresh committed checkout; empty .generated/public; prepared binaries and Pagefind; uncontrolled OS caches",
+    "wall_s": 29.46351432404481,
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 14.916127060772851,
+      "asset_publication_s": 0.041751783108338714,
+      "asset_files": 294,
+      "nift_composition_s": 3.0902908351272345,
+      "total_s": 28.775092862779275,
+      "publication": {
+        "markdown_exports_s": 6.894237719010562,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.10332245286554098,
+        "search_s": 3.720986771862954,
+        "publication_s": 10.724828951992095
+      }
+    },
+    "peak_rss_kib": 1004280,
+    "fresh_equals_accepted": true
+  },
+  {
+    "project": "docker-agent",
+    "iteration": 2,
+    "mode": "fresh committed checkout; empty .generated/public; prepared binaries and Pagefind; uncontrolled OS caches",
+    "wall_s": 30.033802103018388,
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 15.588244640966877,
+      "asset_publication_s": 0.042849478079006076,
+      "asset_files": 294,
+      "nift_composition_s": 3.0863145389594138,
+      "total_s": 29.363275057869032,
+      "publication": {
+        "markdown_exports_s": 7.13581361901015,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.0972004090435803,
+        "search_s": 3.404427899979055,
+        "publication_s": 10.64407863211818
+      }
+    },
+    "peak_rss_kib": 1004420,
+    "fresh_equals_accepted": true
+  },
+  {
+    "project": "docker-agent",
+    "iteration": 3,
+    "mode": "fresh committed checkout; empty .generated/public; prepared binaries and Pagefind; uncontrolled OS caches",
+    "wall_s": 30.2497013930697,
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 15.76345524797216,
+      "asset_publication_s": 0.041464698035269976,
+      "asset_files": 294,
+      "nift_composition_s": 3.04457214102149,
+      "total_s": 29.57582832290791,
+      "publication": {
+        "markdown_exports_s": 7.201110834022984,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.09748243214562535,
+        "search_s": 3.419934078119695,
+        "publication_s": 10.724600853864104
+      }
+    },
+    "peak_rss_kib": 1004604,
+    "fresh_equals_accepted": true
+  },
+  {
+    "project": "docker-agent",
+    "iteration": 4,
+    "mode": "fresh committed checkout; empty .generated/public; prepared binaries and Pagefind; uncontrolled OS caches",
+    "wall_s": 30.182186427060515,
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 15.54497329890728,
+      "asset_publication_s": 0.04593581706285477,
+      "asset_files": 294,
+      "nift_composition_s": 3.103508094092831,
+      "total_s": 29.499763370957226,
+      "publication": {
+        "markdown_exports_s": 7.251744471024722,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.09837463102303445,
+        "search_s": 3.4454756351187825,
+        "publication_s": 10.802965565118939
+      }
+    },
+    "peak_rss_kib": 1003764,
+    "fresh_equals_accepted": true
+  },
+  {
+    "project": "docker-agent",
+    "iteration": 5,
+    "mode": "fresh committed checkout; empty .generated/public; prepared binaries and Pagefind; uncontrolled OS caches",
+    "wall_s": 29.988122734008357,
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 15.845495565095916,
+      "asset_publication_s": 0.04117235215380788,
+      "asset_files": 294,
+      "nift_composition_s": 2.974889984121546,
+      "total_s": 29.27709798910655,
+      "publication": {
+        "markdown_exports_s": 6.923257977003232,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.0927054239436984,
+        "search_s": 3.3901639508549124,
+        "publication_s": 10.412765534128994
+      }
+    },
+    "peak_rss_kib": 1004072,
+    "fresh_equals_accepted": true
+  }
+]

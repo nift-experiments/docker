@@ -416,3 +416,6 @@ Then read feature documentation only when the task requires it, for example:
 - integration with other application stacks.
 
 Prefer documented Nift behaviour and the existing project structure over guessing based on another website generator or framework.
+
+## C6 initial faithful implementation preserved
+C6 warm/fresh/changed benchmarks and route lifecycle correctness are complete. See investigation/C6-BENCHMARKS.md and investigation/c6. The user requested a dedicated optimization pass on 7 October 2026: preserve all initial C6 measurements, profile first, optimize without changing publication or Nift, repeat full correctness and performance gates, and report initial versus optimized results at C7. Optimization evidence must use a separate directory. C7 remains pending.

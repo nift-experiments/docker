@@ -1,0 +1,717 @@
+[
+  {
+    "project": "hugo",
+    "repetition": 1,
+    "mode": "full fresh destination; warm dependencies; application cache reused",
+    "wall_s": 27.742030546069145,
+    "components": {
+      "hugo": {
+        "wall_s": 17.590212184935808,
+        "peak_rss_kib": 1608104,
+        "command": [
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/tools/hugo",
+          "--gc",
+          "--minify",
+          "--panicOnWarning",
+          "--printPathWarnings",
+          "--printUnusedTemplates",
+          "-b",
+          "https://docs.docker.com",
+          "-e",
+          "production",
+          "--destination",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-1/site"
+        ]
+      },
+      "flatten-tests": {
+        "wall_s": 0.2512238600756973,
+        "peak_rss_kib": 67236,
+        "command": [
+          "node",
+          "--test",
+          "hack/test/flatten-and-resolve.mjs"
+        ]
+      },
+      "flatten": {
+        "wall_s": 5.810020585078746,
+        "peak_rss_kib": 508532,
+        "command": [
+          "node",
+          "hack/flatten-and-resolve.js",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-1/site"
+        ]
+      },
+      "api-verify": {
+        "wall_s": 0.776948767947033,
+        "peak_rss_kib": 141876,
+        "command": [
+          "node",
+          "hack/api-docs/verify-output.mjs",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-1/site"
+        ]
+      },
+      "pagefind": {
+        "wall_s": 3.3120791928377002,
+        "peak_rss_kib": 402028,
+        "command": [
+          "node",
+          "/home/nick/Repositories/nift/nift-experiments/docker/.cache/publication-tools/node_modules/pagefind/lib/runner/bin.cjs",
+          "--site",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-1/site",
+          "--output-path",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-1/site/pagefind"
+        ]
+      }
+    },
+    "peak_rss_kib": 1608104
+  },
+  {
+    "project": "hugo",
+    "repetition": 2,
+    "mode": "full fresh destination; warm dependencies; application cache reused",
+    "wall_s": 30.551731670973822,
+    "components": {
+      "hugo": {
+        "wall_s": 19.35613410291262,
+        "peak_rss_kib": 1569556,
+        "command": [
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/tools/hugo",
+          "--gc",
+          "--minify",
+          "--panicOnWarning",
+          "--printPathWarnings",
+          "--printUnusedTemplates",
+          "-b",
+          "https://docs.docker.com",
+          "-e",
+          "production",
+          "--destination",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-2/site"
+        ]
+      },
+      "flatten-tests": {
+        "wall_s": 0.2589769749902189,
+        "peak_rss_kib": 66364,
+        "command": [
+          "node",
+          "--test",
+          "hack/test/flatten-and-resolve.mjs"
+        ]
+      },
+      "flatten": {
+        "wall_s": 6.5233922090847045,
+        "peak_rss_kib": 509096,
+        "command": [
+          "node",
+          "hack/flatten-and-resolve.js",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-2/site"
+        ]
+      },
+      "api-verify": {
+        "wall_s": 0.8978798340540379,
+        "peak_rss_kib": 141588,
+        "command": [
+          "node",
+          "hack/api-docs/verify-output.mjs",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-2/site"
+        ]
+      },
+      "pagefind": {
+        "wall_s": 3.5141511601395905,
+        "peak_rss_kib": 402752,
+        "command": [
+          "node",
+          "/home/nick/Repositories/nift/nift-experiments/docker/.cache/publication-tools/node_modules/pagefind/lib/runner/bin.cjs",
+          "--site",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-2/site",
+          "--output-path",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-2/site/pagefind"
+        ]
+      }
+    },
+    "peak_rss_kib": 1569556
+  },
+  {
+    "project": "hugo",
+    "repetition": 3,
+    "mode": "full fresh destination; warm dependencies; application cache reused",
+    "wall_s": 29.00795062701218,
+    "components": {
+      "hugo": {
+        "wall_s": 19.010234761051834,
+        "peak_rss_kib": 1550808,
+        "command": [
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/tools/hugo",
+          "--gc",
+          "--minify",
+          "--panicOnWarning",
+          "--printPathWarnings",
+          "--printUnusedTemplates",
+          "-b",
+          "https://docs.docker.com",
+          "-e",
+          "production",
+          "--destination",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-3/site"
+        ]
+      },
+      "flatten-tests": {
+        "wall_s": 0.26147362403571606,
+        "peak_rss_kib": 67352,
+        "command": [
+          "node",
+          "--test",
+          "hack/test/flatten-and-resolve.mjs"
+        ]
+      },
+      "flatten": {
+        "wall_s": 5.6692623109556735,
+        "peak_rss_kib": 510392,
+        "command": [
+          "node",
+          "hack/flatten-and-resolve.js",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-3/site"
+        ]
+      },
+      "api-verify": {
+        "wall_s": 0.8211305451113731,
+        "peak_rss_kib": 141264,
+        "command": [
+          "node",
+          "hack/api-docs/verify-output.mjs",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-3/site"
+        ]
+      },
+      "pagefind": {
+        "wall_s": 3.2445801568683237,
+        "peak_rss_kib": 402088,
+        "command": [
+          "node",
+          "/home/nick/Repositories/nift/nift-experiments/docker/.cache/publication-tools/node_modules/pagefind/lib/runner/bin.cjs",
+          "--site",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-3/site",
+          "--output-path",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-3/site/pagefind"
+        ]
+      }
+    },
+    "peak_rss_kib": 1550808
+  },
+  {
+    "project": "hugo",
+    "repetition": 4,
+    "mode": "full fresh destination; warm dependencies; application cache reused",
+    "wall_s": 29.262264371849597,
+    "components": {
+      "hugo": {
+        "wall_s": 18.720162213779986,
+        "peak_rss_kib": 1500868,
+        "command": [
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/tools/hugo",
+          "--gc",
+          "--minify",
+          "--panicOnWarning",
+          "--printPathWarnings",
+          "--printUnusedTemplates",
+          "-b",
+          "https://docs.docker.com",
+          "-e",
+          "production",
+          "--destination",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-4/site"
+        ]
+      },
+      "flatten-tests": {
+        "wall_s": 0.2573330239392817,
+        "peak_rss_kib": 67560,
+        "command": [
+          "node",
+          "--test",
+          "hack/test/flatten-and-resolve.mjs"
+        ]
+      },
+      "flatten": {
+        "wall_s": 6.127299819840118,
+        "peak_rss_kib": 509864,
+        "command": [
+          "node",
+          "hack/flatten-and-resolve.js",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-4/site"
+        ]
+      },
+      "api-verify": {
+        "wall_s": 0.840504955034703,
+        "peak_rss_kib": 141904,
+        "command": [
+          "node",
+          "hack/api-docs/verify-output.mjs",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-4/site"
+        ]
+      },
+      "pagefind": {
+        "wall_s": 3.315866207005456,
+        "peak_rss_kib": 401604,
+        "command": [
+          "node",
+          "/home/nick/Repositories/nift/nift-experiments/docker/.cache/publication-tools/node_modules/pagefind/lib/runner/bin.cjs",
+          "--site",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-4/site",
+          "--output-path",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-4/site/pagefind"
+        ]
+      }
+    },
+    "peak_rss_kib": 1500868
+  },
+  {
+    "project": "hugo",
+    "repetition": 5,
+    "mode": "full fresh destination; warm dependencies; application cache reused",
+    "wall_s": 29.122733725933358,
+    "components": {
+      "hugo": {
+        "wall_s": 18.844460198888555,
+        "peak_rss_kib": 1612124,
+        "command": [
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/tools/hugo",
+          "--gc",
+          "--minify",
+          "--panicOnWarning",
+          "--printPathWarnings",
+          "--printUnusedTemplates",
+          "-b",
+          "https://docs.docker.com",
+          "-e",
+          "production",
+          "--destination",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-5/site"
+        ]
+      },
+      "flatten-tests": {
+        "wall_s": 0.24448536592535675,
+        "peak_rss_kib": 66772,
+        "command": [
+          "node",
+          "--test",
+          "hack/test/flatten-and-resolve.mjs"
+        ]
+      },
+      "flatten": {
+        "wall_s": 5.7422764610964805,
+        "peak_rss_kib": 510312,
+        "command": [
+          "node",
+          "hack/flatten-and-resolve.js",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-5/site"
+        ]
+      },
+      "api-verify": {
+        "wall_s": 0.825823029037565,
+        "peak_rss_kib": 141940,
+        "command": [
+          "node",
+          "hack/api-docs/verify-output.mjs",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-5/site"
+        ]
+      },
+      "pagefind": {
+        "wall_s": 3.4645561890210956,
+        "peak_rss_kib": 401740,
+        "command": [
+          "node",
+          "/home/nick/Repositories/nift/nift-experiments/docker/.cache/publication-tools/node_modules/pagefind/lib/runner/bin.cjs",
+          "--site",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-5/site",
+          "--output-path",
+          "/home/nick/Repositories/nift/nift-experiments/docker-baseline/c6/hugo/full-5/site/pagefind"
+        ]
+      }
+    },
+    "peak_rss_kib": 1612124
+  },
+  {
+    "project": "docker",
+    "repetition": 1,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 61.523862169124186,
+    "peak_rss_kib": 1083400,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 10.800953803842084,
+      "shell_prepare_s": 17.035484147,
+      "compatibility_expansion_ns": 211830798,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 436983665,
+        "MarkdownRenderNS": 166644302,
+        "HookNS": 1034800004,
+        "ChromaNS": 1668355896
+      },
+      "family_wall_ns": {
+        "landing": 17519398,
+        "markdown": 4498736191,
+        "special": 709740504,
+        "legacy-api": 109981,
+        "cli": 3519901034,
+        "api": 325346273
+      },
+      "asset_publication_s": 0.031732812989503145,
+      "asset_files": 294,
+      "nift_composition_s": 2.8213868658058345,
+      "total_s": 60.54594367695972,
+      "publication": {
+        "markdown_exports_s": 6.931328176986426,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.09051962685771286,
+        "search_s": 3.2010182889644057,
+        "publication_s": 10.231498373206705
+      },
+      "minification": {
+        "html_minification_s": 19.614126461092383,
+        "minified_pages": 3901
+      }
+    }
+  },
+  {
+    "project": "docker",
+    "repetition": 2,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 61.56009230483323,
+    "peak_rss_kib": 1084188,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 10.56057706105328,
+      "shell_prepare_s": 16.395934951,
+      "compatibility_expansion_ns": 199406184,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 422503039,
+        "MarkdownRenderNS": 160033140,
+        "HookNS": 1009777755,
+        "ChromaNS": 1597542516
+      },
+      "family_wall_ns": {
+        "landing": 8388744,
+        "markdown": 4309017427,
+        "special": 719288434,
+        "legacy-api": 103989,
+        "cli": 3584679451,
+        "api": 304410166
+      },
+      "asset_publication_s": 0.031301312148571014,
+      "asset_files": 294,
+      "nift_composition_s": 2.8139701951295137,
+      "total_s": 60.55799971008673,
+      "publication": {
+        "markdown_exports_s": 7.567675014957786,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.0946454550139606,
+        "search_s": 3.2965407948940992,
+        "publication_s": 10.96491197310388
+      },
+      "minification": {
+        "html_minification_s": 19.780754992971197,
+        "minified_pages": 3901
+      }
+    }
+  },
+  {
+    "project": "docker",
+    "repetition": 3,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 60.90714173181914,
+    "peak_rss_kib": 1083824,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 10.462376512985596,
+      "shell_prepare_s": 16.194586034,
+      "compatibility_expansion_ns": 199338916,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 413503620,
+        "MarkdownRenderNS": 157181917,
+        "HookNS": 1020166367,
+        "ChromaNS": 1615114450
+      },
+      "family_wall_ns": {
+        "landing": 10747076,
+        "markdown": 4329246842,
+        "special": 682195933,
+        "legacy-api": 82717,
+        "cli": 3498490238,
+        "api": 312011796
+      },
+      "asset_publication_s": 0.03358148108236492,
+      "asset_files": 294,
+      "nift_composition_s": 2.816945312079042,
+      "total_s": 59.87885875906795,
+      "publication": {
+        "markdown_exports_s": 6.943201062036678,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.09354312717914581,
+        "search_s": 3.383961334824562,
+        "publication_s": 10.426762895891443
+      },
+      "minification": {
+        "html_minification_s": 19.933770799078047,
+        "minified_pages": 3901
+      }
+    }
+  },
+  {
+    "project": "docker",
+    "repetition": 4,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 60.24932717718184,
+    "peak_rss_kib": 1083668,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 10.486895566075251,
+      "shell_prepare_s": 15.859483721,
+      "compatibility_expansion_ns": 197927367,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 413763937,
+        "MarkdownRenderNS": 159064717,
+        "HookNS": 1030821287,
+        "ChromaNS": 1605730046
+      },
+      "family_wall_ns": {
+        "landing": 16789404,
+        "markdown": 4319499122,
+        "special": 692691727,
+        "legacy-api": 89959,
+        "cli": 3460158592,
+        "api": 297957903
+      },
+      "asset_publication_s": 0.032970476895570755,
+      "asset_files": 294,
+      "nift_composition_s": 2.749946540920064,
+      "total_s": 59.28982428391464,
+      "publication": {
+        "markdown_exports_s": 7.312880167970434,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.09598677512258291,
+        "search_s": 3.2269497259985656,
+        "publication_s": 10.641918306006119
+      },
+      "minification": {
+        "html_minification_s": 19.507848931010813,
+        "minified_pages": 3901
+      }
+    }
+  },
+  {
+    "project": "docker",
+    "repetition": 5,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 61.61981793795712,
+    "peak_rss_kib": 1083388,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+      "compiled_pages": 2170,
+      "compatibility_wall_s": 10.598358492869092,
+      "shell_prepare_s": 16.092486595,
+      "compatibility_expansion_ns": 199983137,
+      "renderer_components_ns": {
+        "MarkdownParseNS": 416810019,
+        "MarkdownRenderNS": 160235367,
+        "HookNS": 992023954,
+        "ChromaNS": 1598603897
+      },
+      "family_wall_ns": {
+        "landing": 10197697,
+        "markdown": 4226199666,
+        "special": 734913923,
+        "legacy-api": 90853,
+        "cli": 3629623115,
+        "api": 298194537
+      },
+      "asset_publication_s": 0.03163185599260032,
+      "asset_files": 294,
+      "nift_composition_s": 2.7376009749714285,
+      "total_s": 60.600959905888885,
+      "publication": {
+        "markdown_exports_s": 7.510184143902734,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.10442870017141104,
+        "search_s": 3.3225005930289626,
+        "publication_s": 10.946140045067295
+      },
+      "minification": {
+        "html_minification_s": 20.181146312970668,
+        "minified_pages": 3901
+      }
+    }
+  },
+  {
+    "project": "docker-agent",
+    "repetition": 1,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 28.263651939108968,
+    "peak_rss_kib": 1015964,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 14.397672045044601,
+      "asset_publication_s": 0.03217984992079437,
+      "asset_files": 294,
+      "nift_composition_s": 2.818709263112396,
+      "total_s": 27.59326883405447,
+      "publication": {
+        "markdown_exports_s": 7.011250587878749,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.09304655389860272,
+        "search_s": 3.2070383329410106,
+        "publication_s": 10.317752422066405
+      }
+    }
+  },
+  {
+    "project": "docker-agent",
+    "repetition": 2,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 35.753886624006554,
+    "peak_rss_kib": 1015604,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 17.32653685286641,
+      "asset_publication_s": 0.04880727897398174,
+      "asset_files": 294,
+      "nift_composition_s": 3.9949140718672425,
+      "total_s": 35.07434896589257,
+      "publication": {
+        "markdown_exports_s": 8.783649039221928,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.13374781794846058,
+        "search_s": 4.7742239811923355,
+        "publication_s": 13.701324752066284
+      }
+    }
+  },
+  {
+    "project": "docker-agent",
+    "repetition": 3,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 30.267645868007094,
+    "peak_rss_kib": 1016096,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 15.717574680922553,
+      "asset_publication_s": 0.03337353211827576,
+      "asset_files": 294,
+      "nift_composition_s": 3.019812651211396,
+      "total_s": 29.534993340959772,
+      "publication": {
+        "markdown_exports_s": 7.125731694046408,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.09304433292709291,
+        "search_s": 3.535087704891339,
+        "publication_s": 10.761686940910295
+      }
+    }
+  },
+  {
+    "project": "docker-agent",
+    "repetition": 4,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 30.345645488006994,
+    "peak_rss_kib": 1016100,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 15.619341911980882,
+      "asset_publication_s": 0.033934982027858496,
+      "asset_files": 294,
+      "nift_composition_s": 3.061550008133054,
+      "total_s": 29.646259953966364,
+      "publication": {
+        "markdown_exports_s": 7.285528355045244,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.09679737407714128,
+        "search_s": 3.5404710359871387,
+        "publication_s": 10.929251994937658
+      }
+    }
+  },
+  {
+    "project": "docker-agent",
+    "repetition": 5,
+    "mode": "forced full; warm dependencies and application caches",
+    "wall_s": 28.933838227996603,
+    "peak_rss_kib": 1015896,
+    "command": [
+      "python3",
+      "scripts/build.py",
+      "--all"
+    ],
+    "components": {
+      "model": "maintained HTML \u2192 Nift composition",
+      "composition_prepare_s": 14.429680913919583,
+      "asset_publication_s": 0.03289683209732175,
+      "asset_files": 294,
+      "nift_composition_s": 2.927670734934509,
+      "total_s": 28.253845955012366,
+      "publication": {
+        "markdown_exports_s": 7.267882113112137,
+        "markdown_export_count": 2170,
+        "converted_exports": 2170,
+        "ancillary_s": 0.0998725809622556,
+        "search_s": 3.4862299379892647,
+        "publication_s": 10.860535951098427
+      }
+    }
+  }
+]
