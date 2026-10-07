@@ -43,7 +43,7 @@ const snapshot = page => page.evaluate(() => ({
 
 for (const [width,height] of [[1440,900],[390,844]]) {
   for (const [mode,scheme] of (process.env.ONLY_BEHAVIORS ? [['light','light']] : [['light','light'],['dark','dark'],['system-light','light'],['system-dark','dark']])) {
-    browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,headless:true,args:['--disable-dev-shm-usage']});
+    browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,headless:true,ignoreDefaultArgs:['--enable-features=CDPScreenshotNewSurface'],args:['--disable-dev-shm-usage','--disable-gpu']});
     const context=await browser.newContext({viewport:{width,height},colorScheme:scheme,deviceScaleFactor:1,reducedMotion:'reduce',permissions:['clipboard-read','clipboard-write']});
     context.setDefaultTimeout(5000);
     const external=[];
@@ -66,12 +66,15 @@ for (const [width,height] of [[1440,900],[390,844]]) {
       // Stabilize time-dependent analytics bootstrapping; no requests reach services.
       window.__parityFixture=true;
     },{mode});
-    for (const [family,route] of fixtures.filter(([family])=>(!process.env.FIXTURES || process.env.FIXTURES.split(',').includes(family)) && (!process.env.ONLY_BEHAVIORS || ['standard-doc','tabs','accordion','diagram','topology','cli'].includes(family)))) {
+    for (const [family,route] of fixtures.filter(([family])=>(!process.env.SKIP_FIXTURES || !process.env.SKIP_FIXTURES.split(',').includes(family)) && (!process.env.FIXTURES || process.env.FIXTURES.split(',').includes(family)) && (!process.env.ONLY_BEHAVIORS || ['standard-doc','tabs','accordion','diagram','topology','cli'].includes(family)))) {
       if(completed.has(`${family}-${width}-${mode}`)) continue;
       const page=await context.newPage();
       const errors=[];
       page.on('pageerror',error=>errors.push(error.message));
       const response=await page.goto(origin+route,{waitUntil:'networkidle'});
+      // Force a committed viewport surface before capture. This works around
+      // Chromium's intermittent blank/missing surface on the untouched 404.
+      if(family==='404'){await page.setViewportSize({width:width+1,height:height+1});await page.setViewportSize({width,height});await page.waitForTimeout(500);}
       await page.evaluate(()=>document.fonts.ready);
       await page.waitForTimeout(150);
       const record={family,route,width,height,mode,status:response.status(),initial:await snapshot(page),errors,externalBoundary:'remote scripts inert; remote non-script requests blocked'};

@@ -41,7 +41,7 @@ class Components:
    cols=int(k.get('cols',3));key=k.get('items','grid');items=self.c['frontmatter'].get(key,self.c['frontmatter'].get('params',{}).get(key,[]))
    return f'<div class="not-prose md:grid-cols-{max(2,cols-1)} xl:grid-cols-{cols} grid grid-cols-1 gap-4 mb-6">'+''.join(self.card(v) for v in items)+'</div>'
   if name=='accordion':
-   title=k['title'];identifier=re.sub(r'[^\w\s-]','',title.lower()).replace(' ','-');body=self.r.markdown(self.materialize(node.children),self.c)
+   title=k['title'];identifier=re.sub(r'[^\w\s-]','',title.lower()).strip().replace(' ','-');body=self.r.markdown(self.materialize(node.children),self.c)
    icon='<span class="icon-svg -mt-1">'+self.icon(k['icon'])+'</span>' if k.get('icon') else ''
    return '<div id="'+E(identifier)+'" x-data="{ open: '+k.get('open','false')+' }" class="my-6 rounded-sm border border-gray-200 bg-white py-2 dark:border-gray-700 dark:bg-gray-900"><button class="not-prose flex w-full justify-between px-4 py-2" x-on:click="open = ! open"><div class="'+('text-xl' if k.get('large') else '')+' flex items-center gap-2">'+icon+E(title)+'</div><span :class="{ \'hidden\' : !open }" class="icon-svg icon-sm">'+self.icon('chevron-up')+'</span><span :class="{ \'hidden\' : open }" class="icon-svg icon-sm">'+self.icon('chevron-down')+'</span></button><div x-show="open" x-collapse class="px-4">'+body+'</div></div>'
   if name=='experimental':

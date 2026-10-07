@@ -75,7 +75,7 @@ class Chrome:
      if not key:return raw
      attrs=lookup.get(key.group(1) or key.group(2))
      if not attrs:return raw
-     return '<meta '+ ' '.join(k+'="'+E(v)+'"' for k,v in attrs.items())+'>'
+     return '<meta '+ ' '.join(k if v is None else k+'="'+E(v)+'"' for k,v in attrs.items())+'>'
     value=re.sub(r'<meta\b[^>]*>',meta,value)
     schemas=iter(page['schema'])
     value=re.sub(r'(<script[^>]*type=["\']?application/ld\+json["\']?[^>]*>).*?(</script>)',lambda m:m.group(1)+json.dumps(next(schemas),ensure_ascii=False,separators=(',',':')).replace('<','\\u003c').replace('>','\\u003e').replace('&','\\u0026')+m.group(2),value,flags=re.S)

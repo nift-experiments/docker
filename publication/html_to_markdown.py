@@ -47,6 +47,13 @@ def convert(value,title=None):
      if match:payload=match.group(1);break
    if payload is not None:
     raw=base64.b64decode(payload).decode();fence='`'*max(3,max((len(m.group())+1 for m in re.finditer(r'`+',raw)),default=3));token='\ue000'+str(len(code_blocks))+'\ue001';code_blocks.append((token,fence+language+'\n'+raw.rstrip('\n')+'\n'+fence));return '\n\n'+token+'\n\n'
+  if tag=='a' and 'footnote-ref' in classes:return '[^'+attrs['href'].split(':')[-1]+']'
+  if tag=='a' and 'footnote-backref' in classes:return ''
+  if tag=='div' and 'footnotes' in classes:
+   notes=[]
+   for note in descendants(n,'li'):
+    key=note.attrs.get('id','').split(':')[-1];lines=children(note).strip().splitlines();notes.append('[^'+key+']: '+('\n    '.join(lines)))
+   return '\n\n'+'\n\n'.join(notes)+'\n\n'
   if tag in ['script','style','svg','template','select','input'] or attrs.get('role')=='tooltip':return ''
   if tag=='button':return '\n\n**'+n.text().strip()+'**\n\n' if 'tab-item' in classes else ''
   if tag=='pre':

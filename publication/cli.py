@@ -13,7 +13,7 @@ class CLI:
  def heading(self,label):return self.md('## '+label)
  def badge(self,label,color='blue'):
   colors={'blue':'bg-blue-500 dark:bg-blue-400','red':'bg-red-500 dark:bg-red-400','violet':'bg-violet-500 dark:bg-violet-400'}
-  return '<span class="not-prose '+colors[color]+' rounded-sm px-1 text-xs text-white">'+E(label)+'</span> '
+  return '<span class="not-prose '+colors[color]+' rounded-sm px-1 text-xs text-white">'+E(label)+'\n</span>'
  def experimental(self):
   icon=(self.r.assets/'beaker.svg').read_text()
   return '<div class="px-4 border-l-2 border-l-magenta-light dark:border-l-magenta-dark"><p class="not-prose flex gap-2 items-center text-magenta-light dark:text-magenta-dark"><span class="icon-svg pb-1">'+icon+'</span><strong>Experimental</strong></p><p><strong>This command is experimental.</strong></p><p>Experimental features are intended for testing and feedback as their functionality or design may change between releases without warning or can be removed entirely in a future release.</p></div>'
