@@ -1,0 +1,18 @@
+<style>#gordon-chat pre{background:#0d1117;border-radius:.25rem;padding:0;margin:.5rem 0;overflow-x:auto;white-space:pre}#gordon-chat pre code{background:#0d1117;color:#c9d1d9;padding:1rem;display:block;font-family:roboto mono,monospace;font-size:.875rem;line-height:1.5;white-space:pre;overflow-x:auto}#gordon-chat pre code *{white-space:pre}#gordon-chat .prose code.not-prose{background-color:#e5e7eb;color:#111827;padding:.2em .4em;border-radius:.25rem;font-family:roboto mono,monospace;font-size:.875em}.dark #gordon-chat .prose code.not-prose{background-color:#374151;color:#e5e7eb}</style><main class="relative flex w-full max-w-[1920px]"><div style=scroll-behavior:smooth x-data x-init="$nextTick(() => {
+          const container = $el; // The div with overflow
+          const item = document.getElementById('sidebar-current-page')
+          if (item) {
+              const containerTop = container.scrollTop;
+              const containerBottom = containerTop + container.clientHeight;
+
+              const itemTop = item.offsetTop - container.offsetTop;
+              const itemBottom = itemTop + item.offsetHeight;
+
+              // Scroll only if the item is out of view
+              if (itemBottom > containerBottom - 200) {
+                  container.scrollTop = itemTop - (container.clientHeight / 2 - item.offsetHeight / 2);
+              }
+          }
+      })" class="bg-background-toc dark:bg-background-toc fixed top-0 z-40 hidden h-screen w-full flex-none overflow-x-hidden overflow-y-auto md:sticky md:top-16 md:z-auto md:block md:h-[calc(100vh-64px)] md:w-[320px]" :class="{ 'hidden': ! $store.showSidebar }"><div class="fixed bg-black/50 md:hidden" x-show=$store.showSidebar @click="openSidebar = false" x-transition.opacity></div><div class="bg-background-toc dark:bg-background-toc z-50 w-full p-3 md:block md:w-[300px]"><button class="my-4 md:hidden" @click="$store.showSidebar = false">
+<span class=icon-svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon"><path fill-rule="evenodd" d="M11.03 3.97a.75.75.0 010 1.06l-6.22 6.22H21a.75.75.0 010 1.5H4.81l6.22 6.22a.75.75.0 11-1.06 1.06l-7.5-7.5a.75.75.0 010-1.06l7.5-7.5a.75.75.0 011.06.0z" clip-rule="evenodd"/></svg>
+</span>Back</button>

@@ -1,0 +1,5 @@
+{
+  "shared_candidates": 861,
+  "shared_used": 294,
+  "rule": "Exact shell subtrees >=1024 characters shared by at least two documents; body excluded; two-pass bounded-memory extraction."
+}

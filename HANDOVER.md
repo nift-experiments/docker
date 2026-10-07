@@ -65,10 +65,10 @@ Changed-input scenarios: deterministic edits to 1/10/100 authored pages, shared 
 Compare source/template counts, shared abstractions, direct/transitive dependencies, JS bytes, full and changed build time/RSS, output size, migration effort, ease of human/agent editing and compromises. Neither architecture is required to win.
 
 # Current checkpoint
-C0 baseline and C1 parity contract complete. C2 bounded compatibility and raw-composition proof complete; see investigation/C2-ARCHITECTURE.md and c2 evidence. Eight representative routes compose successfully in both projects; five real Markdown fixtures and 40 browser states per project pass. C3–C7 remain and must proceed without approval pauses.
+C0 baseline and C1 parity contract complete. C2 bounded compatibility and raw-composition proof complete; see investigation/C2-ARCHITECTURE.md and c2 evidence. Eight representative routes compose successfully in both projects; five real Markdown fixtures and 40 browser states per project pass. C3 ordinary corpus complete; see investigation/C3-CORPUS.md. All 1,012 ordinary semantic fixtures pass, both projects build 1,015 routes, and all agent output bytes match reference. C4–C7 remain and must proceed without approval pauses.
 
 # Remaining checkpoints
-- C3: full docs/guide corpus and corpus-driven shortcode coverage.
+- C3 completed: ordinary docs/guide corpus and corpus-driven shortcode coverage.
 - C4: generated/special families, all ancillary outputs and fresh publication/search.
 - C5: whole-site interactions and route/content/metadata/asset parity.
 - C6: fresh checkout, changed-input correctness and uncontended repeated component/full-pipeline benchmarks.

@@ -1,0 +1,19 @@
+📦 1015 files built successfully
+time taken: 3.072328 seconds
+{
+  "model": "maintained Markdown \u2192 Docker compatibility renderer \u2192 transient HTML \u2192 Nift",
+  "compiled_pages": 1012,
+  "compatibility_wall_s": 12.187139465939254,
+  "compatibility_expansion_ns": 140598902,
+  "renderer_components_ns": {
+    "MarkdownParseNS": 250371803,
+    "MarkdownRenderNS": 78723535,
+    "HookNS": 945678221,
+    "ChromaNS": 1289002294
+  },
+  "asset_publication_s": 0.20882862410508096,
+  "asset_files": 3479,
+  "nift_composition_s": 3.085916021838784,
+  "total_s": 15.483312294818461,
+  "search": "C2 frozen reference search fixture; fresh publication/indexing is a C4/C5 obligation, not benchmarked here."
+}

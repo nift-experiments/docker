@@ -1,0 +1,44 @@
+"""Pinned Docker files/file component: tree, copy controls and scaffold scripts."""
+from pathlib import PurePosixPath
+import base64,html,re,textwrap
+E=lambda x:html.escape(str(x),quote=True)
+B=lambda x:base64.b64encode(x.encode()).decode()
+def render_files(component,node,parameters):
+ c=component;name=parameters['name'].strip();files=[]
+ for child in node.children:
+  if isinstance(child,str):
+   if child.strip():raise ValueError('text outside file child')
+   continue
+  if child.name!='file':raise ValueError('files requires file children')
+  k=dict(p.split('=',1) for p in child.parameters);source=c.materialize(child.children).replace('\r\n','\n').replace('\r','\n').strip();lines=source.splitlines()
+  if len(lines)<2 or not lines[0].startswith('```') or lines[-1].strip()!='```':raise ValueError('file child requires a fenced source')
+  files.append({'path':k['path'].strip(),'lang':k.get('lang',lines[0][3:].strip()),'content':'\n'.join(lines[1:-1]),'status':k.get('status','').lower(),'hl_lines':k.get('hl_lines','').replace(',',' ')})
+ if not files:raise ValueError('empty files component')
+ dirs=list(dict.fromkeys(str(PurePosixPath(f['path']).parent) for f in files if str(PurePosixPath(f['path']).parent)!='.'))
+ bash=['mkdir -p '+' '.join(name+'/'+d for d in dirs)+' && cd '+name if dirs else 'mkdir '+name+' && cd '+name]
+ ps=['# Write files as UTF-8 without BOM. Works on Windows PowerShell 5.1 and PowerShell 7+.','function WriteFile([string]$Path, [string]$Content) {','    $full = Join-Path -Path (Get-Location).ProviderPath -ChildPath $Path','    [System.IO.File]::WriteAllText($full, $Content, [System.Text.UTF8Encoding]::new($false))','}','','New-Item -ItemType Directory -Force -Path '+name+' | Out-Null',*['New-Item -ItemType Directory -Force -Path '+name+'/'+d+' | Out-Null' for d in dirs],'Set-Location '+name]
+ for f in files:
+  bash.extend(["cat > "+f['path']+" <<'__DOCKER_DOCS_SCAFFOLD_EOF__'",f['content'],'__DOCKER_DOCS_SCAFFOLD_EOF__']);ps.extend(["WriteFile '"+f['path']+"' @'",f['content'],"'@"])
+ state="{ view: 'files', shell: 'bash', selected: 0, scaffoldCopied: false, fileCopied: -1, bashScript: atob('"+B('\n'.join(bash))+"'), psScript: atob('"+B('\n'.join(ps))+"'), fileContents: ["+','.join("atob('"+B(f['content'])+"')" for f in files)+"], copyScaffold() { const script = this.shell === 'bash' ? this.bashScript : this.psScript; window.navigator.clipboard.writeText(script); this.scaffoldCopied = true; setTimeout(() => this.scaffoldCopied = false, 2000); }, copyFile(i) { window.navigator.clipboard.writeText(this.fileContents[i]); this.fileCopied = i; setTimeout(() => this.fileCopied = -1, 2000); } }"
+ def highlight(code,lang,hl=''):
+  rendered=c.r.markdown('```'+lang+(' {hl_lines="'+hl+'"}' if hl else '')+'\n'+code+'\n```',c.c)
+  if '<div class="highlight">' not in rendered:return re.search(r'<pre[^>]*>.*?</pre>',rendered,re.S).group(0)
+  start=rendered.index('<div class="highlight">');end=rendered.index('</div>',start)+6
+  return rendered[start:end]
+ def icon(name):return c.icon(name)
+ def toggle(group,value,label):return '<button type="button" role="tab" class="rounded px-2 py-1 font-medium" :class="'+E(group+" === '"+value+"' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900 dark:text-blue-200' : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-800'")+'" @click="'+E(group+" = '"+value+"'; scaffoldCopied = false")+'">'+label+'</button>'
+ out='<div data-pagefind-ignore class="not-prose my-6" x-data="'+E(state)+'"><div class="overflow-hidden rounded-lg border border-gray-200 bg-white dark:border-gray-800 dark:bg-gray-900"><div class="flex items-center justify-between gap-3 border-b border-gray-200 bg-gray-50 px-3 py-2 text-sm dark:border-gray-800 dark:bg-gray-950"><span class="font-mono font-medium text-gray-700 dark:text-gray-200">'+E(name)+'</span><div class="flex gap-0.5 rounded border border-gray-200 bg-white p-0.5 dark:border-gray-700 dark:bg-gray-900" role="tablist">'+toggle('view','files','Files')+toggle('view','scaffold','Scaffold script')+'</div></div><div class="flex h-[28rem]" x-show="view === \'files\'"><aside class="w-56 shrink-0 overflow-y-auto border-r border-gray-200 bg-gray-50 py-2 dark:border-gray-800 dark:bg-gray-950"><ul class="text-sm" role="tablist">'
+ def folder(label,depth,root=False):return '<li><div class="flex items-center gap-2 py-1 pr-3 font-mono '+('font-medium text-gray-700 dark:text-gray-200' if root else 'text-gray-500 dark:text-gray-400')+'" style="padding-left: '+str(12+depth*16)+'px"><span class="icon-svg icon-sm shrink-0 '+('text-gray-500 dark:text-gray-400' if root else 'text-gray-400')+'">'+icon('folder-open' if root else 'folder')+'</span><span class="truncate">'+E(label)+'</span></div></li>'
+ def entry(i,f,depth):
+  status=f['status'];badge='<span class="ml-auto shrink-0 text-xs font-bold '+('text-amber-600 dark:text-amber-400' if status=='modified' else 'text-green-600 dark:text-green-400')+'" title="'+('Modified' if status=='modified' else 'Added')+'">'+('M' if status=='modified' else 'A')+'</span>' if status else ''
+  return '<li><button type="button" role="tab" class="flex w-full items-center gap-2 py-1 pr-3 text-left font-mono" :class="'+E("selected === "+str(i)+" ? 'bg-gray-200 text-blue-700 dark:bg-gray-800 dark:text-blue-400' : 'text-gray-700 hover:bg-gray-100 hover:text-blue-700 dark:text-gray-200 dark:hover:bg-gray-900 dark:hover:text-blue-400'")+'" @click="selected = '+str(i)+'" title="'+E(f['path'])+'" style="padding-left: '+str(12+depth*16)+'px"><span class="icon-svg icon-sm shrink-0 text-gray-400">'+icon('document-text')+'</span><span class="truncate">'+E(PurePosixPath(f['path']).name)+'</span>'+badge+'</button></li>'
+ out+=folder(name,0,True);folders=set()
+ for d in dirs:
+  parts=PurePosixPath(d).parts
+  for i in range(len(parts)):folders.add('/'.join(parts[:i+1]))
+ for d in sorted(folders):
+  depth=len(PurePosixPath(d).parts);out+=folder(PurePosixPath(d).name,depth)
+  out+=''.join(entry(i,f,depth+1) for i,f in enumerate(files) if str(PurePosixPath(f['path']).parent)==d)
+ out+=''.join(entry(i,f,1) for i,f in enumerate(files) if str(PurePosixPath(f['path']).parent)=='.')+'</ul></aside><main class="group relative min-w-0 flex-1 overflow-hidden"><button type="button" class="absolute top-2 right-5 z-10 text-gray-300 dark:text-gray-500" title="Copy file contents" @click="copyFile(selected)"><span :class="{ \'group-hover:block\' : fileCopied !== selected }" class="icon-svg hidden">'+icon('document-duplicate')+'</span><span :class="{ \'group-hover:block\' : fileCopied === selected }" class="icon-svg hidden">'+icon('check-circle')+'</span></button><div class="h-full overflow-auto [&_.highlight]:overflow-visible">'
+ out+=''.join('<div role="tabpanel" x-show="selected === '+str(i)+'" class="syntax-light dark:syntax-dark">'+highlight(f['content'],f['lang'],f['hl_lines'])+'</div>' for i,f in enumerate(files))+'</div></main></div><div class="flex h-[28rem] flex-col" x-show="view === \'scaffold\'" x-cloak><div class="flex flex-wrap items-center gap-3 border-b border-yellow-200 bg-yellow-50 px-3 py-2 text-xs text-yellow-900 dark:border-yellow-900/40 dark:bg-yellow-950/40 dark:text-yellow-200"><div class="flex items-center gap-2"><span class="icon-svg icon-sm shrink-0">'+icon('exclamation-triangle')+'</span><span>Overwrites existing files with the same names. Run from the parent of your project directory.</span></div><div class="ml-auto flex gap-0.5 rounded border border-yellow-300 bg-white p-0.5 dark:border-yellow-900/60 dark:bg-gray-900" role="tablist">'+toggle('shell','bash','Bash')+toggle('shell','powershell','PowerShell')+'</div></div><div class="group relative flex-1 overflow-hidden"><button type="button" class="absolute top-2 right-5 z-10 text-gray-300 dark:text-gray-500" title="Copy scaffold script" @click="copyScaffold()"><span :class="{ \'group-hover:block\' : !scaffoldCopied }" class="icon-svg hidden">'+icon('document-duplicate')+'</span><span :class="{ \'group-hover:block\' : scaffoldCopied }" class="icon-svg hidden">'+icon('check-circle')+'</span></button><div class="h-full overflow-auto [&_.highlight]:overflow-visible"><div x-show="shell === \'bash\'" class="syntax-light dark:syntax-dark">'+highlight('\n'.join(bash),'bash')+'</div><div x-show="shell === \'powershell\'" x-cloak class="syntax-light dark:syntax-dark">'+highlight('\n'.join(ps),'powershell')+'</div></div></div></div></div></div>'
+ return out

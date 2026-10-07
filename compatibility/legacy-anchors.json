@@ -1,0 +1,12 @@
+{
+  "manuals/desktop/enterprise/hardened-desktop/settings-management/settings-reference.md": {
+    "expose-docker-api-on-tcp-2375": "expose-docker-api-on-tcp-2375-hahahugoshortcode1809s0hbhb",
+    "enable-gpu-backed-inference": "enable-gpu-backed-inference-hahahugoshortcode1809s1hbhb",
+    "virtiofs": "virtiofs-hahahugoshortcode1809s2hbhb",
+    "grpc-fuse": "grpc-fuse-hahahugoshortcode1809s3hbhb",
+    "rosetta": "rosetta-hahahugoshortcode1809s4hbhb",
+    "override-windows-dockerd-port": "override-windows-dockerd-port-hahahugoshortcode1809s5hbhb",
+    "enable-wsl-engine": "enable-wsl-engine-hahahugoshortcode1809s6hbhb",
+    "vpnkit-cidr": "vpnkit-cidr-hahahugoshortcode1809s7hbhb"
+  }
+}

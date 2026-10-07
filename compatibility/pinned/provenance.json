@@ -1,0 +1,7 @@
+{
+  "gha-Dockerfile": {
+    "url": "https://raw.githubusercontent.com/dvdksn/rpg-name-generator/refs/heads/main/Dockerfile",
+    "captured_from": "pinned production clipboard payload",
+    "upstream_commit": "6cf1b1c167f032e8a6629da211602300b623b20e"
+  }
+}

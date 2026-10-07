@@ -14,6 +14,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"time"
 
@@ -21,6 +22,7 @@ import (
 	ch "github.com/alecthomas/chroma/v2/formatters/html"
 	"github.com/alecthomas/chroma/v2/lexers"
 	"github.com/alecthomas/chroma/v2/styles"
+	"github.com/bep/goat"
 	"github.com/yuin/goldmark"
 	"github.com/yuin/goldmark/ast"
 	"github.com/yuin/goldmark/extension"
@@ -35,6 +37,7 @@ import (
 type Request struct {
 	Markdown, Route, Source string
 	Index                   bool
+	LegacyAnchors           map[string]string
 }
 type Metrics struct {
 	MarkdownParseNS, MarkdownRenderNS, HookNS, ChromaNS int64
@@ -93,10 +96,11 @@ func (h *Hooks) resolve(destination string) (string, error) {
 	if u.Path == "" {
 		return destination, nil
 	}
-	candidates := []string{strings.TrimPrefix(path.Clean(path.Join(path.Dir(h.request.Source), u.Path)), "/"), strings.TrimPrefix(u.Path, "/")}
+	candidates := []string{strings.TrimPrefix(path.Clean(path.Join(path.Dir(h.request.Source), u.Path)), "/"), strings.TrimPrefix(path.Clean(u.Path), "/")}
 	if strings.HasPrefix(u.Path, "/") {
-		candidates = []string{strings.TrimPrefix(u.Path, "/")}
+		candidates = []string{strings.TrimPrefix(path.Clean(u.Path), "/")}
 	}
+	candidates = append(candidates, strings.TrimLeft(path.Clean(u.Path), "./"), strings.ToLower(u.Path), path.Base(u.Path))
 	for _, candidate := range candidates {
 		if route, ok := h.refs[candidate]; ok {
 			u.Path = route
@@ -112,7 +116,11 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 			id := attr(n, "id")
 			fmt.Fprintf(w, "<h%d class=\"%s scroll-mt-20 flex items-center gap-2\" id=\"%s\"><a class=\"text-black dark:text-white no-underline hover:underline\" href=\"#%s\">", v.Level, esc(attr(n, "class")), esc(id), esc(id))
 		} else {
-			fmt.Fprintf(w, "</a></h%d>\n", v.Level)
+			w.WriteString("</a>")
+			if tier := attr(n, "tier"); tier != "" {
+				fmt.Fprintf(w, `<span class="not-prose bg-blue-500 dark:bg-blue-400 rounded-sm px-1 text-xs text-white">%s</span>`, esc(tier))
+			}
+			fmt.Fprintf(w, "</h%d>\n", v.Level)
 		}
 	case *ast.Link:
 		if enter {
@@ -124,7 +132,7 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 			if strings.HasPrefix(href, "http") && strings.HasPrefix(string(v.Destination), "http") {
 				rel = " rel=\"noopener\""
 			}
-			fmt.Fprintf(w, "<a class=\"link\" href=\"%s\"%s>", esc(href), rel)
+			fmt.Fprintf(w, "<a class=\"link\" href=\"%s\"%s>", esc(strings.NewReplacer("(", "%28", ")", "%29").Replace(string(util.URLEscape([]byte(href), true)))), rel)
 		} else {
 			w.WriteString("</a>")
 		}
@@ -176,42 +184,127 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 		var code bytes.Buffer
 		for i := 0; i < v.Lines().Len(); i++ {
 			segment := v.Lines().At(i)
-			code.Write(segment.Value(source))
+			value := segment.Value(source)
+			if len(bytes.TrimSpace(value)) == 0 && v.Info != nil {
+				lineStart := bytes.LastIndexByte(source[:segment.Start], '\n') + 1
+				original := source[lineStart:segment.Stop]
+				openingStart := bytes.LastIndexByte(source[:v.Info.Segment.Start], '\n') + 1
+				prefix := source[openingStart:v.Info.Segment.Start]
+				indent := bytes.IndexAny(prefix, "`~")
+				if indent >= 0 && indent < len(original) && len(bytes.TrimRight(original[indent:], "\n")) >= 4 && len(bytes.TrimSpace(original[:indent])) == 0 {
+					value = original[indent:]
+				}
+			}
+			code.Write(value)
 		}
-		lang := string(v.Language(source))
+		lang := strings.Split(string(v.Language(source)), "{")[0]
 		if lang == "" {
 			lang = "text"
 		}
 		if lang == "mermaid" {
 			h.metrics.Hooks["mermaid"]++
-			fmt.Fprintf(w, "<pre class=\"mermaid not-prose my-4 flex justify-center bg-transparent\" data-pagefind-ignore>%s</pre>\n", esc(strings.TrimSuffix(code.String(), "\n")))
+			fmt.Fprintf(w, "<pre class=\"mermaid not-prose my-4 flex justify-center bg-transparent\" data-pagefind-ignore>%s</pre>\n", esc(strings.TrimRight(code.String(), "\n")))
 			return ast.WalkSkipChildren, nil
 		}
-		if v.Info != nil && strings.Contains(string(v.Info.Text(source)), "{") {
-			return ast.WalkStop, fmt.Errorf("code-fence attributes require a corpus fixture: %s", v.Info.Text(source))
+		options := map[string]string{}
+		var ranges [][2]int
+		if v.Info != nil {
+			info := string(v.Info.Text(source))
+			if i := strings.Index(info, "{"); i >= 0 {
+				attrs, ok := parser.ParseAttributes(text.NewReader([]byte(info[i:])))
+				if !ok {
+					attrs = nil // Pinned Goldmark ignores malformed attribute syntax.
+				}
+				for _, a := range attrs {
+					key := string(a.Name)
+					if key != "title" && key != "collapse" && key != "hl_lines" && key != "linenos" && !(lang == "goat" && key == "class") {
+						return ast.WalkStop, fmt.Errorf("unproven fence attribute %s", key)
+					}
+					value := a.Value
+					if b, ok := value.([]byte); ok {
+						options[key] = string(b)
+					} else if array, ok := value.([]any); ok {
+						var values []string
+						for _, x := range array {
+							if b, ok := x.([]byte); ok {
+								values = append(values, string(b))
+							} else {
+								values = append(values, fmt.Sprint(x))
+							}
+						}
+						options[key] = strings.Join(values, " ")
+					} else {
+						options[key] = fmt.Sprint(value)
+					}
+				}
+				for _, r := range strings.Fields(options["hl_lines"]) {
+					parts := strings.Split(r, "-")
+					lo, err := strconv.Atoi(parts[0])
+					if err != nil {
+						return ast.WalkStop, err
+					}
+					hi := lo
+					if len(parts) == 2 {
+						hi, err = strconv.Atoi(parts[1])
+						if err != nil {
+							return ast.WalkStop, err
+						}
+					}
+					ranges = append(ranges, [2]int{lo, hi})
+				}
+			}
 		}
-		begin := time.Now()
+		if lang == "goat" {
+			diagram := goat.BuildSVG(strings.NewReader(strings.TrimRight(code.String(), "\n")))
+			svg := fmt.Sprintf(`<svg font-family="Menlo,Lucida Console,monospace" viewBox="0 0 %d %d">%s</svg>`, diagram.Width, diagram.Height, diagram.Body)
+			fmt.Fprintf(w, `<div class="goat svg-container %s">%s</div>`, esc(options["class"]), svg)
+			return ast.WalkSkipChildren, nil
+		}
 		lexer := lexers.Get(lang)
-		if lexer == nil {
-			lexer = lexers.Fallback
+		unhighlighted := lexer == nil
+		codeText := strings.TrimRight(code.String(), "\n")
+		var value string
+		if unhighlighted {
+			value = `<pre tabindex="0"><code class="language-` + esc(lang) + `" data-lang="` + esc(lang) + `">` + esc(codeText) + `</code></pre>`
+		} else {
+			begin := time.Now()
+			tokens, err := chroma.Coalesce(lexer).Tokenise(nil, codeText)
+			if err != nil {
+				return ast.WalkStop, err
+			}
+			var highlighted bytes.Buffer
+			formatter := ch.New(ch.WithClasses(true), ch.WithLineNumbers(options["linenos"] == "true"), ch.LineNumbersInTable(true), ch.HighlightLines(ranges))
+			err = formatter.Format(&highlighted, styles.Fallback, tokens)
+			h.metrics.ChromaNS += time.Since(begin).Nanoseconds()
+			if err != nil {
+				return ast.WalkStop, err
+			}
+			value = highlighted.String()
 		}
-		lexer = chroma.Coalesce(lexer)
-		codeText := strings.TrimSuffix(code.String(), "\n")
-		tokens, err := lexer.Tokenise(nil, codeText)
-		if err != nil {
-			return ast.WalkStop, err
+		value = strings.ReplaceAll(value, "<pre class=\"chroma\">", "<pre tabindex=\"0\" class=\"chroma\">")
+		if options["linenos"] == "true" {
+			value = strings.Replace(value, `<pre tabindex="0" class="chroma"><span`, `<pre tabindex="0" class="chroma"><code><span`, 1)
+			value = strings.Replace(value, `</pre></td>`, `</code></pre></td>`, 1)
 		}
-		var highlighted bytes.Buffer
-		formatter := ch.New(ch.WithClasses(true))
-		err = formatter.Format(&highlighted, styles.Fallback, tokens)
-		h.metrics.ChromaNS += time.Since(begin).Nanoseconds()
-		if err != nil {
-			return ast.WalkStop, err
+		value = strings.Replace(value, "<code><span class=\"line\">", "<code class=\"language-"+esc(lang)+"\" data-lang=\""+esc(lang)+"\"><span class=\"line\">", 1)
+		var ordinary bytes.Buffer
+		fmt.Fprintf(&ordinary, "<div data-pagefind-ignore x-data x-ref=\"root\" class=\"group mt-2 mb-4 flex w-full scroll-mt-2 flex-col items-start gap-4 rounded bg-gray-50 p-2 outline outline-1 outline-offset-[-1px] outline-gray-200 dark:bg-gray-900 dark:outline-gray-800\"><div class=\"relative w-full\"><div class=\"syntax-light dark:syntax-dark not-prose w-full\"><button x-data=\"{ code: '%s', copying: false }\" class=\"top-1 absolute right-2 z-10 text-gray-300 dark:text-gray-500\" title=\"copy\" @click=\"window.navigator.clipboard.writeText(atob(code).replaceAll(/^[\\$&gt;]\\s+/gm, '')); copying = true; setTimeout(() =&gt; copying = false, 2000);\"><span :class=\"{ 'group-hover:block' : !copying }\" class=\"icon-svg hidden\">%s</span><span :class=\"{ 'group-hover:block' : copying }\" class=\"icon-svg hidden\">%s</span></button><div class=\"highlight\">%s</div></div></div></div>\n", base64.StdEncoding.EncodeToString([]byte(codeText)), h.icons["document-duplicate"], h.icons["check-circle"], value)
+		output := ordinary.String()
+		if unhighlighted {
+			output = strings.Replace(output, `<div class="highlight">`+value+`</div>`, value, 1)
 		}
-		value := highlighted.String()
-		value = strings.Replace(value, "<pre class=\"chroma\">", "<pre tabindex=\"0\" class=\"chroma\">", 1)
-		value = strings.Replace(value, "<code>", "<code class=\"language-"+esc(lang)+"\" data-lang=\""+esc(lang)+"\">", 1)
-		fmt.Fprintf(w, "<div data-pagefind-ignore x-data x-ref=\"root\" class=\"group mt-2 mb-4 flex w-full scroll-mt-2 flex-col items-start gap-4 rounded bg-gray-50 p-2 outline outline-1 outline-offset-[-1px] outline-gray-200 dark:bg-gray-900 dark:outline-gray-800\"><div class=\"relative w-full\"><div class=\"syntax-light dark:syntax-dark not-prose w-full\"><button x-data=\"{ code: '%s', copying: false }\" class=\"top-1 absolute right-2 z-10 text-gray-300 dark:text-gray-500\" title=\"copy\" @click=\"window.navigator.clipboard.writeText(atob(code).replaceAll(/^[\\$&gt;]\\s+/gm, '')); copying = true; setTimeout(() =&gt; copying = false, 2000);\"><span :class=\"{ 'group-hover:block' : !copying }\" class=\"icon-svg hidden\">%s</span><span :class=\"{ 'group-hover:block' : copying }\" class=\"icon-svg hidden\">%s</span></button><div class=\"highlight\">%s</div></div></div></div>\n", base64.StdEncoding.EncodeToString([]byte(codeText)), h.icons["document-duplicate"], h.icons["check-circle"], value)
+		if title := options["title"]; title != "" {
+			header := `<div class="flex w-full items-center gap-2"><div class="flex items-center gap-2.5 rounded bg-gray-100 px-2 py-0.5 dark:bg-gray-800"><div class="font-normal text-gray-500 dark:text-gray-200">` + esc(title) + `</div></div></div>`
+			output = strings.Replace(output, `<div class="relative w-full">`, header+`<div class="relative w-full">`, 1)
+			output = strings.Replace(output, `class="top-1 absolute`, `class="-top-10 absolute`, 1)
+		}
+		if options["collapse"] == "true" {
+			output = strings.Replace(output, `<div class="highlight">`, `<div x-data="{ collapse: true }" class="relative overflow-clip" x-init="$watch('collapse', value =&gt; $refs.root.scrollIntoView({ behavior: 'smooth'}))"><div x-show="collapse" class="absolute z-10 flex h-32 w-full flex-col-reverse items-center overflow-clip pb-4"><button @click="collapse = false" class="chip"><span>Show more</span><span class="icon-svg">`+h.icons["chevron-down"]+`</span></button></div><div :class="{ 'h-32': collapse }"><div class="highlight">`, 1)
+			suffix := `<button @click="collapse = true" x-show="!collapse" class="chip mx-auto mt-4 flex items-center  text-sm"><span>Hide</span><span class="icon-svg">` + h.icons["chevron-up"] + `</span></button></div></div>`
+			output = strings.TrimSuffix(output, "</div></div></div>\n") + suffix + "</div></div></div>\n"
+		}
+		w.WriteString(output)
+		// The hook above emits the ordinary wrapper; add only corpus-used title/collapse behavior.
 		return ast.WalkSkipChildren, nil
 	case *ast.Blockquote:
 		if enter {
@@ -288,10 +381,11 @@ func (h *Hooks) markAlerts(doc ast.Node, source []byte) {
 		}
 		line := p.Lines().At(0)
 		marker := strings.TrimSpace(string(line.Value(source)))
-		if !strings.HasPrefix(marker, "[!") || !strings.HasSuffix(marker, "]") {
+		if !strings.HasPrefix(marker, "[!") || !strings.Contains(marker, "]") {
 			return ast.WalkContinue, nil
 		}
-		kind := strings.ToLower(marker[2 : len(marker)-1])
+		end := strings.Index(marker, "]")
+		kind := strings.ToLower(marker[2:end])
 		switch kind {
 		case "note", "tip", "warning", "caution", "important":
 		default:
@@ -300,8 +394,18 @@ func (h *Hooks) markAlerts(doc ast.Node, source []byte) {
 		h.alerts[n] = kind
 		for child := p.FirstChild(); child != nil; {
 			next := child.NextSibling()
-			if t, ok := child.(*ast.Text); ok && t.Segment.Stop <= line.Stop {
-				p.RemoveChild(p, child)
+			if t, ok := child.(*ast.Text); ok && t.Segment.Start < line.Start+end+1 {
+				if t.Segment.Stop <= line.Start+end+1 {
+					p.RemoveChild(p, child)
+				} else {
+					t.Segment.Start = line.Start + end + 1
+					if source[t.Segment.Start] == ':' {
+						t.Segment.Start++
+					}
+					for t.Segment.Start < t.Segment.Stop && source[t.Segment.Start] == ' ' {
+						t.Segment.Start++
+					}
+				}
 			}
 			child = next
 		}
@@ -346,14 +450,47 @@ func main() {
 			continue
 		}
 		hooks := &Hooks{request: request, refs: refs, icons: icons, metrics: Metrics{Hooks: map[string]int{}}, alerts: map[ast.Node]string{}}
-		md := goldmark.New(goldmark.WithExtensions(extension.GFM, extension.Footnote), goldmark.WithParserOptions(parser.WithAutoHeadingID(), parser.WithAttribute()), goldmark.WithRendererOptions(gh.WithUnsafe(), renderer.WithNodeRenderers(util.Prioritized(hooks, 100))))
+		md := goldmark.New(goldmark.WithExtensions(extension.GFM, extension.Footnote), goldmark.WithParserOptions(parser.WithAttribute()), goldmark.WithRendererOptions(gh.WithUnsafe(), renderer.WithNodeRenderers(util.Prioritized(hooks, 100))))
 		source := []byte(request.Markdown)
 		start := time.Now()
 		doc := md.Parser().Parse(text.NewReader(source), parser.WithContext(parser.NewContext(parser.WithIDs(&dockerIDs{used: map[string]bool{}, metrics: &hooks.metrics}))))
 		hooks.metrics.MarkdownParseNS = time.Since(start).Nanoseconds() - hooks.metrics.HookNS
 		start = time.Now()
+		previousHookNS := hooks.metrics.HookNS
+		ids := &dockerIDs{used: map[string]bool{}, metrics: &hooks.metrics}
+		ast.Walk(doc, func(n ast.Node, enter bool) (ast.WalkStatus, error) {
+			if enter && n.Kind() == ast.KindHeading {
+				if id := attr(n, "id"); id != "" {
+					ids.Put([]byte(id))
+				} else {
+					var headingText strings.Builder
+					ast.Walk(n, func(child ast.Node, entry bool) (ast.WalkStatus, error) {
+						if !entry {
+							return ast.WalkContinue, nil
+						}
+						switch t := child.(type) {
+						case *ast.RawHTML:
+							return ast.WalkSkipChildren, nil
+						case *ast.Text:
+							headingText.Write(util.UnescapePunctuations(t.Value(source)))
+						case *ast.String:
+							headingText.Write(t.Value)
+						}
+						return ast.WalkContinue, nil
+					})
+					plain := stdhtml.UnescapeString(headingText.String())
+					id := ids.Generate([]byte(plain), ast.KindHeading)
+					if legacy, ok := request.LegacyAnchors[string(id)]; ok && strings.Contains(string(n.Text(source)), "data-docker-slot") {
+						id = []byte(legacy)
+						ids.Put(id)
+					}
+					n.SetAttributeString("id", id)
+				}
+			}
+			return ast.WalkContinue, nil
+		})
 		hooks.markAlerts(doc, source)
-		hooks.metrics.HookNS += time.Since(start).Nanoseconds()
+		hooks.metrics.HookNS += time.Since(start).Nanoseconds() - (hooks.metrics.HookNS - previousHookNS)
 		var output bytes.Buffer
 		start = time.Now()
 		before := hooks.metrics.HookNS

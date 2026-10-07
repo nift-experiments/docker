@@ -22,13 +22,14 @@ if args.setup:
     print('Renderer setup completed; excluded from production benchmarks.');raise SystemExit()
 if not binary.is_file():raise SystemExit('Run python3 scripts/build.py --setup before building; setup is not included in benchmark phases.')
 manifest=json.loads((ROOT/'data/composition.json').read_text());statefile=ROOT/'.generated/render-state.json';state=json.loads(statefile.read_text()) if statefile.exists() else {};nextstate={}
+registry=json.loads((ROOT/'data/source-registry.json').read_text()) if (ROOT/'data/source-registry.json').exists() else {}
 renderer=Renderer(binary,ROOT/'authored',ROOT/'data/refs.json',ROOT/'compatibility/assets');compiled=0
-common=[ROOT/'data/refs.json',ROOT/'authored/hugo.yaml',*sorted((ROOT/'authored/content/includes').rglob('*')),*sorted((ROOT/'compatibility/assets').glob('*.svg')),*sorted((ROOT/'compatibility/renderer').glob('*.go')),ROOT/'compatibility/docker.py']
+common=[ROOT/'data/refs.json',ROOT/'authored/hugo.yaml',*sorted((ROOT/'authored/content/includes').rglob('*')),*sorted((ROOT/'compatibility/assets').glob('*.svg')),*sorted((ROOT/'compatibility/renderer').glob('*.go')),ROOT/'compatibility/docker.py',*sorted((ROOT/'compatibility').glob('*.py')),*sorted((ROOT/'compatibility').glob('*.json')),*sorted((ROOT/'compatibility/templates').glob('*')),*sorted((ROOT/'compatibility/pinned').glob('*')),*sorted((ROOT/'authored/data').rglob('*'))]
 commonhash=hashlib.sha256(''.join(sha(p) for p in common if p.is_file()).encode()).hexdigest()
 for record in manifest['pages']:
     name=record['name'];body=record['body'];dependencies=['data/composition.json']
     if record['model']=='markdown':
-        source=ROOT/record['source'];meta,text=read_markdown(source);context={'route':record['route'],'logical':record['logical'],'index':record['index'],'frontmatter':meta}
+        source=ROOT/record['source'];meta,text=read_markdown(source);context={'route':record['route'],'logical':record['logical'],'index':record['index'],'frontmatter':meta,'records':registry}
         fingerprint=hashlib.sha256((commonhash+sha(source)).encode()).hexdigest();nextstate[name]=fingerprint;dependencies.extend([record['source'],'data/refs.json','authored/hugo.yaml'])
         dependencies.extend(str(p.relative_to(ROOT)) for p in common if p.is_file())
         if args.all or state.get(name)!=fingerprint or not (ROOT/body).exists():

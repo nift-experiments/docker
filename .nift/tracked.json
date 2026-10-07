@@ -39,6 +39,5041 @@
       "name": "reference/api/ai-governance/latest/operations/createPolicy/index",
       "title": "Create policy",
       "template": "templates/template.html"
+    },
+    {
+      "name": "bot-detection/index",
+      "title": "Automated traffic detection",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/building-images/build-tag-and-publish-an-image/index",
+      "title": "Build, tag, and publish an image",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/building-images/multi-stage-builds/index",
+      "title": "Multi-stage builds",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/building-images/understanding-image-layers/index",
+      "title": "Understanding the image layers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/building-images/using-the-build-cache/index",
+      "title": "Using the build cache",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/building-images/writing-a-dockerfile/index",
+      "title": "Writing a Dockerfile",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/running-containers/multi-container-applications/index",
+      "title": "Multi-container applications",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/running-containers/overriding-container-defaults/index",
+      "title": "Overriding container defaults",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/running-containers/persisting-container-data/index",
+      "title": "Persisting container data",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/running-containers/publishing-ports/index",
+      "title": "Publishing and exposing ports",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/running-containers/sharing-local-files/index",
+      "title": "Sharing local files with containers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/the-basics/what-is-a-container/index",
+      "title": "What is a container?",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/the-basics/what-is-a-registry/index",
+      "title": "What is a registry?",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/the-basics/what-is-an-image/index",
+      "title": "What is an image?",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/docker-concepts/the-basics/what-is-docker-compose/index",
+      "title": "What is Docker Compose?",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/get-docker/index",
+      "title": "Get Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/resources/index",
+      "title": "Educational resources",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/tutorials/admin-set-up/index",
+      "title": "Roll out Docker to a pilot group",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/tutorials/run-an-agent/index",
+      "title": "Run your coding agent in a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "get-started/tutorials/run-an-app/index",
+      "title": "Build and share a containerized application",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/admin-set-up/index",
+      "title": "Set up your company for success with Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/admin-user-management/index",
+      "title": "Mastering user and access management",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/agentic-ai/index",
+      "title": "Build and run agentic AI applications with Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/angular/index",
+      "title": "Angular language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/azure-pipelines/index",
+      "title": "Introduction to Azure Pipelines with Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/bake/index",
+      "title": "Mastering multi-platform builds, testing, and more with Docker Buildx Bake",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/bun/index",
+      "title": "Bun language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/claude-code-model-runner/index",
+      "title": "Use Claude Code with Docker Model Runner",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/claude-code-sandbox-model-runner/index",
+      "title": "Run Claude Code in a Docker Sandbox with Docker Model Runner",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/compose-bake/index",
+      "title": "Building Compose projects with Bake",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/container-supported-development/index",
+      "title": "Faster development and testing with container-supported development",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/cpp/index",
+      "title": "C++ language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/databases/index",
+      "title": "Use containerized databases",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/deno/index",
+      "title": "Deno language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/dex/index",
+      "title": "Mocking OAuth services in testing with Dex",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/dhi-backstage/index",
+      "title": "Secure a Backstage application with Docker Hardened Images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/dhi-openshift/index",
+      "title": "Use Docker Hardened Images with Red Hat OpenShift",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/dhi-vex-walkthrough/index",
+      "title": "Explore VEX statements in Docker Hardened Images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/django/index",
+      "title": "Containerize a Django application",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/docker-build-cloud/index",
+      "title": "Docker Build Cloud: Reclaim your time with fast, multi-architecture builds",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/docker-compose/index",
+      "title": "Defining and running multi-container applications with Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/docker-scout/index",
+      "title": "Securing your software supply chain with Docker Scout",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/dotnet/index",
+      "title": ".NET language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/genai-claude-code-mcp/index",
+      "title": "Generate Docker Compose Files with Claude Code and Docker MCP Toolkit",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/genai-leveraging-rag/index",
+      "title": "Leveraging RAG in GenAI to teach new information",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/genai-pdf-bot/index",
+      "title": "PDF analysis and chat",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/genai-video-bot/index",
+      "title": "GenAI video transcription and chat",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/gha/index",
+      "title": "Introduction to GitHub Actions with Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/github-sonarqube-sandbox/index",
+      "title": "How to build an AI-powered code quality workflow with SonarQube and E2B",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/go-prometheus-monitoring/index",
+      "title": "Monitor a Golang application with Prometheus and Grafana",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/golang/index",
+      "title": "Go language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/grafana-mcp-server-gemini/index",
+      "title": "Connect Gemini to Grafana via MCP",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/java/index",
+      "title": "Java language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/jupyter/index",
+      "title": "Data science with JupyterLab",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/kafka/index",
+      "title": "Developing event-driven applications with Kafka and Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-agentic-apps/index",
+      "title": "Lab: Building Agentic Apps with Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-ai-fundamentals/index",
+      "title": "Lab: AI Fundamentals for Developers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-attestation-basics/index",
+      "title": "Lab: Container Image Attestations",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-building-images/index",
+      "title": "Lab: Building Container Images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-compose-quickstart/index",
+      "title": "Lab: Docker Compose Quickstart",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-container-getting-started/index",
+      "title": "Lab: Getting Started with Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-container-supported-development/index",
+      "title": "Lab: Container-Supported Development",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-containerized-sdlc/index",
+      "title": "Lab: The Containerized SDLC",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-creating-ai-product-reviewer/index",
+      "title": "Lab: Building an AI Product Reviewer",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-dhi-node/index",
+      "title": "Lab: Migrating a Node App to Docker Hardened Images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-docker-agent/index",
+      "title": "Lab: Getting Started with Docker Agent",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/lab-mcp-gateway/index",
+      "title": "Lab: Docker MCP Gateway",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/language-translation/index",
+      "title": "Build a language translation app",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/laravel/index",
+      "title": "Develop and Deploy Laravel applications with Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/localstack/index",
+      "title": "Develop and test AWS Cloud applications using LocalStack and Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/mistral-vibe-sandbox/index",
+      "title": "Run Mistral Vibe in a Docker Sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/named-entity-recognition/index",
+      "title": "Build a named entity recognition app",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/nextjs/index",
+      "title": "Containerize a Next.js application",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/nodejs/index",
+      "title": "Node.js language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/opencode-model-runner/index",
+      "title": "Use OpenCode with Docker Model Runner",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/opentelemetry/index",
+      "title": "Instrumenting a JavaScript App with OpenTelemetry",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/pgadmin/index",
+      "title": "Visualizing your PostgreSQL databases with pgAdmin",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/php/index",
+      "title": "PHP language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/postgresql/index",
+      "title": "PostgreSQL specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/pre-seeding/index",
+      "title": "Pre-seeding database with schema and data at startup for development environment",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/python/index",
+      "title": "Python language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/r/index",
+      "title": "R language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/rag-ollama/index",
+      "title": "Build a RAG application using Ollama and Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/reactjs/index",
+      "title": "React.js language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/ros2/index",
+      "title": "Introduction to ROS 2 Development with Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/ruby/index",
+      "title": "Ruby on Rails language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/rust/index",
+      "title": "Rust language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/sentiment-analysis/index",
+      "title": "Build a sentiment analysis app",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/tensorflowjs/index",
+      "title": "Face detection with TensorFlow.js",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-cloud/index",
+      "title": "Mastering Testcontainers Cloud by Docker: streamlining integration testing with containers\n",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-dotnet-aspnet-core/index",
+      "title": "Testing an ASP.NET Core web app with Testcontainers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-dotnet-getting-started/index",
+      "title": "Getting started with Testcontainers for .NET",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-go-getting-started/index",
+      "title": "Getting started with Testcontainers for Go",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-aws-localstack/index",
+      "title": "Testing AWS service integrations using LocalStack",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-getting-started/index",
+      "title": "Getting started with Testcontainers for Java",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-jooq-flyway/index",
+      "title": "Working with jOOQ and Flyway using Testcontainers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-keycloak-spring-boot/index",
+      "title": "Securing Spring Boot microservice using Keycloak and Testcontainers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-lifecycle/index",
+      "title": "Testcontainers container lifecycle management using JUnit 5",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-micronaut-kafka/index",
+      "title": "Testing Micronaut Kafka Listener using Testcontainers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-micronaut-wiremock/index",
+      "title": "Testing REST API integrations in Micronaut apps using WireMock",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-mockserver/index",
+      "title": "Testing REST API integrations using MockServer",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-quarkus/index",
+      "title": "Testing Quarkus applications with Testcontainers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-replace-h2/index",
+      "title": "Replace H2 with a real database for testing",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-service-configuration/index",
+      "title": "Configuration of services running in a container",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-spring-boot-kafka/index",
+      "title": "Testing Spring Boot Kafka Listener using Testcontainers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-spring-boot-rest-api/index",
+      "title": "Testing a Spring Boot REST API with Testcontainers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-java-wiremock/index",
+      "title": "Testing REST API integrations using WireMock",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-nodejs-getting-started/index",
+      "title": "Getting started with Testcontainers for Node.js",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/testcontainers-python-getting-started/index",
+      "title": "Getting started with Testcontainers for Python",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/text-classification/index",
+      "title": "Build a text recognition app",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/text-summarization/index",
+      "title": "Build a text summarization app",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/traefik/index",
+      "title": "HTTP routing with Traefik",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/vuejs/index",
+      "title": "Vue.js language-specific guide",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/wiremock/index",
+      "title": "Mocking API services in development and testing with WireMock",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "guides/zscaler/index",
+      "title": "Using Docker with Zscaler",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/company/manage/index",
+      "title": "Manage company organizations, owners, and members",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/company/new-company/index",
+      "title": "Create new company",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/individual/create-account/index",
+      "title": "Create a Docker account",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/individual/deactivate-user-account/index",
+      "title": "Deactivate a Docker account",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/individual/manage-account/index",
+      "title": "Manage a Docker account",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/activity-logs/index",
+      "title": "Activity logs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/insights/index",
+      "title": "Insights",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/manage/deactivate-account/index",
+      "title": "Deactivate an organization",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/manage/general-settings/index",
+      "title": "Change general organization information",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/manage/manage-a-team/index",
+      "title": "Create and manage a team",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/manage/manage-licenses/index",
+      "title": "Manage licenses",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/manage/manage-products/index",
+      "title": "Manage usage and access for Docker products",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/manage/manage-seats/index",
+      "title": "Manage subscription seats",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/manage/members/index",
+      "title": "Invite and manage organization members",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/setup/convert-account/index",
+      "title": "Convert a Docker account to an organization",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/setup/onboard/index",
+      "title": "Onboard a Docker organization",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "accounts/organization/setup/orgs/index",
+      "title": "Create a Docker organization",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "agentic-platform/faq/index",
+      "title": "Docker Agentic Platform FAQ",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "agentic-platform/get-started/index",
+      "title": "Get started with Docker Agentic Platform",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "agentic-platform/kits/index",
+      "title": "Kits",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "agentic-platform/mcp/index",
+      "title": "MCP",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "agentic-platform/policies/index",
+      "title": "Network policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "agentic-platform/release-notes/index",
+      "title": "Docker Agentic Platform release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "agentic-platform/sandboxes/index",
+      "title": "Sandboxes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "agentic-platform/secrets/index",
+      "title": "Secrets",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "agentic-platform/signup/index",
+      "title": "Sign up for Docker Agentic Platform",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai-overview/index",
+      "title": "Docker AI overview",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/community/contributing/index",
+      "title": "Contributing",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/community/opentelemetry/index",
+      "title": "OpenTelemetry Tracing",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/community/telemetry/index",
+      "title": "Telemetry",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/community/troubleshooting/index",
+      "title": "Troubleshooting",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/concepts/agents/index",
+      "title": "Agents",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/concepts/distribution/index",
+      "title": "Agent Distribution",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/concepts/models/index",
+      "title": "Models",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/concepts/multi-agent/index",
+      "title": "Multi-Agent Systems",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/concepts/tools/index",
+      "title": "Tools",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/agents/index",
+      "title": "Agent Configuration",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/agentsignore/index",
+      "title": "Ignoring files",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/budget/index",
+      "title": "Budget",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/commands/index",
+      "title": "Custom Commands",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/flavors/index",
+      "title": "Flavors",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/hcl/index",
+      "title": "HCL Configuration",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/hooks/index",
+      "title": "Hooks",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/models/index",
+      "title": "Model Configuration",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/overview/index",
+      "title": "Configuration Overview",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/permissions/index",
+      "title": "Permissions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/routing/index",
+      "title": "Model Routing",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/sandbox/index",
+      "title": "Sandbox Mode",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/structured-output/index",
+      "title": "Structured Output",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/tools/index",
+      "title": "Tool Configuration",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/configuration/user-settings/index",
+      "title": "User Settings",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/a2a/index",
+      "title": "A2A Protocol",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/acp/index",
+      "title": "ACP (Agent Client Protocol)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/api-server/index",
+      "title": "API Server",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/board/index",
+      "title": "Kanban Board",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/chat-server/index",
+      "title": "Chat Server",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/cli/index",
+      "title": "CLI Reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/code-mode/index",
+      "title": "Code Mode",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/evaluation/index",
+      "title": "Evaluation",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/harnesses/index",
+      "title": "Coding Harnesses",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/mcp-mode/index",
+      "title": "MCP Mode",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/remote-mcp/index",
+      "title": "Remote MCP Servers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/sessions/index",
+      "title": "Sessions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/skills/index",
+      "title": "Skills",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/snapshots/index",
+      "title": "Snapshots",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/features/tui/index",
+      "title": "Terminal UI (TUI)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/getting-started/installation/index",
+      "title": "Installation",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/getting-started/introduction/index",
+      "title": "Introduction",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/getting-started/quickstart/index",
+      "title": "Quick Start",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/getting-started/set-up-a-model/index",
+      "title": "Set Up a Model",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/guides/compaction/index",
+      "title": "Managing Context & Compaction",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/guides/go-sdk/index",
+      "title": "Go SDK",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/guides/headless/index",
+      "title": "Running Agents Headless & in CI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/guides/secrets/index",
+      "title": "Managing Secrets",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/guides/thinking/index",
+      "title": "Thinking / Reasoning",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/guides/tips/index",
+      "title": "Tips & Best Practices",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/anthropic/index",
+      "title": "Anthropic",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/baseten/index",
+      "title": "Baseten",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/bedrock/index",
+      "title": "AWS Bedrock",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/cerebras/index",
+      "title": "Cerebras",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/chatgpt/index",
+      "title": "ChatGPT (OpenAI account)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/cloudflare-ai-gateway/index",
+      "title": "Cloudflare AI Gateway",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/cloudflare-workers-ai/index",
+      "title": "Cloudflare Workers AI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/custom/index",
+      "title": "Provider Definitions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/deepseek/index",
+      "title": "DeepSeek",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/dmr/index",
+      "title": "Docker Model Runner",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/fireworks/index",
+      "title": "Fireworks AI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/github-copilot/index",
+      "title": "GitHub Copilot",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/google/index",
+      "title": "Google Gemini",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/groq/index",
+      "title": "Groq",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/huggingface/index",
+      "title": "Hugging Face",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/local/index",
+      "title": "Local Models (Ollama, vLLM, LocalAI)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/minimax/index",
+      "title": "MiniMax",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/mistral/index",
+      "title": "Mistral",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/moonshot/index",
+      "title": "Moonshot AI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/nebius/index",
+      "title": "Nebius",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/nvidia/index",
+      "title": "NVIDIA NIM",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/openai/index",
+      "title": "OpenAI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/opencode-go/index",
+      "title": "OpenCode Go",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/opencode-zen/index",
+      "title": "OpenCode Zen",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/openrouter/index",
+      "title": "OpenRouter",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/overview/index",
+      "title": "Model Providers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/ovhcloud/index",
+      "title": "OVHcloud",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/together/index",
+      "title": "Together AI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/vercel/index",
+      "title": "Vercel AI Gateway",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/providers/xai/index",
+      "title": "xAI (Grok)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/a2a/index",
+      "title": "A2A Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/api/index",
+      "title": "API Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/background-agents/index",
+      "title": "Background Agents Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/background-jobs/index",
+      "title": "Background Jobs Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/fetch/index",
+      "title": "Fetch Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/filesystem/index",
+      "title": "Filesystem Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/git/index",
+      "title": "Git Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/handoff/index",
+      "title": "Handoff Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/lsp/index",
+      "title": "LSP Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/mcp-catalog/index",
+      "title": "MCP Catalog Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/mcp/index",
+      "title": "MCP Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/memory/index",
+      "title": "Memory Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/model-picker/index",
+      "title": "Model Picker Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/open-url/index",
+      "title": "Open URL Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/openapi/index",
+      "title": "OpenAPI Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/plan/index",
+      "title": "Plan Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/rag/index",
+      "title": "RAG Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/scheduler/index",
+      "title": "Scheduler Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/script/index",
+      "title": "Script Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/session_context/index",
+      "title": "Session Context Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/session_plan/index",
+      "title": "Session Plan Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/shell/index",
+      "title": "Shell Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/tasks/index",
+      "title": "Tasks Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/think/index",
+      "title": "Think Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/todo/index",
+      "title": "Todo Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/transfer-task/index",
+      "title": "Transfer Task Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/user-prompt/index",
+      "title": "User Prompt Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/docker-agent/tools/webhook/index",
+      "title": "Webhook Tool",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/gordon/concepts/capabilities/index",
+      "title": "Gordon's capabilities",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/gordon/concepts/data-privacy/index",
+      "title": "Data privacy and Gordon",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/gordon/how-to/cli/index",
+      "title": "Using Gordon via CLI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/gordon/how-to/configure-tools/index",
+      "title": "Configure Gordon's tools",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/gordon/how-to/docker-desktop/index",
+      "title": "Using Gordon in Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/gordon/how-to/permissions/index",
+      "title": "Gordon's permission model",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/gordon/usage-limits/index",
+      "title": "Gordon usage limits and tiers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/gordon/use-cases/index",
+      "title": "Gordon use cases and examples",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/model-runner/api-reference/index",
+      "title": "DMR REST API",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/model-runner/configuration/index",
+      "title": "Configuration options",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/model-runner/examples/index",
+      "title": "DMR examples",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/model-runner/get-started/index",
+      "title": "Get started with DMR",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/model-runner/ide-integrations/index",
+      "title": "IDE and tool integrations",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/model-runner/inference-engines/index",
+      "title": "Inference engines",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/model-runner/openwebui-integration/index",
+      "title": "Open WebUI integration",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/authentication/index",
+      "title": "Authentication and authorization",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/concepts/index",
+      "title": "Docker Sandboxes API concepts",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/add-a-docker-credential-for-cloud-sandboxes/index",
+      "title": "Add a Docker credential for cloud sandboxes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/add-tools-with-kits/index",
+      "title": "Run agents with kits",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/attach-persistent-storage/index",
+      "title": "Attach persistent storage",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/clone-a-cloud-sandbox/index",
+      "title": "Clone a cloud sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/connect-to-cloud-with-a-bearer-token/index",
+      "title": "Authenticate to Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/control-what-a-sandbox-can-reach/index",
+      "title": "Control what a sandbox can reach",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/copy-a-file-into-a-cloud-sandbox/index",
+      "title": "Copy a file into a cloud sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/create-your-first-sandbox/index",
+      "title": "Create your first sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/delete-a-cloud-sandbox/index",
+      "title": "Delete a cloud sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/expose-a-port-from-a-cloud-sandbox/index",
+      "title": "Expose a port from a cloud sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/find-a-process-you-lost-track-of/index",
+      "title": "Find a process you lost track of",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/get-a-stored-secret-into-a-sandbox/index",
+      "title": "Get a stored secret into a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/get-an-ssh-certificate/index",
+      "title": "Get an SSH certificate",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/get-image-pull-urls/index",
+      "title": "Get image pull URLs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/give-a-sandbox-an-mcp-gateway/index",
+      "title": "Give a sandbox an MCP gateway",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/handle-errors-and-degradation/index",
+      "title": "Handle errors and degradation",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/keep-a-cloud-sandbox-running/index",
+      "title": "Keep a cloud sandbox running",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/let-a-stopped-sandbox-resume-on-demand/index",
+      "title": "Let a stopped sandbox resume on demand",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/manage-cloud-secrets/index",
+      "title": "Manage cloud secrets",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/manage-network-policies/index",
+      "title": "Manage network policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/page-through-and-filter-lists/index",
+      "title": "Page through and filter lists",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/read-files-out-of-a-sandbox/index",
+      "title": "Read files out of a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/recover-when-the-endpoint-moves/index",
+      "title": "Recover when the endpoint moves",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/register-and-manage-an-image/index",
+      "title": "Register and manage an image",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/retry-without-creating-duplicates/index",
+      "title": "Retry without creating duplicates",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/run-a-complete-example/index",
+      "title": "Run a complete example",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/run-an-interactive-shell-in-a-cloud-sandbox/index",
+      "title": "Run an interactive shell in a cloud sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/run-something-that-produces-real-output/index",
+      "title": "Run something that produces real output",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/run-work-across-many-sandboxes/index",
+      "title": "Run work across many sandboxes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/run-your-first-command/index",
+      "title": "Run your first command",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/run-your-own-container-image/index",
+      "title": "Run your own container image",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/send-values-the-api-accepts/index",
+      "title": "Send values the API accepts",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/snapshot-and-fork-a-sandbox/index",
+      "title": "Snapshot and fork a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/stop-and-restart-a-sandbox/index",
+      "title": "Stop and restart a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/what-your-workload-starts-with/index",
+      "title": "What your workload starts with",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/cookbook/work-within-the-limits/index",
+      "title": "Work within the limits",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/errors/index",
+      "title": "Errors and retries",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/get-started/index",
+      "title": "Run your first cloud sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/install/index",
+      "title": "Install the Docker Sandboxes SDK",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes-api/limits/index",
+      "title": "Compute sizes and limits",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/claude-code/index",
+      "title": "Claude Code",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/codex/index",
+      "title": "Codex",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/copilot/index",
+      "title": "Copilot",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/cursor/index",
+      "title": "Cursor",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/devin/index",
+      "title": "Devin",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/docker-agent/index",
+      "title": "Docker Agent",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/droid/index",
+      "title": "Droid",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/gemini/index",
+      "title": "Gemini",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/kiro/index",
+      "title": "Kiro",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/opencode/index",
+      "title": "OpenCode",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/agents/shell/index",
+      "title": "Shell",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/architecture/index",
+      "title": "Architecture",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/cloud/credentials/index",
+      "title": "Authenticate cloud agents",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/cloud/local-vs-cloud/index",
+      "title": "Compare local and cloud sandboxes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/cloud/move/index",
+      "title": "Move a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/cloud/network-policy/index",
+      "title": "Manage cloud network policy",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/cloud/usage/index",
+      "title": "Use cloud sandboxes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/configuration/credentials/index",
+      "title": "Manage credentials",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/configuration/environment-files/index",
+      "title": "Sandbox environment files",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/configuration/gpu-passthrough/index",
+      "title": "Enable NVIDIA GPU passthrough",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/configuration/models/index",
+      "title": "Use local and hosted models",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/configuration/registry-mirror/index",
+      "title": "Configure a registry mirror",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/configuration/settings/index",
+      "title": "Docker Sandboxes settings",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/configuration/upstream-proxy/index",
+      "title": "Configure an upstream proxy",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/customize/author/base-images/index",
+      "title": "Base images for sandbox workloads",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/customize/author/build-an-agent/index",
+      "title": "Build an agent workload",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/customize/author/distribute/index",
+      "title": "Build and distribute kits",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/customize/author/kit-sets/index",
+      "title": "Compose a kit set",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/customize/author/patterns/index",
+      "title": "Kit authoring patterns",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/customize/author/tool-mixins/index",
+      "title": "Build a tool mixin",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/customize/kits-v2/index",
+      "title": "Kits v2",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/customize/use-kits/index",
+      "title": "Use kits",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/faq/index",
+      "title": "FAQ",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/get-started/index",
+      "title": "Get started with local Docker Sandboxes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/access-controls/filesystem/index",
+      "title": "Filesystem access policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/access-controls/local/index",
+      "title": "Local policy",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/access-controls/network/index",
+      "title": "Network access policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/access-controls/organization/index",
+      "title": "Organization policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/audit/configure/index",
+      "title": "Configure audit delivery",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/audit/local/index",
+      "title": "Local audit logs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/audit/record-reference/index",
+      "title": "Audit record reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/audit/siem/index",
+      "title": "SIEM forwarding",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/audit/view-export/index",
+      "title": "View and export audit events",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/concepts/index",
+      "title": "Policy concepts",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/monitor-and-enforce/monitoring/index",
+      "title": "Monitoring policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/monitor-and-enforce/sign-in-enforcement/index",
+      "title": "Sign-in enforcement",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/governance/reference/mcp-policy/index",
+      "title": "MCP policy reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/install/index",
+      "title": "Install Docker Sandboxes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/integrations/chatgpt/index",
+      "title": "Connect ChatGPT to a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/integrations/claude-desktop/index",
+      "title": "Connect Claude Desktop to a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/integrations/cursor/index",
+      "title": "Connect Cursor to a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/integrations/t3-code/index",
+      "title": "Connect T3 Code to a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/integrations/vscode/index",
+      "title": "Connect VS Code to a sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/mcp-gateway/index",
+      "title": "MCP gateway",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/release-notes/index",
+      "title": "Docker Sandboxes release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/security/defaults/index",
+      "title": "Default security posture",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/security/isolation/index",
+      "title": "Isolation layers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/troubleshooting/index",
+      "title": "Troubleshooting",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/usage/index",
+      "title": "Usage",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/workflows/agent-skills/index",
+      "title": "Share agent skills",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/workflows/authentication/index",
+      "title": "Authenticate command-line tools",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/workflows/automation/index",
+      "title": "Run sandboxes in CI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/workflows/development/index",
+      "title": "Develop and test locally",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/sandboxes/workflows/git/index",
+      "title": "Use Git with sandboxes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/skills/install/index",
+      "title": "Install Docker Skills",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build-cloud/builder-settings/index",
+      "title": "Builder settings",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build-cloud/ci/index",
+      "title": "Use Docker Build Cloud in CI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build-cloud/optimization/index",
+      "title": "Optimize for building in the cloud",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build-cloud/release-notes/index",
+      "title": "Docker Build Cloud release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build-cloud/setup/index",
+      "title": "Docker Build Cloud setup",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build-cloud/usage/index",
+      "title": "Building with Docker Build Cloud",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/compose-file/index",
+      "title": "Building with Bake from a Compose file",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/contexts/index",
+      "title": "Using Bake with additional contexts",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/expressions/index",
+      "title": "Expression evaluation in Bake",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/funcs/index",
+      "title": "Functions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/inheritance/index",
+      "title": "Inheritance in Bake",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/introduction/index",
+      "title": "Introduction to Bake",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/matrices/index",
+      "title": "Matrix targets",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/overrides/index",
+      "title": "Overriding configurations",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/reference/index",
+      "title": "Bake file reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/remote-definition/index",
+      "title": "Remote Bake file definition",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/stdlib/index",
+      "title": "Bake standard library functions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/targets/index",
+      "title": "Bake targets",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/bake/variables/index",
+      "title": "Variables in Bake",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/builders/drivers/cloud/index",
+      "title": "Cloud driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/builders/drivers/docker-container/index",
+      "title": "Docker container driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/builders/drivers/docker/index",
+      "title": "Docker driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/builders/drivers/kubernetes/index",
+      "title": "Kubernetes driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/builders/drivers/remote/index",
+      "title": "Remote driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/builders/manage/index",
+      "title": "Manage builders",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/building/base-images/index",
+      "title": "Base images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/building/best-practices/index",
+      "title": "Building best practices",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/building/cdi/index",
+      "title": "Container Device Interface (CDI)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/building/export/index",
+      "title": "Export binaries",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/building/multi-platform/index",
+      "title": "Multi-platform builds",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/building/multi-stage/index",
+      "title": "Multi-stage builds",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/building/secrets/index",
+      "title": "Build secrets",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/building/variables/index",
+      "title": "Build variables",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/buildkit/configure/index",
+      "title": "Configure BuildKit",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/buildkit/dockerfile-release-notes/index",
+      "title": "Dockerfile release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/buildkit/frontend/index",
+      "title": "Custom Dockerfile syntax",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/buildkit/toml-configuration/index",
+      "title": "buildkitd.toml",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/cache/backends/azblob/index",
+      "title": "Azure Blob Storage cache",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/cache/backends/gha/index",
+      "title": "GitHub Actions cache",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/cache/backends/inline/index",
+      "title": "Inline cache",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/cache/backends/local/index",
+      "title": "Local cache",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/cache/backends/registry/index",
+      "title": "Registry cache",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/cache/backends/s3/index",
+      "title": "Amazon S3 cache",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/cache/garbage-collection/index",
+      "title": "Build garbage collection",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/cache/invalidation/index",
+      "title": "Build cache invalidation",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/cache/optimize/index",
+      "title": "Optimize cache usage in builds",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/checks/index",
+      "title": "Checking your build configuration",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/annotations/index",
+      "title": "Add image annotations with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/attestations/index",
+      "title": "Add SBOM and provenance attestations with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/build-summary/index",
+      "title": "GitHub Actions build summary",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/cache/index",
+      "title": "Cache management with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/checks/index",
+      "title": "Validating build configuration with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/configure-builder/index",
+      "title": "Configuring your GitHub Actions builder",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/copy-image-registries/index",
+      "title": "Copy image between registries with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/export-docker/index",
+      "title": "Export to Docker with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/github-builder/architecture/index",
+      "title": "Docker GitHub Builder architecture",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/github-builder/bake/index",
+      "title": "Bake with Docker GitHub Builder",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/github-builder/build/index",
+      "title": "Build with Docker GitHub Builder",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/local-registry/index",
+      "title": "Local registry with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/manage-tags-labels/index",
+      "title": "Manage tags and labels with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/multi-platform/index",
+      "title": "Multi-platform image with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/named-contexts/index",
+      "title": "Named contexts with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/push-multi-registries/index",
+      "title": "Push to multiple registries with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/reproducible-builds/index",
+      "title": "Reproducible builds with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/secrets/index",
+      "title": "Using secrets with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/share-image-jobs/index",
+      "title": "Share built image between jobs with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/test-before-push/index",
+      "title": "Test before push with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/ci/github-actions/update-dockerhub-desc/index",
+      "title": "Update Docker Hub description with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/concepts/context/index",
+      "title": "Build context",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/concepts/dockerfile/index",
+      "title": "Dockerfile overview",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/concepts/overview/index",
+      "title": "Docker Build Overview",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/debug/opentelemetry/index",
+      "title": "OpenTelemetry support",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/exporters/image-registry/index",
+      "title": "Image and registry exporters",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/exporters/local-tar/index",
+      "title": "Local and tar exporters",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/exporters/oci-docker/index",
+      "title": "OCI and Docker exporters",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/metadata/annotations/index",
+      "title": "Annotations",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/metadata/attestations/attestation-storage/index",
+      "title": "Image attestation storage",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/metadata/attestations/sbom/index",
+      "title": "SBOM attestations",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/metadata/attestations/slsa-definitions/index",
+      "title": "SLSA definitions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/metadata/attestations/slsa-provenance/index",
+      "title": "Provenance attestations",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/policies/built-ins/index",
+      "title": "Built-in functions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/policies/debugging/index",
+      "title": "Debugging build policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/policies/examples/index",
+      "title": "Policy templates and examples",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/policies/inputs/index",
+      "title": "Input reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/policies/intro/index",
+      "title": "Introduction to build policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/policies/testing/index",
+      "title": "Test build policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/policies/usage/index",
+      "title": "Using build policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/policies/validate-git/index",
+      "title": "Validating Git repositories",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/policies/validate-images/index",
+      "title": "Validating image inputs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "build/release-notes/index",
+      "title": "Build release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/bridge/customize/index",
+      "title": "Customize Compose Bridge",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/bridge/usage/index",
+      "title": "Use the default Compose Bridge transformation",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/bridge/use-model-runner/index",
+      "title": "Use Docker Model Runner with Compose Bridge",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/compose-sdk/index",
+      "title": "Using the Compose SDK",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/gettingstarted/index",
+      "title": "Docker Compose Quickstart",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/dependent-images/index",
+      "title": "Build dependent images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/environment-variables/best-practices/index",
+      "title": "Best practices for working with environment variables in Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/environment-variables/envvars-precedence/index",
+      "title": "Environment variables precedence in Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/environment-variables/envvars/index",
+      "title": "Configure pre-defined environment variables in Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/environment-variables/set-environment-variables/index",
+      "title": "Set environment variables within your container's environment",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/environment-variables/variable-interpolation/index",
+      "title": "Set, use, and manage variables in a Compose file with interpolation",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/file-watch/index",
+      "title": "Use Compose Watch",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/gpu-support/index",
+      "title": "Run Docker Compose services with GPU access",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/init-containers/index",
+      "title": "Use init containers in Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/lifecycle/index",
+      "title": "Using lifecycle hooks with Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/compose/models-and-compose/index",
+      "title": "Define AI Models in Docker Compose applications",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/multiple-compose-files/extends/index",
+      "title": "Extend your Compose file",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/multiple-compose-files/include/index",
+      "title": "Include",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/multiple-compose-files/merge/index",
+      "title": "Merge Compose files",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/networking/index",
+      "title": "Networking in Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/oci-artifact/index",
+      "title": "Package and deploy Docker Compose applications as OCI artifacts",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/production/index",
+      "title": "Use Compose in production",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/profiles/index",
+      "title": "Using profiles with Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/project-name/index",
+      "title": "Specify a project name",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/provider-services/index",
+      "title": "Use provider services",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/startup-order/index",
+      "title": "Control startup and shutdown order in Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/how-tos/use-secrets/index",
+      "title": "Manage secrets securely in Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/install/linux/index",
+      "title": "Install the Docker Compose plugin",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/install/standalone/index",
+      "title": "Install the Docker Compose standalone (Legacy)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/install/uninstall/index",
+      "title": "Uninstall Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/intro/compose-application-model/index",
+      "title": "How Compose works",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/intro/features-uses/index",
+      "title": "Why use Compose?",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/intro/history/index",
+      "title": "History and development of Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/release-notes/index",
+      "title": "Release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/support-and-feedback/faq/index",
+      "title": "Frequently asked questions about Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/support-and-feedback/feedback/index",
+      "title": "Give feedback",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "compose/trust-model/index",
+      "title": "Trust model for Compose files",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/cert-revoke-solution/index",
+      "title": "Resolve the recent Docker Desktop issue on macOS",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/allow-list/index",
+      "title": "Allowlist for Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/enforce-sign-in/methods/index",
+      "title": "Configure sign-in enforcement",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/enterprise-deployment/dev-box/index",
+      "title": "",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/enterprise-deployment/faq/index",
+      "title": "Enterprise deployment FAQs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/enterprise-deployment/ms-store/index",
+      "title": "Install Docker Desktop from the Microsoft Store on Windows",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/enterprise-deployment/msi-install-and-configure/index",
+      "title": "MSI installer",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/enterprise-deployment/pkg-install-and-configure/index",
+      "title": "PKG installer",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/enterprise-deployment/use-intune/index",
+      "title": "Deploy with Intune",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/enterprise-deployment/use-jamf-pro/index",
+      "title": "Deploy with Jamf Pro",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/air-gapped-containers/index",
+      "title": "Air-gapped containers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/enhanced-container-isolation/config/index",
+      "title": "Configure Docker socket exceptions and advanced settings",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/enhanced-container-isolation/enable-eci/index",
+      "title": "Enable Enhanced Container Isolation",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/enhanced-container-isolation/faq/index",
+      "title": "Enhanced Container Isolation FAQs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/enhanced-container-isolation/limitations/index",
+      "title": "Enhanced Container Isolation limitations",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/image-access-management/index",
+      "title": "Image Access Management",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/namespace-access/index",
+      "title": "Namespace access control",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/registry-access-management/index",
+      "title": "Registry Access Management",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/settings-management/compliance-reporting/index",
+      "title": "Desktop settings reporting",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/settings-management/configure-admin-console/index",
+      "title": "Configure Settings Management in Docker Home",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/settings-management/configure-json-file/index",
+      "title": "Configure Settings Management with a JSON file",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/enterprise/hardened-desktop/settings-management/settings-reference/index",
+      "title": "Settings reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/containerd/index",
+      "title": "containerd image store",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/desktop-cli/index",
+      "title": "Use the Docker Desktop CLI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/gpu/index",
+      "title": "GPU support in Docker Desktop for Windows",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/mcp-catalog-and-toolkit/catalog/index",
+      "title": "Docker MCP Catalog",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/mcp-catalog-and-toolkit/cli/index",
+      "title": "Use MCP Toolkit from the CLI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/mcp-catalog-and-toolkit/dynamic-mcp/index",
+      "title": "Dynamic MCP",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/mcp-catalog-and-toolkit/e2b-sandboxes/index",
+      "title": "E2B sandboxes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/mcp-catalog-and-toolkit/faqs/index",
+      "title": "MCP Toolkit FAQs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/mcp-catalog-and-toolkit/get-started/index",
+      "title": "Get started with Docker MCP Toolkit",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/mcp-catalog-and-toolkit/mcp-gateway/index",
+      "title": "MCP Gateway",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/mcp-catalog-and-toolkit/profiles/index",
+      "title": "MCP Profiles",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "ai/mcp-catalog-and-toolkit/toolkit/index",
+      "title": "Docker MCP Toolkit",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/networking/networking-how-tos/index",
+      "title": "Explore networking how-tos on Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/synchronized-file-sharing/index",
+      "title": "Synchronized file shares",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/usbip/index",
+      "title": "Using USB/IP with Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/vmm/index",
+      "title": "Virtual Machine Manager",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/wasm/index",
+      "title": "Wasm workloads",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/wsl/best-practices/index",
+      "title": "WSL 2 best practices for Docker Desktop on Windows",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/wsl/custom-kernels/index",
+      "title": "Custom kernels on WSL",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/features/wsl/use-wsl/index",
+      "title": "Develop with Docker Desktop using WSL 2 on Windows",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/previous-versions/2.x-mac/index",
+      "title": "Docker Desktop for Mac 2.x release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/previous-versions/2.x-windows/index",
+      "title": "Docker for Windows 2.x release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/previous-versions/3.x-mac/index",
+      "title": "Docker Desktop for Mac 3.x release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/previous-versions/3.x-windows/index",
+      "title": "Docker for Windows 3.x release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/previous-versions/archive-mac/index",
+      "title": "Release notes for previous versions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/previous-versions/archive-windows/index",
+      "title": "Release notes for previous versions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/previous-versions/edge-releases-mac/index",
+      "title": "Docker Desktop for Mac Edge release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/previous-versions/edge-releases-windows/index",
+      "title": "Docker Desktop for Windows Edge Release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/release-notes/index",
+      "title": "Docker Desktop release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/settings-and-maintenance/backup-and-restore/index",
+      "title": "How to back up and restore your Docker Desktop data",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/settings-and-maintenance/settings/index",
+      "title": "Change your Docker Desktop settings",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/setup/install/linux/archlinux/index",
+      "title": "Install Docker Desktop on Arch-based distributions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/setup/install/linux/debian/index",
+      "title": "Install Docker Desktop on Debian",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/setup/install/linux/fedora/index",
+      "title": "Install Docker Desktop on Fedora",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/setup/install/linux/rhel/index",
+      "title": "Install Docker Desktop on RHEL",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/setup/install/linux/ubuntu/index",
+      "title": "Install Docker Desktop on Ubuntu",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/setup/install/mac-install/index",
+      "title": "Install Docker Desktop on Mac",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/setup/install/mac-permission-requirements/index",
+      "title": "Understand permission requirements for Docker Desktop on Mac",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/setup/install/windows-install/index",
+      "title": "Install Docker Desktop on Windows",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/setup/install/windows-permission-requirements/index",
+      "title": "Understand permission requirements for Windows",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/setup/vm-vdi/index",
+      "title": "Run Docker Desktop for Windows in a VM or VDI environment",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/troubleshoot-and-support/faqs/general/index",
+      "title": "General FAQs for Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/troubleshoot-and-support/faqs/linuxfaqs/index",
+      "title": "FAQs for Docker Desktop for Linux",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/troubleshoot-and-support/faqs/macfaqs/index",
+      "title": "FAQs for Docker Desktop for Mac",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/troubleshoot-and-support/faqs/releases/index",
+      "title": "FAQs on Docker Desktop releases",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/troubleshoot-and-support/faqs/windowsfaqs/index",
+      "title": "FAQs for Docker Desktop for Windows",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/troubleshoot-and-support/feedback/index",
+      "title": "Give feedback",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/troubleshoot-and-support/troubleshoot/topics/index",
+      "title": "Troubleshoot topics for Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/uninstall/index",
+      "title": "Uninstall Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/use-desktop/builds/index",
+      "title": "Explore the Builds view in Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/use-desktop/container/index",
+      "title": "Explore the Containers view in Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/use-desktop/images/index",
+      "title": "Explore the Images view in Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/use-desktop/kubernetes/index",
+      "title": "Explore the Kubernetes view",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/use-desktop/logs/index",
+      "title": "Explore the Logs view in Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/use-desktop/resource-saver/index",
+      "title": "Docker Desktop's Resource Saver mode",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "desktop/use-desktop/volumes/index",
+      "title": "Explore the Volumes view in Docker Desktop",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/available/index",
+      "title": "Available types of Docker Hardened Images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/build-process/index",
+      "title": "How Docker Hardened Images are built",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/malware-scanning/index",
+      "title": "Malware scanning",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/responsibility/index",
+      "title": "Understanding roles and responsibilities for Docker Hardened Images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/scanner-integrations/index",
+      "title": "Scanner integrations",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/attestations/index",
+      "title": "Attestations",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/cis/index",
+      "title": "CIS Benchmark",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/cves/index",
+      "title": "Common Vulnerabilities and Exposures (CVEs)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/digests/index",
+      "title": "Image digests",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/distroless/index",
+      "title": "Minimal or distroless images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/fips/index",
+      "title": "FIPS",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/glibc-musl/index",
+      "title": "glibc and musl support in Docker Hardened Images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/hardening/index",
+      "title": "Base image hardening",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/immutability/index",
+      "title": "Immutable infrastructure",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/provenance/index",
+      "title": "Image provenance",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/sbom/index",
+      "title": "Software Bill of Materials (SBOMs)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/signatures/index",
+      "title": "Code signing",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/slsa/index",
+      "title": "Supply-chain Levels for Software Artifacts (SLSA)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/sscs/index",
+      "title": "Software Supply Chain Security",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/ssdlc/index",
+      "title": "Secure Software Development Lifecycle",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/stig/index",
+      "title": "STIG",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/security-concepts/vex/index",
+      "title": "Vulnerability Exploitability eXchange (VEX)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/test/index",
+      "title": "How Docker Hardened Images are tested",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/explore/what/index",
+      "title": "What are hardened images and why use them?",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/get-started/index",
+      "title": "Docker Hardened Images quickstart",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/build/index",
+      "title": "Create and build a Docker Hardened Image",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/customize/index",
+      "title": "Customize a Docker Hardened Image or chart",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/hardened-packages/index",
+      "title": "Use Hardened System Packages",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/helm/index",
+      "title": "Use a Docker Hardened Image chart",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/mirror/index",
+      "title": "Mirror a Docker Hardened Image repository",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/policies/index",
+      "title": "Apply Docker Hardened Image policies to your images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/scan/index",
+      "title": "Scan Docker Hardened Images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/search-evaluate/index",
+      "title": "Search and evaluate Docker Hardened Images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/select-enterprise/index",
+      "title": "Get started with DHI Select and Enterprise",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/troubleshoot/index",
+      "title": "Troubleshoot",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/use/index",
+      "title": "Use a Docker Hardened Image",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/verify/index",
+      "title": "Verify a Docker Hardened Image or chart",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/how-to/vex-api/index",
+      "title": "Query VEX for a Docker Hardened Image",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/migration/checklist/index",
+      "title": "Migration checklist",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/migration/examples/dotnet/index",
+      "title": ".NET",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/migration/examples/go/index",
+      "title": "Go",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/migration/examples/java/index",
+      "title": "Java",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/migration/examples/node/index",
+      "title": "Node.js",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/migration/examples/python/index",
+      "title": "Python",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/migration/migrate-from-doi/index",
+      "title": "Migrate from Alpine or Debian",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/migration/migrate-from-ubuntu/index",
+      "title": "Migrate from Ubuntu",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/migration/migrate-from-wolfi/index",
+      "title": "Migrate from Wolfi",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/migration/migrate-with-ai/index",
+      "title": "Migrate using Gordon",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/release-notes/cli/index",
+      "title": "DHI CLI release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/release-notes/platform/index",
+      "title": "Docker Hardened Images release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/resources/index",
+      "title": "Resources and feedback",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/tools/api/index",
+      "title": "Use the DHI API",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/tools/cli/index",
+      "title": "Use the DHI CLI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/tools/hub/index",
+      "title": "Use Docker Hub",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/tools/mcp/index",
+      "title": "Use the DHI MCP server",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "dhi/tools/terraform/index",
+      "title": "Use the DHI Terraform provider",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/image-library/catalogs/index",
+      "title": "Generative AI content",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/image-library/mirror/index",
+      "title": "Mirror the Docker Hub library",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/image-library/search/index",
+      "title": "Docker Hub search",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/image-library/trusted-content/index",
+      "title": "Trusted content",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/mcp-server/index",
+      "title": "Docker Hub MCP server",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/quickstart/index",
+      "title": "Docker Hub quickstart",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/release-notes/index",
+      "title": "Docker Hub release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/archive/index",
+      "title": "Archive or unarchive a repository",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/create/index",
+      "title": "Create a repository",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/delete/index",
+      "title": "Delete a repository",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/access/index",
+      "title": "Access management",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/builds/advanced/index",
+      "title": "Advanced options for autobuild and autotest",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/builds/automated-testing/index",
+      "title": "Automated repository tests",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/builds/link-source/index",
+      "title": "Configure automated builds from GitHub and BitBucket",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/builds/manage-builds/index",
+      "title": "Manage autobuilds",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/builds/migrate/index",
+      "title": "Migrate from Autobuilds",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/builds/setup/index",
+      "title": "Set up automated builds",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/builds/troubleshoot/index",
+      "title": "Troubleshoot your autobuilds",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/export/index",
+      "title": "Export organization repositories to CSV",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/hub-images/bulk-migrate/index",
+      "title": "Bulk migrate images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/hub-images/immutable-tags/index",
+      "title": "Immutable tags on Docker Hub",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/hub-images/manage/index",
+      "title": "Image Management",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/hub-images/move/index",
+      "title": "Move images between repositories",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/hub-images/oci-artifacts/index",
+      "title": "Software artifacts on Docker Hub",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/hub-images/push/index",
+      "title": "Push images to a repository",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/hub-images/tags/index",
+      "title": "Tags on Docker Hub",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/information/index",
+      "title": "Repository information",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/trusted-content/dsos-program/index",
+      "title": "Docker-Sponsored Open Source Program",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/trusted-content/dvp-program/index",
+      "title": "Docker Verified Publisher Program",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/trusted-content/insights-analytics/index",
+      "title": "Insights and analytics",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/trusted-content/official-images/index",
+      "title": "Docker Official Images",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/vulnerability-scanning/index",
+      "title": "Image security insights",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/repos/manage/webhooks/index",
+      "title": "Webhooks",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/settings/index",
+      "title": "Settings",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/troubleshoot/index",
+      "title": "Troubleshoot Docker Hub",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/usage/manage/index",
+      "title": "Best practices for optimizing Docker Hub usage",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "docker-hub/usage/pulls/index",
+      "title": "Docker Hub pull usage and limits",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/cli/completion/index",
+      "title": "Completion",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/cli/filter/index",
+      "title": "Filter commands",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/cli/formatting/index",
+      "title": "Format command and log output",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/cli/otel/index",
+      "title": "OpenTelemetry for the Docker CLI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/cli/proxy/index",
+      "title": "Use a proxy server with the Docker CLI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/containers/gpu/index",
+      "title": "GPU access",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/containers/multi-service_container/index",
+      "title": "Run multiple processes in a container",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/containers/resource_constraints/index",
+      "title": "Resource constraints",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/containers/run/index",
+      "title": "Running containers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/containers/runmetrics/index",
+      "title": "Runtime metrics",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/containers/start-containers-automatically/index",
+      "title": "Start containers automatically",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/daemon/alternative-runtimes/index",
+      "title": "Alternative container runtimes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/daemon/embedded-containerd/index",
+      "title": "Run containerd in the Docker daemon",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/daemon/ipv6/index",
+      "title": "Use IPv6 networking",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/daemon/live-restore/index",
+      "title": "Live restore",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/daemon/logs/index",
+      "title": "Read the daemon logs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/daemon/prometheus/index",
+      "title": "Collect Docker metrics with Prometheus",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/daemon/proxy/index",
+      "title": "Daemon proxy configuration",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/daemon/remote-access/index",
+      "title": "Configure remote access for Docker daemon",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/daemon/start/index",
+      "title": "Start the daemon",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/daemon/troubleshoot/index",
+      "title": "Troubleshooting the Docker daemon",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/deprecated/index",
+      "title": "Deprecated Docker Engine features",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/extend/config/index",
+      "title": "Plugin Config Version 1 of Plugin V2",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/extend/legacy_plugins/index",
+      "title": "Use Docker Engine plugins",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/extend/plugin_api/index",
+      "title": "Docker Plugin API",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/extend/plugins_authorization/index",
+      "title": "Access authorization plugin",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/extend/plugins_logging/index",
+      "title": "Docker log driver plugins",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/extend/plugins_network/index",
+      "title": "Docker network driver plugins",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/extend/plugins_volume/index",
+      "title": "Docker volume plugins",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/install/binaries/index",
+      "title": "Install Docker Engine from binaries",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/install/centos/index",
+      "title": "Install Docker Engine on CentOS",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/install/debian/index",
+      "title": "Install Docker Engine on Debian",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/install/fedora/index",
+      "title": "Install Docker Engine on Fedora",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/install/linux-postinstall/index",
+      "title": "Linux post-installation steps for Docker Engine",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/install/raspberry-pi-os/index",
+      "title": "Install Docker Engine on Raspberry Pi OS (32-bit / armhf)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/install/rhel/index",
+      "title": "Install Docker Engine on RHEL",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/configure/index",
+      "title": "Configure logging drivers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/drivers/awslogs/index",
+      "title": "Amazon CloudWatch Logs logging driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/drivers/etwlogs/index",
+      "title": "ETW logging driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/drivers/fluentd/index",
+      "title": "Fluentd logging driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/drivers/gcplogs/index",
+      "title": "Google Cloud Logging driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/drivers/gelf/index",
+      "title": "Graylog Extended Format logging driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/drivers/journald/index",
+      "title": "Journald logging driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/drivers/json-file/index",
+      "title": "JSON File logging driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/drivers/local/index",
+      "title": "Local file logging driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/drivers/splunk/index",
+      "title": "Splunk logging driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/drivers/syslog/index",
+      "title": "Syslog logging driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/dual-logging/index",
+      "title": "Use docker logs with remote logging drivers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/log_tags/index",
+      "title": "Customize log driver output",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/logging/plugins/index",
+      "title": "Use a logging driver plugin",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/manage-resources/contexts/index",
+      "title": "Docker contexts",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/manage-resources/labels/index",
+      "title": "Docker object labels",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/manage-resources/pruning/index",
+      "title": "Prune unused Docker objects",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/ca-certs/index",
+      "title": "Use CA certificates with Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/drivers/bridge/index",
+      "title": "Bridge network driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/drivers/host/index",
+      "title": "Host network driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/drivers/ipvlan/index",
+      "title": "IPvlan network driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/drivers/macvlan/index",
+      "title": "Macvlan network driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/drivers/none/index",
+      "title": "None network driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/drivers/overlay/index",
+      "title": "Overlay network driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/firewall-iptables/index",
+      "title": "Docker with iptables",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/firewall-nftables/index",
+      "title": "Docker with nftables",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/links/index",
+      "title": "Legacy container links",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/packet-filtering-firewalls/index",
+      "title": "Packet filtering and firewalls",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/network/port-publishing/index",
+      "title": "Port publishing and mapping",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/17.03/index",
+      "title": "Docker Engine 17.03 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/17.04/index",
+      "title": "Docker Engine 17.04 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/17.05/index",
+      "title": "Docker Engine 17.05 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/17.06/index",
+      "title": "Docker Engine 17.06 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/17.07/index",
+      "title": "Docker Engine 17.07 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/17.09/index",
+      "title": "Docker Engine 17.09 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/17.10/index",
+      "title": "Docker Engine 17.10 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/17.11/index",
+      "title": "Docker Engine 17.11 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/17.12/index",
+      "title": "Docker Engine 17.12 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/18.01/index",
+      "title": "Docker Engine 18.01 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/18.02/index",
+      "title": "Docker Engine 18.02 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/18.03/index",
+      "title": "Docker Engine 18.03 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/18.04/index",
+      "title": "Docker Engine 18.04 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/18.05/index",
+      "title": "Docker Engine 18.05 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/18.06/index",
+      "title": "Docker Engine 18.06 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/18.09/index",
+      "title": "Docker Engine 18.09 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/19.03/index",
+      "title": "Docker Engine 19.03 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/20.10/index",
+      "title": "Docker Engine 20.10 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/23.0/index",
+      "title": "Docker Engine 23.0 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/24.0/index",
+      "title": "Docker Engine 24.0 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/25.0/index",
+      "title": "Docker Engine 25.0 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/26.0/index",
+      "title": "Docker Engine 26.0 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/26.1/index",
+      "title": "Docker Engine 26.1 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/27/index",
+      "title": "Docker Engine version 27 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/28/index",
+      "title": "Docker Engine version 28 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/29/index",
+      "title": "Docker Engine version 29 release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/release-notes/prior-releases/index",
+      "title": "Docker Engine prior releases",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/antivirus/index",
+      "title": "Antivirus software and Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/apparmor/index",
+      "title": "AppArmor security profiles for Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/certificates/index",
+      "title": "Verify repository client with certificates",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/non-events/index",
+      "title": "Docker security non-events",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/protect-access/index",
+      "title": "Protect the Docker daemon socket",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/rootless/tips/index",
+      "title": "Tips",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/rootless/troubleshoot/index",
+      "title": "Troubleshooting",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/rootless/uid-gid-mapping/index",
+      "title": "UID/GID mapping",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/seccomp/index",
+      "title": "Seccomp security profiles for Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/trust/deploying_notary/index",
+      "title": "Deploy Notary Server with Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/trust/trust_automation/index",
+      "title": "Automation with content trust",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/trust/trust_delegation/index",
+      "title": "Delegations for content trust",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/trust/trust_key_mng/index",
+      "title": "Manage keys for content trust",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/trust/trust_sandbox/index",
+      "title": "Play in a content trust sandbox",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/security/userns-remap/index",
+      "title": "Isolate containers with a user namespace",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/bind-mounts/index",
+      "title": "Bind mounts",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/containerd/index",
+      "title": "containerd image store with Docker Engine",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/drivers/aufs-driver/index",
+      "title": "AUFS storage driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/drivers/btrfs-driver/index",
+      "title": "BTRFS storage driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/drivers/overlayfs-driver/index",
+      "title": "OverlayFS storage driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/drivers/select-storage-driver/index",
+      "title": "Select a storage driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/drivers/vfs-driver/index",
+      "title": "VFS storage driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/drivers/windowsfilter-driver/index",
+      "title": "windowsfilter storage driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/drivers/zfs-driver/index",
+      "title": "ZFS storage driver",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/image-mounts/index",
+      "title": "Image mounts",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/tmpfs/index",
+      "title": "tmpfs mounts",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/storage/volumes/index",
+      "title": "Volumes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/admin_guide/index",
+      "title": "Administer and maintain a swarm of Docker Engines",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/configs/index",
+      "title": "Store configuration data using Docker Configs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/how-swarm-mode-works/nodes/index",
+      "title": "How nodes work",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/how-swarm-mode-works/pki/index",
+      "title": "Manage swarm security with public key infrastructure (PKI)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/how-swarm-mode-works/services/index",
+      "title": "How services work",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/how-swarm-mode-works/swarm-task-states/index",
+      "title": "Swarm task states",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/ingress/index",
+      "title": "Use Swarm mode routing mesh",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/join-nodes/index",
+      "title": "Join nodes to a swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/key-concepts/index",
+      "title": "Swarm mode key concepts",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/manage-nodes/index",
+      "title": "Manage nodes in a swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/networking/index",
+      "title": "Manage swarm service networks",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/raft/index",
+      "title": "Raft consensus in swarm mode",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/secrets/index",
+      "title": "Manage sensitive data with Docker secrets",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/services/index",
+      "title": "Deploy services to a swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/stack-deploy/index",
+      "title": "Deploy a stack to a swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/swarm-mode/index",
+      "title": "Run Docker Engine in swarm mode",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/swarm-tutorial/add-nodes/index",
+      "title": "Add nodes to the swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/swarm-tutorial/create-swarm/index",
+      "title": "Create a swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/swarm-tutorial/delete-service/index",
+      "title": "Delete the service running on the swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/swarm-tutorial/deploy-service/index",
+      "title": "Deploy a service to the swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/swarm-tutorial/drain-node/index",
+      "title": "Drain a node on the swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/swarm-tutorial/inspect-service/index",
+      "title": "Inspect a service on the swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/swarm-tutorial/rolling-update/index",
+      "title": "Apply rolling updates to a service",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/swarm-tutorial/scale-service/index",
+      "title": "Scale the service in the swarm",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "engine/swarm/swarm_manager_locking/index",
+      "title": "Lock your swarm to protect its encryption key",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/architecture/metadata/index",
+      "title": "Extension metadata",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/architecture/security/index",
+      "title": "Extension security",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/build/backend-extension-tutorial/index",
+      "title": "Add a backend to your extension",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/build/frontend-extension-tutorial/index",
+      "title": "Create an advanced frontend extension",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/build/minimal-frontend-extension/index",
+      "title": "Create a simple extension",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/design/design-guidelines/index",
+      "title": "Design guidelines for Docker extensions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/design/design-principles/index",
+      "title": "Docker design principles",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/design/mui-best-practices/index",
+      "title": "MUI best practices",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/dev/api/backend/index",
+      "title": "Extension Backend",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/dev/api/dashboard-routes-navigation/index",
+      "title": "Navigation",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/dev/api/dashboard/index",
+      "title": "Dashboard",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/dev/api/docker/index",
+      "title": "Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/dev/api/overview/index",
+      "title": "Extension UI API",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/dev/continuous-integration/index",
+      "title": "Continuous Integration (CI)",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/dev/test-debug/index",
+      "title": "Test and debug",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/dev/usage/index",
+      "title": "CLI reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/extensions/DISTRIBUTION/index",
+      "title": "Package and release your extension",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/extensions/labels/index",
+      "title": "Extension image labels",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/extensions/multi-arch/index",
+      "title": "Build multi-arch extensions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/extensions/publish/index",
+      "title": "Publish in the Marketplace",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/extensions/share/index",
+      "title": "Share your extension",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/extensions/validate/index",
+      "title": "Validate your extension",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/guides/invoke-host-binaries/index",
+      "title": "Invoke host binaries",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/guides/kubernetes/index",
+      "title": "Interacting with Kubernetes from an extension",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/guides/oauth2-flow/index",
+      "title": "Authentication",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/guides/use-docker-socket-from-backend/index",
+      "title": "Use the Docker socket from the extension backend",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/process/index",
+      "title": "The build and publish process",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/extensions-sdk/quickstart/index",
+      "title": "Quickstart",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/marketplace/index",
+      "title": "Marketplace extensions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/non-marketplace/index",
+      "title": "Non-marketplace extensions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/private-marketplace/index",
+      "title": "Configure a private marketplace for extensions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "extensions/settings-feedback/index",
+      "title": "Settings and feedback for Docker Extensions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "faqs/accounts/index",
+      "title": "Account FAQs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "faqs/platform/index",
+      "title": "Platform FAQs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "faqs/security/index",
+      "title": "Security FAQs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "faqs/subscription-billing/index",
+      "title": "Subscription and billing FAQs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "offload/about/index",
+      "title": "About Docker Offload",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "offload/configuration/index",
+      "title": "Configure Docker Offload",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "offload/feedback/index",
+      "title": "Give feedback",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "offload/optimize/index",
+      "title": "Optimize Docker Offload usage",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "offload/quickstart/index",
+      "title": "Docker Offload quickstart",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "offload/troubleshoot/index",
+      "title": "Troubleshoot Docker Offload",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "offload/usage/index",
+      "title": "Docker Offload usage",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "platform-release-notes/index",
+      "title": "Accounts and admin release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "retired/index",
+      "title": "Deprecated and retired Docker products and features",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/deep-dive/advisory-db-sources/index",
+      "title": "Advisory database sources and matching service",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/deep-dive/data-handling/index",
+      "title": "Data collection and storage in Docker Scout",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/explore/analysis/index",
+      "title": "Docker Scout image analysis",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/explore/dashboard/index",
+      "title": "Dashboard",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/explore/exceptions/index",
+      "title": "Manage vulnerability exceptions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/explore/image-details-view/index",
+      "title": "Image details view",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/explore/metrics-exporter/index",
+      "title": "Docker Scout metrics exporter",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/how-tos/artifact-types/index",
+      "title": "Use Scout with different artifact types",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/how-tos/configure-cli/index",
+      "title": "Configure Docker Scout with environment variables",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/how-tos/create-exceptions-gui/index",
+      "title": "Create an exception using the GUI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/how-tos/create-exceptions-vex/index",
+      "title": "Create an exception using the VEX",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/how-tos/view-create-sboms/index",
+      "title": "Docker Scout SBOMs",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/install/index",
+      "title": "Install Docker Scout",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/integrations/ci/azure/index",
+      "title": "Integrate Docker Scout with Microsoft Azure DevOps Pipelines",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/integrations/ci/circle-ci/index",
+      "title": "Integrate Docker Scout with Circle CI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/integrations/ci/gha/index",
+      "title": "Integrate Docker Scout with GitHub Actions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/integrations/ci/gitlab/index",
+      "title": "Integrate Docker Scout with GitLab CI/CD",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/integrations/ci/jenkins/index",
+      "title": "Integrate Docker Scout with Jenkins",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/integrations/environment/cli/index",
+      "title": "Generic environment integration with CLI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/integrations/registry/index",
+      "title": "Integrate Docker Scout with a container registry",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/policy/local/index",
+      "title": "Evaluate policies",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/quickstart/index",
+      "title": "Docker Scout quickstart",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/release-notes/cli/index",
+      "title": "CLI release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "scout/release-notes/platform/index",
+      "title": "Docker Scout release notes",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/access-tokens/organization-access-tokens/index",
+      "title": "Organization access tokens",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/access-tokens/personal-access-tokens/index",
+      "title": "Personal access tokens",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/authentication/2fa/manage/index",
+      "title": "Manage two-factor authentication for your Docker account",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/authentication/2fa/recover-hub-account/index",
+      "title": "Recover your Docker account and two-factor recovery code",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/authentication/oidc-connections/create-manage/index",
+      "title": "Create and manage OIDC connections",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/authentication/oidc-connections/rulesets-claims/index",
+      "title": "OIDC connections rulesets and subject claims",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/authentication/single-sign-on/connect/index",
+      "title": "Set up single sign-on",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/authentication/single-sign-on/manage/index",
+      "title": "Manage SSO domains and connections",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/authentication/single-sign-on/troubleshoot-sso/index",
+      "title": "Troubleshoot single sign-on",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/provisioning/auto-provisioning/index",
+      "title": "Auto-provisioning",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/provisioning/domain-management/index",
+      "title": "Add and manage domains",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/provisioning/just-in-time/index",
+      "title": "Just-in-Time provisioning",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/provisioning/scim/group-mapping/index",
+      "title": "Map identity provider groups to Docker teams",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/provisioning/scim/migrate-scim/index",
+      "title": "Migrate JIT to SCIM",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/provisioning/scim/provision-scim/index",
+      "title": "Set up SCIM provisioning",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/provisioning/troubleshoot-provisioning/index",
+      "title": "Troubleshoot provisioning",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/roles-and-permissions/core-roles/index",
+      "title": "Docker core roles and permissions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/roles-and-permissions/custom-roles/manage/index",
+      "title": "Manage custom roles in Docker Home",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/roles-and-permissions/custom-roles/permissions-reference/index",
+      "title": "Custom role permissions reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "security/security-announcements/index",
+      "title": "Docker security announcements",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/desktop-license/index",
+      "title": "Docker Desktop license agreement",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/manage/3d-secure/index",
+      "title": "Use 3D Secure authentication for Docker billing",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/manage/details/index",
+      "title": "Update your billing details",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/manage/history/index",
+      "title": "Billing and invoice history",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/manage/payment-method/index",
+      "title": "Add or update a payment method",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/manage/plans/index",
+      "title": "Manage plans",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/manage/tax-certificate/index",
+      "title": "Sales tax exemption and VAT",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/plans/ai-governance/index",
+      "title": "AI Governance plan",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/plans/dhi/index",
+      "title": "DHI plans",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/plans/docker-agentic-platform/index",
+      "title": "Docker Agentic Platform plans",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/plans/docker-verified-publisher/index",
+      "title": "Docker Verified Publisher plans",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/plans/docker/index",
+      "title": "Docker plans",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "subscription-billing/plans/gordon/index",
+      "title": "Gordon plans",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "tcc/index",
+      "title": "Testcontainers Cloud",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "testcontainers/index",
+      "title": "Testcontainers",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/dvp/changelog/index",
+      "title": "Docker Verified Publisher API changelog",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/dvp/deprecated/index",
+      "title": "Deprecated Docker Verified Publisher API endpoints",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/sdk/examples/index",
+      "title": "Examples using the Docker Engine SDKs and Docker API",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version-history/index",
+      "title": "Engine API version history",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.40/index",
+      "title": "Docker Engine API v1.40 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.41/index",
+      "title": "Docker Engine API v1.41 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.42/index",
+      "title": "Docker Engine API v1.42 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.43/index",
+      "title": "Docker Engine API v1.43 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.44/index",
+      "title": "Docker Engine API v1.44 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.45/index",
+      "title": "Docker Engine API v1.45 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.46/index",
+      "title": "Docker Engine API v1.46 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.47/index",
+      "title": "Docker Engine API v1.47 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.48/index",
+      "title": "Docker Engine API v1.48 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.49/index",
+      "title": "Docker Engine API v1.49 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.50/index",
+      "title": "Docker Engine API v1.50 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.51/index",
+      "title": "Docker Engine API v1.51 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.52/index",
+      "title": "Docker Engine API v1.52 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.53/index",
+      "title": "Docker Engine API v1.53 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.54/index",
+      "title": "Docker Engine API v1.54 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.55/index",
+      "title": "Docker Engine API v1.55 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/engine/version/v1.56/index",
+      "title": "Docker Engine API v1.56 reference",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/BackendV0/index",
+      "title": "Interface: BackendV0",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/DesktopUI/index",
+      "title": "Interface: DesktopUI",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/Dialog/index",
+      "title": "Interface: Dialog",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/Docker/index",
+      "title": "Interface: Docker",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/DockerCommand/index",
+      "title": "Interface: DockerCommand",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/DockerDesktopClient/index",
+      "title": "Interface: DockerDesktopClient",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/Exec/index",
+      "title": "Interface: Exec",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/ExecOptions/index",
+      "title": "Interface: ExecOptions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/ExecProcess/index",
+      "title": "Interface: ExecProcess",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/ExecResult/index",
+      "title": "Interface: ExecResult",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/ExecResultV0/index",
+      "title": "Interface: ExecResultV0",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/ExecStreamOptions/index",
+      "title": "Interface: ExecStreamOptions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/Extension/index",
+      "title": "Interface: Extension",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/ExtensionCli/index",
+      "title": "Interface: ExtensionCli",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/ExtensionHost/index",
+      "title": "Interface: ExtensionHost",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/ExtensionVM/index",
+      "title": "Interface: ExtensionVM",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/Host/index",
+      "title": "Interface: Host",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/HttpService/index",
+      "title": "Interface: HttpService",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/NavigationIntents/index",
+      "title": "Interface: NavigationIntents",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/OpenDialogResult/index",
+      "title": "Interface: OpenDialogResult",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/RawExecResult/index",
+      "title": "Interface: RawExecResult",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/RequestConfig/index",
+      "title": "Interface: RequestConfig",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/RequestConfigV0/index",
+      "title": "Interface: RequestConfigV0",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/ServiceError/index",
+      "title": "Interface: ServiceError",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/SpawnOptions/index",
+      "title": "Interface: SpawnOptions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/extensions-sdk/Toast/index",
+      "title": "Interface: Toast",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/hub/changelog/index",
+      "title": "Docker Hub API changelog",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/hub/deprecated/index",
+      "title": "Deprecated Docker Hub API endpoints",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/api/registry/auth/index",
+      "title": "Registry authentication",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/consistent-instruction-casing/index",
+      "title": "ConsistentInstructionCasing",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/copy-ignored-file/index",
+      "title": "CopyIgnoredFile",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/duplicate-stage-name/index",
+      "title": "DuplicateStageName",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/expose-invalid-format/index",
+      "title": "ExposeInvalidFormat",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/expose-proto-casing/index",
+      "title": "ExposeProtoCasing",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/from-as-casing/index",
+      "title": "FromAsCasing",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/from-platform-flag-const-disallowed/index",
+      "title": "FromPlatformFlagConstDisallowed",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/invalid-default-arg-in-from/index",
+      "title": "InvalidDefaultArgInFrom",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/invalid-definition-description/index",
+      "title": "InvalidDefinitionDescription",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/json-args-recommended/index",
+      "title": "JSONArgsRecommended",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/legacy-key-value-format/index",
+      "title": "LegacyKeyValueFormat",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/maintainer-deprecated/index",
+      "title": "MaintainerDeprecated",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/multiple-instructions-disallowed/index",
+      "title": "MultipleInstructionsDisallowed",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/no-empty-continuation/index",
+      "title": "NoEmptyContinuation",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/redundant-target-platform/index",
+      "title": "RedundantTargetPlatform",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/reserved-stage-name/index",
+      "title": "ReservedStageName",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/secrets-used-in-arg-or-env/index",
+      "title": "SecretsUsedInArgOrEnv",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/stage-name-casing/index",
+      "title": "StageNameCasing",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/undefined-arg-in-from/index",
+      "title": "UndefinedArgInFrom",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/undefined-var/index",
+      "title": "UndefinedVar",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/build-checks/workdir-relative-path/index",
+      "title": "WorkdirRelativePath",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/cli/dockerd/index",
+      "title": "dockerd",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/build/index",
+      "title": "Compose Build Specification",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/configs/index",
+      "title": "Configs top-level element",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/deploy/index",
+      "title": "Compose Deploy Specification",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/develop/index",
+      "title": "Compose Develop Specification",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/extension/index",
+      "title": "Extensions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/fragments/index",
+      "title": "Fragments",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/include/index",
+      "title": "Use include to modularize Compose files",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/interpolation/index",
+      "title": "Interpolation",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/legacy-versions/index",
+      "title": "Legacy versions",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/merge/index",
+      "title": "Merge Compose files",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/models/index",
+      "title": "Models",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/networks/index",
+      "title": "Define and manage networks in Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/profiles/index",
+      "title": "Learn how to use profiles in Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/secrets/index",
+      "title": "Secrets",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/services/index",
+      "title": "Define services in Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/version-and-name/index",
+      "title": "Version and name top-level elements",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/compose-file/volumes/index",
+      "title": "Define and manage volumes in Docker Compose",
+      "template": "templates/template.html"
+    },
+    {
+      "name": "reference/dockerfile/index",
+      "title": "Dockerfile reference",
+      "template": "templates/template.html"
     }
   ]
 }

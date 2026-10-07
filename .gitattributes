@@ -10,3 +10,4 @@ investigation/markdown-probe/results/goldmark-toolchain.log -whitespace
 authored/** -whitespace
 layouts/** -whitespace
 static/** -whitespace
+compatibility/assets/** -whitespace
