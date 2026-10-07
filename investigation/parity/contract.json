@@ -1,0 +1,151 @@
+{
+  "version": 1,
+  "upstream": "6cf1b1c167f032e8a6629da211602300b623b20e",
+  "baseline": "../docker-baseline/site",
+  "files": 8622,
+  "bytes": 963162827,
+  "content_pages": 2170,
+  "404_documents": 1,
+  "verification_documents": 2,
+  "html_redirects": 1728,
+  "redirect_rules": 2510,
+  "markdown_exports": 2170,
+  "searchable_pages": 2142,
+  "browser": "Chromium 151.0.7922.34 via Playwright 1.62.1",
+  "viewport_sizes": [
+    [
+      1440,
+      900
+    ],
+    [
+      390,
+      844
+    ]
+  ],
+  "themes": [
+    "light",
+    "dark",
+    "system-light",
+    "system-dark"
+  ],
+  "families": [
+    [
+      "home",
+      "/"
+    ],
+    [
+      "section",
+      "/engine/install/"
+    ],
+    [
+      "standard-doc",
+      "/engine/install/ubuntu/"
+    ],
+    [
+      "get-started",
+      "/get-started/"
+    ],
+    [
+      "guide-landing",
+      "/guides/"
+    ],
+    [
+      "guide",
+      "/guides/nodejs/"
+    ],
+    [
+      "learning-series",
+      "/get-started/docker-concepts/building-images/"
+    ],
+    [
+      "cli",
+      "/reference/cli/docker/container/run/"
+    ],
+    [
+      "api-catalog",
+      "/reference/api/"
+    ],
+    [
+      "api-overview",
+      "/reference/api/ai-governance/latest/"
+    ],
+    [
+      "api-operation",
+      "/reference/api/ai-governance/latest/operations/createPolicy/"
+    ],
+    [
+      "glossary",
+      "/reference/glossary/"
+    ],
+    [
+      "api-schema",
+      "/reference/api/ai-governance/latest/schemas/CreatePolicyRequest/"
+    ],
+    [
+      "legacy-api",
+      "/reference/api/engine/version/v1.56/"
+    ],
+    [
+      "samples",
+      "/reference/samples/react/"
+    ],
+    [
+      "wide",
+      "/reference/"
+    ],
+    [
+      "hidden",
+      "/bot-detection/"
+    ],
+    [
+      "tabs",
+      "/desktop/setup/install/linux/"
+    ],
+    [
+      "accordion",
+      "/compose/intro/compose-application-model/"
+    ],
+    [
+      "mermaid",
+      "/ai/sandboxes/governance/access-controls/mcp/"
+    ],
+    [
+      "diagram",
+      "/ai/sandboxes/architecture/"
+    ],
+    [
+      "topology",
+      "/ai/sandboxes/security/"
+    ],
+    [
+      "redirect",
+      "/glossary/"
+    ],
+    [
+      "404",
+      "/missing-parity-fixture/"
+    ]
+  ],
+  "screenshots": 192,
+  "capture_archive": {
+    "path": "../docker-baseline/c1/browser-fixtures.tar.gz",
+    "sha256": "8c7a1e684ee60618e0146d3c370340ce9f6472c016ac2cb0699aa82128d54e10"
+  },
+  "acceptance": {
+    "routes": "Every baseline file and redirect rule accounted for; keep content, alias, export, search and hidden counts distinct.",
+    "content": "Every document preserves visible text, code, heading anchors, navigation information and page-specific UI; no wholesale generated HTML source for docker.",
+    "metadata": "Compare titles, all meta tags, canonical/alternate declarations, structured data and Git-derived dates over the complete corpus.",
+    "assets": "All local URLs resolve at least as well as baseline; copied binary/static assets byte-identical unless equivalence is demonstrated.",
+    "exports": "Markdown, LLM, sitemap, RSS, metadata, robots and verification files remain synchronized with source changes.",
+    "interaction": "Repeat controls.json and authoritative behavior.json.gz checks; compare semantic states and clipboard contents. Search counts can vary while results load; compare settled query results/order/content.",
+    "visual": "Compare every representative state against frozen images, additionally scroll to below-fold interactive regions. Investigate meaningful differences, not screenshot hash equality across platforms.",
+    "dependency": "Incremental output equals fresh full output after page, layout, navigation, global metadata, export/search and URL/redirect changes."
+  },
+  "remote_boundary": "No telemetry, feedback or AI prompts sent. Consent, analytics, YouTube and legacy Redoc remote scripts inert in captures; preserve integration URLs and local UI. Service responses need deterministic mocks, not live availability claims.",
+  "known_harness_limits": [
+    "browser-v2 search result wait was premature; behavior.json.gz supersedes those detailed checks.",
+    "browser-v2 externalRequests contains last context only; controls and API supplement retain blocked request evidence.",
+    "Viewport screenshots are initial view; DOM snapshots and focused controls establish behavior beyond that view."
+  ],
+  "inherited_issues": "audit/summary.json and issues.json.gz are observations, not migration failures. Navigation-only metadata records have empty URLs; legacy Redoc creates some anchors at runtime. Do not silently repair or treat all audit observations as true broken publication."
+}

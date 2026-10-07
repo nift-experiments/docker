@@ -1,5 +1,5 @@
 # Objective
-Establish two faithful Nift recreations of Docker Docs from the complete built upstream production output. This initial checkpoint covers setup and investigation only; do not begin corpus migration without the next user instruction.
+Establish two faithful Nift recreations of Docker Docs from the complete built upstream production output. The user approved proceeding through C1–C7 on 7 October 2026. Proceed without approval pauses between checkpoints; preserve the hard-stop conditions for genuine Nift limitations, fundamental Markdown problems, major parity compromises or a materially incorrect baseline.
 
 # Repository purpose
 Human + agent maintainable Docker Docs recreation.
@@ -65,13 +65,13 @@ Changed-input scenarios: deterministic edits to 1/10/100 authored pages, shared 
 Compare source/template counts, shared abstractions, direct/transitive dependencies, JS bytes, full and changed build time/RSS, output size, migration effort, ease of human/agent editing and compromises. Neither architecture is required to win.
 
 # Current checkpoint
-C0 setup/investigation complete: final production pipeline succeeded; complete website/source archives, full Git history, logs, dependency/tool provenance and full 8,622-file inventory preserved. See investigation/BASELINE.md for measured evidence and execution status. Browser fixtures and full link audits are pending C1. Migration has not begun.
+C0 setup/investigation complete: final production pipeline succeeded; complete website/source archives, full Git history, logs, dependency/tool provenance and full 8,622-file inventory preserved. See investigation/BASELINE.md for measured evidence and execution status. C1 parity contract is frozen; see investigation/PARITY-CONTRACT.md and parity/contract.json. Complete local audits, 192 browser states and focused keyboard/control evidence are preserved. C2 renderer/architecture proof is next. No migrated output or final benchmarks claimed.
 
 # Completed checkpoints
 Repositories created/cloned; Nift initialized; generated handover v0.0.8 inspected and preserved below plus investigation/generated-HANDOVER-v0.0.8.md. Nift 4.7.2 does not generate AGENTS.md here; project rules added manually. Upstream pinned and source architecture inspected. Production build procedure traced through deployment workflow, bake file, Dockerfile and releaser environment.
 
 # Remaining checkpoints
-- C1: freeze complete baseline, route/assets/metadata/redirect inventory and desktop/mobile/behavior fixtures; complete any gaps recorded in BASELINE.md.
+- C1 completed: frozen complete reference and acceptance contract; full audit plus browser/control evidence.
 - C2: reconstruct shared chrome and representative page families; verify route/path/sigil handling and dependency fan-out.
 - C3: migrate full standard docs and guide corpus, preserving metadata and semantic authoring choices.
 - C4: CLI/API adapters, samples, glossary, special layouts and all ancillary outputs.
