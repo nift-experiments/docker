@@ -1,3 +1,0 @@
-# Testcontainers Cloud
-
-

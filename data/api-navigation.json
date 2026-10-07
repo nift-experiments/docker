@@ -1,0 +1,1600 @@
+{
+  "apis": [
+    {
+      "id": "hub",
+      "title": "Docker Hub",
+      "version": "2-beta",
+      "url": "/reference/api/hub/latest/",
+      "tags": [
+        {
+          "description": "See the [Changelog](https://docs.docker.com/reference/api/hub/changelog) for a summary of changes across Docker Hub API versions.\n",
+          "kind": "info",
+          "name": "changelog",
+          "summary": "Changelog"
+        },
+        {
+          "description": "The following resources are available to interact with the documented API:\n- [Docker Hub CLI tool](https://github.com/docker/hub-tool#readme) (currently experimental)\n",
+          "kind": "info",
+          "name": "resources",
+          "summary": "Resources"
+        },
+        {
+          "description": "The Docker Hub API is limited on the amount of requests you can perform per minute against it.\n\nIf you haven't hit the limit, each request to the API will return the following headers in the response.\n\n- `X-RateLimit-Limit` - The limit of requests per minute.\n- `X-RateLimit-Remaining` - The remaining amount of calls within the limit period.\n- `X-RateLimit-Reset` - The unix timestamp of when the remaining resets.\n\nIf you have hit the limit, you will receive a response status of `429` and the `Retry-After` header in the response.\n\nThe [`Retry-After` header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Headers/Retry-After) specifies the number of seconds to wait until you can call the API again.\n\n**Note**: These rate limits are separate from anti-abuse and Docker Hub download, or pull rate limiting.\nTo learn more about Docker Hub pull rate limiting, see [Usage and limits](https://docs.docker.com/docker-hub/usage/).\n",
+          "kind": "info",
+          "name": "rate-limiting",
+          "summary": "Rate Limiting"
+        },
+        {
+          "description": "Most Docker Hub API endpoints require you to authenticate using your Docker credentials before using them.\n\nAdditionally, similar to the Docker Hub UI features, API endpoint responses may vary depending on your subscription (Personal, Pro, or Team) and your account's permissions.\n\nTo learn more about the features available in each subscription and to upgrade your existing subscription, see [Docker Pricing](https://www.docker.com/pricing?ref=Docs&refAction=DocsApiHub).\n\n# Types\n\nThe Docker Hub API supports the following authentication types.\n\nYou must use each authentication type with the [Create access token](#tag/authentication-api/operation/AuthCreateAccessToken) route to obtain a bearer token.\n\n## Password\nUsing a username and password is the most powerful, yet least secure way \nto authenticate with Docker as a user. It allows access to resources \nfor the user without scopes. \n\n_In general, it is recommended to use a personal access token (PAT) instead._\n\n_**The password authentication type is not available if your organization has SSO enforced.**_\n\n## Personal Access Token (PAT)\nUsing a username and PAT is the most secure way to authenticate with \nDocker as a user. PATs are scoped to specific resources and scopes.\n\nCurrently, a PAT is a more secure password due to limited functionality. \nIn the future, we may add fine-grained access like organization \naccess tokens for enhanced usage and security.\n\n## Organization Access Token (OAT)\nOrganization access tokens are scoped to specific resources and scopes \nin an organization. They are managed by organization owners. \n\nThese tokens are meant for automation and are not meant to be used by \nusers.\n\nOperations that support bearer tokens issued from OATs state this in their descriptions.\n\n",
+          "kind": "info",
+          "name": "authentication",
+          "summary": "Authentication"
+        },
+        {
+          "description": "The authentication endpoints allow you to authenticate with Docker Hub APIs.\n\nFor more information, see [Authentication](#tag/authentication).\n",
+          "kind": "nav",
+          "name": "authentication-api",
+          "summary": "Authentication"
+        },
+        {
+          "description": "The Personal Access Token endpoints lets you manage personal access tokens. For more information, see [Access Tokens](https://docs.docker.com/security/access-tokens/personal-access-tokens/).\n\nYou can use a personal access token instead of a password in the [Docker CLI](https://docs.docker.com/reference/cli/docker/) or in the [Create an authentication token](#operation/PostUsersLogin) route to obtain a bearer token.\n\n### Scopes\n\nFor each scope grouping (in this case \"repo\"), you only need to define 1 scope as any lower scopes are assumed.\nFor example: If you define `repo:write`, the API assumes the scope of both `repo:read` *and* `repo:public_read` as well.\nIf you were to define both `repo:write` *and* `repo:read`, then `repo:read` is assumed by `repo:write` and ignored.\n\n***Treat your personal access token like your password and keep it secret. You cannot retrieve your token after it is generated.***\n",
+          "kind": "nav",
+          "name": "access-tokens",
+          "summary": "Personal Access Tokens"
+        },
+        {
+          "description": "The Audit Logs API endpoints allow you to query audit log events across a namespace.\n\nFor more information, see [Audit Logs](https://docs.docker.com/admin/activity-logs/).\n",
+          "kind": "nav",
+          "name": "audit-logs",
+          "summary": "Audit Logs"
+        },
+        {
+          "description": "The Org Settings API endpoints allow you to manage your organization's settings.\n",
+          "kind": "nav",
+          "name": "org-settings",
+          "summary": "Org Settings"
+        },
+        {
+          "description": "The repository endpoints allow you to access your repository's tags.\n",
+          "kind": "nav",
+          "name": "repositories",
+          "summary": "Repositories"
+        },
+        {
+          "description": "The organization endpoints allow you to interact with and manage your organizations.\n\nFor more information, see [Organization administration overview](https://docs.docker.com/admin/organization/).\n",
+          "kind": "nav",
+          "name": "orgs",
+          "summary": "Organizations",
+          "x-audience": "public"
+        },
+        {
+          "description": "The groups endpoints allow you to manage your organization's teams and their members.\n\nFor more information, see [Create and manage a team](https://docs.docker.com/admin/organization/manage/manage-a-team/).\n",
+          "kind": "nav",
+          "name": "groups",
+          "summary": "Groups (Teams)",
+          "x-audience": "public"
+        },
+        {
+          "description": "The invites endpoints allow you to manage invites for users to join your Docker organization.\n\nFor more information, see [Invite members](https://docs.docker.com/accounts/organization/manage/members/#invite-members).\n",
+          "kind": "nav",
+          "name": "invites",
+          "summary": "Invites",
+          "x-audience": "public"
+        },
+        {
+          "description": "SCIM is a provisioning system that lets you manage users within your identity provider (IdP).\n\nFor more information, see [System for Cross-domain Identity management](https://docs.docker.com/security/for-admins/provisioning/scim/).\n",
+          "kind": "nav",
+          "name": "scim",
+          "summary": "SCIM",
+          "x-audience": "public"
+        },
+        {
+          "description": "The organization access token endpoints allow you to manage organization access tokens (OATs). See [Organization access tokens](https://docs.docker.com/security/for-admins/access-tokens/) for more information.\n\nOATs only authenticate requests to the modern namespace-scoped routes under `/v2/namespaces/{namespace}/repositories/`. Legacy repository paths are OAT unsupported, regardless of the token's scopes, and reject every OAT with `403 token issued from organization access token is not allowed`:\n\n- `GET /v2/repositories/{namespace}/{repository}` — use [Get repository](#tag/repositories/operation/GetRepository) instead.\n- `GET /v2/repositories/{namespace}` — use [List repositories](#tag/repositories/operation/listNamespaceRepositories) instead.\n- `GET /v2/users/{username}/repositories` — use [List repositories](#tag/repositories/operation/listNamespaceRepositories) instead.\n",
+          "kind": "nav",
+          "name": "org-access-tokens",
+          "summary": "Organization Access Tokens",
+          "x-audience": "public"
+        }
+      ],
+      "operations": [
+        {
+          "id": "getV2AccessTokens",
+          "url": "/reference/api/hub/latest/operations/getV2AccessTokens/",
+          "method": "GET",
+          "summary": "List personal access tokens",
+          "tags": [
+            "access-tokens"
+          ]
+        },
+        {
+          "id": "postV2AccessTokens",
+          "url": "/reference/api/hub/latest/operations/postV2AccessTokens/",
+          "method": "POST",
+          "summary": "Create personal access token",
+          "tags": [
+            "access-tokens"
+          ]
+        },
+        {
+          "id": "getV2AccessTokensByUuid",
+          "url": "/reference/api/hub/latest/operations/getV2AccessTokensByUuid/",
+          "method": "GET",
+          "summary": "Get personal access token",
+          "tags": [
+            "access-tokens"
+          ]
+        },
+        {
+          "id": "deleteV2AccessTokensByUuid",
+          "url": "/reference/api/hub/latest/operations/deleteV2AccessTokensByUuid/",
+          "method": "DELETE",
+          "summary": "Delete personal access token",
+          "tags": [
+            "access-tokens"
+          ]
+        },
+        {
+          "id": "patchV2AccessTokensByUuid",
+          "url": "/reference/api/hub/latest/operations/patchV2AccessTokensByUuid/",
+          "method": "PATCH",
+          "summary": "Update personal access token",
+          "tags": [
+            "access-tokens"
+          ]
+        },
+        {
+          "id": "AuditLogs_ListAuditLogs",
+          "url": "/reference/api/hub/latest/operations/AuditLogs_ListAuditLogs/",
+          "method": "GET",
+          "summary": "List audit log events",
+          "tags": [
+            "audit-logs"
+          ]
+        },
+        {
+          "id": "AuditLogs_ListAuditActions",
+          "url": "/reference/api/hub/latest/operations/AuditLogs_ListAuditActions/",
+          "method": "GET",
+          "summary": "List audit log actions",
+          "tags": [
+            "audit-logs"
+          ]
+        },
+        {
+          "id": "AuthCreateAccessToken",
+          "url": "/reference/api/hub/latest/operations/AuthCreateAccessToken/",
+          "method": "POST",
+          "summary": "Create access token",
+          "tags": [
+            "authentication-api"
+          ]
+        },
+        {
+          "id": "postV2InvitesBulk",
+          "url": "/reference/api/hub/latest/operations/postV2InvitesBulk/",
+          "method": "POST",
+          "summary": "Bulk create invites",
+          "tags": [
+            "invites"
+          ]
+        },
+        {
+          "id": "deleteV2InvitesById",
+          "url": "/reference/api/hub/latest/operations/deleteV2InvitesById/",
+          "method": "DELETE",
+          "summary": "Cancel an invite",
+          "tags": [
+            "invites"
+          ]
+        },
+        {
+          "id": "patchV2InvitesByIdResend",
+          "url": "/reference/api/hub/latest/operations/patchV2InvitesByIdResend/",
+          "method": "PATCH",
+          "summary": "Resend an invite",
+          "tags": [
+            "invites"
+          ]
+        },
+        {
+          "id": "listNamespaceRepositories",
+          "url": "/reference/api/hub/latest/operations/listNamespaceRepositories/",
+          "method": "GET",
+          "summary": "List repositories in a namespace",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "CreateRepository",
+          "url": "/reference/api/hub/latest/operations/CreateRepository/",
+          "method": "POST",
+          "summary": "Create a new repository",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "GetRepository",
+          "url": "/reference/api/hub/latest/operations/GetRepository/",
+          "method": "GET",
+          "summary": "Get repository in a namespace",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "CheckRepository",
+          "url": "/reference/api/hub/latest/operations/CheckRepository/",
+          "method": "HEAD",
+          "summary": "Check repository in a namespace",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "UpdateRepositoryImmutableTags",
+          "url": "/reference/api/hub/latest/operations/UpdateRepositoryImmutableTags/",
+          "method": "PATCH",
+          "summary": "Update repository immutable tags",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "VerifyRepositoryImmutableTags",
+          "url": "/reference/api/hub/latest/operations/VerifyRepositoryImmutableTags/",
+          "method": "POST",
+          "summary": "Verify repository immutable tags",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "ListRepositoryTags",
+          "url": "/reference/api/hub/latest/operations/ListRepositoryTags/",
+          "method": "GET",
+          "summary": "List repository tags",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "headV2NamespacesByNamespaceRepositoriesByRepositoryTags",
+          "url": "/reference/api/hub/latest/operations/headV2NamespacesByNamespaceRepositoriesByRepositoryTags/",
+          "method": "HEAD",
+          "summary": "Check repository tags",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "GetRepositoryTag",
+          "url": "/reference/api/hub/latest/operations/GetRepositoryTag/",
+          "method": "GET",
+          "summary": "Read repository tag",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "headV2NamespacesByNamespaceRepositoriesByRepositoryTagsByTag",
+          "url": "/reference/api/hub/latest/operations/headV2NamespacesByNamespaceRepositoriesByRepositoryTagsByTag/",
+          "method": "HEAD",
+          "summary": "Check repository tag",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "getV2OrgsByNameAccessTokens",
+          "url": "/reference/api/hub/latest/operations/getV2OrgsByNameAccessTokens/",
+          "method": "GET",
+          "summary": "List access tokens",
+          "tags": [
+            "org-access-tokens"
+          ]
+        },
+        {
+          "id": "postV2OrgsByNameAccessTokens",
+          "url": "/reference/api/hub/latest/operations/postV2OrgsByNameAccessTokens/",
+          "method": "POST",
+          "summary": "Create access token",
+          "tags": [
+            "org-access-tokens"
+          ]
+        },
+        {
+          "id": "getV2OrgsByNameSettings",
+          "url": "/reference/api/hub/latest/operations/getV2OrgsByNameSettings/",
+          "method": "GET",
+          "summary": "Get organization settings",
+          "tags": [
+            "org-settings"
+          ]
+        },
+        {
+          "id": "putV2OrgsByNameSettings",
+          "url": "/reference/api/hub/latest/operations/putV2OrgsByNameSettings/",
+          "method": "PUT",
+          "summary": "Update organization settings",
+          "tags": [
+            "org-settings"
+          ]
+        },
+        {
+          "id": "getV2OrgsByOrgNameAccessTokensByAccessTokenId",
+          "url": "/reference/api/hub/latest/operations/getV2OrgsByOrgNameAccessTokensByAccessTokenId/",
+          "method": "GET",
+          "summary": "Get access token",
+          "tags": [
+            "org-access-tokens"
+          ]
+        },
+        {
+          "id": "deleteV2OrgsByOrgNameAccessTokensByAccessTokenId",
+          "url": "/reference/api/hub/latest/operations/deleteV2OrgsByOrgNameAccessTokensByAccessTokenId/",
+          "method": "DELETE",
+          "summary": "Delete access token",
+          "tags": [
+            "org-access-tokens"
+          ]
+        },
+        {
+          "id": "patchV2OrgsByOrgNameAccessTokensByAccessTokenId",
+          "url": "/reference/api/hub/latest/operations/patchV2OrgsByOrgNameAccessTokensByAccessTokenId/",
+          "method": "PATCH",
+          "summary": "Update access token",
+          "tags": [
+            "org-access-tokens"
+          ]
+        },
+        {
+          "id": "getV2OrgsByOrgNameGroups",
+          "url": "/reference/api/hub/latest/operations/getV2OrgsByOrgNameGroups/",
+          "method": "GET",
+          "summary": "Get groups of an organization",
+          "tags": [
+            "groups"
+          ]
+        },
+        {
+          "id": "postV2OrgsByOrgNameGroups",
+          "url": "/reference/api/hub/latest/operations/postV2OrgsByOrgNameGroups/",
+          "method": "POST",
+          "summary": "Create a new group",
+          "tags": [
+            "groups"
+          ]
+        },
+        {
+          "id": "getV2OrgsByOrgNameGroupsByGroupName",
+          "url": "/reference/api/hub/latest/operations/getV2OrgsByOrgNameGroupsByGroupName/",
+          "method": "GET",
+          "summary": "Get a group of an organization",
+          "tags": [
+            "groups"
+          ]
+        },
+        {
+          "id": "putV2OrgsByOrgNameGroupsByGroupName",
+          "url": "/reference/api/hub/latest/operations/putV2OrgsByOrgNameGroupsByGroupName/",
+          "method": "PUT",
+          "summary": "Update the details for an organization group",
+          "tags": [
+            "groups"
+          ]
+        },
+        {
+          "id": "deleteV2OrgsByOrgNameGroupsByGroupName",
+          "url": "/reference/api/hub/latest/operations/deleteV2OrgsByOrgNameGroupsByGroupName/",
+          "method": "DELETE",
+          "summary": "Delete an organization group",
+          "tags": [
+            "groups"
+          ]
+        },
+        {
+          "id": "patchV2OrgsByOrgNameGroupsByGroupName",
+          "url": "/reference/api/hub/latest/operations/patchV2OrgsByOrgNameGroupsByGroupName/",
+          "method": "PATCH",
+          "summary": "Update some details for an organization group",
+          "tags": [
+            "groups"
+          ]
+        },
+        {
+          "id": "getV2OrgsByOrgNameGroupsByGroupNameMembers",
+          "url": "/reference/api/hub/latest/operations/getV2OrgsByOrgNameGroupsByGroupNameMembers/",
+          "method": "GET",
+          "summary": "List members of a group",
+          "tags": [
+            "groups"
+          ]
+        },
+        {
+          "id": "postV2OrgsByOrgNameGroupsByGroupNameMembers",
+          "url": "/reference/api/hub/latest/operations/postV2OrgsByOrgNameGroupsByGroupNameMembers/",
+          "method": "POST",
+          "summary": "Add a member to a group",
+          "tags": [
+            "groups"
+          ]
+        },
+        {
+          "id": "deleteV2OrgsByOrgNameGroupsByGroupNameMembersByUsername",
+          "url": "/reference/api/hub/latest/operations/deleteV2OrgsByOrgNameGroupsByGroupNameMembersByUsername/",
+          "method": "DELETE",
+          "summary": "Remove a user from a group",
+          "tags": [
+            "groups"
+          ]
+        },
+        {
+          "id": "getV2OrgsByOrgNameInvites",
+          "url": "/reference/api/hub/latest/operations/getV2OrgsByOrgNameInvites/",
+          "method": "GET",
+          "summary": "List org invites",
+          "tags": [
+            "invites"
+          ]
+        },
+        {
+          "id": "getV2OrgsByOrgNameMembers",
+          "url": "/reference/api/hub/latest/operations/getV2OrgsByOrgNameMembers/",
+          "method": "GET",
+          "summary": "List org members",
+          "tags": [
+            "orgs"
+          ]
+        },
+        {
+          "id": "getV2OrgsByOrgNameMembersExport",
+          "url": "/reference/api/hub/latest/operations/getV2OrgsByOrgNameMembersExport/",
+          "method": "GET",
+          "summary": "Export org members CSV",
+          "tags": [
+            "orgs"
+          ]
+        },
+        {
+          "id": "putV2OrgsByOrgNameMembersByUsername",
+          "url": "/reference/api/hub/latest/operations/putV2OrgsByOrgNameMembersByUsername/",
+          "method": "PUT",
+          "summary": "Update org member (role)",
+          "tags": [
+            "orgs"
+          ]
+        },
+        {
+          "id": "deleteV2OrgsByOrgNameMembersByUsername",
+          "url": "/reference/api/hub/latest/operations/deleteV2OrgsByOrgNameMembersByUsername/",
+          "method": "DELETE",
+          "summary": "Remove member from org",
+          "tags": [
+            "orgs"
+          ]
+        },
+        {
+          "id": "CreateRepositoryGroup",
+          "url": "/reference/api/hub/latest/operations/CreateRepositoryGroup/",
+          "method": "POST",
+          "summary": "Assign a group (Team) to a repository for access",
+          "tags": [
+            "repositories"
+          ]
+        },
+        {
+          "id": "getV2Scim20ResourceTypes",
+          "url": "/reference/api/hub/latest/operations/getV2Scim20ResourceTypes/",
+          "method": "GET",
+          "summary": "List resource types",
+          "tags": [
+            "scim"
+          ]
+        },
+        {
+          "id": "getV2Scim20ResourceTypesByName",
+          "url": "/reference/api/hub/latest/operations/getV2Scim20ResourceTypesByName/",
+          "method": "GET",
+          "summary": "Get a resource type",
+          "tags": [
+            "scim"
+          ]
+        },
+        {
+          "id": "getV2Scim20Schemas",
+          "url": "/reference/api/hub/latest/operations/getV2Scim20Schemas/",
+          "method": "GET",
+          "summary": "List schemas",
+          "tags": [
+            "scim"
+          ]
+        },
+        {
+          "id": "getV2Scim20SchemasById",
+          "url": "/reference/api/hub/latest/operations/getV2Scim20SchemasById/",
+          "method": "GET",
+          "summary": "Get a schema",
+          "tags": [
+            "scim"
+          ]
+        },
+        {
+          "id": "getV2Scim20ServiceProviderConfig",
+          "url": "/reference/api/hub/latest/operations/getV2Scim20ServiceProviderConfig/",
+          "method": "GET",
+          "summary": "Get service provider config",
+          "tags": [
+            "scim"
+          ]
+        },
+        {
+          "id": "getV2Scim20Users",
+          "url": "/reference/api/hub/latest/operations/getV2Scim20Users/",
+          "method": "GET",
+          "summary": "List users",
+          "tags": [
+            "scim"
+          ]
+        },
+        {
+          "id": "postV2Scim20Users",
+          "url": "/reference/api/hub/latest/operations/postV2Scim20Users/",
+          "method": "POST",
+          "summary": "Create user",
+          "tags": [
+            "scim"
+          ]
+        },
+        {
+          "id": "getV2Scim20UsersById",
+          "url": "/reference/api/hub/latest/operations/getV2Scim20UsersById/",
+          "method": "GET",
+          "summary": "Get a user",
+          "tags": [
+            "scim"
+          ]
+        },
+        {
+          "id": "putV2Scim20UsersById",
+          "url": "/reference/api/hub/latest/operations/putV2Scim20UsersById/",
+          "method": "PUT",
+          "summary": "Update a user",
+          "tags": [
+            "scim"
+          ]
+        },
+        {
+          "id": "PostUsers2FALogin",
+          "url": "/reference/api/hub/latest/operations/PostUsers2FALogin/",
+          "method": "POST",
+          "summary": "Second factor authentication",
+          "tags": [
+            "authentication-api"
+          ]
+        },
+        {
+          "id": "PostUsersLogin",
+          "url": "/reference/api/hub/latest/operations/PostUsersLogin/",
+          "method": "POST",
+          "summary": "Create an authentication token",
+          "tags": [
+            "authentication-api"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dvp",
+      "title": "Publisher analytics",
+      "version": "1.0.0",
+      "url": "/reference/api/dvp/latest/",
+      "tags": [
+        {
+          "description": "Authentication Endpoints reference.",
+          "kind": "nav",
+          "name": "authentication",
+          "summary": "Authentication Endpoints"
+        },
+        {
+          "description": "Namespace data reference.",
+          "kind": "nav",
+          "name": "namespaces",
+          "summary": "Namespace data"
+        },
+        {
+          "description": "Discovery reference.",
+          "kind": "nav",
+          "name": "discovery",
+          "summary": "Discovery"
+        },
+        {
+          "description": "[ResponseDataFile](#schema-ResponseDataFile)\n",
+          "kind": "info",
+          "name": "responseDataFile",
+          "summary": "ResponseDataFile"
+        },
+        {
+          "description": "[YearModel](#schema-YearModel)\n",
+          "kind": "info",
+          "name": "yearModel",
+          "summary": "Year Data Model"
+        },
+        {
+          "description": "[MonthModel](#schema-MonthModel)\n",
+          "kind": "info",
+          "name": "monthModel",
+          "summary": "Month Data Model"
+        },
+        {
+          "description": "[WeekModel](#schema-WeekModel)\n",
+          "kind": "info",
+          "name": "weekModel",
+          "summary": "Week Data Model"
+        }
+      ],
+      "operations": [
+        {
+          "id": "getNamespaces",
+          "url": "/reference/api/dvp/latest/operations/getNamespaces/",
+          "method": "GET",
+          "summary": "Get namespaces and repos",
+          "tags": [
+            "discovery"
+          ]
+        },
+        {
+          "id": "getUserNamespaces",
+          "url": "/reference/api/dvp/latest/operations/getUserNamespaces/",
+          "method": "GET",
+          "summary": "Get user's namespaces",
+          "tags": [
+            "discovery"
+          ]
+        },
+        {
+          "id": "getNamespace",
+          "url": "/reference/api/dvp/latest/operations/getNamespace/",
+          "method": "GET",
+          "summary": "Get namespace",
+          "tags": [
+            "discovery"
+          ]
+        },
+        {
+          "id": "getNamespacePulls",
+          "url": "/reference/api/dvp/latest/operations/getNamespacePulls/",
+          "method": "GET",
+          "summary": "Get pull data",
+          "tags": [
+            "namespaces"
+          ]
+        },
+        {
+          "id": "getNamespaceYears",
+          "url": "/reference/api/dvp/latest/operations/getNamespaceYears/",
+          "method": "GET",
+          "summary": "Get years with data",
+          "tags": [
+            "namespaces"
+          ]
+        },
+        {
+          "id": "getNamespaceTimespans",
+          "url": "/reference/api/dvp/latest/operations/getNamespaceTimespans/",
+          "method": "GET",
+          "summary": "Get timespans with data",
+          "tags": [
+            "namespaces"
+          ]
+        },
+        {
+          "id": "getNamespaceTimespanMetadata",
+          "url": "/reference/api/dvp/latest/operations/getNamespaceTimespanMetadata/",
+          "method": "GET",
+          "summary": "Get namespace metadata for timespan",
+          "tags": [
+            "namespaces"
+          ]
+        },
+        {
+          "id": "getNamespaceDataByTimespan",
+          "url": "/reference/api/dvp/latest/operations/getNamespaceDataByTimespan/",
+          "method": "GET",
+          "summary": "Get namespace data for timespan",
+          "tags": [
+            "namespaces"
+          ]
+        },
+        {
+          "id": "getRepoPulls",
+          "url": "/reference/api/dvp/latest/operations/getRepoPulls/",
+          "method": "GET",
+          "summary": "Get pull data",
+          "tags": [
+            "namespaces"
+          ]
+        },
+        {
+          "id": "getManyReposPulls",
+          "url": "/reference/api/dvp/latest/operations/getManyReposPulls/",
+          "method": "GET",
+          "summary": "Get pull data for multiple repos",
+          "tags": [
+            "namespaces"
+          ]
+        },
+        {
+          "id": "PostUsers2FALogin",
+          "url": "/reference/api/dvp/latest/operations/PostUsers2FALogin/",
+          "method": "POST",
+          "summary": "Second factor authentication",
+          "tags": [
+            "authentication"
+          ]
+        },
+        {
+          "id": "PostUsersLogin",
+          "url": "/reference/api/dvp/latest/operations/PostUsersLogin/",
+          "method": "POST",
+          "summary": "Create an authentication token",
+          "tags": [
+            "authentication"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "registry",
+      "title": "Registry",
+      "version": "2",
+      "url": "/reference/api/registry/latest/",
+      "tags": [
+        {
+          "description": "All endpoints in this API are prefixed by the version and repository name, for example:\n\n```\n/v2/<name>/\n```\n\nThis format provides structured access control and URI-based scoping of image operations.\n\nFor example, to interact with the `library/ubuntu` repository, use:\n\n```\n/v2/library/ubuntu/\n```\n\nRepository names must meet these requirements:\n1. Consist of path components matching `[a-z0-9]+(?:[._-][a-z0-9]+)*`\n2. If more than one component, they must be separated by `/`\n3. Full repository name must be fewer than 256 characters\n",
+          "kind": "info",
+          "name": "overview",
+          "summary": "Overview"
+        },
+        {
+          "description": "Specifies registry authentication.\n",
+          "externalDocs": {
+            "description": "Detailed authentication workflow and token usage",
+            "url": "https://docs.docker.com/reference/api/registry/auth/"
+          },
+          "kind": "info",
+          "name": "authentication",
+          "summary": "Authentication"
+        },
+        {
+          "description": "Image manifests are JSON documents that describe an image: its configuration blob, the digests of each layer blob, and metadata such as media‑types and annotations.\n",
+          "kind": "nav",
+          "name": "Manifests",
+          "summary": "Manifests"
+        },
+        {
+          "description": "Blobs are the binary objects referenced from manifests:\nthe config JSON and one or more compressed layer tarballs.\n",
+          "kind": "nav",
+          "name": "Blobs",
+          "summary": "Blobs"
+        },
+        {
+          "description": "Pulling an image involves retrieving the manifest and downloading each of the image's layer blobs. This section outlines the general steps followed by a working example.\n\n1. [Get a bearer token for the repository](https://docs.docker.com/reference/api/registry/auth/).\n2. [Get the image manifest](#operation/GetImageManifest).\n3. If the response in the previous step is a multi-architecture manifest list, you must do the following:\n   - Parse the `manifests[]` array to locate the digest for your target platform (e.g., `linux/amd64`).\n   - [Get the image manifest](#operation/GetImageManifest) using the located digest.\n4. [Check if the blob exists](#operation/CheckBlobExists) before downloading. The client should send a `HEAD` request for each layer digest.\n5. [Download each layer blob](#operation/GetBlob) using the digest obtained from the manifest. The client should send a `GET` request for each layer digest.\n\nThe following bash script example pulls `library/ubuntu:latest` from Docker Hub.\n\n```bash\n#!/bin/bash\n\n# Step 1: Get a bearer token\nTOKEN=$(curl -s \"https://auth.docker.io/token?service=registry.docker.io&scope=repository:library/ubuntu:pull\" | jq -r .token)\n\n# Step 2: Get the image manifest. In this example, an image manifest list is returned.\ncurl -s -H \"Authorization: Bearer $TOKEN\" \\\n     -H \"Accept: application/vnd.docker.distribution.manifest.list.v2+json\" \\\n     https://registry-1.docker.io/v2/library/ubuntu/manifests/latest \\\n     -o manifest-list.json\n\n# Step 3a: Parse the `manifests[]` array to locate the digest for your target platform (e.g., `linux/amd64`).\nIMAGE_MANIFEST_DIGEST=$(jq -r '.manifests[] | select(.platform.architecture == \"amd64\" and .platform.os == \"linux\") | .digest' manifest-list.json)\n\n# Step 3b: Get the platform-specific image manifest\ncurl -s -H \"Authorization: Bearer $TOKEN\" \\\n     -H \"Accept: application/vnd.docker.distribution.manifest.v2+json\" \\\n     https://registry-1.docker.io/v2/library/ubuntu/manifests/$IMAGE_MANIFEST_DIGEST \\\n     -o manifest.json\n\n# Step 4: Send a HEAD request to check if the layer blob exists\nDIGEST=$(jq -r '.layers[0].digest' manifest.json)\ncurl -I -H \"Authorization: Bearer $TOKEN\" \\\n     https://registry-1.docker.io/v2/library/ubuntu/blobs/$DIGEST\n\n# Step 5: Download the layer blob\ncurl -L -H \"Authorization: Bearer $TOKEN\" \\\n     https://registry-1.docker.io/v2/library/ubuntu/blobs/$DIGEST\n```\n\nThis example pulls the manifest and the first layer for the `ubuntu:latest` image on the `linux/amd64` platform. Repeat steps 4 and 5 for each digest in the `.layers[]` array in the manifest.\n",
+          "kind": "info",
+          "name": "pull",
+          "summary": "Pulling Images"
+        },
+        {
+          "description": "Pushing an image involves uploading any image blobs (such as the config or layers), and then uploading the manifest that references those blobs.\n\nThis section outlines the basic steps to push an image using the registry API.\n\n1. [Get a bearer token for the repository](https://docs.docker.com/reference/api/registry/auth/)\n\n2. [Check if the blob exists](#operation/CheckBlobExists) using a `HEAD` request for each blob digest.\n\n3. If the blob does not exist, [upload the blob](#operation/CompleteBlobUpload) using a monolithic `PUT` request:\n    - First, [initiate the upload](#operation/InitiateBlobUpload) with `POST`.\n    - Then [upload and complete](#operation/CompleteBlobUpload) with `PUT`.\n\n    **Note**:  Alternatively, you can upload the blob in multiple chunks by using `PATCH` requests to send each chunk, followed by a final `PUT` request to complete the upload. This is known as a [chunked upload](#operation/UploadBlobChunk) and is useful for large blobs or when resuming interrupted uploads.\n\n\n4. [Upload the image manifest](#operation/PutImageManifest) using a `PUT` request to associate the config and layers.\n\nThe following bash script example pushes a dummy config blob and manifest to `yourusername/helloworld:latest` on Docker Hub. You can replace `yourusername` with your Docker Hub username and `dckr_pat` with your Docker Hub personal access token.\n\n```bash\n#!/bin/bash\n\nUSERNAME=yourusername\nPASSWORD=dckr_pat\nREPO=yourusername/helloworld\nTAG=latest\nCONFIG=config.json\nMIME_TYPE=application/vnd.docker.container.image.v1+json\n\n# Step 1: Get a bearer token\nTOKEN=$(curl -s -u \"$USERNAME:$PASSWORD\" \\\n\"https://auth.docker.io/token?service=registry.docker.io&scope=repository:$REPO:push,pull\" \\\n| jq -r .token)\n\n# Create a dummy config blob and compute its digest\necho '{\"architecture\":\"amd64\",\"os\":\"linux\",\"config\":{},\"rootfs\":{\"type\":\"layers\",\"diff_ids\":[]}}' > $CONFIG\nDIGEST=\"sha256:$(sha256sum $CONFIG | awk '{print $1}')\"\n\n# Step 2: Check if the blob exists\nSTATUS=$(curl -s -o /dev/null -w \"%{http_code}\" -I \\\n  -H \"Authorization: Bearer $TOKEN\" \\\n  https://registry-1.docker.io/v2/$REPO/blobs/$DIGEST)\n\nif [ \"$STATUS\" != \"200\" ]; then\n  # Step 3: Upload blob using monolithic upload\n  LOCATION=$(curl -sI -X POST \\\n    -H \"Authorization: Bearer $TOKEN\" \\\n    https://registry-1.docker.io/v2/$REPO/blobs/uploads/ \\\n    | grep -i Location | tr -d '\\r' | awk '{print $2}')\n\n  curl -s -X PUT \"$LOCATION&digest=$DIGEST\" \\\n    -H \"Authorization: Bearer $TOKEN\" \\\n    -H \"Content-Type: application/octet-stream\" \\\n    --data-binary @$CONFIG\nfi\n\n# Step 4: Upload the manifest that references the config blob\nMANIFEST=$(cat <<EOF\n{\n  \"schemaVersion\": 2,\n  \"mediaType\": \"application/vnd.docker.distribution.manifest.v2+json\",\n  \"config\": {\n    \"mediaType\": \"$MIME_TYPE\",\n    \"size\": $(stat -c%s $CONFIG),\n    \"digest\": \"$DIGEST\"\n  },\n  \"layers\": []\n}\nEOF\n)\n\ncurl -s -X PUT \\\n  -H \"Authorization: Bearer $TOKEN\" \\\n  -H \"Content-Type: application/vnd.docker.distribution.manifest.v2+json\" \\\n  -d \"$MANIFEST\" \\\n  https://registry-1.docker.io/v2/$REPO/manifests/$TAG\n\necho \"Pushed image to $REPO:$TAG\"\n```\n\nThis example pushes a minimal image with no layers. To push a complete image, repeat steps 2–3 for each layer and include the layer digests in the `layers[]` field of the manifest.\n",
+          "kind": "info",
+          "name": "push",
+          "summary": "Pushing Images"
+        },
+        {
+          "description": "Deleting an image involves removing its manifest by digest. You must first retrieve the manifest digest, then issue a `DELETE` request using that digest.\n\nOnly untagged manifests (or those not referenced by other tags or images) can be deleted. If a manifest is still referenced, the registry returns `403 Forbidden`.\n\n> **Note**\n>\n> Manifest deletion operations may experience latency and could return a `500 Internal Server Error` during deletion. The system automatically retries the deletion in the background, so the manifest will eventually be removed. You do not need to manually retry the request.\n\nThis section outlines the basic steps to delete an image using the registry API.\n\n1. [Get a bearer token for the repository](https://docs.docker.com/reference/api/registry/auth/).\n2. [Get the manifest](#operation/GetImageManifest) using the image's tag.\n3. Retrieve the `Docker-Content-Digest` header from the manifest response. This digest uniquely identifies the manifest.\n4. [Delete the manifest](#operation/DeleteImageManifest) using a `DELETE` request and the digest.\n\nThe following bash script example deletes the `latest` tag from `yourusername/helloworld` on Docker Hub. Replace `yourusername` with your Docker Hub username and `dckr_pat` with your Docker Hub personal access token.\n\n```bash\n#!/bin/bash\n\nUSERNAME=yourusername\nPASSWORD=dckr_pat\nREPO=yourusername/helloworld\nTAG=latest\n\n# Step 1: Get a bearer token\nTOKEN=$(curl -s -u \"$USERNAME:$PASSWORD\" \\\n  \"https://auth.docker.io/token?service=registry.docker.io&scope=repository:$REPO:pull,push,delete\" \\\n  | jq -r .token)\n\n# Step 2 and 3: Get the manifest and extract the digest from response headers\nDIGEST=$(curl -sI -H \"Authorization: Bearer $TOKEN\" \\\n  -H \"Accept: application/vnd.docker.distribution.manifest.v2+json\" \\\n  https://registry-1.docker.io/v2/$REPO/manifests/$TAG \\\n  | grep -i Docker-Content-Digest | tr -d '\\r' | awk '{print $2}')\n\necho \"Deleting manifest with digest: $DIGEST\"\n\n# Step 4: Delete the manifest by digest\ncurl -s -X DELETE \\\n  -H \"Authorization: Bearer $TOKEN\" \\\n  https://registry-1.docker.io/v2/$REPO/manifests/$DIGEST\n\necho \"Deleted image: $REPO@$DIGEST\"\n```\n\nThis example deletes the manifest for the `latest` tag. To fully delete all references to an image, ensure no other tags or referrers point to the same manifest digest.\n",
+          "kind": "info",
+          "name": "delete",
+          "summary": "Deleting Images"
+        }
+      ],
+      "operations": [
+        {
+          "id": "InitiateBlobUpload",
+          "url": "/reference/api/registry/latest/operations/InitiateBlobUpload/",
+          "method": "POST",
+          "summary": "Initiate blob upload or attempt cross-repository blob mount",
+          "tags": [
+            "Blobs"
+          ]
+        },
+        {
+          "id": "GetBlobUploadStatus",
+          "url": "/reference/api/registry/latest/operations/GetBlobUploadStatus/",
+          "method": "GET",
+          "summary": "Get blob upload status",
+          "tags": [
+            "Blobs"
+          ]
+        },
+        {
+          "id": "CompleteBlobUpload",
+          "url": "/reference/api/registry/latest/operations/CompleteBlobUpload/",
+          "method": "PUT",
+          "summary": "Complete blob upload",
+          "tags": [
+            "Blobs"
+          ]
+        },
+        {
+          "id": "CancelBlobUpload",
+          "url": "/reference/api/registry/latest/operations/CancelBlobUpload/",
+          "method": "DELETE",
+          "summary": "Cancel blob upload",
+          "tags": [
+            "Blobs"
+          ]
+        },
+        {
+          "id": "UploadBlobChunk",
+          "url": "/reference/api/registry/latest/operations/UploadBlobChunk/",
+          "method": "PATCH",
+          "summary": "Upload blob chunk",
+          "tags": [
+            "Blobs"
+          ]
+        },
+        {
+          "id": "GetBlob",
+          "url": "/reference/api/registry/latest/operations/GetBlob/",
+          "method": "GET",
+          "summary": "Retrieve blob",
+          "tags": [
+            "Blobs"
+          ]
+        },
+        {
+          "id": "CheckBlobExists",
+          "url": "/reference/api/registry/latest/operations/CheckBlobExists/",
+          "method": "HEAD",
+          "summary": "Check existence of blob",
+          "tags": [
+            "Blobs"
+          ]
+        },
+        {
+          "id": "GetImageManifest",
+          "url": "/reference/api/registry/latest/operations/GetImageManifest/",
+          "method": "GET",
+          "summary": "Get image manifest",
+          "tags": [
+            "Manifests"
+          ]
+        },
+        {
+          "id": "PutImageManifest",
+          "url": "/reference/api/registry/latest/operations/PutImageManifest/",
+          "method": "PUT",
+          "summary": "Put image manifest",
+          "tags": [
+            "Manifests"
+          ]
+        },
+        {
+          "id": "DeleteImageManifest",
+          "url": "/reference/api/registry/latest/operations/DeleteImageManifest/",
+          "method": "DELETE",
+          "summary": "Delete image manifest",
+          "tags": [
+            "Manifests"
+          ]
+        },
+        {
+          "id": "HeadImageManifest",
+          "url": "/reference/api/registry/latest/operations/HeadImageManifest/",
+          "method": "HEAD",
+          "summary": "Check if manifest exists",
+          "tags": [
+            "Manifests"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ai-governance",
+      "title": "AI Governance",
+      "version": "1",
+      "url": "/reference/api/ai-governance/latest/",
+      "tags": [
+        {
+          "description": "Policy lifecycle management",
+          "kind": "nav",
+          "name": "policies",
+          "summary": "Policies"
+        },
+        {
+          "description": "Rule management within an allowlist policy",
+          "kind": "nav",
+          "name": "rules",
+          "summary": "Rules"
+        }
+      ],
+      "operations": [
+        {
+          "id": "listPolicies",
+          "url": "/reference/api/ai-governance/latest/operations/listPolicies/",
+          "method": "GET",
+          "summary": "List policies",
+          "tags": [
+            "policies"
+          ]
+        },
+        {
+          "id": "createPolicy",
+          "url": "/reference/api/ai-governance/latest/operations/createPolicy/",
+          "method": "POST",
+          "summary": "Create policy",
+          "tags": [
+            "policies"
+          ]
+        },
+        {
+          "id": "getPolicy",
+          "url": "/reference/api/ai-governance/latest/operations/getPolicy/",
+          "method": "GET",
+          "summary": "Get policy",
+          "tags": [
+            "policies"
+          ]
+        },
+        {
+          "id": "deletePolicy",
+          "url": "/reference/api/ai-governance/latest/operations/deletePolicy/",
+          "method": "DELETE",
+          "summary": "Delete policy",
+          "tags": [
+            "policies"
+          ]
+        },
+        {
+          "id": "updatePolicy",
+          "url": "/reference/api/ai-governance/latest/operations/updatePolicy/",
+          "method": "PATCH",
+          "summary": "Update policy",
+          "tags": [
+            "policies"
+          ]
+        },
+        {
+          "id": "createRule",
+          "url": "/reference/api/ai-governance/latest/operations/createRule/",
+          "method": "POST",
+          "summary": "Create rule",
+          "tags": [
+            "rules"
+          ]
+        },
+        {
+          "id": "deleteRule",
+          "url": "/reference/api/ai-governance/latest/operations/deleteRule/",
+          "method": "DELETE",
+          "summary": "Delete rule",
+          "tags": [
+            "rules"
+          ]
+        },
+        {
+          "id": "updateRule",
+          "url": "/reference/api/ai-governance/latest/operations/updateRule/",
+          "method": "PATCH",
+          "summary": "Update rule",
+          "tags": [
+            "rules"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sandboxes",
+      "title": "Docker Sandboxes",
+      "version": "v1",
+      "url": "/reference/api/sandboxes/latest/",
+      "tags": [
+        {
+          "description": "Read, write, copy, and manage files inside a sandbox.",
+          "kind": "nav",
+          "name": "Files",
+          "summary": "Files",
+          "x-displayName": "Files"
+        },
+        {
+          "description": "Run commands and interact with processes inside a sandbox.",
+          "kind": "nav",
+          "name": "Processes",
+          "summary": "Processes",
+          "x-displayName": "Processes"
+        },
+        {
+          "description": "Exchange credentials for the authenticated owner.",
+          "kind": "nav",
+          "name": "Credentials",
+          "summary": "Credentials",
+          "x-displayName": "Credentials"
+        },
+        {
+          "description": "Manage images used to create sandboxes.",
+          "kind": "nav",
+          "name": "Images",
+          "summary": "Images",
+          "x-displayName": "Images"
+        },
+        {
+          "description": "Configure MCP gateways and authorize upstream servers.",
+          "kind": "nav",
+          "name": "MCP gateways",
+          "summary": "MCP gateways",
+          "x-displayName": "MCP gateways"
+        },
+        {
+          "description": "Read enforced outbound network policies and their decision logs.",
+          "kind": "nav",
+          "name": "Network policies",
+          "summary": "Network policies",
+          "x-displayName": "Network policies"
+        },
+        {
+          "description": "Create sandboxes and manage their lifecycle, ports, and SSH access.",
+          "kind": "nav",
+          "name": "Sandboxes",
+          "summary": "Sandboxes",
+          "x-displayName": "Sandboxes"
+        },
+        {
+          "description": "Store credentials and read their metadata without returning secret material.",
+          "kind": "nav",
+          "name": "Secrets",
+          "summary": "Secrets",
+          "x-displayName": "Secrets"
+        },
+        {
+          "description": "Capture sandbox state and restore it into a new sandbox.",
+          "kind": "nav",
+          "name": "Snapshots",
+          "summary": "Snapshots",
+          "x-displayName": "Snapshots"
+        },
+        {
+          "description": "Manage persistent storage and attach it to sandboxes.",
+          "kind": "nav",
+          "name": "Volumes",
+          "summary": "Volumes",
+          "x-displayName": "Volumes"
+        }
+      ],
+      "operations": [
+        {
+          "id": "list",
+          "url": "/reference/api/sandboxes/latest/operations/list/",
+          "method": "GET",
+          "summary": "List lists directory entries by path ascending.",
+          "tags": [
+            "Files"
+          ]
+        },
+        {
+          "id": "remove",
+          "url": "/reference/api/sandboxes/latest/operations/remove/",
+          "method": "DELETE",
+          "summary": "Remove deletes a path.",
+          "tags": [
+            "Files"
+          ]
+        },
+        {
+          "id": "readFile",
+          "url": "/reference/api/sandboxes/latest/operations/readFile/",
+          "method": "GET",
+          "summary": "ReadFile returns raw file content over HTTP; Stat exposes file metadata.",
+          "tags": [
+            "Files"
+          ]
+        },
+        {
+          "id": "writeFile",
+          "url": "/reference/api/sandboxes/latest/operations/writeFile/",
+          "method": "PUT",
+          "summary": "WriteFile accepts raw content with path and mode query parameters.",
+          "tags": [
+            "Files"
+          ]
+        },
+        {
+          "id": "mkdir",
+          "url": "/reference/api/sandboxes/latest/operations/mkdir/",
+          "method": "PUT",
+          "summary": "Mkdir creates a directory.",
+          "tags": [
+            "Files"
+          ]
+        },
+        {
+          "id": "download",
+          "url": "/reference/api/sandboxes/latest/operations/download/",
+          "method": "GET",
+          "summary": "Download streams file headers, bytes, and per-file errors.",
+          "tags": [
+            "Files"
+          ]
+        },
+        {
+          "id": "move",
+          "url": "/reference/api/sandboxes/latest/operations/move/",
+          "method": "POST",
+          "summary": "Move renames or moves a path.",
+          "tags": [
+            "Files"
+          ]
+        },
+        {
+          "id": "stat",
+          "url": "/reference/api/sandboxes/latest/operations/stat/",
+          "method": "GET",
+          "summary": "Stat reads metadata for one path.",
+          "tags": [
+            "Files"
+          ]
+        },
+        {
+          "id": "upload",
+          "url": "/reference/api/sandboxes/latest/operations/upload/",
+          "method": "POST",
+          "summary": "Upload streams one or more files.",
+          "tags": [
+            "Files"
+          ]
+        },
+        {
+          "id": "exchangeDockerCredential",
+          "url": "/reference/api/sandboxes/latest/operations/exchangeDockerCredential/",
+          "method": "POST",
+          "summary": "ExchangeDockerCredential consumes an identity token once for the authenticated owner.",
+          "tags": [
+            "Credentials"
+          ]
+        },
+        {
+          "id": "listImages",
+          "url": "/reference/api/sandboxes/latest/operations/listImages/",
+          "method": "GET",
+          "summary": "ListImages lists images in the caller's owner scope.",
+          "tags": [
+            "Images"
+          ]
+        },
+        {
+          "id": "createImage",
+          "url": "/reference/api/sandboxes/latest/operations/createImage/",
+          "method": "POST",
+          "summary": "CreateImage registers pushed OCI content or disk content derived from a snapshot or sandbox.",
+          "tags": [
+            "Images"
+          ]
+        },
+        {
+          "id": "getImage",
+          "url": "/reference/api/sandboxes/latest/operations/getImage/",
+          "method": "GET",
+          "summary": "GetImage reads one image by its resource name.",
+          "tags": [
+            "Images"
+          ]
+        },
+        {
+          "id": "deleteImage",
+          "url": "/reference/api/sandboxes/latest/operations/deleteImage/",
+          "method": "DELETE",
+          "summary": "DeleteImage deletes an image; deleting an already absent image succeeds.",
+          "tags": [
+            "Images"
+          ]
+        },
+        {
+          "id": "getImagePullSpec",
+          "url": "/reference/api/sandboxes/latest/operations/getImagePullSpec/",
+          "method": "GET",
+          "summary": "GetImagePullSpec returns short-lived pull material through registry-transfer support.",
+          "tags": [
+            "Images"
+          ]
+        },
+        {
+          "id": "getMcpAuthorization",
+          "url": "/reference/api/sandboxes/latest/operations/getMcpAuthorization/",
+          "method": "GET",
+          "summary": "GetMcpAuthorization reads the owner-scoped flow, including its pending URL, under mcp.write.",
+          "tags": [
+            "MCP gateways"
+          ]
+        },
+        {
+          "id": "authorizeMcpServer",
+          "url": "/reference/api/sandboxes/latest/operations/authorizeMcpServer/",
+          "method": "POST",
+          "summary": "AuthorizeMcpServer authorizes credentials for one named upstream.",
+          "tags": [
+            "MCP gateways"
+          ]
+        },
+        {
+          "id": "getNetworkPoliciesInOwnerScope",
+          "url": "/reference/api/sandboxes/latest/operations/getNetworkPoliciesInOwnerScope/",
+          "method": "GET",
+          "summary": "GetNetworkPolicies returns effective and exact views of the same installed generation.",
+          "tags": [
+            "Network policies"
+          ]
+        },
+        {
+          "id": "listPolicyLogEntriesInOwnerScope",
+          "url": "/reference/api/sandboxes/latest/operations/listPolicyLogEntriesInOwnerScope/",
+          "method": "GET",
+          "summary": "ListPolicyLogEntries lists observed policy decisions.",
+          "tags": [
+            "Network policies"
+          ]
+        },
+        {
+          "id": "listProcesses",
+          "url": "/reference/api/sandboxes/latest/operations/listProcesses/",
+          "method": "GET",
+          "summary": "ListProcesses lists processes in creation order.",
+          "tags": [
+            "Processes"
+          ]
+        },
+        {
+          "id": "createProcess",
+          "url": "/reference/api/sandboxes/latest/operations/createProcess/",
+          "method": "POST",
+          "summary": "CreateProcess starts a durable interactive process and returns its resource name.",
+          "tags": [
+            "Processes"
+          ]
+        },
+        {
+          "id": "exec",
+          "url": "/reference/api/sandboxes/latest/operations/exec/",
+          "method": "POST",
+          "summary": "Exec runs one command to completion.",
+          "tags": [
+            "Processes"
+          ]
+        },
+        {
+          "id": "getProcess",
+          "url": "/reference/api/sandboxes/latest/operations/getProcess/",
+          "method": "GET",
+          "summary": "GetProcess reads one process by its endpoint-scoped resource name.",
+          "tags": [
+            "Processes"
+          ]
+        },
+        {
+          "id": "interact",
+          "url": "/reference/api/sandboxes/latest/operations/interact/",
+          "method": "GET",
+          "summary": "Interact binds the complete process name from the path to the first Attach frame.",
+          "tags": [
+            "Processes"
+          ]
+        },
+        {
+          "id": "readOutput",
+          "url": "/reference/api/sandboxes/latest/operations/readOutput/",
+          "method": "GET",
+          "summary": "ReadOutput returns one page of retained output after a stream_sequence, the same cursor Interact resumes from, so a REST client can read what a process printed.",
+          "tags": [
+            "Processes"
+          ]
+        },
+        {
+          "id": "signal",
+          "url": "/reference/api/sandboxes/latest/operations/signal/",
+          "method": "POST",
+          "summary": "Signal sends one signal to an existing process.",
+          "tags": [
+            "Processes"
+          ]
+        },
+        {
+          "id": "listSandboxes",
+          "url": "/reference/api/sandboxes/latest/operations/listSandboxes/",
+          "method": "GET",
+          "summary": "ListSandboxes lists sandboxes in the caller's owner scope.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "createSandbox",
+          "url": "/reference/api/sandboxes/latest/operations/createSandbox/",
+          "method": "POST",
+          "summary": "CreateSandbox admits a sandbox.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "getSandbox",
+          "url": "/reference/api/sandboxes/latest/operations/getSandbox/",
+          "method": "GET",
+          "summary": "GetSandbox reads one sandbox by its resource name.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "deleteSandbox",
+          "url": "/reference/api/sandboxes/latest/operations/deleteSandbox/",
+          "method": "DELETE",
+          "summary": "DeleteSandbox returns the deleting resource while work remains, or an empty message when absent.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "updateSandbox",
+          "url": "/reference/api/sandboxes/latest/operations/updateSandbox/",
+          "method": "PATCH",
+          "summary": "UpdateSandbox changes only the display label under the observed etag.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "createEndpointCredential",
+          "url": "/reference/api/sandboxes/latest/operations/createEndpointCredential/",
+          "method": "POST",
+          "summary": "CreateEndpointCredential grants short-lived access to one sandbox endpoint.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "getMcpGateway",
+          "url": "/reference/api/sandboxes/latest/operations/getMcpGateway/",
+          "method": "GET",
+          "summary": "GetMcpGateway reads gateway state for the sandbox.",
+          "tags": [
+            "MCP gateways"
+          ]
+        },
+        {
+          "id": "addMcpGatewayServer",
+          "url": "/reference/api/sandboxes/latest/operations/addMcpGatewayServer/",
+          "method": "POST",
+          "summary": "AddMcpGatewayServer adds one server to an existing ready gateway.",
+          "tags": [
+            "MCP gateways"
+          ]
+        },
+        {
+          "id": "getNetworkPolicies",
+          "url": "/reference/api/sandboxes/latest/operations/getNetworkPolicies/",
+          "method": "GET",
+          "summary": "GetNetworkPolicies returns effective and exact views of the same installed generation.",
+          "tags": [
+            "Network policies"
+          ]
+        },
+        {
+          "id": "listPolicyLogEntries",
+          "url": "/reference/api/sandboxes/latest/operations/listPolicyLogEntries/",
+          "method": "GET",
+          "summary": "ListPolicyLogEntries lists observed policy decisions.",
+          "tags": [
+            "Network policies"
+          ]
+        },
+        {
+          "id": "listPorts",
+          "url": "/reference/api/sandboxes/latest/operations/listPorts/",
+          "method": "GET",
+          "summary": "ListPorts lists currently published ports for one sandbox.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "createPort",
+          "url": "/reference/api/sandboxes/latest/operations/createPort/",
+          "method": "POST",
+          "summary": "CreatePort makes one sandbox port reachable outside the sandbox.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "getPort",
+          "url": "/reference/api/sandboxes/latest/operations/getPort/",
+          "method": "GET",
+          "summary": "GetPort reads one published port by its resource name.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "deletePort",
+          "url": "/reference/api/sandboxes/latest/operations/deletePort/",
+          "method": "DELETE",
+          "summary": "DeletePort withdraws one published port.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "renewSandboxTimeout",
+          "url": "/reference/api/sandboxes/latest/operations/renewSandboxTimeout/",
+          "method": "POST",
+          "summary": "RenewSandboxTimeout sets a TTL when timeout renewal is supported.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "createSnapshot",
+          "url": "/reference/api/sandboxes/latest/operations/createSnapshot/",
+          "method": "POST",
+          "summary": "CreateSnapshot checkpoints a running sandbox; a stopped source is rejected.",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "id": "issueSSHCert",
+          "url": "/reference/api/sandboxes/latest/operations/issueSSHCert/",
+          "method": "POST",
+          "summary": "IssueSSHCert signs a caller-held public key for sandbox SSH access.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "startSandbox",
+          "url": "/reference/api/sandboxes/latest/operations/startSandbox/",
+          "method": "POST",
+          "summary": "StartSandbox starts a stopped sandbox; a backend that preserved memory resumes it.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "stopSandbox",
+          "url": "/reference/api/sandboxes/latest/operations/stopSandbox/",
+          "method": "POST",
+          "summary": "StopSandbox stops a running sandbox; a backend advertising memory preservation hibernates it.",
+          "tags": [
+            "Sandboxes"
+          ]
+        },
+        {
+          "id": "listSecrets",
+          "url": "/reference/api/sandboxes/latest/operations/listSecrets/",
+          "method": "GET",
+          "summary": "ListSecrets lists secret metadata in the caller's owner scope.",
+          "tags": [
+            "Secrets"
+          ]
+        },
+        {
+          "id": "createSecret",
+          "url": "/reference/api/sandboxes/latest/operations/createSecret/",
+          "method": "POST",
+          "summary": "CreateSecret stores new secret material.",
+          "tags": [
+            "Secrets"
+          ]
+        },
+        {
+          "id": "getSecret",
+          "url": "/reference/api/sandboxes/latest/operations/getSecret/",
+          "method": "GET",
+          "summary": "GetSecret reads one secret's metadata; material is never returned.",
+          "tags": [
+            "Secrets"
+          ]
+        },
+        {
+          "id": "updateSecret",
+          "url": "/reference/api/sandboxes/latest/operations/updateSecret/",
+          "method": "PUT",
+          "summary": "UpdateSecret replaces secret metadata and material.",
+          "tags": [
+            "Secrets"
+          ]
+        },
+        {
+          "id": "deleteSecret",
+          "url": "/reference/api/sandboxes/latest/operations/deleteSecret/",
+          "method": "DELETE",
+          "summary": "DeleteSecret deletes a secret; deleting an already absent secret succeeds.",
+          "tags": [
+            "Secrets"
+          ]
+        },
+        {
+          "id": "listSnapshots",
+          "url": "/reference/api/sandboxes/latest/operations/listSnapshots/",
+          "method": "GET",
+          "summary": "ListSnapshots lists snapshots in the caller's owner scope.",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "id": "getSnapshot",
+          "url": "/reference/api/sandboxes/latest/operations/getSnapshot/",
+          "method": "GET",
+          "summary": "GetSnapshot reads one snapshot by its resource name.",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "id": "deleteSnapshot",
+          "url": "/reference/api/sandboxes/latest/operations/deleteSnapshot/",
+          "method": "DELETE",
+          "summary": "DeleteSnapshot deletes a snapshot; deleting an already absent snapshot succeeds.",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "id": "restoreSnapshot",
+          "url": "/reference/api/sandboxes/latest/operations/restoreSnapshot/",
+          "method": "POST",
+          "summary": "RestoreSnapshot forks a new sandbox from a snapshot.",
+          "tags": [
+            "Snapshots"
+          ]
+        },
+        {
+          "id": "listVolumes",
+          "url": "/reference/api/sandboxes/latest/operations/listVolumes/",
+          "method": "GET",
+          "summary": "ListVolumes lists volumes in the caller's owner scope.",
+          "tags": [
+            "Volumes"
+          ]
+        },
+        {
+          "id": "createVolume",
+          "url": "/reference/api/sandboxes/latest/operations/createVolume/",
+          "method": "POST",
+          "summary": "CreateVolume creates a persistent volume.",
+          "tags": [
+            "Volumes"
+          ]
+        },
+        {
+          "id": "getVolume",
+          "url": "/reference/api/sandboxes/latest/operations/getVolume/",
+          "method": "GET",
+          "summary": "GetVolume reads one volume by its resource name.",
+          "tags": [
+            "Volumes"
+          ]
+        },
+        {
+          "id": "deleteVolume",
+          "url": "/reference/api/sandboxes/latest/operations/deleteVolume/",
+          "method": "DELETE",
+          "summary": "DeleteVolume deletes a volume; deleting an already absent volume succeeds.",
+          "tags": [
+            "Volumes"
+          ]
+        }
+      ]
+    }
+  ]
+}

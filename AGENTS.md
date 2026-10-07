@@ -2,7 +2,7 @@
 
 Read HANDOVER.md before substantial work. It contains project checkpoints and the retained Nift initialization guidance. Read investigation/BASELINE.md and machine-readable inventories before assuming routes or page counts.
 
-- Maintain upstream authored Markdown wherever practical, preserving editorial structure and human-maintainable front matter. Render Markdown through Nift shared layouts.
+- Maintain upstream authored Markdown wherever practical, preserving editorial structure and human-maintainable front matter. Render Markdown through the bounded Docker compatibility stage, then compose transient HTML through Nift shared layouts.
 - Report the different authoring models and transformation costs explicitly in the final comparison.
 - The user approved the full C1–C7 migration campaign on 7 October 2026. Proceed checkpoint-by-checkpoint without further approval, committing/pushing each checkpoint and leaving clean working trees. Stop and report genuine Nift blockers or major parity/Markdown architectural compromises before implementing them.
 - Do not modify Nift, its libraries, or its installation. Confirm and document a real blocker, stop that line of work, and report it.

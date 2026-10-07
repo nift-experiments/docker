@@ -34,17 +34,20 @@ class Components:
    return '<span class="not-prose '+colors[k['color']]+' rounded-sm px-1 text-xs text-white">'+E(k['text'])+'</span>'
   if name=='inline-image':
    src=k['src'];src=('../'+src) if not self.c['index'] and not src.startswith('/') else src
-   return '<img loading="lazy" src="'+E(src)+'" alt="'+E(k.get('alt',''))+'"'+(' title="'+E(k['title'])+'"' if k.get('title') else '')+' class="inline my-0 not-prose">'
+   return '\n<img loading="lazy" src="'+E(src)+'" alt="'+E(k.get('alt',''))+'"'+(' title="'+E(k['title'])+'"' if k.get('title') else '')+' class="inline my-0 not-prose">\n'
   if name=='youtube-embed':return '<div id="youtube-player-'+E(args[0])+'" data-video-id="'+E(args[0])+'" class="youtube-video aspect-video h-fit w-full py-2"></div>'
   if name=='card':return self.card(k)
   if name=='grid':
-   cols=int(k.get('cols',3));items=self.c['frontmatter'].get(k.get('items','grid'),[])
+   cols=int(k.get('cols',3));key=k.get('items','grid');items=self.c['frontmatter'].get(key,self.c['frontmatter'].get('params',{}).get(key,[]))
    return f'<div class="not-prose md:grid-cols-{max(2,cols-1)} xl:grid-cols-{cols} grid grid-cols-1 gap-4 mb-6">'+''.join(self.card(v) for v in items)+'</div>'
   if name=='accordion':
    title=k['title'];identifier=re.sub(r'[^\w\s-]','',title.lower()).replace(' ','-');body=self.r.markdown(self.materialize(node.children),self.c)
    icon='<span class="icon-svg -mt-1">'+self.icon(k['icon'])+'</span>' if k.get('icon') else ''
    return '<div id="'+E(identifier)+'" x-data="{ open: '+k.get('open','false')+' }" class="my-6 rounded-sm border border-gray-200 bg-white py-2 dark:border-gray-700 dark:bg-gray-900"><button class="not-prose flex w-full justify-between px-4 py-2" x-on:click="open = ! open"><div class="'+('text-xl' if k.get('large') else '')+' flex items-center gap-2">'+icon+E(title)+'</div><span :class="{ \'hidden\' : !open }" class="icon-svg icon-sm">'+self.icon('chevron-up')+'</span><span :class="{ \'hidden\' : open }" class="icon-svg icon-sm">'+self.icon('chevron-down')+'</span></button><div x-show="open" x-collapse class="px-4">'+body+'</div></div>'
-  if name=='experimental':return '<div class="px-4 border-l-2 border-l-magenta-light dark:border-l-magenta-dark"><p class="not-prose flex gap-2 items-center text-magenta-light dark:text-magenta-dark"><span class="icon-svg pb-1">'+self.icon('beaker')+'</span><strong>'+E(k.get('title','Experimental'))+'</strong></p>'+self.materialize(node.children)+'</div>'
+  if name=='experimental':
+   if node.delimiter=='%':
+    return '<div class="px-4 border-l-2 border-l-magenta-light dark:border-l-magenta-dark">\n  <p class="not-prose flex gap-2 items-center text-magenta-light dark:text-magenta-dark">\n    <span class="icon-svg pb-1">\n      '+self.icon('beaker')+'\n\n    </span>\n    <strong>'+E(k.get('title','Experimental'))+'</strong>\n  </p>\n  '+self.r.deindent(self.materialize(node.children))+'\n</div>'
+   return '<div class="px-4 border-l-2 border-l-magenta-light dark:border-l-magenta-dark"><p class="not-prose flex gap-2 items-center text-magenta-light dark:text-magenta-dark"><span class="icon-svg pb-1">'+self.icon('beaker')+'</span><strong>'+E(k.get('title','Experimental'))+'</strong></p>'+self.materialize(node.children)+'</div>'
   if name=='button':
    url=k['url'];url=self.r.resolve_ref(url,self.c) if not url.startswith('http') else url
    return '<a class="button not-prose" href="'+E(url)+'"'+(' marlin-label="'+E(k['marlin_label'])+'"' if k.get('marlin_label') else '')+'>'+E(k['text'])+'</a>'
@@ -63,9 +66,9 @@ class Components:
    for key,label in [('subscription','Subscription'),('availability','Availability'),('requires','Requires'),('for','For')]:
     value=feature.get(key)
     if not value:continue
-    inside='<span class="font-bold">'+label+':</span>'
+    inside='<span class="font-bold">'+label+':</span>\n'
     if key=='subscription':
-     for v in value:inside+='<span>'+E(v)+'</span><span class="icon-svg icon-sm">'+self.icon(subscription.get(v,'question-mark-circle'))+'</span>'
+     for v in value:inside+='<span>'+E(v)+'</span>\n<span class="icon-svg icon-sm">'+self.icon(subscription.get(v,'question-mark-circle'))+'</span>'
     elif key=='availability':
      icons={'Experimental':'beaker','Beta':'bolt','Early Access':'rocket-launch','GA':'check-circle','Retired':'archive-box'}
      inside+='<span>'+E(value)+''.join('<span class="icon-svg icon-sm">'+self.icon(icons[v])+'</span>' for v in sorted(icons) if v in value)+'</span>'
@@ -77,13 +80,13 @@ class Components:
    return '<div class="not-prose summary-bar">'+body+'</div>'
   if name=='sectionlinks':
    records=self.c['records'];parent=Path(self.c['logical']).parent
-   children=[(logical,rec) for logical,rec in records.items() if Path(logical).parent==parent and logical!=self.c['logical']]
-   children.sort(key=lambda x:(x[1]['frontmatter'].get('weight',0),x[1]['frontmatter'].get('title','')))
+   children=[(logical,rec) for logical,rec in records.items() if (Path(logical).parent.parent if Path(logical).name=='_index.md' else Path(logical).parent)==parent and logical!=self.c['logical']]
+   children.sort(key=lambda x:(x[1]['frontmatter'].get('weight',0) or 1000000,x[1]['frontmatter'].get('linkTitle',x[1]['frontmatter'].get('title','')).casefold()))
    return self.r.markdown('\n'.join('- ['+rec['frontmatter'].get('title','')+']('+rec['route']+')' for logical,rec in children),self.c)
   if name=='recipe-list':
    parent=Path(self.c['logical']).parent
-   recipes=[rec for logical,rec in self.c['records'].items() if Path(logical).parent==parent and Path(logical).stem not in ['index','_index'] and rec['frontmatter'].get('sidebar',{}).get('group')==k['group']]
-   recipes.sort(key=lambda v:(v['frontmatter'].get('weight',0),v['frontmatter'].get('title','')))
+   recipes=[rec for logical,rec in self.c['records'].items() if Path(logical).parent==parent and Path(logical).stem not in ['index','_index'] and rec['frontmatter'].get('sidebar',rec['frontmatter'].get('params',{}).get('sidebar',{})).get('group')==k['group']]
+   recipes.sort(key=lambda v:(v['frontmatter'].get('weight',0) or 1000000,v['frontmatter'].get('linkTitle',v['frontmatter'].get('title','')).casefold()))
    return '<ul class="not-prose mb-8 grid list-none grid-cols-1 gap-x-8 p-0 md:grid-cols-2">'+''.join('<li class="border-t border-gray-200 py-4 dark:border-gray-700"><a class="font-semibold text-blue-600 hover:underline dark:text-blue-400" href="'+E(v['route'])+'">'+E(v['frontmatter'].get('linkTitle',v['frontmatter'].get('title','')))+'</a><p class="mt-2 text-sm text-gray-600 dark:text-gray-400">'+E(v['frontmatter'].get('description',''))+'</p></li>' for v in recipes)+'</ul>'
   if name=='figure':
    src=k['src'];width=(' width="'+E(k['width'])+'"') if k.get('width') else '';height=(' height="'+E(k['height'])+'"') if k.get('height') else ''
@@ -99,7 +102,7 @@ class Components:
    file=Path(__file__).parent/'pinned/gha-Dockerfile';self.r.dependencies.add(file)
    return self.r.markdown('```dockerfile {collapse=true}\n'+file.read_text().rstrip('\n')+'\n```',self.c)
   if name=='interactive-diagram':
-   file=self.r.upstream/'content'/Path(self.c['logical']).parent/k['src'];self.r.dependencies.add(file);v=yaml.safe_load(file.read_text());kind=v.get('type','sequence');identifier='interactive-diagram-'+hashlib.md5(self.c['logical'].encode()).hexdigest()+'-'+str(self.c.setdefault('diagram_ordinal',0));self.c['diagram_ordinal']+=1
+   file=self.r.upstream/'content'/Path(self.c['logical']).parent/k['src'];self.r.dependencies.add(file);v=yaml.safe_load(file.read_text());kind=v.get('type','sequence');identifier='interactive-diagram-'+hashlib.md5(self.c['logical'].encode()).hexdigest()+'-'+str(self.c.get('shortcode_ordinal',0))
    out='<figure id="'+identifier+'" class="interactive-diagram interactive-diagram--'+E(kind)+' not-prose my-6" data-interactive-diagram data-diagram-type="'+E(kind)+'" aria-labelledby="'+identifier+'-title"><figcaption class="interactive-diagram__header"><div class="interactive-diagram__header-copy"><p id="'+identifier+'-title" class="interactive-diagram__title">'+E(v['title'])+'</p><p class="interactive-diagram__description">'+E(v['description'])+'</p></div></figcaption><div class="interactive-diagram__stage" data-diagram-stage></div>'
    if kind=='topology':
     overview=v['overview'];out+='<div class="interactive-diagram__topology-detail" data-topology-detail aria-live="polite" aria-atomic="true"><p class="interactive-diagram__topology-category" data-topology-category>'+E(overview['category'])+'</p><div class="interactive-diagram__topology-detail-copy"><p class="interactive-diagram__topology-title" data-topology-title>'+E(overview['label'])+'</p><p class="interactive-diagram__topology-body" data-topology-body>'+E(overview['body'])+'</p></div></div>';fallback='<ul>'+''.join('<li>'+E(x['label'])+': '+E(x['details'])+'</li>' for x in v['nodes']+v['edges'])+'</ul>'

@@ -47,6 +47,7 @@ type Response struct {
 	HTML    string
 	Metrics Metrics
 	Error   string
+	Fences  []string `json:",omitempty"`
 }
 type Hooks struct {
 	request Request
@@ -68,7 +69,7 @@ func attr(n ast.Node, key string) string {
 	return fmt.Sprint(v)
 }
 func (h *Hooks) RegisterFuncs(r renderer.NodeRendererFuncRegisterer) {
-	for kind, name := range map[ast.NodeKind]string{ast.KindHeading: "heading", ast.KindLink: "link", ast.KindImage: "image", ast.KindFencedCodeBlock: "codeblock", ast.KindBlockquote: "blockquote", ea.KindTable: "table", ea.KindTableHeader: "table", ea.KindTableRow: "table", ea.KindTableCell: "table"} {
+	for kind, name := range map[ast.NodeKind]string{ast.KindHeading: "heading", ast.KindLink: "link", ast.KindAutoLink: "link", ast.KindImage: "image", ast.KindFencedCodeBlock: "codeblock", ast.KindBlockquote: "blockquote", ea.KindTable: "table", ea.KindTableHeader: "table", ea.KindTableRow: "table", ea.KindTableCell: "table"} {
 		label := name
 		r.Register(kind, func(w util.BufWriter, source []byte, n ast.Node, enter bool) (ast.WalkStatus, error) {
 			before := time.Now()
@@ -132,10 +133,26 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 			if strings.HasPrefix(href, "http") && strings.HasPrefix(string(v.Destination), "http") {
 				rel = " rel=\"noopener\""
 			}
+			if strings.HasPrefix(string(v.Destination), "/") {
+				w.WriteString("\n")
+			}
 			fmt.Fprintf(w, "<a class=\"link\" href=\"%s\"%s>", esc(strings.NewReplacer("(", "%28", ")", "%29").Replace(string(util.URLEscape([]byte(href), true)))), rel)
 		} else {
 			w.WriteString("</a>")
 		}
+	case *ast.AutoLink:
+		if enter {
+			href := string(v.URL(source))
+			if bytes.HasPrefix(v.Label(source), []byte("www.")) {
+				href = "https://" + string(v.Label(source))
+			}
+			if v.AutoLinkType == ast.AutoLinkEmail && !strings.HasPrefix(href, "mailto:") {
+				href = "mailto:" + href
+			}
+			escaped := strings.NewReplacer("(", "%28", ")", "%29").Replace(string(util.URLEscape([]byte(href), true)))
+			fmt.Fprintf(w, `<a class="link" href="%s" rel="noopener">%s</a>`, esc(escaped), esc(string(v.Label(source))))
+		}
+		return ast.WalkSkipChildren, nil
 	case *ast.Image:
 		if !enter {
 			return ast.WalkContinue, nil
@@ -182,6 +199,7 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 			return ast.WalkContinue, nil
 		}
 		var code bytes.Buffer
+		var exportCode bytes.Buffer
 		for i := 0; i < v.Lines().Len(); i++ {
 			segment := v.Lines().At(i)
 			value := segment.Value(source)
@@ -196,6 +214,30 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 				}
 			}
 			code.Write(value)
+			originalStart := bytes.LastIndexByte(source[:segment.Start], '\n') + 1
+			original := source[originalStart:segment.Stop]
+			if v.Info != nil {
+				openingStart := bytes.LastIndexByte(source[:v.Info.Segment.Start], '\n') + 1
+				prefix := source[openingStart:v.Info.Segment.Start]
+				indent := bytes.IndexAny(prefix, "`~")
+				if indent > 0 && len(bytes.TrimSpace(prefix[:indent])) == 0 && bytes.HasPrefix(original, prefix[:indent]) {
+					original = original[indent:]
+				}
+			} else {
+				original = value
+			}
+			if v.Info != nil {
+				openingStart := bytes.LastIndexByte(source[:v.Info.Segment.Start], '\n') + 1
+				prefix := source[openingStart:v.Info.Segment.Start]
+				indent := bytes.IndexAny(prefix, "`~")
+				if indent > 0 && len(bytes.TrimSpace(prefix[:indent])) > 0 {
+					original = value
+				}
+			}
+			if len(bytes.TrimSpace(value)) > 0 && !bytes.ContainsRune(original, '\t') {
+				original = value
+			}
+			exportCode.Write(original)
 		}
 		lang := strings.Split(string(v.Language(source)), "{")[0]
 		if lang == "" {
@@ -237,7 +279,7 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 						options[key] = fmt.Sprint(value)
 					}
 				}
-				for _, r := range strings.Fields(options["hl_lines"]) {
+				for _, r := range strings.Fields(strings.ReplaceAll(options["hl_lines"], ",", " ")) {
 					parts := strings.Split(r, "-")
 					lo, err := strconv.Atoi(parts[0])
 					if err != nil {
@@ -257,7 +299,7 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 		if lang == "goat" {
 			diagram := goat.BuildSVG(strings.NewReader(strings.TrimRight(code.String(), "\n")))
 			svg := fmt.Sprintf(`<svg font-family="Menlo,Lucida Console,monospace" viewBox="0 0 %d %d">%s</svg>`, diagram.Width, diagram.Height, diagram.Body)
-			fmt.Fprintf(w, `<div class="goat svg-container %s">%s</div>`, esc(options["class"]), svg)
+			fmt.Fprintf(w, `<div class="goat svg-container %s" data-export-code="%s">%s</div>`, esc(options["class"]), base64.StdEncoding.EncodeToString([]byte(code.String())), svg)
 			return ast.WalkSkipChildren, nil
 		}
 		lexer := lexers.Get(lang)
@@ -290,6 +332,11 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 		var ordinary bytes.Buffer
 		fmt.Fprintf(&ordinary, "<div data-pagefind-ignore x-data x-ref=\"root\" class=\"group mt-2 mb-4 flex w-full scroll-mt-2 flex-col items-start gap-4 rounded bg-gray-50 p-2 outline outline-1 outline-offset-[-1px] outline-gray-200 dark:bg-gray-900 dark:outline-gray-800\"><div class=\"relative w-full\"><div class=\"syntax-light dark:syntax-dark not-prose w-full\"><button x-data=\"{ code: '%s', copying: false }\" class=\"top-1 absolute right-2 z-10 text-gray-300 dark:text-gray-500\" title=\"copy\" @click=\"window.navigator.clipboard.writeText(atob(code).replaceAll(/^[\\$&gt;]\\s+/gm, '')); copying = true; setTimeout(() =&gt; copying = false, 2000);\"><span :class=\"{ 'group-hover:block' : !copying }\" class=\"icon-svg hidden\">%s</span><span :class=\"{ 'group-hover:block' : copying }\" class=\"icon-svg hidden\">%s</span></button><div class=\"highlight\">%s</div></div></div></div>\n", base64.StdEncoding.EncodeToString([]byte(codeText)), h.icons["document-duplicate"], h.icons["check-circle"], value)
 		output := ordinary.String()
+		originalCode := strings.TrimRight(exportCode.String(), "\n")
+		if originalCode != codeText {
+			metadata := ` data-export-code="` + base64.StdEncoding.EncodeToString([]byte(originalCode)) + `"`
+			output = strings.Replace(output, `<button x-data=`, `<button`+metadata+` x-data=`, 1)
+		}
 		if unhighlighted {
 			output = strings.Replace(output, `<div class="highlight">`+value+`</div>`, value, 1)
 		}
@@ -298,7 +345,7 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 			output = strings.Replace(output, `<div class="relative w-full">`, header+`<div class="relative w-full">`, 1)
 			output = strings.Replace(output, `class="top-1 absolute`, `class="-top-10 absolute`, 1)
 		}
-		if options["collapse"] == "true" {
+		if options["collapse"] != "" && options["collapse"] != "false" && options["collapse"] != "0" {
 			output = strings.Replace(output, `<div class="highlight">`, `<div x-data="{ collapse: true }" class="relative overflow-clip" x-init="$watch('collapse', value =&gt; $refs.root.scrollIntoView({ behavior: 'smooth'}))"><div x-show="collapse" class="absolute z-10 flex h-32 w-full flex-col-reverse items-center overflow-clip pb-4"><button @click="collapse = false" class="chip"><span>Show more</span><span class="icon-svg">`+h.icons["chevron-down"]+`</span></button></div><div :class="{ 'h-32': collapse }"><div class="highlight">`, 1)
 			suffix := `<button @click="collapse = true" x-show="!collapse" class="chip mx-auto mt-4 flex items-center  text-sm"><span>Hide</span><span class="icon-svg">` + h.icons["chevron-up"] + `</span></button></div></div>`
 			output = strings.TrimSuffix(output, "</div></div></div>\n") + suffix + "</div></div></div>\n"
@@ -318,7 +365,11 @@ func (h *Hooks) render(w util.BufWriter, source []byte, n ast.Node, enter bool) 
 			if val := attr(n, "id"); val != "" {
 				id = " id=\"" + esc(val) + "\""
 			}
-			fmt.Fprintf(w, "<blockquote%s class=\"%s\">", id, cls)
+			export := ""
+			if marker := attr(n, "data-export-alert-marker"); marker != "" {
+				export = " data-export-alert-marker=\"" + marker + "\""
+			}
+			fmt.Fprintf(w, "<blockquote%s class=\"%s\"%s>", id, cls, export)
 			if kind != "" {
 				icon := map[string]string{"note": "info", "important": "important", "tip": "lightbulb", "warning": "warning", "caution": "warning"}[kind]
 				fmt.Fprintf(w, "<div class=\"admonition-header\"><span class=\"admonition-icon\">%s</span><span class=\"admonition-title\">%s</span></div><div class=\"admonition-content\">", h.icons["alert-"+icon], strings.ToUpper(kind[:1])+kind[1:])
@@ -392,19 +443,34 @@ func (h *Hooks) markAlerts(doc ast.Node, source []byte) {
 			return ast.WalkContinue, nil
 		}
 		h.alerts[n] = kind
+		n.SetAttributeString("data-export-alert-marker", base64.StdEncoding.EncodeToString([]byte(marker)))
 		for child := p.FirstChild(); child != nil; {
 			next := child.NextSibling()
-			if t, ok := child.(*ast.Text); ok && t.Segment.Start < line.Start+end+1 {
-				if t.Segment.Stop <= line.Start+end+1 {
+			if t, ok := child.(*ast.Text); ok && t.Segment.Start < line.Stop {
+				if t.Segment.Stop <= line.Stop {
 					p.RemoveChild(p, child)
 				} else {
-					t.Segment.Start = line.Start + end + 1
+					t.Segment.Start = line.Stop
 					if source[t.Segment.Start] == ':' {
 						t.Segment.Start++
 					}
 					for t.Segment.Start < t.Segment.Stop && source[t.Segment.Start] == ' ' {
 						t.Segment.Start++
 					}
+				}
+			}
+			if _, ok := child.(*ast.Text); !ok {
+				last := 0
+				ast.Walk(child, func(desc ast.Node, entering bool) (ast.WalkStatus, error) {
+					if entering {
+						if t, ok := desc.(*ast.Text); ok && t.Segment.Stop > last {
+							last = t.Segment.Stop
+						}
+					}
+					return ast.WalkContinue, nil
+				})
+				if last > 0 && last <= line.Stop {
+					p.RemoveChild(p, child)
 				}
 			}
 			child = next
@@ -415,9 +481,62 @@ func (h *Hooks) markAlerts(doc ast.Node, source []byte) {
 		return ast.WalkContinue, nil
 	})
 }
+
+// consumeBlockAttributes covers the four standalone attributes present in the
+// pinned Markdown and the legacy warning attribute in CLI descriptions. The AST
+// excludes code examples, so literal braces inside fences remain untouched.
+func consumeBlockAttributes(doc ast.Node, source []byte) {
+	ast.Walk(doc, func(n ast.Node, enter bool) (ast.WalkStatus, error) {
+		p, ok := n.(*ast.Paragraph)
+		if !enter || !ok || p.Lines().Len() == 0 {
+			return ast.WalkContinue, nil
+		}
+		line := p.Lines().At(p.Lines().Len() - 1)
+		raw := strings.TrimSpace(string(line.Value(source)))
+		if raw != "{ .information }" && raw != "{ .warning }" && raw != "{ #stream }" && raw != "{ #storage-driver-order }" {
+			return ast.WalkContinue, nil
+		}
+		attributes, valid := parser.ParseAttributes(text.NewReader([]byte(raw)))
+		if !valid {
+			return ast.WalkContinue, nil
+		}
+		for child := p.FirstChild(); child != nil; {
+			next := child.NextSibling()
+			if t, ok := child.(*ast.Text); ok {
+				if t.Segment.Start >= line.Start {
+					p.RemoveChild(p, child)
+				} else if t.Segment.Stop > line.Start {
+					t.Segment.Stop = line.Start
+					t.SetSoftLineBreak(false)
+				}
+			}
+			child = next
+		}
+		if t, ok := p.LastChild().(*ast.Text); ok {
+			t.SetSoftLineBreak(false)
+		}
+		var target ast.Node = p
+		if p.Parent().Kind() == ast.KindBlockquote {
+			target = p.Parent()
+		} else if p.FirstChild() == nil {
+			target = p.PreviousSibling()
+		}
+		if target != nil {
+			for _, a := range attributes {
+				target.SetAttribute(a.Name, a.Value)
+			}
+		}
+		if p.FirstChild() == nil {
+			p.Parent().RemoveChild(p.Parent(), p)
+			return ast.WalkSkipChildren, nil
+		}
+		return ast.WalkContinue, nil
+	})
+}
 func main() {
 	assets := flag.String("assets", "compatibility/assets", "Docker SVG assets")
 	refsFile := flag.String("refs", "", "explicit pinned source-route map")
+	inspect := flag.Bool("inspect-fences", false, "validation-only Markdown fence inspection")
 	flag.Parse()
 	refs := map[string]string{}
 	if *refsFile != "" {
@@ -450,11 +569,27 @@ func main() {
 			continue
 		}
 		hooks := &Hooks{request: request, refs: refs, icons: icons, metrics: Metrics{Hooks: map[string]int{}}, alerts: map[ast.Node]string{}}
-		md := goldmark.New(goldmark.WithExtensions(extension.GFM, extension.Footnote), goldmark.WithParserOptions(parser.WithAttribute()), goldmark.WithRendererOptions(gh.WithUnsafe(), renderer.WithNodeRenderers(util.Prioritized(hooks, 100))))
+		md := goldmark.New(goldmark.WithExtensions(extension.GFM, extension.Footnote, extension.DefinitionList), goldmark.WithParserOptions(parser.WithAttribute()), goldmark.WithRendererOptions(gh.WithUnsafe(), renderer.WithNodeRenderers(util.Prioritized(hooks, 100))))
 		source := []byte(request.Markdown)
 		start := time.Now()
 		doc := md.Parser().Parse(text.NewReader(source), parser.WithContext(parser.NewContext(parser.WithIDs(&dockerIDs{used: map[string]bool{}, metrics: &hooks.metrics}))))
 		hooks.metrics.MarkdownParseNS = time.Since(start).Nanoseconds() - hooks.metrics.HookNS
+		if *inspect {
+			response.Fences = []string{}
+			ast.Walk(doc, func(n ast.Node, enter bool) (ast.WalkStatus, error) {
+				if enter && n.Kind() == ast.KindFencedCodeBlock {
+					var b bytes.Buffer
+					for i := 0; i < n.Lines().Len(); i++ {
+						segment := n.Lines().At(i)
+						b.Write(segment.Value(source))
+					}
+					response.Fences = append(response.Fences, strings.TrimRight(b.String(), "\n"))
+				}
+				return ast.WalkContinue, nil
+			})
+			encoder.Encode(response)
+			continue
+		}
 		start = time.Now()
 		previousHookNS := hooks.metrics.HookNS
 		ids := &dockerIDs{used: map[string]bool{}, metrics: &hooks.metrics}
@@ -489,6 +624,7 @@ func main() {
 			}
 			return ast.WalkContinue, nil
 		})
+		consumeBlockAttributes(doc, source)
 		hooks.markAlerts(doc, source)
 		hooks.metrics.HookNS += time.Since(start).Nanoseconds() - (hooks.metrics.HookNS - previousHookNS)
 		var output bytes.Buffer

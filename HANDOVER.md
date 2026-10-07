@@ -65,7 +65,7 @@ Changed-input scenarios: deterministic edits to 1/10/100 authored pages, shared 
 Compare source/template counts, shared abstractions, direct/transitive dependencies, JS bytes, full and changed build time/RSS, output size, migration effort, ease of human/agent editing and compromises. Neither architecture is required to win.
 
 # Current checkpoint
-C0 baseline and C1 parity contract complete. C2 bounded compatibility and raw-composition proof complete; see investigation/C2-ARCHITECTURE.md and c2 evidence. Eight representative routes compose successfully in both projects; five real Markdown fixtures and 40 browser states per project pass. C3 ordinary corpus complete; see investigation/C3-CORPUS.md. All 1,012 ordinary semantic fixtures pass, both projects build 1,015 routes, and all agent output bytes match reference. C4–C7 remain and must proceed without approval pauses.
+C0 baseline and C1 parity contract complete. C2 bounded compatibility and raw-composition proof complete; see investigation/C2-ARCHITECTURE.md and c2 evidence. Eight representative routes compose successfully in both projects; five real Markdown fixtures and 40 browser states per project pass. C3 ordinary corpus complete; see investigation/C3-CORPUS.md. All 1,012 ordinary semantic fixtures pass, both projects build 1,015 routes, and all agent output bytes match reference. C4 complete: all 3,901 HTML routes and fresh ancillary/search publication are composed. See investigation/C4-PUBLICATION.md and c4 evidence. C5–C7 remain and must proceed without approval pauses.
 
 # Remaining checkpoints
 - C3 completed: ordinary docs/guide corpus and corpus-driven shortcode coverage.
@@ -76,7 +76,7 @@ C0 baseline and C1 parity contract complete. C2 bounded compatibility and raw-co
 Commit and push each checkpoint independently; preserve distinct maintained-source models.
 
 # Known deviations
-C2 is a partial-site proof. The human project's home/CLI/API bodies are explicitly temporary generated-family scaffolding. Search and Markdown exports remain frozen reference fixtures pending C4. No final benchmark or whole-site migration completion is claimed. Native baseline differs from Alpine/BuildKit; retain investigation/BASELINE.md caveats.
+C2 evidence remains a historical partial-site proof. C4 replaces all family scaffolding and frozen ancillary/search fixtures with owned maintained inputs and regenerated publication. No final benchmark or whole-site migration completion is claimed. Native baseline differs from Alpine/BuildKit; retain investigation/BASELINE.md caveats.
 
 # Blockers and Nift limitations
 No confirmed core blocker. Historical @markup tables/anchors and @input escaping limitations are documented in investigation/C2-MARKDOWN-GATE.md. The user approved standalone Goldmark/Chroma compatibility and the proven raw-emission path. Do not describe compatibility timings as native @markup performance or expand into a general Hugo implementation. Stop only for the user's real core/parity/architecture/methodology conditions.

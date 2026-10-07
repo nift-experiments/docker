@@ -150,6 +150,7 @@ class Renderer:
     def render(self,source,context):
         begin=time.perf_counter_ns();calls_before=self.calls_ns
         slots={}
+        parsed=parse_shortcodes(source);ordinals={id(n):i for i,n in enumerate(n for n in parsed if isinstance(n,Shortcode))}
         def materialize(nodes):
             out=[]
             for item in nodes:
@@ -187,14 +188,16 @@ class Renderer:
                         label_html=self.markdown(label,context).strip();label_html=label_html.removeprefix('<p>').removesuffix('</p>')
                         buttons.append('<button class="tab-item" :class="'+html.escape("selected === '"+identifier+"' && 'border-blue border-b-4 dark:border-b-blue-600'",quote=True)+'" @click="'+html.escape(action,quote=True)+'">'+label_html+'</button>')
                     panels_html=''.join('<div aria-role="tab" :class="'+html.escape("selected !== '"+identifier+"' && 'hidden'",quote=True)+'">'+panel+'</div>' for (_,identifier),panel in zip(labels,panels))
-                    rendered='<div class="tabs" x-data="'+html.escape(state,quote=True)+'"'+group_attr+' aria-role="tabpanel"><div aria-role="tablist" class="tablist">'+''.join(buttons)+'</div><div>'+panels_html+'</div></div>'
+                    rendered='<div class="tabs" x-data="'+html.escape(state,quote=True)+'"'+group_attr+' aria-role="tabpanel"><div aria-role="tablist" class="tablist">'+' '.join(buttons)+'</div><div>'+panels_html+'</div></div>'
                     token='<div data-docker-slot="'+str(len(slots))+'"></div>';slots[token]=rendered;out.append(token);continue
+                context['shortcode_ordinal']=ordinals.get(id(item),0)
                 component=Components(self,context,materialize).render(item,kwargs,args)
+                if item.name=='experimental' and item.delimiter=='%':out.append(component);continue
                 if component is not None:
                     token='<div data-docker-slot="'+str(len(slots))+'"></div>';slots[token]=component;out.append(token);continue
                 raise ValueError(f'unsupported corpus shortcode {item.name} in {context["logical"]} at {item.position}')
             return ''.join(out)
-        prepared=materialize(parse_shortcodes(source));self.expansion_ns+=time.perf_counter_ns()-begin-(self.calls_ns-calls_before)
+        prepared=materialize(parsed);self.expansion_ns+=time.perf_counter_ns()-begin-(self.calls_ns-calls_before)
         rendered=self.markdown(prepared,context)
         for token,value in reversed(list(slots.items())):rendered=rendered.replace(token,value)
         if 'data-docker-slot=' in rendered:raise ValueError('unresolved shortcode output slot')
@@ -235,4 +238,4 @@ class Renderer:
         raise ValueError('unresolved component ref '+url)
     @staticmethod
     def urlize(value):
-        return re.sub(r'\s+','-',re.sub(r'[^\w\s.-]','',value.strip()))
+        return re.sub(r'\s+','-',re.sub(r'[^\w\s.-]','',value.strip()).strip())

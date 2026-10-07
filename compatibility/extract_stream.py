@@ -8,11 +8,11 @@ from collections import Counter
 import hashlib,re
 from extract import frame
 
-def extract_stream(documents,root):
+def extract_stream(documents,root,body_frame=None):
  root=Path(root);counts=Counter();labels={}
  for name,file in documents.items():
   source=file.read_text()
-  try:nodes,start,end=frame(source)
+  try:nodes,start,end=body_frame(source,name) if body_frame else frame(source)
   except StopIteration:raise ValueError('no composition body in '+str(file))
   seen=set()
   for n in nodes:
@@ -22,7 +22,7 @@ def extract_stream(documents,root):
   counts.update(seen)
  shared={h:'layouts/shared/'+labels[h]+'-'+h[:12]+'.html' for h,c in counts.items() if c>=2};used=set();result={}
  for name,file in documents.items():
-  source=file.read_text();nodes,start,end=frame(source);selected=[]
+  source=file.read_text();nodes,start,end=body_frame(source,name) if body_frame else frame(source);selected=[]
   for n in sorted(nodes,key=lambda n:(n.start,-n.end)):
    if not n.end or not(n.end<=start or n.start>=end) or n.end-n.start<1024:continue
    if any(n.start<e and n.end>s for s,e,_ in selected):continue

@@ -21,8 +21,10 @@ const fixtures = [
   ['mermaid','/ai/sandboxes/governance/access-controls/mcp/'],['diagram','/ai/sandboxes/architecture/'],
   ['topology','/ai/sandboxes/security/'],['redirect','/glossary/'],['404','/missing-parity-fixture/'],
 ];
-const browser = await chromium.launch({executablePath:process.env.CHROMIUM_PATH,headless:true});
-const records = [];
+let browser;
+const prior=process.env.RESUME && fs.existsSync(path.join(output,'observations.json')) ? JSON.parse(fs.readFileSync(path.join(output,'observations.json'),'utf8')).records : [];
+const records = prior;
+const completed=new Set(prior.map(r=>`${r.family}-${r.width}-${r.mode}`));
 const allExternal=[];
 const sha = value => crypto.createHash('sha256').update(value).digest('hex');
 const snapshot = page => page.evaluate(() => ({
@@ -41,6 +43,7 @@ const snapshot = page => page.evaluate(() => ({
 
 for (const [width,height] of [[1440,900],[390,844]]) {
   for (const [mode,scheme] of (process.env.ONLY_BEHAVIORS ? [['light','light']] : [['light','light'],['dark','dark'],['system-light','light'],['system-dark','dark']])) {
+    browser=await chromium.launch({executablePath:process.env.CHROMIUM_PATH,headless:true,args:['--disable-dev-shm-usage']});
     const context=await browser.newContext({viewport:{width,height},colorScheme:scheme,deviceScaleFactor:1,reducedMotion:'reduce',permissions:['clipboard-read','clipboard-write']});
     context.setDefaultTimeout(5000);
     const external=[];
@@ -64,6 +67,7 @@ for (const [width,height] of [[1440,900],[390,844]]) {
       window.__parityFixture=true;
     },{mode});
     for (const [family,route] of fixtures.filter(([family])=>(!process.env.FIXTURES || process.env.FIXTURES.split(',').includes(family)) && (!process.env.ONLY_BEHAVIORS || ['standard-doc','tabs','accordion','diagram','topology','cli'].includes(family)))) {
+      if(completed.has(`${family}-${width}-${mode}`)) continue;
       const page=await context.newPage();
       const errors=[];
       page.on('pageerror',error=>errors.push(error.message));
@@ -146,6 +150,7 @@ for (const [width,height] of [[1440,900],[390,844]]) {
       console.log(name,response.status(),errors.length);
     }
     await context.close();
+    await browser.close();
   }
 }
 await browser.close();

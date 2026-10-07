@@ -1,0 +1,14 @@
+[
+  {
+    "logical": "data/cli/compose",
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference",
+    "files": "*.yaml",
+    "policy": "Preserve the original module source; explicit registry resolves files directly without copying a second maintained tree."
+  },
+  {
+    "logical": "data/cli/model",
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference",
+    "files": "*.yaml",
+    "policy": "Preserve the original module source; explicit registry resolves files directly without copying a second maintained tree."
+  }
+]

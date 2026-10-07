@@ -1,0 +1,4314 @@
+[
+  {
+    "route": "/reference/cli/docker/buildx/",
+    "title": "docker buildx",
+    "logical": "reference/cli/docker/buildx.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/buildx/docker_buildx.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/bake/",
+    "title": "docker buildx bake",
+    "logical": "reference/cli/docker/buildx/bake.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_bake.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/build/",
+    "title": "docker buildx build",
+    "logical": "reference/cli/docker/buildx/build.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_build.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/create/",
+    "title": "docker buildx create",
+    "logical": "reference/cli/docker/buildx/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/dap/",
+    "title": "docker buildx dap",
+    "logical": "reference/cli/docker/buildx/dap.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/buildx/docker_buildx_dap.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/dap/build/",
+    "title": "docker buildx dap build",
+    "logical": "reference/cli/docker/buildx/dap/build.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_dap_build.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/debug/",
+    "title": "docker buildx debug",
+    "logical": "reference/cli/docker/buildx/debug.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/buildx/docker_buildx_debug.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/debug/build/",
+    "title": "docker buildx debug build",
+    "logical": "reference/cli/docker/buildx/debug/build.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_debug_build.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/dial-stdio/",
+    "title": "docker buildx dial-stdio",
+    "logical": "reference/cli/docker/buildx/dial-stdio.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_dial-stdio.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/du/",
+    "title": "docker buildx du",
+    "logical": "reference/cli/docker/buildx/du.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_du.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/history/",
+    "title": "docker buildx history",
+    "logical": "reference/cli/docker/buildx/history.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/buildx/docker_buildx_history.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/history/export/",
+    "title": "docker buildx history export",
+    "logical": "reference/cli/docker/buildx/history/export.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_history_export.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/history/import/",
+    "title": "docker buildx history import",
+    "logical": "reference/cli/docker/buildx/history/import.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_history_import.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/history/inspect/",
+    "title": "docker buildx history inspect",
+    "logical": "reference/cli/docker/buildx/history/inspect.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/buildx/docker_buildx_history_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/history/inspect/attachment/",
+    "title": "docker buildx history inspect attachment",
+    "logical": "reference/cli/docker/buildx/history/inspect/attachment.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_history_inspect_attachment.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/history/logs/",
+    "title": "docker buildx history logs",
+    "logical": "reference/cli/docker/buildx/history/logs.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_history_logs.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/history/ls/",
+    "title": "docker buildx history ls",
+    "logical": "reference/cli/docker/buildx/history/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_history_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/history/open/",
+    "title": "docker buildx history open",
+    "logical": "reference/cli/docker/buildx/history/open.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_history_open.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/history/rm/",
+    "title": "docker buildx history rm",
+    "logical": "reference/cli/docker/buildx/history/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_history_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/history/trace/",
+    "title": "docker buildx history trace",
+    "logical": "reference/cli/docker/buildx/history/trace.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_history_trace.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/imagetools/",
+    "title": "docker buildx imagetools",
+    "logical": "reference/cli/docker/buildx/imagetools.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/buildx/docker_buildx_imagetools.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/imagetools/create/",
+    "title": "docker buildx imagetools create",
+    "logical": "reference/cli/docker/buildx/imagetools/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_imagetools_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/imagetools/inspect/",
+    "title": "docker buildx imagetools inspect",
+    "logical": "reference/cli/docker/buildx/imagetools/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_imagetools_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/inspect/",
+    "title": "docker buildx inspect",
+    "logical": "reference/cli/docker/buildx/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/ls/",
+    "title": "docker buildx ls",
+    "logical": "reference/cli/docker/buildx/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/policy/",
+    "title": "docker buildx policy",
+    "logical": "reference/cli/docker/buildx/policy.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/buildx/docker_buildx_policy.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/policy/eval/",
+    "title": "docker buildx policy eval",
+    "logical": "reference/cli/docker/buildx/policy/eval.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_policy_eval.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/policy/test/",
+    "title": "docker buildx policy test",
+    "logical": "reference/cli/docker/buildx/policy/test.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_policy_test.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/prune/",
+    "title": "docker buildx prune",
+    "logical": "reference/cli/docker/buildx/prune.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_prune.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/rm/",
+    "title": "docker buildx rm",
+    "logical": "reference/cli/docker/buildx/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/stop/",
+    "title": "docker buildx stop",
+    "logical": "reference/cli/docker/buildx/stop.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_stop.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/use/",
+    "title": "docker buildx use",
+    "logical": "reference/cli/docker/buildx/use.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_use.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/buildx/version/",
+    "title": "docker buildx version",
+    "logical": "reference/cli/docker/buildx/version.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/buildx/docker_buildx_version.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/",
+    "title": "docker compose",
+    "logical": "reference/cli/docker/compose.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/alpha/dry-run/",
+    "title": "docker compose alpha dry-run",
+    "logical": "reference/cli/docker/compose/alpha/dry-run.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_alpha_dry-run.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/alpha/scale/",
+    "title": "docker compose alpha scale",
+    "logical": "reference/cli/docker/compose/alpha/scale.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_alpha_scale.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/alpha/watch/",
+    "title": "docker compose alpha watch",
+    "logical": "reference/cli/docker/compose/alpha/watch.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_alpha_watch.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/attach/",
+    "title": "docker compose attach",
+    "logical": "reference/cli/docker/compose/attach.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_attach.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/bridge/",
+    "title": "docker compose bridge",
+    "logical": "reference/cli/docker/compose/bridge.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/bridge/convert/",
+    "title": "docker compose bridge convert",
+    "logical": "reference/cli/docker/compose/bridge/convert.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_convert.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/bridge/transformations/",
+    "title": "docker compose bridge transformations",
+    "logical": "reference/cli/docker/compose/bridge/transformations.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/bridge/transformations/create/",
+    "title": "docker compose bridge transformations create",
+    "logical": "reference/cli/docker/compose/bridge/transformations/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/bridge/transformations/list/",
+    "title": "docker compose bridge transformations list",
+    "logical": "reference/cli/docker/compose/bridge/transformations/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_bridge_transformations_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/build/",
+    "title": "docker compose build",
+    "logical": "reference/cli/docker/compose/build.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_build.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/commit/",
+    "title": "docker compose commit",
+    "logical": "reference/cli/docker/compose/commit.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_commit.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/config/",
+    "title": "docker compose config",
+    "logical": "reference/cli/docker/compose/config.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_config.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/convert/",
+    "title": "docker compose convert",
+    "logical": "reference/cli/docker/compose/convert.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_convert.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/cp/",
+    "title": "docker compose cp",
+    "logical": "reference/cli/docker/compose/cp.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_cp.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/create/",
+    "title": "docker compose create",
+    "logical": "reference/cli/docker/compose/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/down/",
+    "title": "docker compose down",
+    "logical": "reference/cli/docker/compose/down.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_down.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/events/",
+    "title": "docker compose events",
+    "logical": "reference/cli/docker/compose/events.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_events.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/exec/",
+    "title": "docker compose exec",
+    "logical": "reference/cli/docker/compose/exec.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_exec.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/export/",
+    "title": "docker compose export",
+    "logical": "reference/cli/docker/compose/export.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_export.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/images/",
+    "title": "docker compose images",
+    "logical": "reference/cli/docker/compose/images.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_images.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/kill/",
+    "title": "docker compose kill",
+    "logical": "reference/cli/docker/compose/kill.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_kill.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/logs/",
+    "title": "docker compose logs",
+    "logical": "reference/cli/docker/compose/logs.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_logs.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/ls/",
+    "title": "docker compose ls",
+    "logical": "reference/cli/docker/compose/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/pause/",
+    "title": "docker compose pause",
+    "logical": "reference/cli/docker/compose/pause.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_pause.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/port/",
+    "title": "docker compose port",
+    "logical": "reference/cli/docker/compose/port.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_port.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/ps/",
+    "title": "docker compose ps",
+    "logical": "reference/cli/docker/compose/ps.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_ps.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/publish/",
+    "title": "docker compose publish",
+    "logical": "reference/cli/docker/compose/publish.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_publish.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/pull/",
+    "title": "docker compose pull",
+    "logical": "reference/cli/docker/compose/pull.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_pull.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/push/",
+    "title": "docker compose push",
+    "logical": "reference/cli/docker/compose/push.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_push.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/restart/",
+    "title": "docker compose restart",
+    "logical": "reference/cli/docker/compose/restart.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_restart.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/rm/",
+    "title": "docker compose rm",
+    "logical": "reference/cli/docker/compose/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/run/",
+    "title": "docker compose run",
+    "logical": "reference/cli/docker/compose/run.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_run.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/scale/",
+    "title": "docker compose scale",
+    "logical": "reference/cli/docker/compose/scale.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_scale.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/start/",
+    "title": "docker compose start",
+    "logical": "reference/cli/docker/compose/start.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_start.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/stats/",
+    "title": "docker compose stats",
+    "logical": "reference/cli/docker/compose/stats.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_stats.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/stop/",
+    "title": "docker compose stop",
+    "logical": "reference/cli/docker/compose/stop.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_stop.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/top/",
+    "title": "docker compose top",
+    "logical": "reference/cli/docker/compose/top.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_top.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/unpause/",
+    "title": "docker compose unpause",
+    "logical": "reference/cli/docker/compose/unpause.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_unpause.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/up/",
+    "title": "docker compose up",
+    "logical": "reference/cli/docker/compose/up.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_up.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/version/",
+    "title": "docker compose version",
+    "logical": "reference/cli/docker/compose/version.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_version.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/volumes/",
+    "title": "docker compose volumes",
+    "logical": "reference/cli/docker/compose/volumes.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_volumes.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/wait/",
+    "title": "docker compose wait",
+    "logical": "reference/cli/docker/compose/wait.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_wait.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/compose/watch/",
+    "title": "docker compose watch",
+    "logical": "reference/cli/docker/compose/watch.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/compose/v5/docs/reference/docker_compose_watch.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/debug/",
+    "title": "docker debug",
+    "logical": "reference/cli/docker/debug.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/debug/docker_debug.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/",
+    "title": "docker desktop",
+    "logical": "reference/cli/docker/desktop.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/desktop/docker_desktop.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/diagnose/",
+    "title": "docker desktop diagnose",
+    "logical": "reference/cli/docker/desktop/diagnose.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_diagnose.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/disable/",
+    "title": "docker desktop disable",
+    "logical": "reference/cli/docker/desktop/disable.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/desktop/docker_desktop_disable.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/disable/model-runner/",
+    "title": "docker desktop disable model-runner",
+    "logical": "reference/cli/docker/desktop/disable/model-runner.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_disable_model_runner.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/enable/",
+    "title": "docker desktop enable",
+    "logical": "reference/cli/docker/desktop/enable.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/desktop/docker_desktop_enable.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/enable/model-runner/",
+    "title": "docker desktop enable model-runner",
+    "logical": "reference/cli/docker/desktop/enable/model-runner.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_enable_model_runner.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/engine/",
+    "title": "docker desktop engine",
+    "logical": "reference/cli/docker/desktop/engine.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/desktop/docker_desktop_engine.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/engine/ls/",
+    "title": "docker desktop engine ls",
+    "logical": "reference/cli/docker/desktop/engine/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_engine_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/engine/use/",
+    "title": "docker desktop engine use",
+    "logical": "reference/cli/docker/desktop/engine/use.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_engine_use.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/kubernetes/",
+    "title": "docker desktop kubernetes",
+    "logical": "reference/cli/docker/desktop/kubernetes.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/desktop/docker_desktop_kubernetes.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/kubernetes/images/",
+    "title": "docker desktop kubernetes images",
+    "logical": "reference/cli/docker/desktop/kubernetes/images.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_kubernetes_images.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/kubernetes/reset-cluster/",
+    "title": "docker desktop kubernetes reset-cluster",
+    "logical": "reference/cli/docker/desktop/kubernetes/reset-cluster.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_kubernetes_reset-cluster.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/kubernetes/status/",
+    "title": "docker desktop kubernetes status",
+    "logical": "reference/cli/docker/desktop/kubernetes/status.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_kubernetes_status.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/logs/",
+    "title": "docker desktop logs",
+    "logical": "reference/cli/docker/desktop/logs.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_logs.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/restart/",
+    "title": "docker desktop restart",
+    "logical": "reference/cli/docker/desktop/restart.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_restart.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/start/",
+    "title": "docker desktop start",
+    "logical": "reference/cli/docker/desktop/start.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_start.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/status/",
+    "title": "docker desktop status",
+    "logical": "reference/cli/docker/desktop/status.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_status.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/stop/",
+    "title": "docker desktop stop",
+    "logical": "reference/cli/docker/desktop/stop.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_stop.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/update/",
+    "title": "docker desktop update",
+    "logical": "reference/cli/docker/desktop/update.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_update.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/desktop/version/",
+    "title": "docker desktop version",
+    "logical": "reference/cli/docker/desktop/version.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/desktop/docker_desktop_version.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/",
+    "title": "docker dhi",
+    "logical": "reference/cli/docker/dhi.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/dhi/docker_dhi.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/attestation/",
+    "title": "docker dhi attestation",
+    "logical": "reference/cli/docker/dhi/attestation.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/dhi/docker_dhi_attestation.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/attestation/get/",
+    "title": "docker dhi attestation get",
+    "logical": "reference/cli/docker/dhi/attestation/get.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_attestation_get.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/attestation/list/",
+    "title": "docker dhi attestation list",
+    "logical": "reference/cli/docker/dhi/attestation/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_attestation_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/attestation/sbom/",
+    "title": "docker dhi attestation sbom",
+    "logical": "reference/cli/docker/dhi/attestation/sbom.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_attestation_sbom.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/auth/",
+    "title": "docker dhi auth",
+    "logical": "reference/cli/docker/dhi/auth.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/dhi/docker_dhi_auth.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/auth/apk/",
+    "title": "docker dhi auth apk",
+    "logical": "reference/cli/docker/dhi/auth/apk.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_auth_apk.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/auth/deb/",
+    "title": "docker dhi auth deb",
+    "logical": "reference/cli/docker/dhi/auth/deb.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_auth_deb.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/catalog/",
+    "title": "docker dhi catalog",
+    "logical": "reference/cli/docker/dhi/catalog.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/dhi/docker_dhi_catalog.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/catalog/get/",
+    "title": "docker dhi catalog get",
+    "logical": "reference/cli/docker/dhi/catalog/get.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_catalog_get.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/catalog/list/",
+    "title": "docker dhi catalog list",
+    "logical": "reference/cli/docker/dhi/catalog/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_catalog_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/",
+    "title": "docker dhi customization",
+    "logical": "reference/cli/docker/dhi/customization.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/dhi/docker_dhi_customization.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/build/",
+    "title": "docker dhi customization build",
+    "logical": "reference/cli/docker/dhi/customization/build.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/dhi/docker_dhi_customization_build.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/build/get/",
+    "title": "docker dhi customization build get",
+    "logical": "reference/cli/docker/dhi/customization/build/get.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_customization_build_get.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/build/list/",
+    "title": "docker dhi customization build list",
+    "logical": "reference/cli/docker/dhi/customization/build/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_customization_build_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/build/logs/",
+    "title": "docker dhi customization build logs",
+    "logical": "reference/cli/docker/dhi/customization/build/logs.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_customization_build_logs.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/create/",
+    "title": "docker dhi customization create",
+    "logical": "reference/cli/docker/dhi/customization/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_customization_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/delete/",
+    "title": "docker dhi customization delete",
+    "logical": "reference/cli/docker/dhi/customization/delete.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_customization_delete.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/edit/",
+    "title": "docker dhi customization edit",
+    "logical": "reference/cli/docker/dhi/customization/edit.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_customization_edit.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/get/",
+    "title": "docker dhi customization get",
+    "logical": "reference/cli/docker/dhi/customization/get.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_customization_get.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/list/",
+    "title": "docker dhi customization list",
+    "logical": "reference/cli/docker/dhi/customization/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_customization_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/customization/prepare/",
+    "title": "docker dhi customization prepare",
+    "logical": "reference/cli/docker/dhi/customization/prepare.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_customization_prepare.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/mirror/",
+    "title": "docker dhi mirror",
+    "logical": "reference/cli/docker/dhi/mirror.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/dhi/docker_dhi_mirror.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/mirror/list/",
+    "title": "docker dhi mirror list",
+    "logical": "reference/cli/docker/dhi/mirror/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_mirror_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/mirror/start/",
+    "title": "docker dhi mirror start",
+    "logical": "reference/cli/docker/dhi/mirror/start.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_mirror_start.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/dhi/mirror/stop/",
+    "title": "docker dhi mirror stop",
+    "logical": "reference/cli/docker/dhi/mirror/stop.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/dhi/docker_dhi_mirror_stop.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/",
+    "title": "docker",
+    "logical": "reference/cli/docker.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/builder/",
+    "title": "docker builder",
+    "logical": "reference/cli/docker/builder.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_builder.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/builder/build/",
+    "title": "docker builder build",
+    "logical": "reference/cli/docker/builder/build.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_builder_build.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/builder/prune/",
+    "title": "docker builder prune",
+    "logical": "reference/cli/docker/builder/prune.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_builder_prune.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/checkpoint/",
+    "title": "docker checkpoint",
+    "logical": "reference/cli/docker/checkpoint.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_checkpoint.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/checkpoint/create/",
+    "title": "docker checkpoint create",
+    "logical": "reference/cli/docker/checkpoint/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_checkpoint_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/checkpoint/ls/",
+    "title": "docker checkpoint ls",
+    "logical": "reference/cli/docker/checkpoint/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_checkpoint_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/checkpoint/rm/",
+    "title": "docker checkpoint rm",
+    "logical": "reference/cli/docker/checkpoint/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_checkpoint_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/config/",
+    "title": "docker config",
+    "logical": "reference/cli/docker/config.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_config.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/config/create/",
+    "title": "docker config create",
+    "logical": "reference/cli/docker/config/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_config_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/config/inspect/",
+    "title": "docker config inspect",
+    "logical": "reference/cli/docker/config/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_config_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/config/ls/",
+    "title": "docker config ls",
+    "logical": "reference/cli/docker/config/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_config_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/config/rm/",
+    "title": "docker config rm",
+    "logical": "reference/cli/docker/config/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_config_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/",
+    "title": "docker container",
+    "logical": "reference/cli/docker/container.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_container.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/attach/",
+    "title": "docker container attach",
+    "logical": "reference/cli/docker/container/attach.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_attach.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/commit/",
+    "title": "docker container commit",
+    "logical": "reference/cli/docker/container/commit.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_commit.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/cp/",
+    "title": "docker container cp",
+    "logical": "reference/cli/docker/container/cp.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_cp.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/create/",
+    "title": "docker container create",
+    "logical": "reference/cli/docker/container/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/diff/",
+    "title": "docker container diff",
+    "logical": "reference/cli/docker/container/diff.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_diff.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/exec/",
+    "title": "docker container exec",
+    "logical": "reference/cli/docker/container/exec.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_exec.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/export/",
+    "title": "docker container export",
+    "logical": "reference/cli/docker/container/export.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_export.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/inspect/",
+    "title": "docker container inspect",
+    "logical": "reference/cli/docker/container/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/kill/",
+    "title": "docker container kill",
+    "logical": "reference/cli/docker/container/kill.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_kill.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/logs/",
+    "title": "docker container logs",
+    "logical": "reference/cli/docker/container/logs.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_logs.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/ls/",
+    "title": "docker container ls",
+    "logical": "reference/cli/docker/container/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/pause/",
+    "title": "docker container pause",
+    "logical": "reference/cli/docker/container/pause.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_pause.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/port/",
+    "title": "docker container port",
+    "logical": "reference/cli/docker/container/port.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_port.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/prune/",
+    "title": "docker container prune",
+    "logical": "reference/cli/docker/container/prune.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_prune.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/rename/",
+    "title": "docker container rename",
+    "logical": "reference/cli/docker/container/rename.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_rename.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/restart/",
+    "title": "docker container restart",
+    "logical": "reference/cli/docker/container/restart.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_restart.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/rm/",
+    "title": "docker container rm",
+    "logical": "reference/cli/docker/container/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/run/",
+    "title": "docker container run",
+    "logical": "reference/cli/docker/container/run.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_run.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/start/",
+    "title": "docker container start",
+    "logical": "reference/cli/docker/container/start.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_start.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/stats/",
+    "title": "docker container stats",
+    "logical": "reference/cli/docker/container/stats.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_stats.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/stop/",
+    "title": "docker container stop",
+    "logical": "reference/cli/docker/container/stop.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_stop.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/top/",
+    "title": "docker container top",
+    "logical": "reference/cli/docker/container/top.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_top.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/unpause/",
+    "title": "docker container unpause",
+    "logical": "reference/cli/docker/container/unpause.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_unpause.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/update/",
+    "title": "docker container update",
+    "logical": "reference/cli/docker/container/update.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_update.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/container/wait/",
+    "title": "docker container wait",
+    "logical": "reference/cli/docker/container/wait.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_container_wait.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/context/",
+    "title": "docker context",
+    "logical": "reference/cli/docker/context.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_context.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/context/create/",
+    "title": "docker context create",
+    "logical": "reference/cli/docker/context/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_context_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/context/export/",
+    "title": "docker context export",
+    "logical": "reference/cli/docker/context/export.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_context_export.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/context/import/",
+    "title": "docker context import",
+    "logical": "reference/cli/docker/context/import.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_context_import.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/context/inspect/",
+    "title": "docker context inspect",
+    "logical": "reference/cli/docker/context/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_context_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/context/ls/",
+    "title": "docker context ls",
+    "logical": "reference/cli/docker/context/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_context_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/context/rm/",
+    "title": "docker context rm",
+    "logical": "reference/cli/docker/context/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_context_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/context/show/",
+    "title": "docker context show",
+    "logical": "reference/cli/docker/context/show.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_context_show.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/context/update/",
+    "title": "docker context update",
+    "logical": "reference/cli/docker/context/update.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_context_update.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/context/use/",
+    "title": "docker context use",
+    "logical": "reference/cli/docker/context/use.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_context_use.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/",
+    "title": "docker image",
+    "logical": "reference/cli/docker/image.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_image.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/build/",
+    "title": "docker image build",
+    "logical": "reference/cli/docker/image/build.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_build.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/history/",
+    "title": "docker image history",
+    "logical": "reference/cli/docker/image/history.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_history.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/import/",
+    "title": "docker image import",
+    "logical": "reference/cli/docker/image/import.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_import.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/inspect/",
+    "title": "docker image inspect",
+    "logical": "reference/cli/docker/image/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/load/",
+    "title": "docker image load",
+    "logical": "reference/cli/docker/image/load.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_load.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/ls/",
+    "title": "docker image ls",
+    "logical": "reference/cli/docker/image/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/prune/",
+    "title": "docker image prune",
+    "logical": "reference/cli/docker/image/prune.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_prune.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/pull/",
+    "title": "docker image pull",
+    "logical": "reference/cli/docker/image/pull.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_pull.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/push/",
+    "title": "docker image push",
+    "logical": "reference/cli/docker/image/push.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_push.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/rm/",
+    "title": "docker image rm",
+    "logical": "reference/cli/docker/image/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/save/",
+    "title": "docker image save",
+    "logical": "reference/cli/docker/image/save.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_save.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/image/tag/",
+    "title": "docker image tag",
+    "logical": "reference/cli/docker/image/tag.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_image_tag.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/inspect/",
+    "title": "docker inspect",
+    "logical": "reference/cli/docker/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/login/",
+    "title": "docker login",
+    "logical": "reference/cli/docker/login.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_login.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/logout/",
+    "title": "docker logout",
+    "logical": "reference/cli/docker/logout.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_logout.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/manifest/",
+    "title": "docker manifest",
+    "logical": "reference/cli/docker/manifest.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_manifest.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/manifest/annotate/",
+    "title": "docker manifest annotate",
+    "logical": "reference/cli/docker/manifest/annotate.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_manifest_annotate.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/manifest/create/",
+    "title": "docker manifest create",
+    "logical": "reference/cli/docker/manifest/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_manifest_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/manifest/inspect/",
+    "title": "docker manifest inspect",
+    "logical": "reference/cli/docker/manifest/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_manifest_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/manifest/push/",
+    "title": "docker manifest push",
+    "logical": "reference/cli/docker/manifest/push.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_manifest_push.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/manifest/rm/",
+    "title": "docker manifest rm",
+    "logical": "reference/cli/docker/manifest/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_manifest_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/network/",
+    "title": "docker network",
+    "logical": "reference/cli/docker/network.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_network.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/network/connect/",
+    "title": "docker network connect",
+    "logical": "reference/cli/docker/network/connect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_network_connect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/network/create/",
+    "title": "docker network create",
+    "logical": "reference/cli/docker/network/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_network_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/network/disconnect/",
+    "title": "docker network disconnect",
+    "logical": "reference/cli/docker/network/disconnect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_network_disconnect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/network/inspect/",
+    "title": "docker network inspect",
+    "logical": "reference/cli/docker/network/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_network_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/network/ls/",
+    "title": "docker network ls",
+    "logical": "reference/cli/docker/network/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_network_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/network/prune/",
+    "title": "docker network prune",
+    "logical": "reference/cli/docker/network/prune.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_network_prune.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/network/rm/",
+    "title": "docker network rm",
+    "logical": "reference/cli/docker/network/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_network_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/node/",
+    "title": "docker node",
+    "logical": "reference/cli/docker/node.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_node.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/node/demote/",
+    "title": "docker node demote",
+    "logical": "reference/cli/docker/node/demote.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_node_demote.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/node/inspect/",
+    "title": "docker node inspect",
+    "logical": "reference/cli/docker/node/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_node_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/node/ls/",
+    "title": "docker node ls",
+    "logical": "reference/cli/docker/node/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_node_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/node/promote/",
+    "title": "docker node promote",
+    "logical": "reference/cli/docker/node/promote.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_node_promote.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/node/ps/",
+    "title": "docker node ps",
+    "logical": "reference/cli/docker/node/ps.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_node_ps.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/node/rm/",
+    "title": "docker node rm",
+    "logical": "reference/cli/docker/node/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_node_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/node/update/",
+    "title": "docker node update",
+    "logical": "reference/cli/docker/node/update.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_node_update.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/",
+    "title": "docker plugin",
+    "logical": "reference/cli/docker/plugin.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_plugin.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/create/",
+    "title": "docker plugin create",
+    "logical": "reference/cli/docker/plugin/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_plugin_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/disable/",
+    "title": "docker plugin disable",
+    "logical": "reference/cli/docker/plugin/disable.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_plugin_disable.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/enable/",
+    "title": "docker plugin enable",
+    "logical": "reference/cli/docker/plugin/enable.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_plugin_enable.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/inspect/",
+    "title": "docker plugin inspect",
+    "logical": "reference/cli/docker/plugin/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_plugin_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/install/",
+    "title": "docker plugin install",
+    "logical": "reference/cli/docker/plugin/install.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_plugin_install.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/ls/",
+    "title": "docker plugin ls",
+    "logical": "reference/cli/docker/plugin/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_plugin_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/push/",
+    "title": "docker plugin push",
+    "logical": "reference/cli/docker/plugin/push.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_plugin_push.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/rm/",
+    "title": "docker plugin rm",
+    "logical": "reference/cli/docker/plugin/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_plugin_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/set/",
+    "title": "docker plugin set",
+    "logical": "reference/cli/docker/plugin/set.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_plugin_set.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/plugin/upgrade/",
+    "title": "docker plugin upgrade",
+    "logical": "reference/cli/docker/plugin/upgrade.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_plugin_upgrade.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/search/",
+    "title": "docker search",
+    "logical": "reference/cli/docker/search.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_search.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/secret/",
+    "title": "docker secret",
+    "logical": "reference/cli/docker/secret.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_secret.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/secret/create/",
+    "title": "docker secret create",
+    "logical": "reference/cli/docker/secret/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_secret_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/secret/inspect/",
+    "title": "docker secret inspect",
+    "logical": "reference/cli/docker/secret/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_secret_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/secret/ls/",
+    "title": "docker secret ls",
+    "logical": "reference/cli/docker/secret/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_secret_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/secret/rm/",
+    "title": "docker secret rm",
+    "logical": "reference/cli/docker/secret/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_secret_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/service/",
+    "title": "docker service",
+    "logical": "reference/cli/docker/service.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_service.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/service/create/",
+    "title": "docker service create",
+    "logical": "reference/cli/docker/service/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_service_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/service/inspect/",
+    "title": "docker service inspect",
+    "logical": "reference/cli/docker/service/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_service_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/service/logs/",
+    "title": "docker service logs",
+    "logical": "reference/cli/docker/service/logs.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_service_logs.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/service/ls/",
+    "title": "docker service ls",
+    "logical": "reference/cli/docker/service/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_service_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/service/ps/",
+    "title": "docker service ps",
+    "logical": "reference/cli/docker/service/ps.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_service_ps.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/service/rm/",
+    "title": "docker service rm",
+    "logical": "reference/cli/docker/service/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_service_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/service/rollback/",
+    "title": "docker service rollback",
+    "logical": "reference/cli/docker/service/rollback.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_service_rollback.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/service/scale/",
+    "title": "docker service scale",
+    "logical": "reference/cli/docker/service/scale.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_service_scale.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/service/update/",
+    "title": "docker service update",
+    "logical": "reference/cli/docker/service/update.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_service_update.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/stack/",
+    "title": "docker stack",
+    "logical": "reference/cli/docker/stack.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_stack.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/stack/config/",
+    "title": "docker stack config",
+    "logical": "reference/cli/docker/stack/config.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_stack_config.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/stack/deploy/",
+    "title": "docker stack deploy",
+    "logical": "reference/cli/docker/stack/deploy.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_stack_deploy.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/stack/ls/",
+    "title": "docker stack ls",
+    "logical": "reference/cli/docker/stack/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_stack_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/stack/ps/",
+    "title": "docker stack ps",
+    "logical": "reference/cli/docker/stack/ps.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_stack_ps.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/stack/rm/",
+    "title": "docker stack rm",
+    "logical": "reference/cli/docker/stack/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_stack_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/stack/services/",
+    "title": "docker stack services",
+    "logical": "reference/cli/docker/stack/services.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_stack_services.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/swarm/",
+    "title": "docker swarm",
+    "logical": "reference/cli/docker/swarm.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_swarm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/swarm/ca/",
+    "title": "docker swarm ca",
+    "logical": "reference/cli/docker/swarm/ca.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_swarm_ca.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/swarm/init/",
+    "title": "docker swarm init",
+    "logical": "reference/cli/docker/swarm/init.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_swarm_init.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/swarm/join-token/",
+    "title": "docker swarm join-token",
+    "logical": "reference/cli/docker/swarm/join-token.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_swarm_join-token.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/swarm/join/",
+    "title": "docker swarm join",
+    "logical": "reference/cli/docker/swarm/join.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_swarm_join.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/swarm/leave/",
+    "title": "docker swarm leave",
+    "logical": "reference/cli/docker/swarm/leave.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_swarm_leave.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/swarm/unlock-key/",
+    "title": "docker swarm unlock-key",
+    "logical": "reference/cli/docker/swarm/unlock-key.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_swarm_unlock-key.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/swarm/unlock/",
+    "title": "docker swarm unlock",
+    "logical": "reference/cli/docker/swarm/unlock.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_swarm_unlock.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/swarm/update/",
+    "title": "docker swarm update",
+    "logical": "reference/cli/docker/swarm/update.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_swarm_update.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/system/",
+    "title": "docker system",
+    "logical": "reference/cli/docker/system.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_system.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/system/df/",
+    "title": "docker system df",
+    "logical": "reference/cli/docker/system/df.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_system_df.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/system/events/",
+    "title": "docker system events",
+    "logical": "reference/cli/docker/system/events.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_system_events.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/system/info/",
+    "title": "docker system info",
+    "logical": "reference/cli/docker/system/info.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_system_info.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/system/prune/",
+    "title": "docker system prune",
+    "logical": "reference/cli/docker/system/prune.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_system_prune.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/trust/",
+    "title": "docker trust",
+    "logical": "reference/cli/docker/trust.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_trust.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/trust/inspect/",
+    "title": "docker trust inspect",
+    "logical": "reference/cli/docker/trust/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_trust_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/trust/key/",
+    "title": "docker trust key",
+    "logical": "reference/cli/docker/trust/key.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_trust_key.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/trust/key/generate/",
+    "title": "docker trust key generate",
+    "logical": "reference/cli/docker/trust/key/generate.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_trust_key_generate.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/trust/key/load/",
+    "title": "docker trust key load",
+    "logical": "reference/cli/docker/trust/key/load.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_trust_key_load.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/trust/revoke/",
+    "title": "docker trust revoke",
+    "logical": "reference/cli/docker/trust/revoke.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_trust_revoke.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/trust/sign/",
+    "title": "docker trust sign",
+    "logical": "reference/cli/docker/trust/sign.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_trust_sign.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/trust/signer/",
+    "title": "docker trust signer",
+    "logical": "reference/cli/docker/trust/signer.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_trust_signer.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/trust/signer/add/",
+    "title": "docker trust signer add",
+    "logical": "reference/cli/docker/trust/signer/add.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_trust_signer_add.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/trust/signer/remove/",
+    "title": "docker trust signer remove",
+    "logical": "reference/cli/docker/trust/signer/remove.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_trust_signer_remove.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/version/",
+    "title": "docker version",
+    "logical": "reference/cli/docker/version.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_version.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/volume/",
+    "title": "docker volume",
+    "logical": "reference/cli/docker/volume.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/engine/docker_volume.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/volume/create/",
+    "title": "docker volume create",
+    "logical": "reference/cli/docker/volume/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_volume_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/volume/inspect/",
+    "title": "docker volume inspect",
+    "logical": "reference/cli/docker/volume/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_volume_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/volume/ls/",
+    "title": "docker volume ls",
+    "logical": "reference/cli/docker/volume/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_volume_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/volume/prune/",
+    "title": "docker volume prune",
+    "logical": "reference/cli/docker/volume/prune.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_volume_prune.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/volume/rm/",
+    "title": "docker volume rm",
+    "logical": "reference/cli/docker/volume/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_volume_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/volume/update/",
+    "title": "docker volume update",
+    "logical": "reference/cli/docker/volume/update.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/engine/docker_volume_update.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/init/",
+    "title": "docker init",
+    "logical": "reference/cli/docker/init.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/init/docker_init.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/",
+    "title": "docker mcp",
+    "logical": "reference/cli/docker/mcp.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/",
+    "title": "docker mcp catalog",
+    "logical": "reference/cli/docker/mcp/catalog.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/create/",
+    "title": "docker mcp catalog create",
+    "logical": "reference/cli/docker/mcp/catalog/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/list/",
+    "title": "docker mcp catalog list",
+    "logical": "reference/cli/docker/mcp/catalog/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/ls/",
+    "title": "docker mcp catalog ls",
+    "logical": "reference/cli/docker/mcp/catalog/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/pull/",
+    "title": "docker mcp catalog pull",
+    "logical": "reference/cli/docker/mcp/catalog/pull.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_pull.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/push/",
+    "title": "docker mcp catalog push",
+    "logical": "reference/cli/docker/mcp/catalog/push.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_push.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/remove/",
+    "title": "docker mcp catalog remove",
+    "logical": "reference/cli/docker/mcp/catalog/remove.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_remove.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/rm/",
+    "title": "docker mcp catalog rm",
+    "logical": "reference/cli/docker/mcp/catalog/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/server/",
+    "title": "docker mcp catalog server",
+    "logical": "reference/cli/docker/mcp/catalog/server.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_server.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/server/add/",
+    "title": "docker mcp catalog server add",
+    "logical": "reference/cli/docker/mcp/catalog/server/add.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_server_add.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/server/inspect/",
+    "title": "docker mcp catalog server inspect",
+    "logical": "reference/cli/docker/mcp/catalog/server/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_server_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/server/ls/",
+    "title": "docker mcp catalog server ls",
+    "logical": "reference/cli/docker/mcp/catalog/server/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_server_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/server/remove/",
+    "title": "docker mcp catalog server remove",
+    "logical": "reference/cli/docker/mcp/catalog/server/remove.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_server_remove.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/show/",
+    "title": "docker mcp catalog show",
+    "logical": "reference/cli/docker/mcp/catalog/show.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_show.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/catalog/tag/",
+    "title": "docker mcp catalog tag",
+    "logical": "reference/cli/docker/mcp/catalog/tag.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_catalog_tag.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/client/",
+    "title": "docker mcp client",
+    "logical": "reference/cli/docker/mcp/client.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp_client.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/client/connect/",
+    "title": "docker mcp client connect",
+    "logical": "reference/cli/docker/mcp/client/connect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_client_connect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/client/disconnect/",
+    "title": "docker mcp client disconnect",
+    "logical": "reference/cli/docker/mcp/client/disconnect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_client_disconnect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/client/ls/",
+    "title": "docker mcp client ls",
+    "logical": "reference/cli/docker/mcp/client/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_client_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/feature/",
+    "title": "docker mcp feature",
+    "logical": "reference/cli/docker/mcp/feature.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp_feature.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/feature/disable/",
+    "title": "docker mcp feature disable",
+    "logical": "reference/cli/docker/mcp/feature/disable.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_feature_disable.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/feature/enable/",
+    "title": "docker mcp feature enable",
+    "logical": "reference/cli/docker/mcp/feature/enable.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_feature_enable.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/feature/list/",
+    "title": "docker mcp feature list",
+    "logical": "reference/cli/docker/mcp/feature/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_feature_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/feature/ls/",
+    "title": "docker mcp feature ls",
+    "logical": "reference/cli/docker/mcp/feature/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_feature_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/gateway/",
+    "title": "docker mcp gateway",
+    "logical": "reference/cli/docker/mcp/gateway.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp_gateway.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/gateway/run/",
+    "title": "docker mcp gateway run",
+    "logical": "reference/cli/docker/mcp/gateway/run.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_gateway_run.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/",
+    "title": "docker mcp profile",
+    "logical": "reference/cli/docker/mcp/profile.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp_profile.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/config/",
+    "title": "docker mcp profile config",
+    "logical": "reference/cli/docker/mcp/profile/config.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_config.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/create/",
+    "title": "docker mcp profile create",
+    "logical": "reference/cli/docker/mcp/profile/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/export/",
+    "title": "docker mcp profile export",
+    "logical": "reference/cli/docker/mcp/profile/export.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_export.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/import/",
+    "title": "docker mcp profile import",
+    "logical": "reference/cli/docker/mcp/profile/import.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_import.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/list/",
+    "title": "docker mcp profile list",
+    "logical": "reference/cli/docker/mcp/profile/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/pull/",
+    "title": "docker mcp profile pull",
+    "logical": "reference/cli/docker/mcp/profile/pull.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_pull.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/push/",
+    "title": "docker mcp profile push",
+    "logical": "reference/cli/docker/mcp/profile/push.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_push.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/remove/",
+    "title": "docker mcp profile remove",
+    "logical": "reference/cli/docker/mcp/profile/remove.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_remove.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/server/",
+    "title": "docker mcp profile server",
+    "logical": "reference/cli/docker/mcp/profile/server.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_server.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/server/add/",
+    "title": "docker mcp profile server add",
+    "logical": "reference/cli/docker/mcp/profile/server/add.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_server_add.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/server/ls/",
+    "title": "docker mcp profile server ls",
+    "logical": "reference/cli/docker/mcp/profile/server/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_server_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/server/remove/",
+    "title": "docker mcp profile server remove",
+    "logical": "reference/cli/docker/mcp/profile/server/remove.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_server_remove.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/show/",
+    "title": "docker mcp profile show",
+    "logical": "reference/cli/docker/mcp/profile/show.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_show.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/profile/tools/",
+    "title": "docker mcp profile tools",
+    "logical": "reference/cli/docker/mcp/profile/tools.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_profile_tools.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/secret/",
+    "title": "docker mcp secret",
+    "logical": "reference/cli/docker/mcp/secret.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp_secret.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/secret/ls/",
+    "title": "docker mcp secret ls",
+    "logical": "reference/cli/docker/mcp/secret/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_secret_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/secret/rm/",
+    "title": "docker mcp secret rm",
+    "logical": "reference/cli/docker/mcp/secret/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_secret_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/secret/set/",
+    "title": "docker mcp secret set",
+    "logical": "reference/cli/docker/mcp/secret/set.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_secret_set.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/server/",
+    "title": "docker mcp server",
+    "logical": "reference/cli/docker/mcp/server.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp_server.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/server/init/",
+    "title": "docker mcp server init",
+    "logical": "reference/cli/docker/mcp/server/init.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_server_init.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/tools/",
+    "title": "docker mcp tools",
+    "logical": "reference/cli/docker/mcp/tools.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/mcp/docker_mcp_tools.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/tools/call/",
+    "title": "docker mcp tools call",
+    "logical": "reference/cli/docker/mcp/tools/call.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_tools_call.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/tools/count/",
+    "title": "docker mcp tools count",
+    "logical": "reference/cli/docker/mcp/tools/count.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_tools_count.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/tools/inspect/",
+    "title": "docker mcp tools inspect",
+    "logical": "reference/cli/docker/mcp/tools/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_tools_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/tools/list/",
+    "title": "docker mcp tools list",
+    "logical": "reference/cli/docker/mcp/tools/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_tools_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/tools/ls/",
+    "title": "docker mcp tools ls",
+    "logical": "reference/cli/docker/mcp/tools/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_tools_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/mcp/version/",
+    "title": "docker mcp version",
+    "logical": "reference/cli/docker/mcp/version.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/mcp/docker_mcp_version.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/",
+    "title": "docker model",
+    "logical": "reference/cli/docker/model.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/bench/",
+    "title": "docker model bench",
+    "logical": "reference/cli/docker/model/bench.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_bench.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/context/",
+    "title": "docker model context",
+    "logical": "reference/cli/docker/model/context.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_context.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/context/create/",
+    "title": "docker model context create",
+    "logical": "reference/cli/docker/model/context/create.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_context_create.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/context/inspect/",
+    "title": "docker model context inspect",
+    "logical": "reference/cli/docker/model/context/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_context_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/context/ls/",
+    "title": "docker model context ls",
+    "logical": "reference/cli/docker/model/context/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_context_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/context/rm/",
+    "title": "docker model context rm",
+    "logical": "reference/cli/docker/model/context/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_context_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/context/use/",
+    "title": "docker model context use",
+    "logical": "reference/cli/docker/model/context/use.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_context_use.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/df/",
+    "title": "docker model df",
+    "logical": "reference/cli/docker/model/df.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_df.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/gateway/",
+    "title": "docker model gateway",
+    "logical": "reference/cli/docker/model/gateway.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_gateway.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/inspect/",
+    "title": "docker model inspect",
+    "logical": "reference/cli/docker/model/inspect.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/install-runner/",
+    "title": "docker model install-runner",
+    "logical": "reference/cli/docker/model/install-runner.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_install-runner.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/launch/",
+    "title": "docker model launch",
+    "logical": "reference/cli/docker/model/launch.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_launch.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/list/",
+    "title": "docker model list",
+    "logical": "reference/cli/docker/model/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/logs/",
+    "title": "docker model logs",
+    "logical": "reference/cli/docker/model/logs.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_logs.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/package/",
+    "title": "docker model package",
+    "logical": "reference/cli/docker/model/package.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_package.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/ps/",
+    "title": "docker model ps",
+    "logical": "reference/cli/docker/model/ps.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_ps.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/pull/",
+    "title": "docker model pull",
+    "logical": "reference/cli/docker/model/pull.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_pull.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/purge/",
+    "title": "docker model purge",
+    "logical": "reference/cli/docker/model/purge.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_purge.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/push/",
+    "title": "docker model push",
+    "logical": "reference/cli/docker/model/push.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_push.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/reinstall-runner/",
+    "title": "docker model reinstall-runner",
+    "logical": "reference/cli/docker/model/reinstall-runner.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_reinstall-runner.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/requests/",
+    "title": "docker model requests",
+    "logical": "reference/cli/docker/model/requests.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_requests.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/restart-runner/",
+    "title": "docker model restart-runner",
+    "logical": "reference/cli/docker/model/restart-runner.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_restart-runner.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/rm/",
+    "title": "docker model rm",
+    "logical": "reference/cli/docker/model/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/run/",
+    "title": "docker model run",
+    "logical": "reference/cli/docker/model/run.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_run.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/search/",
+    "title": "docker model search",
+    "logical": "reference/cli/docker/model/search.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_search.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/show/",
+    "title": "docker model show",
+    "logical": "reference/cli/docker/model/show.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_show.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/skills/",
+    "title": "docker model skills",
+    "logical": "reference/cli/docker/model/skills.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_skills.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/start-runner/",
+    "title": "docker model start-runner",
+    "logical": "reference/cli/docker/model/start-runner.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_start-runner.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/status/",
+    "title": "docker model status",
+    "logical": "reference/cli/docker/model/status.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_status.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/stop-runner/",
+    "title": "docker model stop-runner",
+    "logical": "reference/cli/docker/model/stop-runner.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_stop-runner.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/tag/",
+    "title": "docker model tag",
+    "logical": "reference/cli/docker/model/tag.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_tag.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/uninstall-runner/",
+    "title": "docker model uninstall-runner",
+    "logical": "reference/cli/docker/model/uninstall-runner.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_uninstall-runner.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/unload/",
+    "title": "docker model unload",
+    "logical": "reference/cli/docker/model/unload.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_unload.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/model/version/",
+    "title": "docker model version",
+    "logical": "reference/cli/docker/model/version.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/_vendor/github.com/docker/model-runner/cmd/cli/docs/reference/docker_model_version.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/offload/",
+    "title": "docker offload",
+    "logical": "reference/cli/docker/offload.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/offload/docker_offload.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/offload/diagnose/",
+    "title": "docker offload diagnose",
+    "logical": "reference/cli/docker/offload/diagnose.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/offload/docker_offload_diagnose.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/offload/start/",
+    "title": "docker offload start",
+    "logical": "reference/cli/docker/offload/start.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/offload/docker_offload_start.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/offload/status/",
+    "title": "docker offload status",
+    "logical": "reference/cli/docker/offload/status.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/offload/docker_offload_status.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/offload/stop/",
+    "title": "docker offload stop",
+    "logical": "reference/cli/docker/offload/stop.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/offload/docker_offload_stop.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/offload/version/",
+    "title": "docker offload version",
+    "logical": "reference/cli/docker/offload/version.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/offload/docker_offload_version.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/",
+    "title": "docker scout",
+    "logical": "reference/cli/docker/scout.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/scout/docker_scout.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/attestation/",
+    "title": "docker scout attestation",
+    "logical": "reference/cli/docker/scout/attestation.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/scout/docker_scout_attestation.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/attestation/add/",
+    "title": "docker scout attestation add",
+    "logical": "reference/cli/docker/scout/attestation/add.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_attestation_add.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/attestation/get/",
+    "title": "docker scout attestation get",
+    "logical": "reference/cli/docker/scout/attestation/get.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_attestation_get.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/attestation/list/",
+    "title": "docker scout attestation list",
+    "logical": "reference/cli/docker/scout/attestation/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_attestation_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/cache/",
+    "title": "docker scout cache",
+    "logical": "reference/cli/docker/scout/cache.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/scout/docker_scout_cache.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/cache/df/",
+    "title": "docker scout cache df",
+    "logical": "reference/cli/docker/scout/cache/df.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_cache_df.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/cache/prune/",
+    "title": "docker scout cache prune",
+    "logical": "reference/cli/docker/scout/cache/prune.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_cache_prune.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/compare/",
+    "title": "docker scout compare",
+    "logical": "reference/cli/docker/scout/compare.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_compare.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/config/",
+    "title": "docker scout config",
+    "logical": "reference/cli/docker/scout/config.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_config.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/cves/",
+    "title": "docker scout cves",
+    "logical": "reference/cli/docker/scout/cves.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_cves.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/enroll/",
+    "title": "docker scout enroll",
+    "logical": "reference/cli/docker/scout/enroll.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_enroll.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/environment/",
+    "title": "docker scout environment",
+    "logical": "reference/cli/docker/scout/environment.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_environment.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/help/",
+    "title": "docker scout help",
+    "logical": "reference/cli/docker/scout/help.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_help.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/integration/",
+    "title": "docker scout integration",
+    "logical": "reference/cli/docker/scout/integration.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/scout/docker_scout_integration.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/integration/configure/",
+    "title": "docker scout integration configure",
+    "logical": "reference/cli/docker/scout/integration/configure.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_integration_configure.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/integration/delete/",
+    "title": "docker scout integration delete",
+    "logical": "reference/cli/docker/scout/integration/delete.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_integration_delete.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/integration/list/",
+    "title": "docker scout integration list",
+    "logical": "reference/cli/docker/scout/integration/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_integration_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/policy/",
+    "title": "docker scout policy",
+    "logical": "reference/cli/docker/scout/policy.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/scout/docker_scout_policy.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/policy/publish/",
+    "title": "docker scout policy publish",
+    "logical": "reference/cli/docker/scout/policy/publish.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_policy_publish.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/push/",
+    "title": "docker scout push",
+    "logical": "reference/cli/docker/scout/push.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_push.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/quickview/",
+    "title": "docker scout quickview",
+    "logical": "reference/cli/docker/scout/quickview.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_quickview.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/recommendations/",
+    "title": "docker scout recommendations",
+    "logical": "reference/cli/docker/scout/recommendations.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_recommendations.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/repo/",
+    "title": "docker scout repo",
+    "logical": "reference/cli/docker/scout/repo.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/scout/docker_scout_repo.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/repo/disable/",
+    "title": "docker scout repo disable",
+    "logical": "reference/cli/docker/scout/repo/disable.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_repo_disable.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/repo/enable/",
+    "title": "docker scout repo enable",
+    "logical": "reference/cli/docker/scout/repo/enable.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_repo_enable.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/repo/list/",
+    "title": "docker scout repo list",
+    "logical": "reference/cli/docker/scout/repo/list.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_repo_list.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/sbom/",
+    "title": "docker scout sbom",
+    "logical": "reference/cli/docker/scout/sbom.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_sbom.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/stream/",
+    "title": "docker scout stream",
+    "logical": "reference/cli/docker/scout/stream.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_stream.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/version/",
+    "title": "docker scout version",
+    "logical": "reference/cli/docker/scout/version.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_version.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/vex/",
+    "title": "docker scout vex",
+    "logical": "reference/cli/docker/scout/vex.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/scout/docker_scout_vex.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/vex/get/",
+    "title": "docker scout vex get",
+    "logical": "reference/cli/docker/scout/vex/get.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_vex_get.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/scout/watch/",
+    "title": "docker scout watch",
+    "logical": "reference/cli/docker/scout/watch.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/scout/docker_scout_watch.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/",
+    "title": "docker pass",
+    "logical": "reference/cli/docker/pass.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/secrets/docker_pass.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/get/",
+    "title": "docker pass get",
+    "logical": "reference/cli/docker/pass/get.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/secrets/docker_pass_get.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/ls/",
+    "title": "docker pass ls",
+    "logical": "reference/cli/docker/pass/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/secrets/docker_pass_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/plugins/",
+    "title": "docker pass plugins",
+    "logical": "reference/cli/docker/pass/plugins.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/secrets/docker_pass_plugins.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/plugins/1password/",
+    "title": "docker pass plugins 1password",
+    "logical": "reference/cli/docker/pass/plugins/1password.md",
+    "family": "cli",
+    "section": true,
+    "source": "authored/data/cli/secrets/docker_pass_plugins_1password.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/plugins/1password/purge/",
+    "title": "docker pass plugins 1password purge",
+    "logical": "reference/cli/docker/pass/plugins/1password/purge.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/secrets/docker_pass_plugins_1password_purge.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/plugins/1password/setup/",
+    "title": "docker pass plugins 1password setup",
+    "logical": "reference/cli/docker/pass/plugins/1password/setup.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/secrets/docker_pass_plugins_1password_setup.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/plugins/disable/",
+    "title": "docker pass plugins disable",
+    "logical": "reference/cli/docker/pass/plugins/disable.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/secrets/docker_pass_plugins_disable.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/plugins/enable/",
+    "title": "docker pass plugins enable",
+    "logical": "reference/cli/docker/pass/plugins/enable.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/secrets/docker_pass_plugins_enable.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/plugins/ls/",
+    "title": "docker pass plugins ls",
+    "logical": "reference/cli/docker/pass/plugins/ls.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/secrets/docker_pass_plugins_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/rm/",
+    "title": "docker pass rm",
+    "logical": "reference/cli/docker/pass/rm.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/secrets/docker_pass_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/run/",
+    "title": "docker pass run",
+    "logical": "reference/cli/docker/pass/run.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/secrets/docker_pass_run.yaml"
+  },
+  {
+    "route": "/reference/cli/docker/pass/set/",
+    "title": "docker pass set",
+    "logical": "reference/cli/docker/pass/set.md",
+    "family": "cli",
+    "section": false,
+    "source": "authored/data/cli/secrets/docker_pass_set.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/",
+    "title": "sbx",
+    "logical": "reference/cli/sbx.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/attach/",
+    "title": "sbx attach",
+    "logical": "reference/cli/sbx/attach.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_attach.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/completion/",
+    "title": "sbx completion",
+    "logical": "reference/cli/sbx/completion.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_completion.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/completion/bash/",
+    "title": "sbx completion bash",
+    "logical": "reference/cli/sbx/completion/bash.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_completion_bash.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/completion/fish/",
+    "title": "sbx completion fish",
+    "logical": "reference/cli/sbx/completion/fish.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_completion_fish.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/completion/powershell/",
+    "title": "sbx completion powershell",
+    "logical": "reference/cli/sbx/completion/powershell.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_completion_powershell.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/completion/zsh/",
+    "title": "sbx completion zsh",
+    "logical": "reference/cli/sbx/completion/zsh.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_completion_zsh.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/cp/",
+    "title": "sbx cp",
+    "logical": "reference/cli/sbx/cp.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_cp.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/create/",
+    "title": "sbx create",
+    "logical": "reference/cli/sbx/create.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_create.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/create/claude/",
+    "title": "sbx create claude",
+    "logical": "reference/cli/sbx/create/claude.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_create_claude.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/create/codex/",
+    "title": "sbx create codex",
+    "logical": "reference/cli/sbx/create/codex.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_create_codex.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/create/cursor/",
+    "title": "sbx create cursor",
+    "logical": "reference/cli/sbx/create/cursor.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_create_cursor.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/create/devin/",
+    "title": "sbx create devin",
+    "logical": "reference/cli/sbx/create/devin.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_create_devin.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/create/docker-agent/",
+    "title": "sbx create docker-agent",
+    "logical": "reference/cli/sbx/create/docker-agent.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_create_docker-agent.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/create/gemini/",
+    "title": "sbx create gemini",
+    "logical": "reference/cli/sbx/create/gemini.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_create_gemini.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/create/opencode/",
+    "title": "sbx create opencode",
+    "logical": "reference/cli/sbx/create/opencode.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_create_opencode.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/create/shell/",
+    "title": "sbx create shell",
+    "logical": "reference/cli/sbx/create/shell.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_create_shell.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/daemon/",
+    "title": "sbx daemon",
+    "logical": "reference/cli/sbx/daemon.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_daemon.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/daemon/log-level/",
+    "title": "sbx daemon log-level",
+    "logical": "reference/cli/sbx/daemon/log-level.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_daemon_log-level.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/daemon/log-level/set/",
+    "title": "sbx daemon log-level set",
+    "logical": "reference/cli/sbx/daemon/log-level/set.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_daemon_log-level_set.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/daemon/restart/",
+    "title": "sbx daemon restart",
+    "logical": "reference/cli/sbx/daemon/restart.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_daemon_restart.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/daemon/start/",
+    "title": "sbx daemon start",
+    "logical": "reference/cli/sbx/daemon/start.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_daemon_start.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/daemon/status/",
+    "title": "sbx daemon status",
+    "logical": "reference/cli/sbx/daemon/status.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_daemon_status.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/daemon/stop/",
+    "title": "sbx daemon stop",
+    "logical": "reference/cli/sbx/daemon/stop.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_daemon_stop.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/diagnose/",
+    "title": "sbx diagnose",
+    "logical": "reference/cli/sbx/diagnose.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_diagnose.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/env/",
+    "title": "sbx env",
+    "logical": "reference/cli/sbx/env.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_env.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/env/create/",
+    "title": "sbx env create",
+    "logical": "reference/cli/sbx/env/create.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_env_create.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/env/exec/",
+    "title": "sbx env exec",
+    "logical": "reference/cli/sbx/env/exec.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_env_exec.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/env/plan/",
+    "title": "sbx env plan",
+    "logical": "reference/cli/sbx/env/plan.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_env_plan.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/env/rm/",
+    "title": "sbx env rm",
+    "logical": "reference/cli/sbx/env/rm.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_env_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/env/run/",
+    "title": "sbx env run",
+    "logical": "reference/cli/sbx/env/run.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_env_run.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/exec/",
+    "title": "sbx exec",
+    "logical": "reference/cli/sbx/exec.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_exec.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/",
+    "title": "sbx kit",
+    "logical": "reference/cli/sbx/kit.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_kit.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/add/",
+    "title": "sbx kit add",
+    "logical": "reference/cli/sbx/kit/add.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_add.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/builder/",
+    "title": "sbx kit builder",
+    "logical": "reference/cli/sbx/kit/builder.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_kit_builder.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/builder/history/",
+    "title": "sbx kit builder history",
+    "logical": "reference/cli/sbx/kit/builder/history.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_kit_builder_history.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/builder/history/export/",
+    "title": "sbx kit builder history export",
+    "logical": "reference/cli/sbx/kit/builder/history/export.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_builder_history_export.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/builder/history/inspect/",
+    "title": "sbx kit builder history inspect",
+    "logical": "reference/cli/sbx/kit/builder/history/inspect.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_builder_history_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/builder/history/logs/",
+    "title": "sbx kit builder history logs",
+    "logical": "reference/cli/sbx/kit/builder/history/logs.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_builder_history_logs.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/builder/history/ls/",
+    "title": "sbx kit builder history ls",
+    "logical": "reference/cli/sbx/kit/builder/history/ls.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_builder_history_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/builder/history/rm/",
+    "title": "sbx kit builder history rm",
+    "logical": "reference/cli/sbx/kit/builder/history/rm.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_builder_history_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/builder/history/trace/",
+    "title": "sbx kit builder history trace",
+    "logical": "reference/cli/sbx/kit/builder/history/trace.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_builder_history_trace.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/builder/rm/",
+    "title": "sbx kit builder rm",
+    "logical": "reference/cli/sbx/kit/builder/rm.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_builder_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/builder/status/",
+    "title": "sbx kit builder status",
+    "logical": "reference/cli/sbx/kit/builder/status.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_builder_status.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/inspect/",
+    "title": "sbx kit inspect",
+    "logical": "reference/cli/sbx/kit/inspect.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/pack/",
+    "title": "sbx kit pack",
+    "logical": "reference/cli/sbx/kit/pack.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_pack.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/provenance/",
+    "title": "sbx kit provenance",
+    "logical": "reference/cli/sbx/kit/provenance.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_provenance.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/pull/",
+    "title": "sbx kit pull",
+    "logical": "reference/cli/sbx/kit/pull.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_pull.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/push/",
+    "title": "sbx kit push",
+    "logical": "reference/cli/sbx/kit/push.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_push.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/sign/",
+    "title": "sbx kit sign",
+    "logical": "reference/cli/sbx/kit/sign.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_sign.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/validate/",
+    "title": "sbx kit validate",
+    "logical": "reference/cli/sbx/kit/validate.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_validate.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/kit/verify/",
+    "title": "sbx kit verify",
+    "logical": "reference/cli/sbx/kit/verify.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_kit_verify.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/login/",
+    "title": "sbx login",
+    "logical": "reference/cli/sbx/login.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_login.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/logout/",
+    "title": "sbx logout",
+    "logical": "reference/cli/sbx/logout.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_logout.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/ls/",
+    "title": "sbx ls",
+    "logical": "reference/cli/sbx/ls.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/mcp/",
+    "title": "sbx mcp",
+    "logical": "reference/cli/sbx/mcp.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_mcp.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/mcp/add/",
+    "title": "sbx mcp add",
+    "logical": "reference/cli/sbx/mcp/add.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_mcp_add.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/mcp/auth/",
+    "title": "sbx mcp auth",
+    "logical": "reference/cli/sbx/mcp/auth.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_mcp_auth.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/mcp/auth/rm/",
+    "title": "sbx mcp auth rm",
+    "logical": "reference/cli/sbx/mcp/auth/rm.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_mcp_auth_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/mcp/auth/status/",
+    "title": "sbx mcp auth status",
+    "logical": "reference/cli/sbx/mcp/auth/status.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_mcp_auth_status.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/mcp/inspect/",
+    "title": "sbx mcp inspect",
+    "logical": "reference/cli/sbx/mcp/inspect.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_mcp_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/mcp/load/",
+    "title": "sbx mcp load",
+    "logical": "reference/cli/sbx/mcp/load.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_mcp_load.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/mcp/ls/",
+    "title": "sbx mcp ls",
+    "logical": "reference/cli/sbx/mcp/ls.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_mcp_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/mcp/rm/",
+    "title": "sbx mcp rm",
+    "logical": "reference/cli/sbx/mcp/rm.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_mcp_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/move/",
+    "title": "sbx move",
+    "logical": "reference/cli/sbx/move.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_move.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/",
+    "title": "sbx policy",
+    "logical": "reference/cli/sbx/policy.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_policy.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/allow/",
+    "title": "sbx policy allow",
+    "logical": "reference/cli/sbx/policy/allow.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_policy_allow.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/allow/network/",
+    "title": "sbx policy allow network",
+    "logical": "reference/cli/sbx/policy/allow/network.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_policy_allow_network.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/check/",
+    "title": "sbx policy check",
+    "logical": "reference/cli/sbx/policy/check.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_policy_check.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/check/network/",
+    "title": "sbx policy check network",
+    "logical": "reference/cli/sbx/policy/check/network.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_policy_check_network.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/deny/",
+    "title": "sbx policy deny",
+    "logical": "reference/cli/sbx/policy/deny.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_policy_deny.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/deny/network/",
+    "title": "sbx policy deny network",
+    "logical": "reference/cli/sbx/policy/deny/network.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_policy_deny_network.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/init/",
+    "title": "sbx policy init",
+    "logical": "reference/cli/sbx/policy/init.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_policy_init.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/inspect/",
+    "title": "sbx policy inspect",
+    "logical": "reference/cli/sbx/policy/inspect.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_policy_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/log/",
+    "title": "sbx policy log",
+    "logical": "reference/cli/sbx/policy/log.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_policy_log.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/ls/",
+    "title": "sbx policy ls",
+    "logical": "reference/cli/sbx/policy/ls.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_policy_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/reset/",
+    "title": "sbx policy reset",
+    "logical": "reference/cli/sbx/policy/reset.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_policy_reset.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/rm/",
+    "title": "sbx policy rm",
+    "logical": "reference/cli/sbx/policy/rm.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_policy_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/policy/rm/network/",
+    "title": "sbx policy rm network",
+    "logical": "reference/cli/sbx/policy/rm/network.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_policy_rm_network.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/ports/",
+    "title": "sbx ports",
+    "logical": "reference/cli/sbx/ports.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_ports.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/prune/",
+    "title": "sbx prune",
+    "logical": "reference/cli/sbx/prune.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_prune.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/reset/",
+    "title": "sbx reset",
+    "logical": "reference/cli/sbx/reset.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_reset.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/rm/",
+    "title": "sbx rm",
+    "logical": "reference/cli/sbx/rm.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/run/",
+    "title": "sbx run",
+    "logical": "reference/cli/sbx/run.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_run.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/secret/",
+    "title": "sbx secret",
+    "logical": "reference/cli/sbx/secret.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_secret.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/secret/import/",
+    "title": "sbx secret import",
+    "logical": "reference/cli/sbx/secret/import.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_secret_import.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/secret/ls/",
+    "title": "sbx secret ls",
+    "logical": "reference/cli/sbx/secret/ls.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_secret_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/secret/rm/",
+    "title": "sbx secret rm",
+    "logical": "reference/cli/sbx/secret/rm.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_secret_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/secret/set-custom/",
+    "title": "sbx secret set-custom",
+    "logical": "reference/cli/sbx/secret/set-custom.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_secret_set-custom.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/secret/set/",
+    "title": "sbx secret set",
+    "logical": "reference/cli/sbx/secret/set.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_secret_set.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/settings/",
+    "title": "sbx settings",
+    "logical": "reference/cli/sbx/settings.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_settings.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/settings/get/",
+    "title": "sbx settings get",
+    "logical": "reference/cli/sbx/settings/get.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_settings_get.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/settings/list/",
+    "title": "sbx settings list",
+    "logical": "reference/cli/sbx/settings/list.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_settings_list.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/settings/set/",
+    "title": "sbx settings set",
+    "logical": "reference/cli/sbx/settings/set.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_settings_set.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/settings/unset/",
+    "title": "sbx settings unset",
+    "logical": "reference/cli/sbx/settings/unset.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_settings_unset.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/setup/",
+    "title": "sbx setup",
+    "logical": "reference/cli/sbx/setup.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_setup.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/setup/ssh/",
+    "title": "sbx setup ssh",
+    "logical": "reference/cli/sbx/setup/ssh.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_setup_ssh.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/setup/ssh/remove/",
+    "title": "sbx setup ssh remove",
+    "logical": "reference/cli/sbx/setup/ssh/remove.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_setup_ssh_remove.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/skills/",
+    "title": "sbx skills",
+    "logical": "reference/cli/sbx/skills.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_skills.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/skills/add/",
+    "title": "sbx skills add",
+    "logical": "reference/cli/sbx/skills/add.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_skills_add.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/skills/import/",
+    "title": "sbx skills import",
+    "logical": "reference/cli/sbx/skills/import.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_skills_import.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/skills/ls/",
+    "title": "sbx skills ls",
+    "logical": "reference/cli/sbx/skills/ls.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_skills_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/skills/rm/",
+    "title": "sbx skills rm",
+    "logical": "reference/cli/sbx/skills/rm.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_skills_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/skills/update/",
+    "title": "sbx skills update",
+    "logical": "reference/cli/sbx/skills/update.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_skills_update.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/stop/",
+    "title": "sbx stop",
+    "logical": "reference/cli/sbx/stop.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_stop.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/template/",
+    "title": "sbx template",
+    "logical": "reference/cli/sbx/template.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_template.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/template/inspect/",
+    "title": "sbx template inspect",
+    "logical": "reference/cli/sbx/template/inspect.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_template_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/template/load/",
+    "title": "sbx template load",
+    "logical": "reference/cli/sbx/template/load.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_template_load.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/template/ls/",
+    "title": "sbx template ls",
+    "logical": "reference/cli/sbx/template/ls.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_template_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/template/rm/",
+    "title": "sbx template rm",
+    "logical": "reference/cli/sbx/template/rm.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_template_rm.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/template/save/",
+    "title": "sbx template save",
+    "logical": "reference/cli/sbx/template/save.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_template_save.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/ttl/",
+    "title": "sbx ttl",
+    "logical": "reference/cli/sbx/ttl.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_ttl.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/tui/",
+    "title": "sbx tui",
+    "logical": "reference/cli/sbx/tui.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_tui.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/version/",
+    "title": "sbx version",
+    "logical": "reference/cli/sbx/version.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_version.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/volume/",
+    "title": "sbx volume",
+    "logical": "reference/cli/sbx/volume.md",
+    "family": "sbx-cli",
+    "section": true,
+    "source": "authored/data/sbx_cli/sbx_volume.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/volume/create/",
+    "title": "sbx volume create",
+    "logical": "reference/cli/sbx/volume/create.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_volume_create.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/volume/inspect/",
+    "title": "sbx volume inspect",
+    "logical": "reference/cli/sbx/volume/inspect.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_volume_inspect.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/volume/ls/",
+    "title": "sbx volume ls",
+    "logical": "reference/cli/sbx/volume/ls.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_volume_ls.yaml"
+  },
+  {
+    "route": "/reference/cli/sbx/volume/rm/",
+    "title": "sbx volume rm",
+    "logical": "reference/cli/sbx/volume/rm.md",
+    "family": "sbx-cli",
+    "section": false,
+    "source": "authored/data/sbx_cli/sbx_volume_rm.yaml"
+  }
+]

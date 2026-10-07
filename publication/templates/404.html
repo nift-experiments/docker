@@ -1,0 +1,5 @@
+<h1>404</h1><p>There might be a mistake in the URL or you might've clicked a link to
+content that no longer exists. If you think it's the latter, please file
+an issue in our issue tracker on GitHub.</p><a id=newissue class=link href=https://github.com/docker/docs/issues/new><strong>Create a new issue</strong></a>
+<a href=https://docs.docker.com/><figure><img src=/assets/images/404-docs.png alt="404 page not found"><figcaption class=link>Go to the homepage</figcaption></figure></a><script>let el=document.querySelector("#newissue");if(el){let e=new URL("https://github.com/docker/docs/issues/new");e.searchParams.set("title","404 at "+window.location.pathname);let t="I found a broken link : "+window.location.href;document.referrer!==""&&(t+=`
+I arrived on this page through: `+document.referrer),e.searchParams.set("body",t),e.searchParams.set("template","broken_link.yml"),e.searchParams.set("title","[404]: "+window.location.pathname),e.searchParams.set("target",window.location.href),e.searchParams.set("location",document.referrer),e.searchParams.set("labels","status/triage"),el.setAttribute("href",e.toString())}</script>

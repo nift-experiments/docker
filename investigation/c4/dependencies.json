@@ -1,0 +1,26 @@
+[
+  {
+    "project": "docker",
+    "case": "content",
+    "changed_outputs": 13,
+    "incremental_equals_full": true
+  },
+  {
+    "project": "docker",
+    "case": "layout",
+    "changed_outputs": 2153,
+    "incremental_equals_full": true
+  },
+  {
+    "project": "docker-agent",
+    "case": "content",
+    "changed_outputs": 13,
+    "incremental_equals_full": true
+  },
+  {
+    "project": "docker-agent",
+    "case": "layout",
+    "changed_outputs": 2153,
+    "incremental_equals_full": true
+  }
+]
