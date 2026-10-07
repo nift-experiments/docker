@@ -1,0 +1,7 @@
+0 of 1 files built successfully
+time taken: 0.001119 seconds
+error: while building /
+  content/index.html:1:1
+  markup: file syntax is @markup(format, path)
+    @markup(md, "content/docker-table.md", "...
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

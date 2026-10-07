@@ -1,0 +1,14 @@
+/home/nick/Repositories/nift/nift-experiments/docker-baseline/c2/goldmark/goldmark-probe: go1.26.0
+	path	docker-render-proof
+	mod	docker-render-proof	(devel)	
+	dep	github.com/yuin/goldmark	v1.8.2	h1:kEGpgqJXdgbkhcOgBxkC0X0PmoPG1ZyoZ117rDVp4zE=
+	build	-buildmode=exe
+	build	-compiler=gc
+	build	CGO_ENABLED=1
+	build	CGO_CFLAGS=
+	build	CGO_CPPFLAGS=
+	build	CGO_CXXFLAGS=
+	build	CGO_LDFLAGS=
+	build	GOARCH=amd64
+	build	GOOS=linux
+	build	GOAMD64=v1

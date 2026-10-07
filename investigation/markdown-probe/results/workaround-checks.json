@@ -1,0 +1,17 @@
+{
+  "native-code": {
+    "code_text_exact": true
+  },
+  "goldmark-docker-code": {
+    "code_text_exact": true
+  },
+  "goldmark-table": {
+    "table": true,
+    "anchor": true,
+    "header_cells": 5,
+    "data_cells": 20
+  },
+  "goldmark-literal": {
+    "literal_preserved": true
+  }
+}

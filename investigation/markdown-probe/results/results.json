@@ -1,0 +1,53 @@
+{
+  "nift_version": "Nift v4.7.2\n",
+  "results": [
+    {
+      "case": "native-table",
+      "exit": 0,
+      "source": "@markup(md, \"content/docker-table.md\")",
+      "bytes": 1031,
+      "sha256": "540147fad58de180839723195cadac0db20c4d09fc31bc38e2f4e4906c7ad96b",
+      "table_rendered": false,
+      "heading_id": false
+    },
+    {
+      "case": "native-code",
+      "exit": 0,
+      "source": "@markup(md, \"content/docker-code.md\")",
+      "bytes": 236,
+      "sha256": "face78892ec27f7faccca7ddd5070ca7c5877440f28ed2e58292090606d50168"
+    },
+    {
+      "case": "profile-argument",
+      "exit": 1,
+      "source": "@markup(md, \"content/docker-table.md\", \"extended\")"
+    },
+    {
+      "case": "native-highlight",
+      "exit": 0,
+      "source": "@input(\"content/highlight-only.html\")",
+      "bytes": 92,
+      "sha256": "a47b5d0aea1743e1a242cfaaa7d31c50ba64ed613c8cdee9fcdd39f012a91098",
+      "span_preserved": false
+    },
+    {
+      "case": "native-literal-sigil",
+      "exit": 1,
+      "source": "@markup(md, \"content/literal.md\")"
+    },
+    {
+      "case": "raw-composition",
+      "exit": 0,
+      "source": "@dep(\"content/highlight.html\")@script { f := file(\"content/highlight.html\"); f.open(); value := f.read_all(); f.close(); return value; }",
+      "bytes": 116,
+      "sha256": "3bc543aab3df88509312bf93ca52918ce0634b1e82e255d111ec6a01e6e8d07d",
+      "exact": true,
+      "changed_input": {
+        "incremental_exit": 0,
+        "full_exit": 0,
+        "changed": true,
+        "incremental_equals_full": true
+      }
+    }
+  ]
+}

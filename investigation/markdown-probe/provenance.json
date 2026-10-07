@@ -1,0 +1,8 @@
+{
+  "upstream": "6cf1b1c167f032e8a6629da211602300b623b20e",
+  "fixtures": {
+    "docker-table.md": "content/manuals/release-lifecycle.md, Lifecycle stage heading and table",
+    "docker-code.md": "content/manuals/engine/storage/drivers/device-mapper-driver.md, loopback resize console example",
+    "highlight.html": "synthetic minimal Chroma markup and literal-sigil composition fixture"
+  }
+}

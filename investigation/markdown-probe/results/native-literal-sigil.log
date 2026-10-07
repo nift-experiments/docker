@@ -1,0 +1,7 @@
+0 of 1 files built successfully
+time taken: 0.00082 seconds
+error: while building /
+  content/literal.md:2:1
+  @input path does not exist: missing-file
+    @input("missing-file")
+    ^~~~~~~~~~~~~~~~~~~~~~

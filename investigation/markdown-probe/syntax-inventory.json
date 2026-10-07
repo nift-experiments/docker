@@ -1,0 +1,47 @@
+{
+  "authored": {
+    "markdown_files": 1116,
+    "files_with_shortcode_candidates": 449,
+    "lexical_shortcode_openings": 2022,
+    "shortcode_names": {
+      "whats-new": 1,
+      "youtube-embed": 34,
+      "tabs": 282,
+      "tab": 565,
+      "labspace-launch": 12,
+      "dockerfile": 1,
+      "param": 298,
+      "files": 17,
+      "file": 66,
+      "accordion": 8,
+      "grid": 55,
+      "card": 3,
+      "include": 86,
+      "summary-bar": 196,
+      "apiVersionPrevious": 1,
+      "sandbox-auth": 1,
+      "button": 27,
+      "release-date": 268,
+      "desktop-install-v2": 37,
+      "desktop-install": 1,
+      "inline-image": 11,
+      "create_panel": 2,
+      "figure": 2,
+      "sectionlinks": 2,
+      "experimental": 3,
+      "badge": 8,
+      "interactive-diagram": 2,
+      "recipe-list": 7,
+      "setting-metadata": 26
+    },
+    "files_with_table_candidates": 231
+  },
+  "vendored": {
+    "markdown_files": 266,
+    "files_with_shortcode_candidates": 0,
+    "lexical_shortcode_openings": 0,
+    "shortcode_names": {},
+    "files_with_table_candidates": 175
+  },
+  "scope": "Lexical inventory for renderer feasibility, including syntax inside examples/comments; not a validated semantic parser or migrated route count."
+}

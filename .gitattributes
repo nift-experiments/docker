@@ -1,3 +1,7 @@
 # Keep captured logs and generated starter output byte-for-byte.
 investigation/build/* -whitespace
 public/index.html -whitespace
+
+# Verbatim upstream excerpt and tool build-information output.
+investigation/markdown-probe/docker-table.md -whitespace
+investigation/markdown-probe/results/goldmark-toolchain.log -whitespace
